@@ -1,0 +1,9 @@
+
+* About
+  SPL Project
+  Abhijit Paul
+  BSSE 1201
+* ToDo [1/3]
+  - [X] Build a basic Language Model
+  - [ ] Fast File Handling
+  - [ ] Hardcode Pronunciation Rules
