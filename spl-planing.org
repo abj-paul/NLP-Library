@@ -1,0 +1,25 @@
+
+* Begginer Friendly Corpus
+  [[https://nlp.stanford.edu/sentiment/code.html][size 5mb]]
+  [[https://medium.com/swlh/you-c120c972f8c6][list of beginner friendly dataset]]
+
+* Bangla Corpus
+  [[https://banglanlp.org/tools-and-demos/publicly-available-tools-and-resources/][Everything here]]
+  Bangla wikipedia dump seems promising.
+** NLP projects with bangla
+   [[https://github.com/sagorbrur/bnlp][This github project looks nice]]
+* Steps
+  - Take input from file
+  - Make a med word.
+  - Find spelling errors.
+* Days
+** 9 Feb - Make language model 
+   String matching.
+   So find the string/sentence in the text file.
+   Count number of matches.
+*** Issues
+    - fscanf(fptr,"%s %s",two_word)
+    - Create a file with 10 "you have"
+    - Possible factor: punctuation
+** 10 Feb - Know about scanf
+   So the punctuations were creating problems for us. To handle them, we need scanf.

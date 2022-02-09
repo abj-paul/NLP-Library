@@ -1,0 +1,20 @@
+
+* Goal of SPL-1
+  Its goal is to see how to handle a big project. This far, all of our codes are at most 300 Lines. We never handled big projects.
+  - ~Lines of Code~ is the only matrix here for evaluation.
+** Rules
+  - Never copy code or use external library.
+  - Each line that uses library will be subtracted from total number of lines. So if you make a project which is graphics-intensive, then all lines that uses library function will be deducted from the matrix ~Lines of Code.~ (So if you need to use ~shell script~, do not use any C++ library function. Rather, make it yourself. Make a function that takes shell string and compiles it.)
+** Best Project is-
+   The project that implements the library.
+   For example, you implement one or two functions that you use from socket.h or for scripting.
+* Language
+  Java, C, C++
+  - No need to bother with project management format like cMake. Only use ~things that you have already been taught~. Everything will be excluded from marking thats not plain c,c++ stuffs.
+* Evaluation
+  Lines of Code
+  Complexity of Lines
+* Final Presentation Board
+  - Which function implements this feature? show it to me.
+  - If i set the value to 5. what will happen?
+  - Eun the project
