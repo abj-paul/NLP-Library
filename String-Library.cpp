@@ -2,6 +2,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#define MAX_WORD_IN_A_SENTENCE 20
+#define MAX_WORD_SIZE 40
+
 int string_len(char* x){
   int i=0;
   while(x[i]!='\0'){
@@ -40,7 +43,7 @@ bool is_same_string(const char* str,char word[]){
   int n2 = string_len(word);
 
   if(n1!=n2) return false;
-  //printf("%s\n",word);
+  //  printf("%s\n",word);
   for(int i=0; i<n1; i++){
     if(str[i]!=word[i]) return false;
   }
@@ -58,4 +61,67 @@ bool is_same_string(char* str,const char* word){
     if(str[i]!=word[i]) return false;
   }
   return true;
+}
+
+char** tokenizer_revamp(const char* str){
+  char** word_list = (char**)calloc(MAX_WORD_IN_A_SENTENCE, sizeof(char));
+
+  word_list[0] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+  word_list[1] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+
+  int str_index=0, word_index=0, word_list_index=1;
+  while(str[str_index]!='\0'){
+    if(str[str_index]==' '){
+      word_list[word_list_index][word_index] = '\0';;
+      word_list_index++;
+      word_index=0;
+
+      word_list[word_list_index] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+    }else{
+      word_list[word_list_index][word_index] = str[str_index];
+      word_index++;
+    }
+    str_index++;
+  }
+
+  word_list[word_list_index][word_index] = '\0';
+  word_list_index++;
+
+  word_list[word_list_index]=NULL;
+  return word_list;
+}
+char** tokenizer_revamp(char* str){
+  char** word_list = (char**)calloc(MAX_WORD_IN_A_SENTENCE, sizeof(char));
+
+  word_list[0] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+  word_list[1] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+
+  int str_index=0, word_index=0, word_list_index=1;
+  while(str[str_index]!='\0'){
+    if(str[str_index]==' '){
+      word_list[word_list_index][word_index] = '\0';;
+      word_list_index++;
+      word_index=0;
+
+      word_list[word_list_index] = (char*)calloc(MAX_WORD_SIZE, sizeof(char));
+    }else{
+      word_list[word_list_index][word_index] = str[str_index];
+      word_index++;
+    }
+    str_index++;
+  }
+
+  word_list[word_list_index][word_index] = '\0';
+  word_list_index++;
+
+  word_list[word_list_index]=NULL;
+  return word_list;
+}
+
+void print_word_list(char** x){
+  int i=1;
+  while(x[i]!=NULL){
+    printf("%d) %s\n",i,x[i]);
+    i++;
+  }
 }
