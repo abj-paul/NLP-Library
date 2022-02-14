@@ -1,6 +1,5 @@
 
 #include<bits/stdc++.h>
-using namespace std;
 
 #define MAX_WORD_IN_A_SENTENCE 20
 #define MAX_WORD_SIZE 40
@@ -38,6 +37,19 @@ void string_concatenate(char first[], char second[], char sentence[]){
 }
 
 bool is_same_string(const char* str,char word[]){
+  //printf("Compare Strings Function.\n");
+  int n1 = string_len(str);
+  int n2 = string_len(word);
+
+  if(n1!=n2) return false;
+  //  printf("%s\n",word);
+  for(int i=0; i<n1; i++){
+    if(str[i]!=word[i]) return false;
+  }
+  return true;
+}
+
+bool is_same_string(const char* str,const char* word){
   //printf("Compare Strings Function.\n");
   int n1 = string_len(str);
   int n2 = string_len(word);
@@ -142,4 +154,14 @@ void print_string(const char* str){
     i++;
   }
   printf("\n");
+}
+
+void string_copy(char* source_array, const char* the_word){
+  int i=0;
+  while(the_word[i]!='\0'){
+    if(source_array[i]=the_word[i]);
+    i++;
+  }
+  source_array[i]='\0';
+  return;
 }

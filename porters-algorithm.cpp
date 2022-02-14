@@ -1,5 +1,4 @@
 
-
 #include "String-Library.cpp"
 #include "auxiliary.cpp"
 #define VOWEL 1
@@ -12,7 +11,13 @@ int m_value(const char* str);
 bool isConsonant(int i, const char* str);
 char capitalize(char c);
 bool isPunctuation(char c);
+bool regex(const char* condition, const char* str);
+
+bool ends_with(const char* suffix, const char* word);
+void replace_suffix(char* word, const char* prev_suffix, const char* new_suffix);
+char* get_stem(char* word);
 void test_functions(const char* test_string);
+
 
 int main(){
   test_functions("The skies are crying, I am watching, catching teardrops in my hands.");
@@ -70,7 +75,7 @@ char capitalize(char c){
 bool isPunctuation(char c){
   char all_punctuations[] = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~\\";
   //  print_string(all_punctuations);
-  int size = string_len(all_punctuations), i=0;
+  int i=0;
   while(all_punctuations[i]!=0){
     if(all_punctuations[i]==c) return true;
     i++;
@@ -79,8 +84,84 @@ bool isPunctuation(char c){
 }
 
 
+
+bool regex(const char* condition, const char* str){
+  int len = string_len(str);
+  
+  if(is_same_string("*s",condition)){
+    if(capitalize(str[string_len(str)-1])=='S'){
+      return true;
+    }else return false;
+  }
+  else if(is_same_string("*v*",condition)){
+    int i=0;
+    while(str[i]!='\0'){
+      if(!isConsonant(i,str) && !isPunctuation(str[i])) return true;
+      i++;
+    }
+    return false;
+  }
+  else if(is_same_string("*d",condition)){
+    if(len<=1) return false;
+    else if(isConsonant(len-1,str) && isConsonant(len-2, str)) return true;
+    else return false;
+  }
+  else if(is_same_string("*o",condition)){
+
+    if(len<=2) return false; 
+    else{
+      char c= capitalize(str[len-1]);
+      if(isConsonant(len-1, str) && c!='W' && c!='Y' && c!='X' && !isConsonant(len-2,str) && !isPunctuation(str[len-2]) && isConsonant(len-3,str)) return true;
+      else{
+	 return false;
+      }
+    }
+  }
+  return false; // Unknown Regex
+}
+
+
+bool ends_with(const char* suffix, const char* word){
+  if(string_len(suffix)>string_len(word)){
+    return false;
+  }
+
+  int n1 = string_len(word);
+  int n2 = string_len(suffix);
+
+  for(int i=n1-1, j=n2-1; j>=0; j--,i--){
+    if(word[i]!=suffix[j]) return false;
+  }
+  return true;
+}
+
+
+void replace_suffix(char* word, const char* prev_suffix, const char* new_suffix){
+  // cut -> Add
+
+  int stem_size = string_len(word)-string_len(prev_suffix), len=string_len(word);
+  word[stem_size] = '\0';
+  //  printf("After trimming Suffix: %s\n",word);
+  int i=INT_INITIALIZE_VALUE, j=INT_INITIALIZE_VALUE;
+
+  for(i=stem_size, j=0; i<len && j<string_len(new_suffix); i++, j++){
+    word[i]=new_suffix[j];
+  }
+  word[i]='\0';
+
+  //  printf("After adding new suffix: %s\n",word);
+}
+
+char* get_stem(char* word){
+  if(ends_with("sses",word)){ replace_suffix(word, "sses","ss"); return word;}
+  else if(ends_with("ies",word)){ replace_suffix(word, "ies","i"); return word;}
+  else if(ends_with("ss",word)){ replace_suffix(word, "ss","ss"); return word;}
+  else if(ends_with("s",word)){ replace_suffix(word, "s",""); return word;}
+
+  return NULL; // Invalid suffix
+}
 void test_functions(const char* test_string){
-  printf("X is punction? %d\n",isPunctuation('x'));
+  /*printf("X is punction? %d\n",isPunctuation('x'));
   printf("\' is punction? %d\n",isPunctuation('\''));
 
   // Testing
@@ -100,9 +181,9 @@ void test_functions(const char* test_string){
 
   int* x = vowel_consonant_count_array(test_string);
   print_array(x,string_len(test_string));
-  free(x);
+  free(x);*/
 
-  printf("m-value of TREE = %d\n",m_value("TREE"));
+  /*  printf("m-value of TREE = %d\n",m_value("TREE"));
   printf("m-value of BY = %d\n",m_value("BY"));
   printf("m-value of OATS = %d\n",m_value("OATS"));
   printf("m-value of TREES = %d\n",m_value("trees"));
@@ -111,5 +192,26 @@ void test_functions(const char* test_string){
   printf("m-value of TROUBLES = %d\n",m_value("troubles"));
   printf("m-value of OATEN = %d\n",m_value("oaten"));
   printf("m-value of PRIVATE = %d\n",m_value("private"));
-}
 
+
+  printf("Checking regex:\n");
+  printf("*v* : Plastered=%d\n",regex("*v*","Plastered"));
+  printf("*s : Walkers=%d\n",regex("*s","walkers"));
+  printf("*d : Caress=%d\n",regex("*d","Caress"));
+  printf("*o : Reganwil=%d\n",regex("*o","Reganwil"));*/
+
+  char editable_string[MAX_WORD_SIZE*2] = "Caresses";
+
+  printf("Caresses ends with %d\n",ends_with("sses",editable_string));
+  replace_suffix(editable_string, "sses", "ss");
+
+  string_copy(editable_string,"Caresses");
+  printf("Stem of Caresses is %s\n",editable_string,get_stem(editable_string));
+  string_copy(editable_string,"Tries");
+  printf("Stem of Tries is %s\n",editable_string,get_stem(editable_string));
+  string_copy(editable_string,"Caress");
+  printf("Stem of Caress is %s\n",editable_string,get_stem(editable_string));
+  string_copy(editable_string,"cats");
+  printf("Stem of cats is %s\n",editable_string,get_stem(editable_string));
+
+}
