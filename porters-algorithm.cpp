@@ -16,11 +16,11 @@ bool regex(const char* condition, const char* str);
 bool ends_with(const char* suffix, const char* word);
 void replace_suffix(char* word, const char* prev_suffix, const char* new_suffix);
 char* get_stem(char* word);
-void test_functions(const char* test_string);
+void test_functions();
 
 
 int main(){
-  test_functions("The skies are crying, I am watching, catching teardrops in my hands.");
+  test_functions();
   return 0;
 }
 
@@ -72,6 +72,13 @@ char capitalize(char c){
   return c;
 }
 
+char smallize(char c){
+  int offset = 'a' - 'A';
+  if(c>='A' && c<='Z') c=c+offset;
+  return c;
+
+}
+
 bool isPunctuation(char c){
   char all_punctuations[] = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~\\";
   //  print_string(all_punctuations);
@@ -84,12 +91,21 @@ bool isPunctuation(char c){
 }
 
 
+bool isCapital(char c){
+  if(c<='A' && c>='Z') return true;
+  return false;
+}
+
+bool regex(const char* condition, const char* str, int index){
+  if(capitalize(str[index])==capitalize(condition[1])) return true;
+  return false;
+}
 
 bool regex(const char* condition, const char* str){
   int len = string_len(str);
   
-  if(is_same_string("*s",condition)){
-    if(capitalize(str[string_len(str)-1])=='S'){
+  if(isCapital(condition[1])){
+    if(capitalize(str[string_len(str)-1])==condition[1]){
       return true;
     }else return false;
   }
@@ -130,7 +146,7 @@ bool ends_with(const char* suffix, const char* word){
   int n2 = string_len(suffix);
 
   for(int i=n1-1, j=n2-1; j>=0; j--,i--){
-    if(word[i]!=suffix[j]) return false;
+    if(capitalize(word[i])!=capitalize(suffix[j])) return false;
   }
   return true;
 }
@@ -145,7 +161,7 @@ void replace_suffix(char* word, const char* prev_suffix, const char* new_suffix)
   int i=INT_INITIALIZE_VALUE, j=INT_INITIALIZE_VALUE;
 
   for(i=stem_size, j=0; i<len && j<string_len(new_suffix); i++, j++){
-    word[i]=new_suffix[j];
+    word[i]=smallize(new_suffix[j]);
   }
   word[i]='\0';
 
@@ -153,14 +169,98 @@ void replace_suffix(char* word, const char* prev_suffix, const char* new_suffix)
 }
 
 char* get_stem(char* word){
-  if(ends_with("sses",word)){ replace_suffix(word, "sses","ss"); return word;}
-  else if(ends_with("ies",word)){ replace_suffix(word, "ies","i"); return word;}
-  else if(ends_with("ss",word)){ replace_suffix(word, "ss","ss"); return word;}
-  else if(ends_with("s",word)){ replace_suffix(word, "s",""); return word;}
+  // 1a
+  if(ends_with("sses",word)) replace_suffix(word, "sses","ss");
+  else if(ends_with("ies",word)) replace_suffix(word, "ies","i");
+  else if(ends_with("ss",word)) replace_suffix(word, "ss","ss");
+  else if(ends_with("s",word)) replace_suffix(word, "s","");
 
-  return NULL; // Invalid suffix
+  //1b
+  else if(m_value(word)>0 && ends_with("EED",word)) replace_suffix(word, "EED","EE");
+  else if(regex("*v*",word) && ends_with("ED",word)) replace_suffix(word, "ED","");
+  else if(regex("*v*",word) && ends_with("ING",word)) replace_suffix(word, "ING","");
+
+  // Correction rules
+  if(ends_with("AT",word)) replace_suffix(word, "AT","ATE");
+  else if(ends_with("BL",word)) replace_suffix(word, "BL","BLE");
+  else if(ends_with("IZ",word)) replace_suffix(word, "IZ","IZE");
+
+  //return word;
+
+  // 1C
+  if(regex("*v*",word) && ends_with("Y",word)) replace_suffix(word, "Y","I"); 
+
+  // Step 2
+  if(m_value(word)>0){
+    if(ends_with("ATIONAL",word)) replace_suffix(word, "TIONAL", "TION"); 
+    else if(ends_with("TIONAL",word)) replace_suffix(word, "TIONAL", "TION");
+    else if(ends_with("ENCI",word)) replace_suffix(word, "ENCI", "ENCE");
+    else if(ends_with("ANCI",word)) replace_suffix(word, "ANCI", "ANCE");
+    else if(ends_with("IZER",word)) replace_suffix(word, "IZER", "IZE");
+    else if(ends_with("ABLI",word)) replace_suffix(word, "ABLI", "ABLE");
+    else if(ends_with("ALLI",word)) replace_suffix(word, "ALLI", "AL");
+    else if(ends_with("ENTLI",word)) replace_suffix(word, "ENTLI", "ENT");
+    else if(ends_with("ELI",word)) replace_suffix(word, "ELI", "E");
+    else if(ends_with("OUSLI",word)) replace_suffix(word, "OUSLI", "OUS");
+    else if(ends_with("IZATION",word)) replace_suffix(word, "IZATION", "IZE");
+    else if(ends_with("ATION",word)) replace_suffix(word, "ATION", "ATE");
+    else if(ends_with("ATOR",word)) replace_suffix(word, "ATOR", "ATE");
+    else if(ends_with("ALISM",word)) replace_suffix(word, "ALISM", "AL");
+    else if(ends_with("IVENESS",word)) replace_suffix(word, "IVENESS", "IVE");
+    else if(ends_with("FULNESS",word)) replace_suffix(word, "FULNESS", "FUL");
+    else if(ends_with("OUSNESS",word)) replace_suffix(word, "OUSNESS", "OUS");
+    else if(ends_with("ALITI",word)) replace_suffix(word, "ALITI", "AL");
+    else if(ends_with("IVITI",word)) replace_suffix(word, "IVITI", "IVE");
+    else if(ends_with("BILITI",word)) replace_suffix(word, "BILITI", "BLE");
+  } 
+
+
+  // Step 3
+  if(m_value(word)>0){
+    if(ends_with("ICATE",word))  replace_suffix(word, "ICATE", "IC");
+    else if(ends_with("ATIVE",word))  replace_suffix(word, "ATIVE", "");
+    else if(ends_with("ALIZE",word))  replace_suffix(word, "ALIZE", "AL");
+    else if(ends_with("ICITI",word))  replace_suffix(word, "ICITI", "IC");
+    else if(ends_with("ICAL",word))  replace_suffix(word, "ICAL", "IC");
+    else if(ends_with("FUL",word))  replace_suffix(word, "FUL", "");
+    else if(ends_with("NESS",word))  replace_suffix(word, "NESS", "");
+  }
+
+  // Step 4
+  if(m_value(word)>1){
+    if(ends_with("AL",word))  replace_suffix(word, "AL", "");
+    else if(ends_with("ANCE",word))  replace_suffix(word, "ANCE", "");
+    else if(ends_with("ENCE",word))  replace_suffix(word, "ENCE", "");
+    else if(ends_with("ER",word))  replace_suffix(word, "ER", "");
+    else if(ends_with("IC",word))  replace_suffix(word, "IC", "");
+    else if(ends_with("ABLE",word))  replace_suffix(word, "ABLE", "");
+    else if(ends_with("IBLE",word))  replace_suffix(word, "IBLE", "");
+    else if(ends_with("ANT",word))  replace_suffix(word, "ANT", "");
+    else if(ends_with("EMENT",word))  replace_suffix(word, "EMENT", "");
+    else if(ends_with("MENT",word))  replace_suffix(word, "MENT", "");
+    else if(ends_with("ENT",word))  replace_suffix(word, "ENT", "");
+    
+    else if((regex("*S",word,string_len(word)-3) || regex("*T",word,string_len(word)-3) ) && ends_with("ION",word))  replace_suffix(word, "ION", "");
+    else if(ends_with("OU",word))  replace_suffix(word, "OU", "");
+    else if(ends_with("ISM",word))  replace_suffix(word, "ISM", "");
+    else if(ends_with("ATE",word))  replace_suffix(word, "ATE", "");
+    else if(ends_with("ITI",word))  replace_suffix(word, "ITI", "");
+    else if(ends_with("OUS",word))  replace_suffix(word, "OUS", "");
+    else if(ends_with("IVE",word))  replace_suffix(word, "IVE", "");
+    else if(ends_with("IZE",word))  replace_suffix(word, "IZE", "");
+
+
+    // Step 5a
+    if(m_value(word)>1 && ends_with("E",word))  replace_suffix(word, "E", "");
+    else if(m_value(word)==1 && !regex("*o",word) && ends_with("E",word))  replace_suffix(word, "E", "");
+
+    // Step 5b
+    if(m_value(word)>1 && regex("*d",word) && regex("*L",word)) replace_suffix(word, "L","");
+  }
+  
+  return word;
 }
-void test_functions(const char* test_string){
+void test_functions(){
   /*printf("X is punction? %d\n",isPunctuation('x'));
   printf("\' is punction? %d\n",isPunctuation('\''));
 
@@ -196,7 +296,7 @@ void test_functions(const char* test_string){
 
   printf("Checking regex:\n");
   printf("*v* : Plastered=%d\n",regex("*v*","Plastered"));
-  printf("*s : Walkers=%d\n",regex("*s","walkers"));
+  printf("*S : Walkers=%d\n",regex("*S","walkers"));
   printf("*d : Caress=%d\n",regex("*d","Caress"));
   printf("*o : Reganwil=%d\n",regex("*o","Reganwil"));*/
 
@@ -205,13 +305,21 @@ void test_functions(const char* test_string){
   printf("Caresses ends with %d\n",ends_with("sses",editable_string));
   replace_suffix(editable_string, "sses", "ss");
 
-  string_copy(editable_string,"Caresses");
-  printf("Stem of Caresses is %s\n",editable_string,get_stem(editable_string));
+  /*  string_copy(editable_string,"Caresses");
+  printf("Stem of Caresses is %s\n",get_stem(editable_string));
   string_copy(editable_string,"Tries");
-  printf("Stem of Tries is %s\n",editable_string,get_stem(editable_string));
+  printf("Stem of Tries is %s\n",get_stem(editable_string));
   string_copy(editable_string,"Caress");
-  printf("Stem of Caress is %s\n",editable_string,get_stem(editable_string));
+  printf("Stem of Caress is %s\n",get_stem(editable_string));
   string_copy(editable_string,"cats");
-  printf("Stem of cats is %s\n",editable_string,get_stem(editable_string));
+  printf("Stem of cats is %s\n",get_stem(editable_string));*/
+
+  // revival->reviv, adoption->adopt, formative->form, relational->relate, controlling->control, rolling->roll
+  char all_words[10][50] = {"revival","adoption","formative","relational","controlling"};
+  for(int i=0; i<5; i++){
+    string_copy(editable_string,all_words[i]);
+    printf("Stem of %s is ",editable_string);
+    printf("%s\n",get_stem(editable_string));
+  }
 
 }
