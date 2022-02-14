@@ -125,3 +125,21 @@ void print_word_list(char** x){
     i++;
   }
 }
+
+void print_string(char* str){
+  int i=0;
+  while(str[i]!='\0'){
+    printf("%c",str[i]);
+    i++;
+  }
+  printf("\n");
+}
+
+void print_string(const char* str){
+  int i=0;
+  while(str[i]!='\0'){
+    printf("%c",str[i]);
+    i++;
+  }
+  printf("\n");
+}
