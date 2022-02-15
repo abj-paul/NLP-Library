@@ -240,7 +240,7 @@ char* get_stem(char* word){
     else if(ends_with("MENT",word))  replace_suffix(word, "MENT", "");
     else if(ends_with("ENT",word))  replace_suffix(word, "ENT", "");
     
-    else if((regex("*S",word,string_len(word)-3) || regex("*T",word,string_len(word)-3) ) && ends_with("ION",word))  replace_suffix(word, "ION", "");
+    else if((regex("*S",word,string_len(word)-1-3) || regex("*T",word,string_len(word)-1-3) ) && ends_with("ION",word))  replace_suffix(word, "ION", "");
     else if(ends_with("OU",word))  replace_suffix(word, "OU", "");
     else if(ends_with("ISM",word))  replace_suffix(word, "ISM", "");
     else if(ends_with("ATE",word))  replace_suffix(word, "ATE", "");
@@ -255,7 +255,7 @@ char* get_stem(char* word){
     else if(m_value(word)==1 && !regex("*o",word) && ends_with("E",word))  replace_suffix(word, "E", "");
 
     // Step 5b
-    if(m_value(word)>1 && regex("*d",word) && regex("*L",word)) replace_suffix(word, "L","");
+    if(m_value(word)>1 && regex("*d",word) && regex("*L",word, string_len(word)-1)) replace_suffix(word, "L","");
   }
   
   return word;
