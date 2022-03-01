@@ -8,6 +8,9 @@
   Bangla wikipedia dump seems promising.
 ** NLP projects with bangla
    [[https://github.com/sagorbrur/bnlp][This github project looks nice]]
+
+* New NLP playlist
+  https://www.youtube.com/watch?v=n25JjoixM3I&list=PLLssT5z_DsK8BdawOVCCaTCO99Ya58ryR
 * Steps
   - Take input from file
   - Make a med word.
@@ -22,4 +25,13 @@
     - Create a file with 10 "you have"
     - Possible factor: punctuation
 ** 10 Feb - Know about scanf
-   So the punctuations were creating problems for us. To handle them, we need scanf.
+   So the punctuations were creating problems for us. To handle them, we need scanf
+   - Issues
+*** DONE Not enough heap
+    Its not heap issue because adding more words cause no issue.
+*** index becomes 0
+*** not allocated properly
+** 14 Feb - Porter, Complete it today!
+   - Make a function to find m value
+   - make condition functions
+   - Make a replace function
