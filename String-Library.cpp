@@ -1,8 +1,9 @@
+#include "String-Library.h"
 
-#include<bits/stdc++.h>
-
-#define MAX_WORD_IN_A_SENTENCE 20
-#define MAX_WORD_SIZE 40
+/*int main(){
+  string_len("Abhi");
+  return 0;
+  }*/
 
 int string_len(char* x){
   int i=0;

@@ -1,7 +1,8 @@
+#ifndef abj
 #include <bits/stdc++.h>
 #include "String-Library.cpp"
 using namespace std;
-
+#endif
 // Function Prototypes
 bool is_same_string(char* str,char* word);
 bool is_same_string(const char* str,char* word);

@@ -1,38 +1,12 @@
-#include<iostream>
-#include "auxiliary.cpp"
-#include "String-Library.cpp"
+#include "sentence-segmentation.h"
 
 
-namespace abj{
-  class SentenceSegmentation {
-  public:
-    std::vector<char*>sentence_list;
-    SentenceSegmentation(char* string);
-    void test_function();
-    void use_decision_tree();
-    ~SentenceSegmentation();
-  private:
-    char* str;
-    bool decision_tree(int i);
-    const char* punctuation_list_containing_file = "punctuation.txt";
-    char* punctuation_list = NULL;
-    int number_of_punctuation;
-    char* getPunctuationList(const char* filename);
-    bool isPunctuation(char c);
-    bool lots_of_space_after_it(int i);
-    bool isAbbreviation(char* str, int i);
-    void print_sentence(int start_index, int i);
-    char* make_sentence(int start_index, int i);
-  };
-}
-
-
-int main(){
+/*int main(){
   char main_string[] = "I am only human. Dr. Albert told me to fetch him. PhD. professors are often very helpful. Selena is a great singer!";
   abj::SentenceSegmentation ss(main_string) ;
   ss.test_function();
   return 0;
-}
+  }*/
 
 abj::SentenceSegmentation::SentenceSegmentation(char* string){
   //Prepare
