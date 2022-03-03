@@ -12,6 +12,7 @@ void string_concatenate(char first[], char second[], char sentence[]);
 bool is_same_string(const char* str,char word[]);
 bool is_same_string(const char* str,const char* word);
 bool is_same_string(char* str,const char* word);
+bool is_same_string(char* str, char* word);
 char** tokenizer_revamp(const char* str);
 char** tokenizer_revamp(char* str);
 void print_word_list(char** x);

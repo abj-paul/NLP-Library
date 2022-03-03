@@ -76,6 +76,20 @@ bool is_same_string(char* str,const char* word){
   return true;
 }
 
+bool is_same_string(char* str, char* word){
+  //printf("Compare Strings Function.\n");
+  int n1 = string_len(str);
+  int n2 = string_len(word);
+
+  if(n1!=n2) return false;
+  //printf("%s\n",word);
+  for(int i=0; i<n1; i++){
+    if(str[i]!=word[i]) return false;
+  }
+  return true;
+}
+
+
 char** tokenizer_revamp(const char* str){
   char** word_list = (char**)calloc(MAX_WORD_IN_A_SENTENCE, sizeof(char));
 

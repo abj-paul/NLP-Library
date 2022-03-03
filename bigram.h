@@ -7,6 +7,7 @@
 //#define CORPUS "korpus/stanfordSentimentTreebank/datasetSentences.txt"
 //#define CORPUS "LN-chapter.txt"
 #define CORPUS "small-corpus.txt"
+#define COMPILED_CORPUS "compiled-corpus.txt"
 
 namespace abj{
 class Bigram{
@@ -24,10 +25,16 @@ private:
   double probablity(char* first_word, char* second_word);
   double log(double value);
   std::vector<char*>  get_word_from_sentence(char* sentence);
+  std::vector<char*> get_word_from_sentence(const char* sentence);
   char* make_word(int start_index, int end_index, char* sentece);
+  char* make_word(int start_index, int end_index, const char* sentence);
 
 
   bool load_all_corpus_strings();
+  int get_word_count(char* word1, char* word2);
+  int get_word_count(char* worwordd);
+
+  double probablity(const char* sentence);
 };
 }
 

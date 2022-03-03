@@ -15,6 +15,7 @@
   - Take input from file
   - Make a med word.
   - Find spelling errors.
+  - [X] Adding Header files.
 * Days
 ** 9 Feb - Make language model 
    String matching.
@@ -35,3 +36,18 @@
    - Make a function to find m value
    - make condition functions
    - Make a replace function
+** 3March - Edit All files [5/9]
+   - [X] auxiliary.cpp
+   - [X] bigram.cpp
+   - [ ] find_string_match.cpp
+   - [ ] main.cpp
+   - [X] porters-algorithm.cpp
+   - [ ] sentence-probablity.cpp
+   - [X] sentence-segmentation.cpp
+   - [X] String-Library.cpp
+   - [ ] test-area.cpp
+*** Issues
+    - Flycheck can not detect iostream
+
+* Caution!
+  our bigram only works for mtl and speech recognition. Due to ~stemming~, it can no longer identify grammatical errors.
