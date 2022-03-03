@@ -4,7 +4,8 @@
 #ifndef abj
 #include "sentence-segmentation.cpp"
 #include "porters-algorithm.cpp"
-#define CORPUS "korpus/stanfordSentimentTreebank/datasetSentences.txt"
+//#define CORPUS "korpus/stanfordSentimentTreebank/datasetSentences.txt"
+#define CORPUS "LN-chapter.txt"
 
 namespace abj{
 class Bigram{
@@ -15,12 +16,15 @@ public:
 private:
   const char* compiled_corpus = "compiled_corpus.txt";
   FILE* corpus_fptr;
-  char* all_strings_in_corpus;
+  char* compiled_corpus_strings;
   bool compile_and_normalize_corpus();
   double probablity(char* first_word, char* second_word);
   double log(double value);
   std::vector<char*>  get_word_from_sentence(char* sentence);
   char* make_word(int start_index, int end_index, char* sentece);
+
+
+  bool load_all_corpus_strings();
 };
 }
 

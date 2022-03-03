@@ -166,3 +166,15 @@ void string_copy(char* source_array, const char* the_word){
   source_array[i]='\0';
   return;
 }
+
+bool string_concatenate(char* corpus, char* word, const char separator){
+  int index = string_len(corpus);
+  corpus[index]=separator;
+
+  int i=0,j=0;
+  for(i=index+1, j=0; word[j]!='\0'; i++, j++){
+    corpus[i]=word[j];
+  }
+  corpus[i]='\0';
+  return true;
+}

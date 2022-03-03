@@ -16,25 +16,32 @@ abj::Bigram::Bigram(const char* corpus){
   int size = ftell(this->corpus_fptr);
   fseek(this->corpus_fptr, 0L, SEEK_SET);
   
-  this->all_strings_in_corpus=(char*)calloc(size, sizeof(char));
+  this->compiled_corpus_strings=(char*)calloc(size, sizeof(char));
+  compiled_corpus_strings[0]='\0';
   
 }
 abj::Bigram::~Bigram(){
   fclose(this->corpus_fptr);
-  free(this->all_strings_in_corpus);
+  free(this->compiled_corpus_strings);
 }
 double probablity(){
   return 1; 
 }
 
 bool abj::Bigram::compile_and_normalize_corpus(){
-  SentenceSegmentation ss(this->all_strings_in_corpus);
+  SentenceSegmentation ss(this->compiled_corpus_strings);
   ss.use_decision_tree();
+  printf("Sentence list size: %d\n",ss.sentence_list.size());
   for(int i=0; i<ss.sentence_list.size(); i++){
-    //get_stem()
+    std::vector<char*>words = this->get_word_from_sentence(ss.sentence_list[i]);
+    printf("Word list size: %d\n",words.size());
+    for(int j=0; j<words.size(); j++){
+      string_concatenate(this->compiled_corpus_strings, get_stem(words[j]), ' ');
+    }
   }
   // free words and sentence
-  return -1;
+  printf("%s\n",this->compiled_corpus_strings);
+  return true;
 }
 
 std::vector<char*> abj::Bigram::get_word_from_sentence(char* sentence){
@@ -61,8 +68,23 @@ char* abj::Bigram::make_word(int start_index, int end_index, char* sentence){
   return word;
 }
 
+bool abj::Bigram::load_all_corpus_strings(){
+  while(!feof(this->corpus_fptr)){
+    char* passage = (char*)calloc(MAX_WORD_SIZE*100,sizeof(char));
+    fscanf(this->corpus_fptr,"%s",passage);
+    string_concatenate(this->compiled_corpus_strings, passage, ' ');
+    free(passage);
+  }
+  printf("Loading corpus: \n%s\n",this->compiled_corpus_strings);
+  return true;
+}
+
 void abj::Bigram::test_function(){
-  char str[] = "Abhi am only human hoooo.";
-  std::vector<char*>words = this->get_word_from_sentence(str);
-  for(int i=0; i<words.size(); i++) printf("%s\n",words[i]);
+  //char str[] = "Abhi am only human hoooo.";
+  //std::vector<char*>words = this->get_word_from_sentence(str);
+  //for(int i=0; i<words.size(); i++) printf("%s\n",words[i]);
+  //printf("Compiled Corpus:\n");
+  //  this->compile_and_normalize_corpus();
+  
+  this->load_all_corpus_strings();
 }

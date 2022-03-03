@@ -19,4 +19,6 @@ void print_string(char* str);
 void print_string(const char* str);
 void string_copy(char* source_array, const char* the_word);
 
+bool string_concatenate(char* corpus, char* word, const char separator);
+
 #endif

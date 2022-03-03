@@ -72,23 +72,7 @@ char* abj::SentenceSegmentation::getPunctuationList(const char* filename){
   return punctuation_list;
 }
 
-void abj::SentenceSegmentation::test_function(){
-  char* punctuation_list = this->getPunctuationList(this->punctuation_list_containing_file);
-
-  print_array(punctuation_list, this->number_of_punctuation);
-
-  char c = '!';
-  printf("%d\n",this->isPunctuation(c));
-  //  printf("Done printing.\n");
-
-  this->use_decision_tree();
-  printf("Number of sentences:%d\n",this->sentence_list.size());
-  for(int i=0; i<this->sentence_list.size(); i++){
-    printf("%s\n",this->sentence_list[i]);
-  }
- 
   // Punctuation List
-}
 abj::SentenceSegmentation::~SentenceSegmentation(){
   free(this->punctuation_list);
 }
@@ -132,3 +116,19 @@ char* abj::SentenceSegmentation::make_sentence(int start_index, int end_index){
   return store_in_heap;
 }
 
+void abj::SentenceSegmentation::test_function(){
+  char* punctuation_list = this->getPunctuationList(this->punctuation_list_containing_file);
+
+  print_array(punctuation_list, this->number_of_punctuation);
+
+  char c = '!';
+  printf("%d\n",this->isPunctuation(c));
+  //  printf("Done printing.\n");
+
+  this->use_decision_tree();
+  printf("Number of sentences:%d\n",this->sentence_list.size());
+  for(int i=0; i<this->sentence_list.size(); i++){
+    printf("%s\n",this->sentence_list[i]);
+  }
+}
+ 
