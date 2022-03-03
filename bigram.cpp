@@ -104,10 +104,10 @@ void abj::Bigram::test_function(){
       string_concatenate(this->compiled_corpus_strings, get_stem(words[i]), ' ');
     }
   }
+  printf(this->compiled_corpus_strings);
 
 
 
-  
 
   //printf("Compiled Corpus:\n");
   //this->compile_and_normalize_corpus();
