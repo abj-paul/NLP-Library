@@ -3,8 +3,6 @@
 int main(){
   abj::Bigram bg(CORPUS);
   bg.test_function();
-  printf("%s\n",bg.compiled_corpus_strings);
-  printf("Control reaches here before return.\n");
   return 0;
 }
 
@@ -77,7 +75,7 @@ char* abj::Bigram::make_word(int start_index, int end_index, char* sentence){
 
 bool abj::Bigram::load_all_corpus_strings(){
   while(!feof(this->corpus_fptr)){
-    char* passage = (char*)calloc(MAX_WORD_SIZE*1000,sizeof(char));
+    char* passage = (char*)calloc(MAX_WORD_SIZE,sizeof(char));
     fscanf(this->corpus_fptr,"%s",passage);
     string_concatenate(this->compiled_corpus_strings, passage, ' ');
     free(passage);
@@ -90,8 +88,29 @@ void abj::Bigram::test_function(){
   //char str[] = "Abhi am only human hoooo.";
   //std::vector<char*>words = this->get_word_from_sentence(str);
   //for(int i=0; i<words.size(); i++) printf("%s\n",words[i]);
-  printf("Compiled Corpus:\n");
-  this->compile_and_normalize_corpus();
-  printf("Control reaches here after test function.\n");
+
+  //Testing Sentence Segmentation
+  this->load_all_corpus_strings();
+  //printf("Loaded corpus: \n%s\n",this->compiled_corpus_strings);
+  SentenceSegmentation ss(this->compiled_corpus_strings);
+  ss.use_decision_tree();
+  free(compiled_corpus_strings);
+  for(int i=0; i<ss.sentence_list.size(); i++){
+    //printf("%d)%s\n",i+1, ss.sentence_list[i]);
+    std::vector<char*>words = get_word_from_sentence(ss.sentence_list[i]);
+    for(int i=0; i<words.size(); i++){
+      printf("%d)%s->",i+1, words[i]);
+      printf("%s\n",get_stem(words[i]));
+      string_concatenate(this->compiled_corpus_strings, get_stem(words[i]), ' ');
+    }
+  }
+
+
+
+  
+
+  //printf("Compiled Corpus:\n");
+  //this->compile_and_normalize_corpus();
+  //printf("Control reaches here after test function.\n");
   //  this->load_all_corpus_strings();
 }
