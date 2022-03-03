@@ -21,5 +21,6 @@ void print_string(const char* str);
 void string_copy(char* source_array, const char* the_word);
 
 bool string_concatenate(char* corpus, char* word, const char separator);
+bool string_insert_behind(char* str,int* index, char c);
 
 #endif

@@ -192,3 +192,20 @@ bool string_concatenate(char* corpus, char* word, const char separator){
   corpus[i]='\0';
   return true;
 }
+bool string_insert_behind(char* str,int* index, char c){
+  printf("Running for index=%d!\n",*index);
+  char behind_char=c;
+
+  int i=*index;
+  while(str[i]!='\0'){
+    char temp=str[i];
+    str[i]=behind_char;
+    behind_char = temp;
+    i++;
+  }
+  str[i]=behind_char;
+  str[i+1]='\0';
+
+  (*index)++;
+  return true;
+}

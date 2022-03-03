@@ -18,6 +18,9 @@ public:
 
   char* compiled_corpus_strings;
 private:
+  char start_symbol[MAX_WORD_SIZE] = "<s>";
+  char end_symbol[MAX_WORD_SIZE] = "</s>";
+  
   const char* compiled_corpus = "compiled_corpus.txt";
   FILE* corpus_fptr;
   int corpus_size=0;
@@ -35,6 +38,7 @@ private:
   int get_word_count(char* worwordd);
 
   double probablity(const char* sentence);
+  void naive_punctuation_handling(char* str);
 };
 }
 

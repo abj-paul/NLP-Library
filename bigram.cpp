@@ -45,15 +45,18 @@ bool abj::Bigram::compile_and_normalize_corpus(){
   compiled_corpus_strings[0]='\0';
   for(int i=0; i<ss.sentence_list.size(); i++){
     //printf("%d)%s\n",i+1, ss.sentence_list[i]);
+    string_concatenate(compiled_corpus_strings, this->start_symbol, ' ');
     std::vector<char*>words = get_word_from_sentence(ss.sentence_list[i]);
     for(int i=0; i<words.size(); i++){
       //  printf("%d)%s->",i+1, words[i]);
       //printf("%s\n",get_stem(words[i]));
       string_concatenate(this->compiled_corpus_strings, get_stem(words[i]), ' ');
     }
+    string_concatenate(compiled_corpus_strings, this->end_symbol, ' ');
   }
   //printf(this->compiled_corpus_strings);
-
+  this->naive_punctuation_handling(this->compiled_corpus_strings);
+  printf("%s\n",compiled_corpus_strings);
 
    // Creating new corpus
    FILE* compiled_fptr = fopen(COMPILED_CORPUS, "w");
@@ -162,8 +165,19 @@ int abj::Bigram::get_word_count(char* word){
   return count;
 }
 
+void abj::Bigram::naive_punctuation_handling(char* str){
+  char temp[5]="temp";
+  abj::SentenceSegmentation ss(temp);
+
+  int i=0;
+  while(str[i]!='\0'){
+    if(ss.isPunctuation(str[i])) string_insert_behind(str,&i,' ');
+    i++;
+  }
+}
+
 void abj::Bigram::test_function(){
-  //char str[] = "Abhi am only human hoooo.";
+  char str[] = "Abhi am only human hoooo.";
   //std::vector<char*>words = this->get_word_from_sentence(str);
   //for(int i=0; i<words.size(); i++) printf("%s\n",words[i]);
 
@@ -188,9 +202,14 @@ void abj::Bigram::test_function(){
   //printf("%s=%d",test_word,get_string_count(get_stem(test_word)));
   this->probablity("Antonio sacrificed himself");
 
+  //  string_insert_behind(str,18,'!');
+  //printf("\nInserting %c --> %s\n",'!',str);
+
 
   //printf("Compiled Corpus:\n");
   //this->compile_and_normalize_corpus();
   //printf("Control reaches here after test function.\n");
   //  this->load_all_corpus_strings();
 }
+
+
