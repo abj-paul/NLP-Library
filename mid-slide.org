@@ -1,0 +1,127 @@
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: toc:nil        (no default TOC at all)
+#+OPTIONS: num:nil
+#+OPTIONS: timestamp:nil toc:1 num:nil toc = table of content 
+
+
+#+TITLE: NLP Library
+#+DATE: 06.03.2022
+
+* About the project
+   | Created by-  | Supervised by      |
+   | Abhijit Paul | Dr. Zerina Begum   |
+   | 1201         | Professor, IIT, DU |
+* What is natural language processing?
+  Process information contained in natural language so that computer can interact with human. In a broad overview, 
+  #+begin_src text
+p(I eat rice) = p(I| START) * p(eat|I) * p(rice|eat) * p(END | eat)
+  #+end_src
+  And if we have a corpus or collection of texts, we can use that to find the probablity very easily.
+#+begin_src text
+p(eat|I) = c(I eat)/c(I)
+#+end_src
+#+REVEAL: split
+Of course, to build a library, we had to do a lot of:
+- Preprocessing
+- Normalizing
+- Interprolation
+** Why NLP
+   - Text is the largest repository of human knowledge and its growing quickly.
+     : Forumns, Numerous Articles, Helplines, Trends
+   - Its ~fun~ to work on. It reduces the distace between human and computer.
+* Challenges
+** Learning Curves
+   - Object Oriented Programming concepts implementation in C++.
+     : Syntax, Differences with java
+   - Natural Language Programming
+     : Dan Jurafsky, Stanford
+   - GNU Debugger for ease of debugging and it did wonders when we have a lot of different fuction calls.
+     : watch, display, backtrace
+** Challenges I have faced
+*** Heap management
+    #+begin_NOTES
+
+    I decided to do everything in raw c, but then I encountered this trouble in heap management. Some strings, like words when we stem them, should exist in the heap for a long time, over multiple functions. On the other hand, some strings should only exist in the heap for some time.
+    As we deal, manipulate and create string in almost all of the functions, it soon became an issue. The code works fine so far, but memory leak will surely cause problems later.
+    #+end_NOTES
+- Implementing everything in raw c.
+- Program grows in size and then, it becomes hard to understand where to free the heap.
+  : who uses who
+- We passed variables ~using pointer~ to reduce the overhead that comes from copying strings.
+*** Modularization
+#+begin_NOTES
+     I had a lot of files as I started working. And as a intuition,  I kept the files separated. like Functions that work with string should only remain in string library.
+
+    But it also soon become drought with trouble. A module only provides a few functions but it can have a lot of internal functions to keep it functioning. Thus keeping it all public makes it hard to find the right function from other modules, isolating problems and good naming sense. So we decided to introduce OOP at this point and it did wonders to our code.
+#+end_NOTES
+We used it as a extension of using classes.
+  - Fragmentation of file do not work!
+    : private, public scope. Why private does wonders?
+  - Hard to remember what I have done 7 days ago.
+    : header file
+  - Isolating problems to debug.
+*** Making a Maximum-matching Abbrebiation mathcer
+    : My own solution!
+    Sentence Segmentation was a major hurdle. A simple decision tree became inadequate to segment sentences.
+    [[file:decision-tree.jpeg]]
+    Abbrebiations are hard to handle this way! So instead, we decided to use a maximum matching algorithm.
+*** Simple Regex
+    We have developed a simple regex function to help with the ~porter's algorithm.~ 
+    - *S  (The stem ends with a letter. S={a-ZA-Z})
+    - *v* (The stem ~contains~ a vowel)
+    - *d  (The stem ends with double consonants)
+    - *o  (The stem ends in CVC wher the second C is not W,X or Y)
+** Challenges I will face
+*** Generating candidate set efficiently
+    For the latter part of our NLP library, we will need to generate a candidate set for spelling, grammatical or ambiguity error.
+    - Using a simple ~minimum edit distance~ algorithm.
+    - Using Simple classifiers to gain O(logn)
+*** Hardcoding Pronunciation Rules
+    Its a difficult one. We have yet to find a handy algorithm like porter's algorithm for stemming. We may hardcode rules from a grammar book.
+*** Coreference Resolution
+    Bigram works fine for most of the cases, except for when we have coreference issue. Like this-
+    #+begin_src text
+The work which was done by the machines in the past pays 7 dollar a month.
+    #+end_src
+    Here,
+    #+begin_src text
+	p(pays | past) <<<< p(pays | work)
+    #+end_src
+* How I solved the problems
+  We forsee a big speed in software development once we standarize the process.
+  - Using OOP
+    : Deallocation and management. It was a life saver!
+  - Using simple classifiers
+    : Arrange corpuses by folders like games,food etc
+  -Precomputation
+  : Huge amount of time. Google.
+** Parts of the project that I loved
+ I will very  ~Briefly talk about~ it.
+   - Implementing porters algorithm
+   - Using objects
+   - Reading the header file to understand previous works
+   - Isolately developing each module.
+* What we plan to do in the future?
+- Spam Detection
+- Named Entity Recognition
+- Speech Recognition
+- Sentence Correction
+** Project Structure
+   [[file:project-structure.png]]
+* Thank You!
+  My project is about 40% done.
+  Lines of Code = 1175
+  #+begin_src text
+      242 String-Library.cpp
+      29 String-Library.h
+      14 auxiliary.cpp
+      12 auxiliary.h
+     301 porters-algorithm.cpp
+      22 porters-algorithm.h
+     134 sentence-segmentation.cpp
+      33 sentence-segmentation.h
+     337 bigram.cpp
+      51 bigram.h
+    1175 total
+  #+end_src
+
