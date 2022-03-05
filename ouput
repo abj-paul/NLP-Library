@@ -1,0 +1,28 @@
+Enter a string(related to corpus): they watched antonio!
+Raw Corpus:
+Victorious soldiers were playing the holy musical instruments. The sky was turnning blurry while the angels were crying, as they watched Antonio sacrificing himself for the humanity. humanity. 
+-----------------------------------------------------------------------------------------
+Compiled Corpus:
+ <s>  Victori soldi were plai the holi mus instruments . </s> <s> The ski wa turnn blurri while the angel were crying, a thei watch Antonio sacrif himself for the humanity . </s>
+-----------------------------------------------------------------------------------------
+Our input is:
+they watched antonio!
+After normalizing, input string becomes:
+ <s> thei watch antonio ! </s>
+-----------------------------------------------------------------------------------------
+After sentence segmentation, we get the following sentences.
+1)  <s> thei watch antonio !
+For sentence 1, we get the following tokens(Stemmed).
+1) 
+2) <s>
+3) thei
+4) watch
+5) antonio
+6) !
+c(THEI | <S>)=0.00
+c(<S>)=2.00
+-----------------------------------------------------------------------------------------
+So probablity = -1.10
+c(WATCH | THEI)=0.00
+c(THEI)=1.00
+-----------------------------------------------------------------------------------------
