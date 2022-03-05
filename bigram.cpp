@@ -4,9 +4,9 @@
 int main(){
   char str[]= "Antonio sacrificed himself.";
   abj::Bigram bg(CORPUS);
-  bg.display_process_in_detail(str);
-  bg.test_function();
-  //bg.take_input_and_find_probablity();
+  //bg.display_process_in_detail(str);
+  //bg.test_function();
+  bg.take_input_and_find_probablity();
   return 0;
 }
 
@@ -271,29 +271,26 @@ void abj::Bigram::test_function(){
 }
 
 void abj::Bigram::take_input_and_find_probablity(){
-  this->compile_and_normalize_corpus();
-  char str[MAX_WORD_SIZE*100];
+  char input_str[MAX_WORD_SIZE*100];
   printf("Enter a string(related to corpus): ");
-  scanf("%[^\n]s",&str);
-  printf("Our input is: %s\n",str);
-  printf("After normalizing: %s\n",this->normalize_string(str));
-  printf("Total Probablity=%lf\n",this->probablity(this->normalize_string(str)));
+  scanf("%[^\n]s",input_str);
+  this->display_process_in_detail(input_str);
 }
 
 void abj::Bigram::display_process_in_detail(char* input_str){
   printf("Raw Corpus:\n");
   this->print_raw_corpus();
   this->compile_and_normalize_corpus();
-  printf("Compiled Corpus:\n");
+  printf("\n-----------------------------------------------------------------------------------------\nCompiled Corpus:\n");
   this->print_compiled_corpus();
 
-  printf("Our input is:\n%s\n",input_str);
+  printf("-----------------------------------------------------------------------------------------\nOur input is:\n%s\n",input_str);
   printf("After normalizing, input string becomes:\n%s\n",this->normalize_string(input_str));
   string_copy(input_str, this->normalize_string(input_str));
 
   SentenceSegmentation ss(input_str);
   ss.use_decision_tree();
-  printf("After sentence segmentation, we get the following sentences.\n");
+  printf("-----------------------------------------------------------------------------------------\nAfter sentence segmentation, we get the following sentences.\n");
   print_vector(ss.sentence_list);
 
 
@@ -311,14 +308,14 @@ void abj::Bigram::display_process_in_detail(char* input_str){
       printf("c(%s)=%.2lf\n",words[word_count], single);
 
       double prob = std::log((both+1)/(single+1));
-      printf("So probablity = %.2lf\n",prob);
+      printf("-----------------------------------------------------------------------------------------\nSo probablity = %.2lf\n",prob);
 
       total_prob_sentence +=prob;
     }
     printf("Probablity for the sentence is=%.2lf\n",total_prob_sentence);
     total_prob += total_prob_sentence;
   }
-  printf("Total Probablity for the passage is=%.2lf\n",total_prob);
+  printf("---------------------------\nTotal Probablity for the passage is=%.2lf\n",total_prob);
 }
 
 void abj::Bigram::print_raw_corpus(){
