@@ -13,12 +13,17 @@ int string_len(char* x){
   return i;
 }
 int string_len(const char* x){
+  if(x==NULL){
+    printf("Error occurred at - %s\n",x);
+    return 0;
+  }
   int i=0;
   while(x[i]!='\0'){
     i++;
   }
   return i;
 }
+
 
 void string_concatenate(char first[], char second[], char sentence[]){
   int i=0;
@@ -193,7 +198,7 @@ bool string_concatenate(char* corpus, char* word, const char separator){
   return true;
 }
 bool string_insert_behind(char* str,int* index, char c){
-  printf("Running for index=%d!\n",*index);
+  //  printf("Running for index=%d!\n",*index);
   char behind_char=c;
 
   int i=*index;
@@ -208,4 +213,30 @@ bool string_insert_behind(char* str,int* index, char c){
 
   (*index)++;
   return true;
+}
+
+char capitalize(char c){
+  int offset = 'a' - 'A';
+  if(c>='a' && c<='z') c=c-offset;
+  return c;
+}
+
+
+char* capitalize(char* str){
+  int i=0;
+  while(str[i]!='\0'){
+    str[i]=capitalize(str[i]);
+    i++;
+  }
+  return str;
+}
+
+void string_copy(char* source_array, char* the_word){
+  int i=0;
+  while(the_word[i]!='\0'){
+    if(source_array[i]=the_word[i]);
+    i++;
+  }
+  source_array[i]='\0';
+  return;
 }

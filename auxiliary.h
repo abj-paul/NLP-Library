@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 
 #ifndef _AUXILIARY_H
 
@@ -7,4 +8,5 @@
 
 void print_array(int *x, int size);
 void print_array(char *x, int size);
+void print_vector(std::vector<char*> x);
 #endif

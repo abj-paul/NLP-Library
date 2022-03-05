@@ -10,7 +10,6 @@
 int* vowel_consonant_count_array(const char* str);
 int m_value(const char* str);
 bool isConsonant(int i, const char* str);
-char capitalize(char c);
 bool isPunctuation(char c);
 bool regex(const char* condition, const char* str);
 

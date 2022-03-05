@@ -17,15 +17,18 @@ public:
   ~Bigram();
 
   char* compiled_corpus_strings;
+  void take_input_and_find_probablity();
+  void display_process_in_detail(char* str);
+  void unigram(char* str);
 private:
   char start_symbol[MAX_WORD_SIZE] = "<s>";
   char end_symbol[MAX_WORD_SIZE] = "</s>";
   
-  const char* compiled_corpus = "compiled_corpus.txt";
+  const char* compiled_corpus = COMPILED_CORPUS;
   FILE* corpus_fptr;
   int corpus_size=0;
   bool compile_and_normalize_corpus();
-  double probablity(char* first_word, char* second_word);
+  double probablity(char* sentence);
   double log(double value);
   std::vector<char*>  get_word_from_sentence(char* sentence);
   std::vector<char*> get_word_from_sentence(const char* sentence);
@@ -39,6 +42,9 @@ private:
 
   double probablity(const char* sentence);
   void naive_punctuation_handling(char* str);
+  char* normalize_string(char* str);
+  void print_raw_corpus();
+  void print_compiled_corpus();
 };
 }
 

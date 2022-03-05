@@ -47,11 +47,6 @@ bool isConsonant(int i, const char* str){
   return false; // Punctuations are not consonants
 }
 
-char capitalize(char c){
-  int offset = 'a' - 'A';
-  if(c>='a' && c<='z') c=c-offset;
-  return c;
-}
 
 char smallize(char c){
   int offset = 'a' - 'A';

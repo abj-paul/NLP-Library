@@ -1,8 +1,12 @@
 #include "bigram.h"
+#include<cmath> // for only one function = log
 
 int main(){
+  char str[]= "Antonio sacrificed himself.";
   abj::Bigram bg(CORPUS);
+  bg.display_process_in_detail(str);
   bg.test_function();
+  //bg.take_input_and_find_probablity();
   return 0;
 }
 
@@ -21,14 +25,31 @@ abj::Bigram::Bigram(const char* corpus){
   
 }
 abj::Bigram::~Bigram(){
-  printf("\nDestruction!\n");
+  //printf("\nDestruction!\n");
   //  fclose(this->corpus_fptr);
   //free(this->compiled_corpus_strings);
 }
+double abj::Bigram::probablity(char* sentence){
+  std::vector<char*>word = this->get_word_from_sentence(sentence);
+  //print_vector(word);
+  double total_prob=1;
+  for(int i=1; i<=word.size()-1; i++){
+    double prob = 0;
+    (double)get_word_count(get_stem(word[i]), (get_stem(word[i+1])))/(double)get_word_count(get_stem(word[i]));
+    printf("%s %s / %s = %lf\n", word[i], word[i+1], word[i],prob);
+    if(prob=0){
+      total_prob=0.01;
+      prob=0.01;
+    }
+    total_prob = total_prob+std::log(prob);
+  }
+  return total_prob;
+}
 double abj::Bigram::probablity(const char* sentence){
   std::vector<char*>word = this->get_word_from_sentence(sentence);
+  //print_vector(word);
   double total_prob=1;
-  for(int i=0; i<word.size()-1; i++){
+  for(int i=0; i<=word.size()-1; i++){
     double prob = (double)get_word_count(get_stem(word[i]),get_stem(word[i+1]))/(double)get_word_count(get_stem(word[i]));
     printf("%s %s / %s = %lf\n", word[i], word[i+1], word[i],prob);
     total_prob*=prob;
@@ -56,7 +77,7 @@ bool abj::Bigram::compile_and_normalize_corpus(){
   }
   //printf(this->compiled_corpus_strings);
   this->naive_punctuation_handling(this->compiled_corpus_strings);
-  printf("%s\n",compiled_corpus_strings);
+  //printf("%s\n",compiled_corpus_strings);
 
    // Creating new corpus
    FILE* compiled_fptr = fopen(COMPILED_CORPUS, "w");
@@ -136,14 +157,17 @@ bool abj::Bigram::load_all_corpus_strings(){
 
 
 int abj::Bigram::get_word_count(char* word1, char* word2){
+  capitalize(word1);
+  capitalize(word2);
+  
   FILE* fptr = fopen(COMPILED_CORPUS, "r");
   char word1_corpus[MAX_WORD_SIZE], word2_corpus[MAX_WORD_SIZE];
   int i=0, count=0;
   while(this->compiled_corpus_strings[i]!='\0'){
     fscanf(fptr,"%s %s",word1_corpus, word2_corpus);
-    if(is_same_string(word1, word1_corpus) && is_same_string(word2, word2_corpus)){
-      count++;
-    }
+     capitalize(word1_corpus);
+     capitalize(word2_corpus);
+    if(is_same_string( (word1),  (word1_corpus)) && is_same_string( (word2),  (word2_corpus)))  count++;
     i++;
   }
   fclose(fptr);
@@ -151,12 +175,14 @@ int abj::Bigram::get_word_count(char* word1, char* word2){
 }
 
 int abj::Bigram::get_word_count(char* word){
+  capitalize(word);
   FILE* fptr = fopen(COMPILED_CORPUS, "r");
   char word_corpus[MAX_WORD_SIZE];
   int i=0, count=0;
   while(this->compiled_corpus_strings[i]!='\0'){
     fscanf(fptr,"%s",word_corpus);
-    if(is_same_string(word, word_corpus)){
+     capitalize(word_corpus);
+    if(is_same_string( (word), word_corpus)){
       count++;
     }
     i++;
@@ -175,9 +201,33 @@ void abj::Bigram::naive_punctuation_handling(char* str){
     i++;
   }
 }
+char* abj::Bigram::normalize_string(char* str){
+  SentenceSegmentation ss(str);
+  ss.use_decision_tree();
+
+  //  print_vector(ss.sentence_list);
+
+  char* normalized_str = (char*)calloc(string_len(str),sizeof(char));
+  normalized_str[0]='\0';
+  
+for(int i=0; i<ss.sentence_list.size(); i++){
+    //printf("%d)%s\n",i+1, ss.sentence_list[i]);
+    string_concatenate(normalized_str, this->start_symbol, ' ');
+    std::vector<char*>words = get_word_from_sentence(ss.sentence_list[i]);
+    for(int i=0; i<words.size(); i++){
+      //  printf("%d)%s->",i+1, words[i]);
+      //printf("%s\n",get_stem(words[i]));
+      string_concatenate(normalized_str, get_stem(words[i]), ' ');
+    }
+    string_concatenate(normalized_str, this->end_symbol, ' ');
+  }
+  this->naive_punctuation_handling(normalized_str);
+  return normalized_str;
+}
+
 
 void abj::Bigram::test_function(){
-  char str[] = "Abhi am only human hoooo.";
+  //char str[] = "Abhi am only human hoooo.";
   //std::vector<char*>words = this->get_word_from_sentence(str);
   //for(int i=0; i<words.size(); i++) printf("%s\n",words[i]);
 
@@ -197,19 +247,94 @@ void abj::Bigram::test_function(){
     }
   }
   printf(this->compiled_corpus_strings);*/
-  this->compile_and_normalize_corpus(); //Only line that matters
+  // FINAL this->compile_and_normalize_corpus(); //Only line that matters
   //char test_word[] = "Victorious";
   //printf("%s=%d",test_word,get_string_count(get_stem(test_word)));
-  this->probablity("Antonio sacrificed himself");
+  // FINAL this->probablity("Antonio sacrificed himself");
+  //this->probablity(normalize_string("Antonio sacrificed himself"));
 
   //  string_insert_behind(str,18,'!');
   //printf("\nInserting %c --> %s\n",'!',str);
+
+  //char str[] = "the";
+  //printf("the=%d\n",get_word_count(get_stem(str)));
 
 
   //printf("Compiled Corpus:\n");
   //this->compile_and_normalize_corpus();
   //printf("Control reaches here after test function.\n");
   //  this->load_all_corpus_strings();
+  //this->input_string_and_get_probablity();
+
+  char temp0[] = "sacrificed";
+  printf("Sacrificed - occurs: %d\n",this->get_word_count(get_stem(temp0)));
 }
 
+void abj::Bigram::take_input_and_find_probablity(){
+  this->compile_and_normalize_corpus();
+  char str[MAX_WORD_SIZE*100];
+  printf("Enter a string(related to corpus): ");
+  scanf("%[^\n]s",&str);
+  printf("Our input is: %s\n",str);
+  printf("After normalizing: %s\n",this->normalize_string(str));
+  printf("Total Probablity=%lf\n",this->probablity(this->normalize_string(str)));
+}
 
+void abj::Bigram::display_process_in_detail(char* input_str){
+  printf("Raw Corpus:\n");
+  this->print_raw_corpus();
+  this->compile_and_normalize_corpus();
+  printf("Compiled Corpus:\n");
+  this->print_compiled_corpus();
+
+  printf("Our input is:\n%s\n",input_str);
+  printf("After normalizing, input string becomes:\n%s\n",this->normalize_string(input_str));
+  string_copy(input_str, this->normalize_string(input_str));
+
+  SentenceSegmentation ss(input_str);
+  ss.use_decision_tree();
+  printf("After sentence segmentation, we get the following sentences.\n");
+  print_vector(ss.sentence_list);
+
+
+  double total_prob=0;
+  for(int sentence_count=0; sentence_count<ss.sentence_list.size(); sentence_count++){
+    std::vector<char*>words = this->get_word_from_sentence(ss.sentence_list[sentence_count]);
+    printf("For sentence %d, we get the following tokens(Stemmed).\n",sentence_count+1);
+    print_vector(words);
+
+    double total_prob_sentence=0;
+    for(int word_count=1; word_count<words.size()-1; word_count++){
+      double both = (double)get_word_count(words[word_count],words[word_count+1]);
+      double single = (double)get_word_count(words[word_count]);
+      printf("c(%s | %s)=%.2lf\n",words[word_count+1],words[word_count], both);
+      printf("c(%s)=%.2lf\n",words[word_count], single);
+
+      double prob = std::log((both+1)/(single+1));
+      printf("So probablity = %.2lf\n",prob);
+
+      total_prob_sentence +=prob;
+    }
+    printf("Probablity for the sentence is=%.2lf\n",total_prob_sentence);
+    total_prob += total_prob_sentence;
+  }
+  printf("Total Probablity for the passage is=%.2lf\n",total_prob);
+}
+
+void abj::Bigram::print_raw_corpus(){
+  char str[MAX_WORD_SIZE];
+  while(!feof(this->corpus_fptr)){
+    fscanf(this->corpus_fptr,"%s", str);
+    printf("%s ",str);
+  }
+  fseek(this->corpus_fptr, 0L, SEEK_SET);
+}
+
+void abj::Bigram::print_compiled_corpus(){
+  printf("%s\n",this->compiled_corpus_strings);
+}
+
+void abj::Bigram::unigram(char* str){
+  string_copy(str, normalize_string(str));
+  std::vector<char*>words = get_word_from_sentence(str);
+}
