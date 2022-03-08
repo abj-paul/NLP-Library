@@ -94,7 +94,6 @@ int abj::Vector<T>::getSize(){
 int main(){
 	abj::Vector<const char*> x;
 	abj::Vector<const char*> y;
-	abj::Vector<const char*> z;
 
 	char a[] = "Abhi";
 	char b[] = "Jit";
@@ -108,5 +107,9 @@ int main(){
 
 	y.push(x);
 	y.print();
+	y.push("Empire!");
+
+	abj::Vector<const char*> z(y);
+	z.print();
 return 0;
 }
