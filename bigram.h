@@ -5,8 +5,8 @@
 #include "sentence-segmentation.cpp"
 #include "porters-algorithm.cpp"
 //#define CORPUS "korpus/stanfordSentimentTreebank/datasetSentences.txt"
-//#define CORPUS "LN-chapter.txt"
-#define CORPUS "small-corpus.txt"
+#define CORPUS "LN-chapter.txt"
+//#define CORPUS "small-corpus.txt"
 #define COMPILED_CORPUS "compiled-corpus.txt"
 
 namespace abj{

@@ -127,7 +127,7 @@ std::vector<char*> abj::Bigram::get_word_from_sentence(const char* sentence){
 
 char* abj::Bigram::make_word(int start_index, int end_index, char* sentence){
   if(start_index>=corpus_size || end_index>=corpus_size) return NULL; 
-  char* word = (char*)calloc(MAX_WORD_SIZE*2, sizeof(char));
+  char* word = (char*)calloc(MAX_WORD_SIZE*3, sizeof(char));
   int i=0,j=0;
   for(i=start_index,j=0; i<=end_index; i++,j++) word[j]=sentence[i];
   word[i]='\0';
@@ -136,7 +136,7 @@ char* abj::Bigram::make_word(int start_index, int end_index, char* sentence){
 
 char* abj::Bigram::make_word(int start_index, int end_index, const char* sentence){
   if(start_index>=corpus_size || end_index>=corpus_size) return NULL; 
-  char* word = (char*)calloc(MAX_WORD_SIZE*2, sizeof(char));
+  char* word = (char*)calloc(MAX_WORD_SIZE*3, sizeof(char));
   int i=0,j=0;
   for(i=start_index,j=0; i<=end_index; i++,j++) word[j]=sentence[i];
   word[i]='\0';

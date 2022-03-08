@@ -31,20 +31,20 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#/slide-org60097e0">About the project</a></li>
-<li><a href="#/slide-org3a4f6dd">What is natural language processing?</a></li>
-<li><a href="#/slide-org74f5a75">Challenges</a></li>
-<li><a href="#/slide-org1f7f3b8">How I solved the problems</a></li>
-<li><a href="#/slide-org3022e20">What we plan to do in the future?</a></li>
-<li><a href="#/slide-org86aa3d7">Thank You!</a></li>
+<li><a href="#/slide-orgd9afa06">About the project</a></li>
+<li><a href="#/slide-org74dbc77">What is natural language processing?</a></li>
+<li><a href="#/slide-org7fe0e07">Challenges</a></li>
+<li><a href="#/slide-orgecb958c">How I solved the problems</a></li>
+<li><a href="#/slide-org0c36767">What we plan to do in the future?</a></li>
+<li><a href="#/slide-org1df16c4">Thank You!</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-org60097e0">
-<h2 id="org60097e0">About the project</h2>
+<section id="slide-orgd9afa06">
+<h2 id="orgd9afa06">About the project</h2>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -73,8 +73,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org3a4f6dd">
-<h2 id="org3a4f6dd">What is natural language processing?</h2>
+<section id="slide-org74dbc77">
+<h2 id="org74dbc77">What is natural language processing?</h2>
 <p>
 Process information contained in natural language so that computer can interact with human. In a broad overview, 
 </p>
@@ -92,7 +92,7 @@ And if we have a corpus or collection of texts, we can use that to find the prob
 </code></pre>
 </div>
 </section>
-<section id="slide-org3a4f6dd-split">
+<section id="slide-org74dbc77-split">
 <p>
 Of course, to build a library, we had to do a lot of:
 </p>
@@ -103,8 +103,8 @@ Of course, to build a library, we had to do a lot of:
 
 </ul>
 </section>
-<section id="slide-orgf7b305d">
-<h3 id="orgf7b305d">Why NLP</h3>
+<section id="slide-org78f4795">
+<h3 id="org78f4795">Why NLP</h3>
 <ul>
 <li><p>
 Text is the largest repository of human knowledge and its growing quickly.
@@ -118,13 +118,13 @@ Forumns, Numerous Articles, Helplines, Trends
 </section>
 </section>
 <section>
-<section id="slide-org74f5a75">
-<h2 id="org74f5a75">Challenges</h2>
-<div class="outline-text-2" id="text-org74f5a75">
+<section id="slide-org7fe0e07">
+<h2 id="org7fe0e07">Challenges</h2>
+<div class="outline-text-2" id="text-org7fe0e07">
 </div>
 </section>
-<section id="slide-org6845a2d">
-<h3 id="org6845a2d">Learning Curves</h3>
+<section id="slide-orgcb807a3">
+<h3 id="orgcb807a3">Learning Curves</h3>
 <ul>
 <li><p>
 Object Oriented Programming concepts implementation in C++.
@@ -147,13 +147,13 @@ watch, display, backtrace
 
 </ul>
 </section>
-<section id="slide-orgd82e174">
-<h3 id="orgd82e174">Challenges I have faced</h3>
-<div class="outline-text-3" id="text-orgd82e174">
+<section id="slide-orga38de7e">
+<h3 id="orga38de7e">Challenges I have faced</h3>
+<div class="outline-text-3" id="text-orga38de7e">
 </div>
 </section>
-<section id="slide-org1e4461c">
-<h4 id="org1e4461c">Heap management</h4>
+<section id="slide-orgd7d5789">
+<h4 id="orgd7d5789">Heap management</h4>
 <aside class="notes">
 <p>
 
@@ -177,8 +177,8 @@ who uses who
 
 </ul>
 </section>
-<section id="slide-org2d0bc5c">
-<h4 id="org2d0bc5c">Modularization</h4>
+<section id="slide-orgfad4522">
+<h4 id="orgfad4522">Modularization</h4>
 <aside class="notes">
 <p>
 I had a lot of files as I started working. And as a intuition,  I kept the files separated. like Functions that work with string should only remain in string library.
@@ -209,20 +209,20 @@ header file
 
 </ul>
 </section>
-<section id="slide-org03694b7">
-<h4 id="org03694b7">Making a Maximum-matching Abbrebiation mathcer</h4>
+<section id="slide-org66e9b7f">
+<h4 id="org66e9b7f">Making a Maximum-matching Abbrebiation mathcer</h4>
 <pre class="example">
 My own solution!
 </pre>
 
 <p>
 Sentence Segmentation was a major hurdle. A simple decision tree became inadequate to segment sentences.
-<img src="decision-tree.jpeg" alt="decision-tree.jpeg" />
+<img src="https://github.com/abj-paul/NLP-Library/blob/main/decision-tree.jpeg" alt="decision-tree.jpeg" />
 Abbrebiations are hard to handle this way! So instead, we decided to use a maximum matching algorithm.
 </p>
 </section>
-<section id="slide-org89087fb">
-<h4 id="org89087fb">Simple Regex</h4>
+<section id="slide-orgea6251d">
+<h4 id="orgea6251d">Simple Regex</h4>
 <p>
 We have developed a simple regex function to help with the <code>porter's algorithm.</code> 
 </p>
@@ -234,13 +234,13 @@ We have developed a simple regex function to help with the <code>porter's algori
 
 </ul>
 </section>
-<section id="slide-org8c86268">
-<h3 id="org8c86268">Challenges I will face</h3>
-<div class="outline-text-3" id="text-org8c86268">
+<section id="slide-org66078a1">
+<h3 id="org66078a1">Challenges I will face</h3>
+<div class="outline-text-3" id="text-org66078a1">
 </div>
 </section>
-<section id="slide-org9e150f9">
-<h4 id="org9e150f9">Generating candidate set efficiently</h4>
+<section id="slide-org02b6adc">
+<h4 id="org02b6adc">Generating candidate set efficiently</h4>
 <p>
 For the latter part of our NLP library, we will need to generate a candidate set for spelling, grammatical or ambiguity error.
 </p>
@@ -250,14 +250,14 @@ For the latter part of our NLP library, we will need to generate a candidate set
 
 </ul>
 </section>
-<section id="slide-org7fc07ed">
-<h4 id="org7fc07ed">Hardcoding Pronunciation Rules</h4>
+<section id="slide-orgceffd88">
+<h4 id="orgceffd88">Hardcoding Pronunciation Rules</h4>
 <p>
 Its a difficult one. We have yet to find a handy algorithm like porter's algorithm for stemming. We may hardcode rules from a grammar book.
 </p>
 </section>
-<section id="slide-org497cd61">
-<h4 id="org497cd61">Coreference Resolution</h4>
+<section id="slide-org9d096f1">
+<h4 id="org9d096f1">Coreference Resolution</h4>
 <p>
 Bigram works fine for most of the cases, except for when we have coreference issue. Like this-
 </p>
@@ -277,8 +277,8 @@ Here,
 </section>
 </section>
 <section>
-<section id="slide-org1f7f3b8">
-<h2 id="org1f7f3b8">How I solved the problems</h2>
+<section id="slide-orgecb958c">
+<h2 id="orgecb958c">How I solved the problems</h2>
 <p>
 We forsee a big speed in software development once we standarize the process.
 </p>
@@ -304,8 +304,8 @@ Arrange corpuses by folders like games,food etc
 Huge amount of time. Google.
 </pre>
 </section>
-<section id="slide-org39fa73e">
-<h3 id="org39fa73e">Parts of the project that I loved</h3>
+<section id="slide-org97acbc0">
+<h3 id="org97acbc0">Parts of the project that I loved</h3>
 <p>
 I will very  <code>Briefly talk about</code> it.
 </p>
@@ -319,8 +319,8 @@ I will very  <code>Briefly talk about</code> it.
 </section>
 </section>
 <section>
-<section id="slide-org3022e20">
-<h2 id="org3022e20">What we plan to do in the future?</h2>
+<section id="slide-org0c36767">
+<h2 id="org0c36767">What we plan to do in the future?</h2>
 <ul>
 <li>Spam Detection</li>
 <li>Named Entity Recognition</li>
@@ -329,18 +329,18 @@ I will very  <code>Briefly talk about</code> it.
 
 </ul>
 </section>
-<section id="slide-org516cbbc">
-<h3 id="org516cbbc">Project Structure</h3>
+<section id="slide-orgf8966d6">
+<h3 id="orgf8966d6">Project Structure</h3>
 
-<div id="orgcc7493d" class="figure">
+<div id="orgbf266b3" class="figure">
 <p><img src="project-structure.png" alt="project-structure.png" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org86aa3d7">
-<h2 id="org86aa3d7">Thank You!</h2>
+<section id="slide-org1df16c4">
+<h2 id="org1df16c4">Thank You!</h2>
 <p>
 My project is about 40% done.
 Lines of Code = 1175
