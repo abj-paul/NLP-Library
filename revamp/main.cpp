@@ -1,6 +1,8 @@
-#include "String.h"
+#include<iostream>
+#include "lib_string.h"
 
 int main(){
-	abj::String::test_function();
+	abj::String s;
+	s.test_function();
 return 0;
 }
