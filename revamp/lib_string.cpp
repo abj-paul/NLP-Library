@@ -18,9 +18,9 @@ abj::String::String(abj::String& data){ // RISKY!!!! because both data and "this
 abj::String::String(const char* data){
 	// Getting String Size
 	int size = 0;
-	while(data[size]!='\0') size++;	
+	while(data[size]!='\0') size++;
 
-	this->storage = (char*)calloc(size+1,sizeof(char));	
+	this->storage = (char*)calloc(size+1,sizeof(char));
 
 	for(int i=0; i<size; i++) this->storage[i]=data[i];
 	this->storage[size]='\0';
@@ -52,7 +52,7 @@ abj::String::String(char* data, int FLAG){
 
 
 int abj::String::size(){
-	return this->curr_size;		
+	return this->curr_size;
 }
 
 void abj::String::print(){
@@ -61,7 +61,7 @@ void abj::String::print(){
 
 char abj::String::capitalize(char c){
 	int offset = 'a'-'A';
-	if(c>='a' && c<='z') c=c-offset; 
+	if(c>='a' && c<='z') c=c-offset;
 	return c;
 }
 
@@ -71,7 +71,7 @@ void abj::String::capitalize(){
 
 char* abj::String::get_raw_data(){
 	char* temp = (char*)calloc(this->curr_size+1, sizeof(char));
-	
+
 	for(int i=0; i<this->curr_size; i++){
 		temp[i]	= this->storage[i];
 	}
@@ -98,8 +98,8 @@ void abj::String::resize(int size){
 void abj::String::concatenate_at_end(abj::String str, char separator){
 	// Getting String Size
 	int str_size=0;
-	while(str[str_size]!='\0') str_size++;
-	
+	while(str.get(str_size)!='\0') str_size++;
+
 	int old_size = this->curr_size;
 	this->resize(this->curr_size+str_size);
 
@@ -140,15 +140,19 @@ bool abj::String::equals(const char* data){
 // f("abhi paul", "jit', " ") = abhi  jit paul
 // f("abhi paul", "jit', "") = abhi jit paul
 // f("abhi paul", "jit', "-") = abhi -jit paul
-void abj::String::concatenate_at_point(String str, int index, char separator){
-// resize, copy+separator+new_data+copy		
+void abj::String::concatenate_at_point(abj::String str, int index, char separator){
+// resize, copy+separator+new_data+copy
 	int old_size = this->curr_size;
-	resize(this->curr_size+str.size());	
+	resize(this->curr_size+str.size());
 	this->storage[old_size] = separator;
 
 	int j=0;
-	for(int i=old_size+1; j<str.size(); i+=, j++) this->storage[i]=str.get(j);
+	for(int i=old_size+1; j<str.size(); i++, j++) this->storage[i]=str.get(j);
 	this->storage[old_size+str.size()]='\0';
+}
+
+char abj::String::get(int index){
+    return this->storage[index];
 }
 
 void abj::String::test_function(){
@@ -164,14 +168,15 @@ void abj::String::test_function(){
 	abj::String z(str);
 	z.print();
 
-	x.concatenate_at_end(str, "-");
+	x.concatenate_at_end(z, '-');
 	x.print();
 
-	y.concatenate_at_point(str, "_");
+	y.concatenate_at_point(z, y.size(), '_');
 	y.print();
 }
 
-int main(){
+/*int main(){
 	abj::String x;
 	x.test_function();
-}
+	return 0;
+}*/

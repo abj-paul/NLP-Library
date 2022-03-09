@@ -29,14 +29,14 @@ class String{
 		abj::String copy();
 
 		// Concatenation
-		void concatenate_at_point(abj::String str, char separator);
-		void concatenate_at_end(abj::String str, int index, char separator);
+		void concatenate_at_point(abj::String str, int index, char separator);
+		void concatenate_at_end(abj::String str, char separator);
 
 		bool equals(abj::String data);
 		bool equals(const char* data);
 		void resize(int size);
 
-		/*static*/ void test_function();
+		static void test_function();
 };
 
 
