@@ -156,6 +156,7 @@ char abj::String::get(int index){
 }
 
 void abj::String::test_function(){
+printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");
 	x.capitalize();
 	x.print();
