@@ -213,7 +213,8 @@ void abj::String::removeData(){
 void abj::String::insert_char_at_point(int index, char c){
   if(this->curr_capacity<=this->curr_size+1) resize(this->curr_size+1);
 
-  char temp, prev_char = this->storage[index];
+  char temp;
+  char prev_char = this->storage[index];
   this->storage[index]=c;
   for(int i=index+1; i<=this->curr_size; i++) {
     temp = this->storage[i];
