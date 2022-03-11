@@ -2,6 +2,7 @@
 
 abj::String::String(){
 	this->curr_size=0;
+	this->curr_capacity=0;
 	this->storage=NULL;
 }
 
@@ -13,6 +14,7 @@ abj::String::String(abj::String& data){ // RISKY!!!! because both data and "this
 	this->storage[data.size()]='\0';
 
 	this->curr_size = data.size();
+	this->curr_capacity= data.capacity();
 }
 
 abj::String::String(const char* data){
@@ -26,6 +28,7 @@ abj::String::String(const char* data){
 	this->storage[size]='\0';
 
 	this->curr_size=size;
+	this->curr_capacity=size;
 }
 
 abj::String::String(char* data, int FLAG){
@@ -35,24 +38,31 @@ abj::String::String(char* data, int FLAG){
 	if(FLAG==USE_OLD_MEMORY){
 		this->curr_size = size;
 		this->storage = data;
+		this->curr_capacity=size;
 	}else if(FLAG==ALLOCATE_NEW_MEMORY){
 		this->storage = (char*)calloc(size+1, sizeof(char));
 		for(int i=0; i<size; i++) this->storage[i]=data[i];
 		this->storage[size]='\0';
 
 		this->curr_size=size;
+		this->curr_capacity=size;
 
 	}
 	else{
 		printf("Unrecognized command! Initializing with NULL.\n");
 		this->storage=NULL;
 		this->curr_size=0;
+		this->curr_capacity=0;
 	}
 }
 
 
 int abj::String::size(){
 	return this->curr_size;
+}
+
+int abj::String::capacity(){
+  return this->curr_capacity;
 }
 
 void abj::String::print(){
@@ -86,16 +96,18 @@ abj::String abj::String::copy(){
 }
 
 void abj::String::resize(int size){
-	char* new_memory = (char*)calloc(size+2,sizeof(char));
+        int new_size = std::max(this->curr_capacity*2, size);
+        char* new_memory = (char*)calloc(new_size,sizeof(char));
 	for(int i=0; i<this->curr_size; i++) new_memory[i]=this->storage[i];
 	free(this->storage);
 
 	this->storage = new_memory;
-	this->curr_size = size;
+	this->curr_size = this->curr_size;
+	this->curr_capacity=new_size;
 
 }
 
-void abj::String::concatenate_at_end(abj::String str, char separator){
+void abj::String::concatenate_at_end(abj::String& str, char separator){
 	// Getting String Size
 	int str_size=0;
 	while(str.get(str_size)!='\0') str_size++;
@@ -107,10 +119,17 @@ void abj::String::concatenate_at_end(abj::String str, char separator){
 
 	int j=0;
 	for(int i=old_size+1; j<str.size(); i++, j++)this->storage[i]=str.get(j);
-	this->storage[old_size+str_size]='\0';
+	if(old_size==0){
+	  this->curr_size = old_size+str_size+1;
+	  this->storage[old_size+str_size+1]='\0';
+	}
+	else{
+	  this->curr_size = old_size+str_size;
+	  this->storage[old_size+str_size]='\0';
+	}
 }
 
-bool abj::String::equals(String data){
+bool abj::String::equals(abj::String& data){
 	if(data.size()!=this->curr_size) return false;
 
 
@@ -140,7 +159,7 @@ bool abj::String::equals(const char* data){
 // f("abhi paul", "jit', " ") = abhi  jit paul
 // f("abhi paul", "jit', "") = abhi jit paul
 // f("abhi paul", "jit', "-") = abhi -jit paul
-void abj::String::concatenate_at_point(abj::String str, int index, char separator){
+void abj::String::concatenate_at_point(abj::String& str, int index, char separator){
 // resize, copy+separator+new_data+copy
 	int old_size = this->curr_size;
 	resize(this->curr_size+str.size());
@@ -149,10 +168,61 @@ void abj::String::concatenate_at_point(abj::String str, int index, char separato
 	int j=0;
 	for(int i=old_size+1; j<str.size(); i++, j++) this->storage[i]=str.get(j);
 	this->storage[old_size+str.size()]='\0';
+	this->curr_size = old_size+str.size();
 }
 
 char abj::String::get(int index){
     return this->storage[index];
+}
+
+
+void abj::String::initialize(abj::String& data){ // RISKY!!!! because both data and "this" can access this heap data. Thus, without us knowing, data functions can change the heap data.
+	this->storage = (char*)calloc(data.size()+1,sizeof(char));
+
+	char* temp = data.get_raw_data();
+	for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
+	this->storage[data.size()]='\0';
+
+	this->curr_size = data.size();
+	this->curr_capacity = data.capacity();
+}
+
+void abj::String::initialize(char* data){
+	// Getting String Size
+	int size = 0;
+	while(data[size]!='\0') size++;
+
+	this->storage = (char*)calloc(size+1,sizeof(char));
+
+	for(int i=0; i<size; i++) this->storage[i]=data[i];
+	this->storage[size]='\0';
+
+	this->curr_size=size;
+	this->curr_capacity=size;
+}
+
+
+void abj::String::removeData(){
+  this->storage=NULL;
+  this->curr_size=0;
+  this->curr_capacity=0;
+  free(this->storage);
+}
+
+
+void abj::String::insert_char_at_point(int index, char c){
+  if(this->curr_capacity<=this->curr_size+1) resize(this->curr_size+1);
+
+  char temp, prev_char = this->storage[index];
+  this->storage[index]=c;
+  for(int i=index+1; i<=this->curr_size; i++) {
+    temp = this->storage[i];
+    this->storage[i]=prev_char;
+    prev_char = temp;
+  }
+
+  this->curr_size = this->curr_size+1;
+  
 }
 
 void abj::String::test_function(){
@@ -169,11 +239,19 @@ printf("Testing String----------------\n");
 	abj::String z(str);
 	z.print();
 
-	x.concatenate_at_end(z, '-');
+	x.concatenate_at_end(z, ':');
 	x.print();
 
 	y.concatenate_at_point(z, y.size(), '_');
 	y.print();
+
+	abj::String t;
+	t.concatenate_at_end(x, '_');
+	t.print();
+
+	t.insert_char_at_point(t.size()-2, '!');
+	t.insert_char_at_point(t.size()-3, '~');
+	t.print();
 }
 
 /*int main(){

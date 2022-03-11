@@ -24,7 +24,7 @@ class Vector{
 
 	void print();
 
-	int getSize();
+	int size();
 	T get(int index);
 
 	static void test_function();
@@ -45,13 +45,13 @@ abj::Vector<T>::Vector(int size){
 }
 template<typename T>
 abj::Vector<T>::Vector(abj::Vector<T>& initializer){
-	this->storage = (T*)calloc(initializer.getSize(), sizeof(T));
-	this->capacity=initializer.getSize();
+	this->storage = (T*)calloc(initializer.size(), sizeof(T));
+	this->capacity=initializer.size();
 
-	for(int i=0; i<initializer.getSize(); i++){
+	for(int i=0; i<initializer.size(); i++){
 		this->storage[i]=initializer.get(i);
 	}
-	this->current_size=initializer.getSize();
+	this->current_size=initializer.size();
 }
 template<typename T>
 abj::Vector<T>::~Vector(){
@@ -73,19 +73,19 @@ void abj::Vector<T>::push(T data){
 template<typename T>
 void abj::Vector<T>::push(abj::Vector<T> data){
 	/*
-	printf("---data size=%d\n",data.getSize());
+	printf("---data size=%d\n",data.size());
 	data.print();
 	printf("Our data is fine!\n");
 	*/
-	if(data.getSize()+this->current_size>this->capacity)
-		this->resize(data.getSize()+this->current_size);	
+	if(data.size()+this->current_size>this->capacity)
+		this->resize(data.size()+this->current_size);	
 	int j=0;
-	for(int i=this->current_size; i<this->capacity && j<data.getSize(); i++, j++){
+	for(int i=this->current_size; i<this->capacity && j<data.size(); i++, j++){
 		this->storage[i]=data.get(j);	
 		//printf("%d) %s\n",i+1,this->storage[i]);
 	}
 
-	this->current_size = data.getSize()+this->current_size;
+	this->current_size = data.size()+this->current_size;
 }
 
 template<typename T>
@@ -118,7 +118,7 @@ void abj::Vector<T>::print(){
 }
 
 template<typename T>
-int abj::Vector<T>::getSize(){
+int abj::Vector<T>::size(){
 	return this->current_size;
 }
 
