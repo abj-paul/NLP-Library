@@ -56,8 +56,14 @@ void abj::Punctuation::print(){
   this->corpus.print();
 }
 
+abj::Punctuation::~Punctuation(){
+  //this->punctuation_list.~Vector<char>();
+  this->corpus.~String();
+
+}
+
 void abj::Punctuation::test_function(){
-  printf("Testing Punctuation.\n");
+  printf("Testing Punctuation.-----------------\n");
   abj::String str("I am only human! and I bleed when I fall down.");
 
   abj::Punctuation p;

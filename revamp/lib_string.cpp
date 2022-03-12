@@ -171,7 +171,8 @@ void abj::String::concatenate_at_point(abj::String& str, int index, char separat
 	this->curr_size = old_size+str.size();
 }
 
-char abj::String::get(int index){
+int abj::String::get(int index){
+  if(index>this->curr_size) return -1;
     return this->storage[index];
 }
 

@@ -55,7 +55,7 @@ abj::Vector<T>::Vector(abj::Vector<T>& initializer){
 }
 template<typename T>
 abj::Vector<T>::~Vector(){
-	free(this->storage);
+  if(this->storage!=NULL)free(this->storage);
 	this->capacity=0;
 	this->current_size=0;
 }

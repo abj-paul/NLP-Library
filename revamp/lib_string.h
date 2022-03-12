@@ -22,7 +22,7 @@ class String{
 
 		int size();
   int capacity();
-		char get(int index);
+		int get(int index);
   void initialize(abj::String& str);
   void initialize(char* str);
   void removeData();

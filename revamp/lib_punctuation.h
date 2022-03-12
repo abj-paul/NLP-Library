@@ -17,16 +17,18 @@ namespace abj {
 
     int get_file_length(FILE* fptr);
     void get_punctuation_list();
-    bool isPunctuation(char c);
   public:
     Punctuation(abj::String corpus);
     Punctuation();
+    ~Punctuation();
 
     void setCorpus(abj::String corpus);
     void handle_punctuation();
     static void test_function();
 
     void print();
+    // Service
+    bool isPunctuation(char c);
   };
 }
 #endif
