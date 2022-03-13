@@ -1,7 +1,9 @@
-run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o
-	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o -o run
+run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o
+	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o -o run
 main.o: main.cpp lib_string.o lib_vector.o
 	g++ -c -g main.cpp
+Tokenizer.o: Tokenizer.cpp Tokenizer.h lib_vector.o lib_string.o
+	g++ -c -g Tokenizer.cpp
 SentenceSgmenter.o: SentenceSegmenter.cpp SentenceSegmenter.h lib_punctuation.o
 	g++ -c -g SentenceSegmenter.cpp
 lib_punctuation.o: lib_punctuation.cpp lib_punctuation.h lib_vector.o lib_string.o

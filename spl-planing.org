@@ -48,6 +48,10 @@
    - [ ] test-area.cpp
 *** Issues
     - Flycheck can not detect iostream
+** 13March - ******* Next stages
+   - Edit String lib with template so that all functions support const abj::String and const char*.
+   - Edit SentenceSegmenter with ~inverted comma support~ and ~abbreviation control.~
+   - At the end, do multithreading and add socket. So I have to end by 20.
 
 * Caution!
   our bigram only works for mtl and speech recognition. Due to ~stemming~, it can no longer identify grammatical errors.
