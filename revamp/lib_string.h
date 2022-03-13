@@ -4,7 +4,7 @@
 #define MAX_WORD_IN_A_SENTENCE 20
 #define MAX_WORD_SIZE 40
 #define USE_OLD_MEMORY 1
-#define ALLOCATE_NEW_MEMORY 1
+#define ALLOCATE_NEW_MEMORY 2
 
 namespace abj{
 
