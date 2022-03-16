@@ -4,6 +4,7 @@
 //#include "lib_punctuation.h"
 //#include "SentenceSegmenter.h"
 #include "Tokenizer.h"
+#include "Stemmer.cpp"
 
 
 int main(){
@@ -12,5 +13,6 @@ int main(){
 	abj::Punctuation::test_function();
 	abj::SentenceSegmenter::test_function();
 	abj::Tokenizer::test_function();
+	abj::Stemmer::test_function();
 return 0;
 }

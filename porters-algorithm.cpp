@@ -1,9 +1,9 @@
 #include "porters-algorithm.h"
 
-/*int main(){
+int main(){
   test_functions();
   return 0;
-  }*/
+  }
 
 
 int* vowel_consonant_count_array(const char* str){

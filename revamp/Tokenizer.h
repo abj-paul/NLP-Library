@@ -1,9 +1,10 @@
+#include "SentenceSegmenter.h"
+
 #ifndef _TOKENIZER_H
 
 //#include "lib_string.h"
 //#include "lib_vector.h"
 //#include "lib_punctuation.h"
-#include "SentenceSegmenter.h"
 
 // Return vector of tokens (for each sentence)
 namespace abj{

@@ -1,9 +1,8 @@
-
-#ifndef _LIB_PUNCTUATION_H
-
 #include<iostream>
 #include "lib_string.h"
 #include "lib_vector.h"
+
+#ifndef _LIB_PUNCTUATION_H
 
 
 namespace abj {

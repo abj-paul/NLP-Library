@@ -26,6 +26,7 @@ class Vector{
 
 	int size();
 	T get(int index);
+  bool set(int index, T data);
 
 	static void test_function();
 };
@@ -120,6 +121,17 @@ void abj::Vector<T>::print(){
 template<typename T>
 int abj::Vector<T>::size(){
 	return this->current_size;
+}
+
+
+template<typename T>
+bool abj::Vector<T>::set(int index, T data){
+  if(index>=this->current_size){
+    printf("Vector Error! Can not set(%d)! Current size is %d.\n",index,this->current_size);
+    return false;
+  }
+  this->storage[index]=data;
+  return true;
 }
 
 template<typename T>

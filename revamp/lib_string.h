@@ -23,6 +23,7 @@ class String{
 		int size();
   int capacity();
 		int get(int index);
+  bool set(int index, char c);
   void initialize(abj::String& str);
   void initialize(char* str);
   void removeData();
@@ -41,6 +42,8 @@ class String{
 		bool equals(abj::String& data);
 		bool equals(const char* data);
 		void resize(int size);
+
+  char lastChar();
 
 		static void test_function();
 };

@@ -227,6 +227,24 @@ void abj::String::insert_char_at_point(int index, char c){
   
 }
 
+
+char abj::String::lastChar(){
+  return this->storage[this->curr_size-1];
+}
+
+
+bool abj::String::set(int index, char c){
+  if(index>=this->curr_size){
+    //printf("String Set error! Unable to set(%d) as string size is lesser(%d).\n",index,this->curr_size);
+
+    this->resize(index+5);
+    this->storage[index]=c;
+    return true;
+  }
+  this->storage[index]=c;
+  return true;
+}
+
 void abj::String::test_function(){
 printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");
