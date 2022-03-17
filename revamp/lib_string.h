@@ -1,6 +1,8 @@
 #include<iostream>
 
 #ifndef _STRING_LIBRARY_H_
+#define _STRING_LIBRARY_H_
+
 #define MAX_WORD_IN_A_SENTENCE 20
 #define MAX_WORD_SIZE 40
 #define USE_OLD_MEMORY 1

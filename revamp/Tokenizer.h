@@ -1,7 +1,8 @@
-#include "SentenceSegmenter.h"
 
 #ifndef _TOKENIZER_H
+#define _TOKENIZER_H
 
+#include "SentenceSegmenter.h"
 //#include "lib_string.h"
 //#include "lib_vector.h"
 //#include "lib_punctuation.h"

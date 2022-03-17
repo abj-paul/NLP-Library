@@ -1,8 +1,9 @@
 #include<iostream>
-#include "lib_string.h"
-#include "lib_vector.h"
 
 #ifndef _LIB_PUNCTUATION_H
+#define _LIB_PUNCTUATION_H
+#include "lib_string.h"
+#include "lib_vector.h"
 
 
 namespace abj {
@@ -26,6 +27,7 @@ namespace abj {
     static void test_function();
 
     void print();
+    abj::String getUpdatedCorpus();
     // Service
     bool isPunctuation(char c);
   };

@@ -62,6 +62,10 @@ abj::Punctuation::~Punctuation(){
 
 }
 
+abj::String abj::Punctuation::getUpdatedCorpus(){
+  return this->corpus;
+}
+
 void abj::Punctuation::test_function(){
   printf("Testing Punctuation.-----------------\n");
   abj::String str("I am only human! and I bleed when I fall down.");

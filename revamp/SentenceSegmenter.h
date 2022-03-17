@@ -1,7 +1,8 @@
 
-#include "lib_punctuation.h"
 #ifndef _SETENCE_SEGMENTATION_H
+#define _SETENCE_SEGMENTATION_H
 
+#include "lib_punctuation.h"
 namespace abj{
   class SentenceSegmenter {
   public:
