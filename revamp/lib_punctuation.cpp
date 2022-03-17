@@ -24,7 +24,7 @@ void abj::Punctuation::get_punctuation_list(){
     fscanf(fptr,"%c\n",&p);
     this->punctuation_list.push(p);
   }
-  this->punctuation_list.print();
+  //this->punctuation_list.print();
   fclose(fptr);
 }
 

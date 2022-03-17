@@ -26,11 +26,26 @@ char* abj::Bigram::extract_content_from_file(const char* filename){ //auxiliary 
 }
 
 bool abj::Bigram::preprocess_corpus(){
-  abj::Punctuation punctuation;
+  /*abj::Punctuation punctuation;
   punctuation.setCorpus(this->corpus);
   punctuation.handle_punctuation();
   this->corpus = punctuation.getUpdatedCorpus();
-  this->corpus.print();
+  this->corpus.print();*/
+
+  abj::SentenceSegmenter ss;
+  ss.setCorpus(this->corpus);
+  ss.use_decision_tree();
+  ss.print();
+
+  for(int i=0; i<ss.sentence_list.size(); i++){
+    Punctuation p;
+    p.setCorpus(ss.sentence_list.get(i));
+    p.handle_punctuation();
+    ss.sentence_list.set(i, p.getUpdatedCorpus());
+  }
+
+  ss.print();
+  
   return true;
 }
 
