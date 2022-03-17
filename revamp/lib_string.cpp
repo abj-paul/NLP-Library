@@ -241,6 +241,7 @@ bool abj::String::set(int index, char c){
     this->storage[index]=c;
     return true;
   }
+  if(c=='\0') this->curr_size=index;
   this->storage[index]=c;
   return true;
 }

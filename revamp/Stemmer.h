@@ -13,11 +13,12 @@ namespace abj{
   class Stemmer{
   private:
     abj::String word;
-    abj::Vector<int> vowel_consonant_count; // VOWEL CONSONANT COUNT ARRAY
+    abj::Vector<int> vowel_consonant_array; // VOWEL CONSONANT COUNT ARRAY
+    int m_value;
     
-    void build_vowel_consonant_count_array();
-    int m_value();
-    bool isConsonant(int i);
+    void build_vowel_consonant_array();
+    int calculate_m_value();
+    bool isConsonant(int index);
     bool isPunctuation(char c);
     bool regex(const char* condition); // For readability, we choose regex
     bool regex(const char* condition, int index);
@@ -27,7 +28,7 @@ namespace abj{
     bool isCapital(char c);
 
 
-    bool ends_with(const char* suffix, abj::String& word);
+    bool ends_with(const char* suffix);
     void replace_suffix(const char* prev_suffix, const char* new_suffix);
   public:
     Stemmer(abj::String& word);

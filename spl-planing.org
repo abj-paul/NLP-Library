@@ -64,3 +64,8 @@
   - Sorting dataset for bigram
   - Threading
   - Automata style inverted comma detection
+
+  - Convert & to and
+* Questions
+  - Porter's m-value: Should it change after each time the suffic is replaced? I do not think so but still, its a point to keep an eye on when debugging.
+  
