@@ -6,14 +6,14 @@
 
 namespace abj{
 
-#define VOWEL 1
-#define CONSONANT 2
-#define PUNCTUATION 3
-
+  
   class Stemmer{
   private:
     abj::String word;
     abj::Vector<int> vowel_consonant_array; // VOWEL CONSONANT COUNT ARRAY
+  int VOWEL=1;
+  int CONSONANT=2;
+  int PUNCTUATION=3;
     int m_value;
     
     void build_vowel_consonant_array();

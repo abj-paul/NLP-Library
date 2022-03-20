@@ -1,3 +1,4 @@
+#include<vector>
 
 #ifndef _BIGRAM_H_
 #define _BIGRAM_H_

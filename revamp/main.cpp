@@ -8,12 +8,12 @@
 
 
 int main(){
-	abj::String::test_function();
+  /*abj::String::test_function();
 	abj::Vector<int>::test_function();
 	abj::Punctuation::test_function();
 	abj::SentenceSegmenter::test_function();
 	abj::Tokenizer::test_function();
-	abj::Stemmer::test_function();
+	abj::Stemmer::test_function();*/
 
 	abj::Bigram::test_function();
 return 0;

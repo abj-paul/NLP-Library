@@ -4,7 +4,7 @@
 #define _LIB_VECTOR_H
 
 namespace abj{
-template<typename T>
+  template<typename T>
 class Vector{
 	private:
 		int current_size;
@@ -19,10 +19,15 @@ class Vector{
 
 	~Vector();
 
-	void push(T data);
+	void push(T& data);
+	// void push(T data);
 	void push(abj::Vector<T> new_data);
 
 	void print();
+
+    void operator = (abj::Vector<T>& x);
+    void operator =(T& data);
+    T operator[](int index);
 
 	int size();
 	T get(int index);
@@ -62,32 +67,49 @@ abj::Vector<T>::~Vector(){
 }
 
 template<typename T>
-void abj::Vector<T>::push(T data){
-	this->current_size++;
-	if(this->current_size>this->capacity){
-		this->resize(this->capacity*2);
-	}
+void abj::Vector<T>::push(T& data){
+	// if(this->current_size+1>this->capacity){
+		// this->resize(this->capacity*2);
+	// }
+	// this->storage[this->current_size++]=data; // usual
+    if(this->current_size+1>=this->capacity){
+        T* temp = (T*)calloc(this->capacity*2, sizeof(T));
+        this->capacity*=2;
 
-	this->storage[this->current_size-1]=data;
+        for(int i=0; i<this->current_size; i++) temp[i]=this->storage[i];
+        free(this->storage);
+        this->storage=temp;
+    }
+    this->storage[this->current_size++] = data;
+
 }
 
-template<typename T>
-void abj::Vector<T>::push(abj::Vector<T> data){
-	/*
-	printf("---data size=%d\n",data.size());
-	data.print();
-	printf("Our data is fine!\n");
-	*/
-	if(data.size()+this->current_size>this->capacity)
-		this->resize(data.size()+this->current_size);	
-	int j=0;
-	for(int i=this->current_size; i<this->capacity && j<data.size(); i++, j++){
-		this->storage[i]=data.get(j);	
-		//printf("%d) %s\n",i+1,this->storage[i]);
-	}
+// template<typename T>
+// void abj::Vector<T>::push(T data){
+// 	if(this->current_size+1>this->capacity){
+// 		this->resize(this->capacity*2);
+// 	}
+// 	this->storage[this->current_size++]=data; // usual
+// }
 
-	this->current_size = data.size()+this->current_size;
-}
+
+// template<typename T>
+// void abj::Vector<T>::push(abj::Vector<T> data){
+// 	/*
+// 	printf("---data size=%d\n",data.size());
+// 	data.print();
+// 	printf("Our data is fine!\n");
+// 	*/
+// 	if(data.size()+this->current_size>this->capacity)
+// 		this->resize(data.size()+this->current_size);	
+// 	int j=0;
+// 	for(int i=this->current_size; i<this->capacity && j<data.size(); i++, j++){
+// 		this->storage[i]=data.get(j);	
+// 		//printf("%d) %s\n",i+1,this->storage[i]);
+// 	}
+
+// 	this->current_size = data.size()+this->current_size;
+// }
 
 template<typename T>
 T abj::Vector<T>::get(int index){
@@ -133,16 +155,40 @@ bool abj::Vector<T>::set(int index, T data){
   this->storage[index]=data;
   return true;
 }
+template<typename T>
+// A = B, Create new A and B
+void abj::Vector<T>::operator=(abj::Vector<T>& data){
+  printf("The operator function is being used!\n");
+  if(this==&data) return ;
+  this->~Vector();
+  this->resize(data.size());
+  for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
+  this->current_size = data.size();
+}
+
+template<typename T>
+void abj::Vector<T>::operator = (T& data){
+  if(current_size+1>=this->capacity) resize(this->capacity*2);
+  this->storage[this->current_size]=data;
+  this->current_size++;
+}
+
+template<typename T>
+T abj::Vector<T>::operator[](int index){
+  if(index>=this->current_size) return NULL;
+  return this->storage[index];
+}
+
 
 template<typename T>
 void abj::Vector<T>::test_function(){
 printf("Testing Vector----------------------\n");
-	abj::Vector<const char*> x;
-	abj::Vector<const char*> y;
+	abj::Vector<char*> x;
+	abj::Vector<char*> y;
 
-	char a[] = "Abhi";
-	char b[] = "Jit";
-	char c[] = "Paul";
+	char* a = "Abhi";
+	char* b = "Jit";
+	char* c = "Paul";
 
 	x.push(a);
 	x.push(b);
@@ -150,11 +196,11 @@ printf("Testing Vector----------------------\n");
 
 	x.print();
 
-	y.push(x);
-	y.print();
-	y.push("Empire!");
+	// y.push(x);
+	// y.print();
+	// y.push("Empire!");
 
-	abj::Vector<const char*> z(y);
+	abj::Vector<const char*> z(x);
 	z.print();
 }
 

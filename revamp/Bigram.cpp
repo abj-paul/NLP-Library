@@ -43,8 +43,25 @@ bool abj::Bigram::preprocess_corpus(){
     p.handle_punctuation();
     ss.sentence_list.set(i, p.getUpdatedCorpus());
   }
-
+  
   ss.print();
+
+  abj::Vector<abj::Vector<abj::String>> tokenized_corpus;
+  for(int i=0; i<ss.sentence_list.size(); i++){
+      abj::Tokenizer t ;
+      t.setString(ss.sentence_list.get(i));
+      t.tokenize();
+      //t.print();
+      abj::Vector<abj::String>tokens = t.getTokens();
+      tokenized_corpus.push(tokens);
+  }
+
+  for(int i=0; i<tokenized_corpus.size(); i++){
+    printf("Sentence %d:\n",i+1);
+         for(int j=0; j<tokenized_corpus[i].size(); j++){
+	   tokenized_corpus[i].get(j).print();
+    }
+    }
   
   return true;
 }

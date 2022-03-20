@@ -21,6 +21,7 @@ class Tokenizer {
   abj::String make_token(int start_index, int end_index);
   
  public:
+
   Tokenizer();
   Tokenizer(abj::String sentence);
 
