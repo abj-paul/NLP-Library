@@ -77,7 +77,8 @@ void abj::SentenceSegmenter::use_decision_tree(){
   int start_index=0,i=0;
   for(i=0; i<this->corpus.size(); i++){
     if(this->decision_tree(i)){
-      this->sentence_list.push(this->make_sentence(start_index, i));
+      abj::String sentence = this->make_sentence(start_index, i);
+      this->sentence_list.push(sentence);
       start_index=i+2; // Because there is a space between (dot) and first word of next sentence
     }
     //else printf("%c",this->this->corpus.get(index));

@@ -56,12 +56,17 @@ bool abj::Bigram::preprocess_corpus(){
       tokenized_corpus.push(tokens);
   }
 
+  // Printing tokens
   for(int i=0; i<tokenized_corpus.size(); i++){
     printf("Sentence %d:\n",i+1);
          for(int j=0; j<tokenized_corpus[i].size(); j++){
 	   tokenized_corpus[i].get(j).print();
+	   //abj::String current_token = tokenized_corpus[i].get(j);
+	   //stemmer.initialize(current_token);
+	   //tokenized_corpus[i].set(j,stemmer.get_stem());
+	   //tokenized_corpus[i].get(j).print();
     }
-    }
+  }
   
   return true;
 }
