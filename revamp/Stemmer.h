@@ -33,7 +33,7 @@ namespace abj{
   public:
     Stemmer(abj::String& word);
     Stemmer();
-    void initialize(abj::String& word);
+    void initialize(abj::String word);
     
     abj::String get_stem();
     static void test_function();

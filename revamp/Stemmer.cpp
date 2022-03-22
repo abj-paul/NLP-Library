@@ -2,11 +2,11 @@
 
 abj::Stemmer::Stemmer(){
   //Do nothing
-  this->word=NULL;
+  //this->word=NULL;
   this->m_value=0;
 }
 
-void abj::Stemmer::initialize(abj::String& word){
+void abj::Stemmer::initialize(abj::String word){
   this->word.initialize(word);
   this->build_vowel_consonant_array();
   this->m_value = calculate_m_value();
