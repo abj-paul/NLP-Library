@@ -7,3 +7,5 @@
   - [X] Build a basic Language Model
   - [ ] Fast File Handling
   - [ ] Hardcode Pronunciation Rules
+* Continuous Evaluation
+https://docs.google.com/spreadsheets/d/1udMsR04-lTSwc5k40loml6rYBmbqdTP_OdLPq6ofee8/edit#gid=0
