@@ -16,6 +16,17 @@
   - Make a med word.
   - Find spelling errors.
   - [X] Adding Header files.
+** Perplexity
+   - Take a corpus. (FIND IT FIRST.)
+   - Split it in test and train corpus. You must take the ratio (70:30) as parameter.
+   - Stem train data in a bigram model. 
+   - SentenceSegmet the test data and send it sentence by sentence to laplace smoothing.
+   - We will get the log value. Its likely log base 10. So mathematically,
+     #+begin_src text
+       0.0001, 10^-3
+inverse: 1000, 10^3
+     #+end_src
+     So we just need to alter the sign of power to get perplexity!
 * Days
 ** 9 Feb - Make language model 
    String matching.
@@ -52,7 +63,16 @@
    - Edit String lib with template so that all functions support const abj::String and const char*.
    - Edit SentenceSegmenter with ~inverted comma support~ and ~abbreviation control.~
    - At the end, do multithreading and add socket. So I have to end by 20.
-
+** 25th March
+   Organize Bigram class by defining a class for processing sentence fragments.
+   Perplexity.
+** 26th March
+   Noisy Channel model -> minimum edit distance to generate candidate set for the words.
+                          Form all_possible_combination sentence
+			  Load confusion matrices
+			  Find probablity of each sentence using noisy channel model
+** 27th March
+   Evaluation class
 * Caution!
   our bigram only works for mtl and speech recognition. Due to ~stemming~, it can no longer identify grammatical errors.
 
@@ -68,4 +88,7 @@
   - Convert & to and
 * Questions
   - Porter's m-value: Should it change after each time the suffic is replaced? I do not think so but still, its a point to keep an eye on when debugging.
-  
+* What I have learnt
+  - Learn about the error before debugging: When I would encounter errors like rvalue-lvalue errors, i would google a bit, fix some codes and look at the sky, hoping it works. But it was time consuming. Slowly, I have learn that if you encounter some error you are not clear about, first Learn.
+  - Extensive test of each module, each function: I would develop a module, do one or two tests and move on to developing the new modules. And this caused a lot of error later on when I have to use these modules later on. Some functions i have never tested enough before, becomes the error. There were a time when, if my code had any segmentation fault, i was sure that the lib_string and lib_vector modules have caused it.
+* Temp

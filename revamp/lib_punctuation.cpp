@@ -4,13 +4,14 @@ abj::Punctuation::Punctuation(){
   this->get_punctuation_list();
 }
 
-abj::Punctuation::Punctuation(abj::String corpus){
-  this->corpus.initialize(corpus);
+abj::Punctuation::Punctuation(abj::String text){
+  this->get_punctuation_list();
+  this->corpus.initialize(text);
 }
 
-void abj::Punctuation::setCorpus(abj::String corpus){
-  this->corpus.removeData();
-  this->corpus.initialize(corpus);
+void abj::Punctuation::setCorpus(abj::String text){
+  //this->corpus.removeData();
+  this->corpus.initialize(text);
 }
 
 void abj::Punctuation::get_punctuation_list(){

@@ -9,7 +9,6 @@ abj::String::String(){
 abj::String::String(abj::String& data){ // RISKY!!!! because both data and "this" can access this heap data. Thus, without us knowing, data functions can change the heap data.
 	this->storage = (char*)calloc(data.size()+1,sizeof(char));
 
-	char* temp = data.get_raw_data();
 	for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
 	this->storage[data.size()]='\0';
 
@@ -171,8 +170,11 @@ void abj::String::concatenate_at_point(abj::String& str, int index, char separat
 	this->curr_size = old_size+str.size();
 }
 
-int abj::String::get(int index){
-  if(index>this->curr_size) return -1;
+char abj::String::get(int index){
+  if(index<0 || index>=this->curr_size){
+    printf("String Index - out of bound!\n");
+    return NULL;
+  } 
     return this->storage[index];
 }
 
@@ -246,6 +248,14 @@ bool abj::String::set(int index, char c){
   return true;
 }
 
+char abj::String::operator[](int index){
+  if(index<0 || index>=this->curr_size){
+    printf("Out of index!\n");
+      return (char)NULL;
+    }
+  return this->storage[index];
+  }
+
 void abj::String::test_function(){
 printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");
@@ -253,7 +263,7 @@ printf("Testing String----------------\n");
 	x.print();
 
 	abj::String y(x);
-	y.capitalize();
+        y.capitalize();
 	printf("x==y? %d\n",y.equals(x));
 
 	char str[] = "New Word.";

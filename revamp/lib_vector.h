@@ -26,7 +26,9 @@ class Vector{
 	void print();
 
     void operator = (abj::Vector<T>& x);
+    void operator = (abj::Vector<T>&& x);
     void operator =(T& data);
+    void operator =(T&& data);
     T operator[](int index);
 
 	int size();
@@ -113,6 +115,10 @@ void abj::Vector<T>::push(T& data){
 
 template<typename T>
 T abj::Vector<T>::get(int index){
+  if(index<0 || index>=this->current_size) {
+    printf("Vector index out of bound!\n");
+    return 0;
+  }
 	return this->storage[index];
 }
 
@@ -158,11 +164,16 @@ bool abj::Vector<T>::set(int index, T data){
 template<typename T>
 // A = B, Create new A and B
 void abj::Vector<T>::operator=(abj::Vector<T>& data){
-  printf("The operator function is being used!\n");
+  // printf("The operator function is being used!\n");
   if(this==&data) return ;
-  this->~Vector();
-  this->resize(data.size());
-  for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
+  //this->~Vector();
+  //this->resize(data.size());
+  //free(this->storage);
+  this->storage = (T*)calloc(data.size(), sizeof(T));
+  for(int i=0; i<data.size(); i++) {
+    T ref = data.get(i);
+    this->storage[i]=ref;
+  }
   this->current_size = data.size();
 }
 
@@ -174,8 +185,33 @@ void abj::Vector<T>::operator = (T& data){
 }
 
 template<typename T>
+void abj::Vector<T>::operator=(abj::Vector<T>&& data){
+  // printf("The operator function is being used!\n");
+  if(this==&data) return ;
+  this->~Vector();
+  //this->resize(data.size());
+  this->storage = (T*)calloc(data.size(), sizeof(T));
+  for(int i=0; i<data.size(); i++) {
+    T ref = data.get(i);
+    this->storage[i]=ref;
+  }
+  this->current_size = data.size();
+}
+
+template<typename T>
+void abj::Vector<T>::operator = (T&& data){
+  if(current_size+1>=this->capacity) resize(this->capacity*2);
+  this->storage[this->current_size]=data;
+  this->current_size++;
+}
+
+
+template<typename T>
 T abj::Vector<T>::operator[](int index){
-  if(index>=this->current_size) return NULL;
+  if(index<0 || index>=this->current_size) {
+    printf("Vector Out of index!\n");
+    return (T)NULL;
+  }
   return this->storage[index];
 }
 
