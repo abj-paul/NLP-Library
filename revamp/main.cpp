@@ -4,7 +4,8 @@
 #include "SentenceSegmenter.h"
 #include "Tokenizer.h"
 #include "Stemmer.h"*/
-#include "Bigram.h"
+//#include "Bigram.h"
+#include "Perplexity.h"
 
 
 int main(){
@@ -15,6 +16,7 @@ int main(){
 	abj::Tokenizer::test_function();
 	abj::Stemmer::test_function();*/
 
-	abj::Bigram::test_function();
+  //abj::Bigram::test_function();
+	abj::Perplexity::test_function();
 return 0;
 }

@@ -71,6 +71,11 @@ inverse: 1000, 10^3
                           Form all_possible_combination sentence
 			  Load confusion matrices
 			  Find probablity of each sentence using noisy channel model
+*** Perplexity
+    Make train/corpus and test/input file
+    Run text_probablity_using_laplace_smoothing for
+        - each sentence
+	- iteratively compute PP
 ** 27th March
    Evaluation class
 * Caution!
