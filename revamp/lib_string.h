@@ -47,6 +47,7 @@ class String{
 
   char lastChar();
   char operator[](int index);
+  abj::String operator+(abj::String str);
 
 		static void test_function();
 };

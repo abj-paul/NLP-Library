@@ -91,4 +91,9 @@ inverse: 1000, 10^3
 * What I have learnt
   - Learn about the error before debugging: When I would encounter errors like rvalue-lvalue errors, i would google a bit, fix some codes and look at the sky, hoping it works. But it was time consuming. Slowly, I have learn that if you encounter some error you are not clear about, first Learn.
   - Extensive test of each module, each function: I would develop a module, do one or two tests and move on to developing the new modules. And this caused a lot of error later on when I have to use these modules later on. Some functions i have never tested enough before, becomes the error. There were a time when, if my code had any segmentation fault, i was sure that the lib_string and lib_vector modules have caused it.
+  - SED command to edit corpus files. Like
+    #+begin_src bash
+sed "s/[0-9]*\s*/DETECT/g"
+    #+end_src
+    to detect all number+space in our file.
 * Temp

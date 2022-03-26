@@ -10,6 +10,7 @@
 //#define CORPUS "korpus/stanfordSentimentTreebank/datasetSentences.txt"
 //#define DEFAULT_CORPUS "../LN-chapter.txt"
 #define DEFAULT_CORPUS "../small-corpus.txt"
+//#define DEFAULT_CORPUS "sed-corpus.txt"
 
 
 namespace abj{
@@ -32,7 +33,7 @@ class Bigram{
   //~Bigram();
   
   bool preprocess_corpus();
-  Vector<Vector<String>> get_stems_list(abj::String& text);
+  Vector<Vector<String>> get_stems_list(abj::String& text, abj::String tag);
   static void test_function();
   double text_probablity_using_laplace_smoothing(abj::String sentence);
 };

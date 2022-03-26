@@ -32,16 +32,28 @@ char* Bigram::extract_content_from_file(const char* filename){ //auxiliary funct
   return content;
 }
 
-Vector<Vector<String>> Bigram::get_stems_list(abj::String& text){
-  printf("Printing corpus:\n");
-  this->corpus.print();
+Vector<Vector<String>> Bigram::get_stems_list(abj::String& text, abj::String tag){
+  abj::String corpus_file_lastname("_catched_file.txt");
+  abj::String segmented_sentence_file_lastname("_sentences_file.txt");
+  abj::String punctuation_handled_file_lastname("_punctuation_handled_file.txt");
+  abj::String token_file_lastname("_token_file.txt");
+  abj::String stem_file_lastname("_stem_file.txt");
+
+
+  
+  FILE* corpus_file = fopen((tag+corpus_file_lastname).get_raw_data(),"a+");
+  fprintf(corpus_file, "%s", this->corpus.get_raw_data());
+  fclose(corpus_file);
   
   SentenceSegmenter ss;
   ss.setCorpus(text);
   ss.use_decision_tree();
 
-  printf("Printing sentences:-----------------------\n");
-  ss.print();
+  FILE* segmented_sentence_file = fopen((tag+segmented_sentence_file_lastname).get_raw_data(),"a+");
+  for(int i=0; i<ss.sentence_list.size(); i++){
+    fprintf(segmented_sentence_file, "%d) %s\n",i+1, ss.sentence_list[i].get_raw_data());
+  }
+  fclose(segmented_sentence_file);
 
   Vector<String>sentences;
   for(int i=0; i<ss.sentence_list.size(); i++){
@@ -51,8 +63,10 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text){
     String sentence = p.getUpdatedCorpus();
     sentences.push(sentence);
   }
-  printf("After punctuation handling, Printing sentences:--------------\n");
-  for(int i=0; i<sentences.size(); i++) sentences[i].print();
+
+  FILE* punctuation_handled_file = fopen((tag+punctuation_handled_file_lastname).get_raw_data(),"a+");
+  for(int i=0; i<sentences.size(); i++) fprintf(punctuation_handled_file, "%d) %s\n",i+1,sentences[i].get_raw_data());
+  fclose(punctuation_handled_file);
   
   Vector<Vector<String>> all_tokens;
   for(int i=0; i<ss.sentence_list.size(); i++){
@@ -62,8 +76,12 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text){
       Vector<String>tokens = t.getTokens();
       all_tokens.push(tokens);
 
-      printf("Printing tokens for sentence:%d\n",i+1);
-      t.print();
+      // Printing in file
+      FILE* token_file = fopen((tag+token_file_lastname).get_raw_data(),"a+");
+      fprintf(token_file, "%d) %s\n",i+1, ss.sentence_list[i].get_raw_data());
+      fprintf(token_file, "Total Tokens=%d\n",tokens.size());
+      for(int a=0; a<tokens.size(); a++) fprintf(token_file, "%s\n",tokens[a].get_raw_data());
+      fclose(token_file);
   }
 
   //Stemming the tokens
@@ -77,13 +95,20 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text){
       String current_stem = stemmer.get_stem();
       sentence_stems.push(current_stem);
     }
+    FILE* stem_file = fopen((tag+stem_file_lastname).get_raw_data(),"a+");
+    fprintf(stem_file, "%d) %s\n",i+1, ss.sentence_list[i].get_raw_data());
+    fprintf(stem_file, "Total Stems=%d\n",sentence_stems.size());
+    for(int a=0; a<sentence_stems.size(); a++) fprintf(stem_file, "%s\n",sentence_stems[a].get_raw_data());
+    fclose(stem_file);
+    
     all_stems.push(sentence_stems);
   }
   return all_stems;
 }
 
 bool Bigram::preprocess_corpus(){
-  this->stemmed_corpus = this->get_stems_list(this->corpus);
+  abj::String tag("corpus");
+  this->stemmed_corpus = this->get_stems_list(this->corpus, tag);
 
   int stem_count=0;
   for(int i=0; i<stemmed_corpus.size(); i++)
@@ -121,39 +146,9 @@ double Bigram::probablity_laplace_smoothing(String word2, char PIPE, String word
 }
 
 double Bigram::text_probablity_using_laplace_smoothing(String text){
-  // // First preprocess the sentence
-  // SentenceSegmenter sentenceSegmenter(text);
-  // sentenceSegmenter.use_decision_tree();
-
-  // // Handling Puctuation
-  // for(int i=0; i<sentenceSegmenter.sentence_list.size(); i++){
-  //   Punctuation punctuation(sentenceSegmenter.sentence_list[i]);
-  //   punctuation.handle_punctuation();
-  //   sentenceSegmenter.sentence_list.set(i,punctuation.getUpdatedCorpus());
-  // }
-  // // Tokenize it
-  // Vector<Vector<String>> tokenized_text;
-  // for(int i=0; i<sentenceSegmenter.sentence_list.size(); i++){
-  //   Tokenizer tokenizer(sentenceSegmenter.sentence_list[i]);
-  //   tokenizer.tokenize();
-  //   Vector<String> tokens = tokenizer.getTokens();
-  //   tokenized_text.push(tokens);
-  // }
-  // //sentenceSegmenter.~SentenceSegmenter();
-  // // Now stem it
-  // Vector<Vector<String>> text_stems;
-  // for(int i=0; i<tokenized_text.size(); i++){
-  //   Vector<String> sentence_stem_list;
-  //   for(int j=0; j<tokenized_text[i].size(); j++){
-  //     Stemmer t;
-  //     t.initialize(tokenized_text[i][j]);
-  //     String temp = t.get_stem();
-  //     sentence_stem_list.push(temp);
-  //   }
-  //   text_stems.push(sentence_stem_list);
-  // }
+  abj::String tag("input");
   Vector<Vector<String>> text_stems;
-  text_stems = this->get_stems_list(text);
+  text_stems = this->get_stems_list(text, tag);
 
   // text_stem is our final output! We will work on it.
   double total_probablity=0;
@@ -179,23 +174,9 @@ void Bigram::print_stems(){
 void Bigram::test_function(){
   printf("Testing bigram---------------------------\n");
 
-  /*  String phrase("Victorious Soldiers !");
-  Tokenizer tokenizer(phrase);
-  tokenizer.tokenize();
-  Vector<String>tokens = tokenizer.getTokens();
-  Stemmer w1, w2;
-  w1.initialize(tokens[0]);
-  w2.initialize(tokens[1]);
-  
-  double p = bigram.probablity_laplace_smoothing(w2.get_stem(), '|', w1.get_stem());
-  phrase.print();
-  printf("probablity=%lf\n",p);
-  */
-
   String phrase("Stupid Soldiers must work together to achieve big things!");
   Bigram bigram;
   bigram.preprocess_corpus();
   std::cout<<"Probablity: "<<bigram.text_probablity_using_laplace_smoothing(phrase)<<std::endl;
-
 }
 

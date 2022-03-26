@@ -19,4 +19,4 @@ lib_vector.o: lib_vector.h
 auxiliary.o: auxiliary.h
 	g++ -c -g auxiliary.h
 clean:
-	rm *.o run *.gch
+	rm *.o run *.gch input_*.txt corpus_*.txt

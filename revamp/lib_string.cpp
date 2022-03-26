@@ -256,6 +256,19 @@ char abj::String::operator[](int index){
   return this->storage[index];
   }
 
+
+abj::String abj::String::operator+(abj::String str){
+  char* temp = (char*)calloc(this->curr_size+str.size()+2, sizeof(char));
+  for(int i=0; i<this->curr_size; i++) temp[i]=this->storage[i];
+
+  int j=0;
+  for(int i=this->curr_size; j<str.size(); i++, j++) temp[i]=str[j];
+  temp[this->curr_size+str.size()]='\0'; //5,4 -> 0-4, 5,6,7,8
+
+  abj::String s(temp);
+  return s;
+}
+
 void abj::String::test_function(){
 printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");
