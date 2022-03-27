@@ -16,6 +16,7 @@ class String{
 		int curr_size;
                 int curr_capacity;
 		char capitalize(char c);
+  int compare_string(char *str1, char *str2);
 	public:
 		String();
 		String(abj::String& data);
@@ -50,6 +51,9 @@ class String{
   char lastChar();
   char operator[](int index);
   abj::String operator+(abj::String str);
+  bool operator==(abj::String data);
+  bool operator>(abj::String data);
+  bool operator<(abj::String data);
 
 		static void test_function();
 };

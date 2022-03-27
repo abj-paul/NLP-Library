@@ -297,6 +297,33 @@ abj::String abj::String::operator+(abj::String str){
   return s;
 }
 
+bool abj::String::operator==(abj::String data){
+  if(data.size()!=this->curr_size) return false;
+
+  for(int i=0; i<data.size(); i++){
+    if(capitalize(data[i])!=capitalize(this->storage[i])) return false;
+  }
+  return true;
+}
+int abj::String::compare_string(char *str1, char *str2){
+  while( ( *str1 != '\0' && *str2 != '\0' ) && capitalize(*str1) == capitalize(*str2) ){
+        str1++;
+        str2++;
+    }
+
+    if(*str1 == *str2) return 0; // strings are identical
+    else return capitalize(*str1) - capitalize(*str2);
+}
+bool abj::String::operator>(abj::String data){
+  if(this->compare_string(this->storage, data.get_raw_data()) > 0) return true;
+  return false;
+}
+bool abj::String::operator<(abj::String data){
+  if(this->compare_string(this->storage, data.get_raw_data()) < 0) return true;
+  return false;
+}
+
+
 void abj::String::test_function(){
 printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");

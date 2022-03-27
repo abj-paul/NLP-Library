@@ -106,7 +106,13 @@ inverse: 1000, 10^3
 sed "s/[0-9]*\s*/DETECT/g"
     #+end_src
     to detect all number+space in our file.
+* FAQ for presentation
+** Why did you need a separate string class?
+   - operator overloading: > < == + - etc
+   - Capitalize(), get_raw_data()
+   - captialzie(char c) and string_compare
 * Sources
   [[https://www.youtube.com/watch?v=QGT6XTeA3YQ&t=10s][N gram smoothing techniques]]
   [[https://www.quora.com/What-are-some-good-algorithms-for-binning-similar-sounding-words][Words with similar pronunciation NLP]]
-* Temp
+  [[https://overiq.com/c-programming-101/the-strcmp-function-in-c/][str_cmp code]]
+* Tem
