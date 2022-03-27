@@ -14,6 +14,12 @@ Bigram::Bigram(const char* filename){
   this->corpus.initialize(this->extract_content_from_file(filename));
 }
 
+
+
+void Bigram::setCorpus(const char* filename){
+  this->corpus.initialize(this->extract_content_from_file(filename));
+}
+
 char* Bigram::extract_content_from_file(const char* filename){ //auxiliary function
   FILE* fptr = fopen(DEFAULT_CORPUS,"r");
   if(fptr==NULL){
@@ -103,6 +109,7 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text, abj::String tag
     
     all_stems.push(sentence_stems);
   }
+  //this->corpus.~String();
   return all_stems;
 }
 
@@ -124,10 +131,13 @@ int Bigram::count_of_stem(String stem){
     for(int j=0; j<stemmed_corpus[i].size(); j++){
       String corpus_stem(stemmed_corpus[i].get(j));
       if(stem.equals(corpus_stem)) count++;
+      //corpus_stem.~String();
     }
   }
   return count;
 }
+
+
 
 int Bigram::count_of_two_stem(String stem1, String stem2){
   int count=0;
@@ -156,7 +166,7 @@ double Bigram::text_probablity_using_laplace_smoothing(String text){
     for(int j=1; j<text_stems[i].size(); j++){
       double curr_probablity = probablity_laplace_smoothing(text_stems[i][j], '|', text_stems[i][j-1]);
       text_stems[i][j].print();
-      printf("Probablity=%lf\n",curr_probablity);
+      //printf("Probablity=%lf\n",curr_probablity);
       total_probablity += curr_probablity;
     }
   }
@@ -174,7 +184,7 @@ void Bigram::print_stems(){
 void Bigram::test_function(){
   printf("Testing bigram---------------------------\n");
 
-  String phrase("Stupid Soldiers must work together to achieve big things!");
+  String phrase("The newsreporter spoke highly of your city.");
   Bigram bigram;
   bigram.preprocess_corpus();
   std::cout<<"Probablity: "<<bigram.text_probablity_using_laplace_smoothing(phrase)<<std::endl;

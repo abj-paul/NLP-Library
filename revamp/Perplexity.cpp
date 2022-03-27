@@ -4,7 +4,7 @@ using namespace abj;
 Perplexity::Perplexity(){
   this->corpus_filename.initialize(DEFAULT_CORPUS);
   this->train_part=0.8;
-  this->train_part=0.2;
+  this->test_part=0.2;
 
   this->train_corpus.initialize("train_corpus.txt");
   this->test_corpus.initialize("test_corpus.txt");
@@ -48,36 +48,58 @@ void Perplexity::split_corpus(){
   double test_sentence_count=ss.sentence_list.size()-train_sentence_count;
 
   if(test_sentence_count==0){
-    printf("Erro! Too small corpus, can not create test train set!\n");
+    printf("Error! Too small corpus, can not create test train set!\n");
     exit(1);
   }
   // Building train set
   FILE* train_fptr = fopen(train_corpus.get_raw_data(), "a+");
   for(int i=0; i<train_sentence_count; i++){
-    fprintf(train_fptr, "%s", ss.sentence_list[i].get_raw_data()); // Verify the output!!!!!!!!!
+    //fprintf(train_fptr, "%s", ss.sentence_list[i].get_raw_data()); // Verify the output!!!!!!!!!
+    fputs(ss.sentence_list[i].get_raw_data(), train_fptr);
   }
   fclose(train_fptr);
 
   // Building test set
   FILE* test_fptr = fopen(test_corpus.get_raw_data(), "a+");
   for(long long int i=(long long int)train_sentence_count; i<ss.sentence_list.size(); i++){
-    fprintf(test_fptr, "%s ", ss.sentence_list[i].get_raw_data()); // Verify the output!!!!!!!!!
+    //fprintf(test_fptr, "%s ", ss.sentence_list[i].get_raw_data()); // Verify the output!!!!!!!!!
+    fputs(ss.sentence_list[i].get_raw_data(), test_fptr);
   }
   fclose(test_fptr);
 }
 
+void Perplexity::build_bigram_model(){
+  this->bigram.setCorpus(this->train_corpus.get_raw_data());
+  this->bigram.preprocess_corpus();
+}
+
+// Returns AVERAGE perplexity value
+double Perplexity::test_bigram_model(){
+  abj::String corpus(read_file(this->test_corpus.get_raw_data()));
+  SentenceSegmenter ss(corpus);
+  ss.use_decision_tree();
+  
+  double total_perplexity=0;
+  for(int i=0; i<ss.sentence_list.size(); i++){
+    double perplexity = 0; // In log format
+    double sentence_probablity = this->bigram.text_probablity_using_laplace_smoothing(ss.sentence_list[i]);
+
+   double number_of_words = 10;
+    
+    perplexity = pow(pow(10,((-1)*(sentence_probablity))), 1/number_of_words);
+    printf("N=%lf, 1/N(probablity)=%lf\n",number_of_words, perplexity);
+    total_perplexity += perplexity;
+  }
+  return (total_perplexity/ss.sentence_list.size());
+}
+
+
 double Perplexity::perplexity(){
   this->split_corpus();
   this->build_bigram_model();
-  this->test_bigram_model();
-
-  return -1;
+  return this->test_bigram_model();
 }
-void Perplexity::build_bigram_model(){}
-void Perplexity::test_bigram_model(){}
-
-
 void Perplexity::test_function(){
   abj::Perplexity pp;
-  pp.perplexity();
+  printf("Perplexity is=%lf",pp.perplexity());
 }

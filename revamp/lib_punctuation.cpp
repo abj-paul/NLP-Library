@@ -59,7 +59,7 @@ void abj::Punctuation::print(){
 
 abj::Punctuation::~Punctuation(){
   //this->punctuation_list.~Vector<char>();
-  this->corpus.~String();
+  //this->corpus.~String();
 
 }
 

@@ -30,6 +30,7 @@ class Bigram{
  public:
   Bigram(); // Uses default Corpus
   Bigram(const char* filename);
+  void setCorpus(const char* filename);
   //~Bigram();
   
   bool preprocess_corpus();

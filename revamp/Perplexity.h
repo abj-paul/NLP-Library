@@ -12,10 +12,11 @@ class Perplexity {
   double test_part;
   abj::String train_corpus;
   abj::String test_corpus;
+  abj::Bigram bigram;
   
   void split_corpus();
   void build_bigram_model();
-  void test_bigram_model();
+  double test_bigram_model();
   char* read_file(const char* filename);
 
  public:

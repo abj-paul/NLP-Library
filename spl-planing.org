@@ -76,6 +76,11 @@ inverse: 1000, 10^3
     Run text_probablity_using_laplace_smoothing for
         - each sentence
 	- iteratively compute PP
+*** Solving Big Input Problem
+    - [ ] Run the bigram class. Does it work alone?
+    - [ ] If it runs, revisit the perplexity and try to edit it to make it work.
+    - [ ] If all fails, then we have Kneeser-ney algorithm!
+    - [ ] So at night, start with noisy channel model.
 ** 27th March
    Evaluation class
 * Caution!
@@ -101,4 +106,7 @@ inverse: 1000, 10^3
 sed "s/[0-9]*\s*/DETECT/g"
     #+end_src
     to detect all number+space in our file.
+* Sources
+  [[https://www.youtube.com/watch?v=QGT6XTeA3YQ&t=10s][N gram smoothing techniques]]
+  [[https://www.quora.com/What-are-some-good-algorithms-for-binning-similar-sounding-words][Words with similar pronunciation NLP]]
 * Temp

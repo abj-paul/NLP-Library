@@ -46,9 +46,9 @@ abj::Vector<T>::Vector(){
 	this->current_size=0;
 }
 template<typename T>
-abj::Vector<T>::Vector(int size){
-	this->storage = (T*)calloc(size,sizeof(T));	
-	this->capacity=size;
+abj::Vector<T>::Vector(int size_){
+	this->storage = (T*)calloc(size_,sizeof(T));	
+	this->capacity=size_;
 	this->current_size=0;
 }
 template<typename T>
@@ -63,7 +63,7 @@ abj::Vector<T>::Vector(abj::Vector<T>& initializer){
 }
 template<typename T>
 abj::Vector<T>::~Vector(){
-  if(this->storage!=NULL)free(this->storage);
+  if(this->storage!=NULL && this->current_size!=0)free(this->storage);
 	this->capacity=0;
 	this->current_size=0;
 }
@@ -115,6 +115,7 @@ void abj::Vector<T>::push(T& data){
 
 template<typename T>
 T abj::Vector<T>::get(int index){
+  if(this->current_size==0) return NULL;
   if(index<0 || index>=this->current_size) {
     printf("Vector index out of bound!\n");
     return 0;
@@ -210,7 +211,7 @@ template<typename T>
 T abj::Vector<T>::operator[](int index){
   if(index<0 || index>=this->current_size) {
     printf("Vector Out of index!\n");
-    return (T)NULL;
+    return NULL;
   }
   return this->storage[index];
 }

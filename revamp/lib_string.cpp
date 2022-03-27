@@ -6,6 +6,16 @@ abj::String::String(){
 	this->storage=NULL;
 }
 
+// abj::String::~String(){
+//   if(this->storage!=NULL && this->curr_size!=0){
+//       free(this->storage);
+//       this->storage=NULL;
+//       this->curr_size=0;
+//       this->curr_capacity=0;
+//     }
+// }
+
+
 abj::String::String(abj::String& data){ // RISKY!!!! because both data and "this" can access this heap data. Thus, without us knowing, data functions can change the heap data.
 	this->storage = (char*)calloc(data.size()+1,sizeof(char));
 
@@ -99,6 +109,7 @@ void abj::String::resize(int size){
         char* new_memory = (char*)calloc(new_size,sizeof(char));
 	for(int i=0; i<this->curr_size; i++) new_memory[i]=this->storage[i];
 	free(this->storage);
+	this->storage=NULL;
 
 	this->storage = new_memory;
 	this->curr_size = this->curr_size;
@@ -171,9 +182,10 @@ void abj::String::concatenate_at_point(abj::String& str, int index, char separat
 }
 
 char abj::String::get(int index){
+  if(this->curr_size==0) return (char)NULL;
   if(index<0 || index>=this->curr_size){
     printf("String Index - out of bound!\n");
-    return NULL;
+    return (char)NULL;
   } 
     return this->storage[index];
 }
@@ -204,12 +216,28 @@ void abj::String::initialize(char* data){
 	this->curr_capacity=size;
 }
 
+void abj::String::initialize(const char* data){
+	// Getting String Size
+	int size = 0;
+	while(data[size]!='\0') size++;
+
+	this->storage = (char*)calloc(size+1,sizeof(char));
+
+	for(int i=0; i<size; i++) this->storage[i]=data[i];
+	this->storage[size]='\0';
+
+	this->curr_size=size;
+	this->curr_capacity=size;
+}
+
+
 
 void abj::String::removeData(){
   this->storage=NULL;
   this->curr_size=0;
   this->curr_capacity=0;
   free(this->storage);
+  this->storage=NULL;
 }
 
 

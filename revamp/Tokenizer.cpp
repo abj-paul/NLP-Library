@@ -11,12 +11,14 @@ abj::Tokenizer::Tokenizer(abj::String sentence){
   this->start_token.initialize((char*)"<s>");
   this->end_token.initialize((char*)"</s>");
 }
-void abj::Tokenizer::setString(abj::String sentence){
-  this->sentence = sentence;
-}
 
 abj::Tokenizer::~Tokenizer(){
-  // Do Nothing
+  this->tokens.~Vector();
+  // this->sentence.~String();
+}
+
+void abj::Tokenizer::setString(abj::String sentence){
+  this->sentence = sentence;
 }
 
 void abj::Tokenizer::tokenize(){
@@ -45,6 +47,7 @@ abj::String abj::Tokenizer::make_token(int start_index, int end_index){
 
   abj::String token(t,ALLOCATE_NEW_MEMORY);
   free(t);
+  t=NULL;
   return token;
 }
 

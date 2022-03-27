@@ -21,6 +21,7 @@ class String{
 		String(abj::String& data);
 		String(char* data, int FLAG);
 		String(const char* data);
+		// ~String();
 
 		int size();
   int capacity();
@@ -28,6 +29,7 @@ class String{
   bool set(int index, char c);
   void initialize(abj::String& str);
   void initialize(char* str);
+  void initialize(const char* str);
   void removeData();
   void insert_char_at_point(int index, char c);
 

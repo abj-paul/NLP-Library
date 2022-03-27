@@ -16,7 +16,7 @@ int main(){
 	abj::Tokenizer::test_function();
 	abj::Stemmer::test_function();*/
 
-  //abj::Bigram::test_function();
+        // abj::Bigram::test_function();
 	abj::Perplexity::test_function();
 return 0;
 }
