@@ -18,6 +18,8 @@ namespace abj{
     void load_vocabulary();
     void print_vocabulary(); // For debug
     int binarySearch(int left_index, int right_index, abj::String& word);
+    abj::Vector<abj::String> generate_candidate_set(abj::String word);
+    int domerau_levensthein_edit_distance(abj::String& A, abj::String&& B);
 
     
   public:

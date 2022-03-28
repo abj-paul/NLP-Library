@@ -111,6 +111,8 @@ sed "s/[0-9]*\s*/DETECT/g"
    - operator overloading: > < == + - etc
    - Capitalize(), get_raw_data()
    - captialzie(char c) and string_compare
+** What concepts have you implemented?
+   Domerau-Levensthein edit distance
 * Sources
   [[https://www.youtube.com/watch?v=QGT6XTeA3YQ&t=10s][N gram smoothing techniques]]
   [[https://www.quora.com/What-are-some-good-algorithms-for-binning-similar-sounding-words][Words with similar pronunciation NLP]]

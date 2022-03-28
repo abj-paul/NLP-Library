@@ -56,11 +56,48 @@ int NonWord::binarySearch(int left_index, int right_index, abj::String& word){
     return -1;
 }
 
+int NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String&& B){
+  int m[MAX_WORD_SIZE][MAX_WORD_SIZE];
+  for(int i=0; i<A.size(); i++) m[i][0]=i;
+  for(int j=0; j<B.size(); j++) m[0][j]=j;
+
+  int cost=0;
+  // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or B.
+  for(int i=1; i<=A.size(); i++){
+    for(int j=1; j<=B.size(); j++){
+      if(A[i-1]==B[j-1]) cost=0;
+      else cost=1;
+
+      m[i][j] = std::min(m[i-1][j]+1,                //deletion
+			std::min(m[i][j-1]+1,       //insertion
+				 m[i-1][j-1]+cost));//substitution
+      if(i>1 && j>1 && A[i-1]==B[j-1-1] && A[i-1-1]==B[j-1]){
+	m[i][j] = std::min(m[i][j], m[i-2][j-2]+1); //transposition
+      }
+    }
+  }
+
+  return m[A.size()][B.size()];
+}
+
+abj::Vector<abj::String> NonWord::generate_candidate_set(abj::String word){
+  abj::Vector<abj::String> candidate_set;
+  
+  for(int i=0; i<this->vocabulary.size(); i++){
+    if(this->domerau_levensthein_edit_distance(word, this->vocabulary[i]) <=2) candidate_set.push(this->vocabulary[i]);
+  }
+  return candidate_set;
+}
+
 void NonWord::test_function(){
   abj::NonWord nonWord;
-  abj::String word("aaShiRvAad");
+  abj::String word("able");
   printf("%s is nonword?%d\n",word.get_raw_data(),nonWord.isNonWord(word));
+
+  abj::Vector<abj::String> candidate_set = nonWord.generate_candidate_set(word);
+  for(int i=0; i <candidate_set.size(); i++) candidate_set[i].print();
 }
+
 
 int main(){
   abj::NonWord::test_function();
