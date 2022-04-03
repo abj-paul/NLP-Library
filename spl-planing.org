@@ -83,6 +83,14 @@ inverse: 1000, 10^3
     - [ ] So at night, start with noisy channel model.
 ** 27th March
    Evaluation class
+** 31th March [/]
+   - [ ] Backtracking (9:00-9:30)
+   - [ ] Load confusion Matrix (9:30-10:30)
+   - [ ] Calculate non-word sentence probablity with simplifying assumption (10:30-11)
+   - [ ] Google on Soundex algorithm
+   - [ ] Implement them
+   - [ ] Find probablity for non-word using simplifying assumption
+   - [ ] Implement voice recognition
 * Caution!
   our bigram only works for mtl and speech recognition. Due to ~stemming~, it can no longer identify grammatical errors.
 
