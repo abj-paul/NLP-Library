@@ -3,6 +3,8 @@
   SPL Project
   Abhijit Paul
   BSSE 1201
+* Sources
+  [[https://www.researchgate.net/profile/Kenneth-Church-2/publication/221102042_A_Spelling_Correction_Program_Based_on_a_Noisy_Channel_Model/links/09e415120007d5385f000000/A-Spelling-Correction-Program-Based-on-a-Noisy-Channel-Model.pdf?origin=publication_detail][Confusion Matrix for Noisy Channel Model - Research Paper]]
 * ToDo [1/3]
   - [X] Build a basic Language Model
   - [ ] Fast File Handling

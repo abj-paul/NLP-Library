@@ -1,7 +1,9 @@
-run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o
-	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o -o run
+run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o
+	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o -o run
 main.o: main.cpp Bigram.o
 	g++ -c -g main.cpp
+NoisyChannelModel.o: NoisyChannelModel.cpp NoisyChannelModel.h
+	g++ -c -g NoisyChannelModel.cpp
 Perplexity.o: Perplexity.cpp Perplexity.h Bigram.o
 	g++ -c -g Perplexity.cpp
 Bigram.o: Bigram.cpp Bigram.h Tokenizer.o Stemmer.o
@@ -21,4 +23,4 @@ lib_vector.o: lib_vector.h
 auxiliary.o: auxiliary.h
 	g++ -c -g auxiliary.h
 clean:
-	rm *.o run *.gch input_*.txt corpus_*.txt train_*.txt test_*.txt
+	rm *.o run *.gch input_*.txt corpus_*.txt train_*.txt test_*.txt *_OUTPUT.txt

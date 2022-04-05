@@ -19,7 +19,7 @@ class Vector{
 
 	~Vector();
 
-	void push(const T& data);
+	void push(T& data);
 	// void push(T data);
 	void push(abj::Vector<T> new_data);
 
@@ -69,7 +69,7 @@ abj::Vector<T>::~Vector(){
 }
 
 template<typename T>
-void abj::Vector<T>::push(const T& data){
+void abj::Vector<T>::push(T& data){
 	// if(this->current_size+1>this->capacity){
 		// this->resize(this->capacity*2);
 	// }

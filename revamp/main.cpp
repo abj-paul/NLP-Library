@@ -5,8 +5,8 @@
 #include "Tokenizer.h"
 #include "Stemmer.h"*/
 //#include "Bigram.h"
-#include "Perplexity.h"
-
+//#include "Perplexity.h"
+#include "NoisyChannelModel.h"
 
 int main(){
   /*abj::String::test_function();
@@ -17,6 +17,7 @@ int main(){
 	abj::Stemmer::test_function();*/
 
         // abj::Bigram::test_function();
-	abj::Perplexity::test_function();
+	//abj::Perplexity::test_function();
+  abj::NoisyChannelModel::test_function();
 return 0;
 }
