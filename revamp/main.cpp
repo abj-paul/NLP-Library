@@ -18,6 +18,7 @@ int main(){
 
         // abj::Bigram::test_function();
 	//abj::Perplexity::test_function();
+  //abj::NonWord::test_function();
   abj::NoisyChannelModel::test_function();
 return 0;
 }

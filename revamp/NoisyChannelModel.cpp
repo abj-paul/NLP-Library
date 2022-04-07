@@ -61,4 +61,6 @@ void NoisyChannelModel::test_function(){
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.deletion_confusion_matrix, new abj::String("DEL_OUTPUT.txt"));
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.substitution_confusion_matrix, new abj::String("SUB_OUTPUT.txt"));
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.transposition_confusion_matrix, new abj::String("TRANS_OUTPUT.txt"));
+
+  //noisyChannelModel.print_vocabulary();
 }

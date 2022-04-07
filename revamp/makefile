@@ -1,7 +1,9 @@
-run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o
-	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o -o run
+run: main.o lib_string.o lib_vector.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o NonWord.o
+	g++ main.o lib_string.o lib_punctuation.o SentenceSegmenter.o Tokenizer.o Stemmer.o Bigram.o Perplexity.o NoisyChannelModel.o NonWord.o -o run
 main.o: main.cpp Bigram.o
 	g++ -c -g main.cpp
+NonWord.o: NonWord.cpp NonWord.h
+	g++ -c -g NonWord.cpp
 NoisyChannelModel.o: NoisyChannelModel.cpp NoisyChannelModel.h
 	g++ -c -g NoisyChannelModel.cpp
 Perplexity.o: Perplexity.cpp Perplexity.h Bigram.o

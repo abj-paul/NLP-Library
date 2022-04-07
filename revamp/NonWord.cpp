@@ -56,10 +56,22 @@ int NonWord::binarySearch(int left_index, int right_index, abj::String& word){
     return -1;
 }
 
-int NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String&& B){
+Candidate NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String&& B){
+  // Converting A to B
   int m[MAX_WORD_SIZE][MAX_WORD_SIZE];
-  for(int i=0; i<A.size(); i++) m[i][0]=i;
-  for(int j=0; j<B.size(); j++) m[0][j]=j;
+  int direction[MAX_WORD_SIZE][MAX_WORD_SIZE];
+  abj::Vector<int> backtrack_path;
+  
+  for(int i=0; i<=A.size(); i++) {
+    m[i][0]=i;
+    direction[i][0]=DELETION_DOWN_ARROW;
+  }
+  for(int j=0; j<=B.size(); j++){
+    direction[0][j]=INSERTION_RIGHT_ARROW;
+    m[0][j]=j;
+  }
+  direction[0][0]=NO_OPERATION;
+  m[0][0]=0;
 
   int cost=0;
   // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or B.
@@ -71,20 +83,69 @@ int NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String&& B){
       m[i][j] = std::min(m[i-1][j]+1,                //deletion
 			std::min(m[i][j-1]+1,       //insertion
 				 m[i-1][j-1]+cost));//substitution
+      // Direction
+      if(m[i][j]==m[i-1][j]+1) direction[i][j]=DELETION_DOWN_ARROW;
+      else if(m[i][j]==m[i][j-1]+1) direction[i][j]=INSERTION_RIGHT_ARROW;
+      else if(m[i-1][j-1]==m[i][j]) direction[i][j]=SAME_CHARACTER_DIAGONAL_ARROW;
+      else if(m[i-1][j-1]+1==m[i][j]) direction[i][j]=SUBSTITUTION_DIAGONAL_ARROW;
+      
       if(i>1 && j>1 && A[i-1]==B[j-1-1] && A[i-1-1]==B[j-1]){
 	m[i][j] = std::min(m[i][j], m[i-2][j-2]+1); //transposition
+	if(m[i][j]==m[i-2][j-2]+1) direction[i][j] = TRANSPOSITION_ARROW;
       }
     }
   }
 
-  return m[A.size()][B.size()];
+  //print_direction(direction, A, B);
+  this->backtracking(A.size(), B.size(), direction, &backtrack_path);
+  backtrack_path.reverse();
+
+  abj::Candidate candidate(B, m[A.size()][B.size()], backtrack_path);
+  return candidate;
 }
 
-abj::Vector<abj::String> NonWord::generate_candidate_set(abj::String word){
-  abj::Vector<abj::String> candidate_set;
+void NonWord::backtracking(int i, int j, int d[][MAX_WORD_SIZE], abj::Vector<int>* backtrack_path){
+  if(i<0 || j<0) return;
+  backtrack_path->push(d[i][j]);
+
+  if(d[i][j]==INSERTION_RIGHT_ARROW){
+    //weight_matrix+=weight[][];
+    this->backtracking(i, j-1, d, backtrack_path);
+  }
+  else if(d[i][j]==DELETION_DOWN_ARROW) this->backtracking(i-1, j, d, backtrack_path);
+  else if(d[i][j]==SAME_CHARACTER_DIAGONAL_ARROW) this->backtracking(i-1, j-1, d, backtrack_path);
+  else if(d[i][j]==SUBSTITUTION_DIAGONAL_ARROW) this->backtracking(i-1, j-1, d, backtrack_path);
+  else if(d[i][j]==TRANSPOSITION_ARROW) this->backtracking(i-2, j-2, d, backtrack_path);
+
+  return;
+}
+
+void NonWord::print_direction(int d[][MAX_WORD_SIZE], abj::String A, abj::String B){
+  for(int i=0; i<=A.size(); i++){
+    for(int j=0; j<=B.size(); j++){
+      print_med_direction(d[i][j]);
+    }
+    printf("\n");
+  }
+}
+void NonWord::print_med_direction(int direction_Value){
+      if(direction_Value==INSERTION_RIGHT_ARROW) printf("<- ");
+      else if(direction_Value==DELETION_DOWN_ARROW) printf("DW ");
+      else if(direction_Value==SAME_CHARACTER_DIAGONAL_ARROW) printf("SM ");
+      else if(direction_Value==SUBSTITUTION_DIAGONAL_ARROW) printf("^| ");
+      else if(direction_Value==TRANSPOSITION_ARROW) printf("TP ");
+      else if(direction_Value==NO_OPERATION) printf("NA ");
+}
+
+
+abj::Vector<abj::Candidate> NonWord::generate_candidate_set(abj::String word){
+  abj::Vector<abj::Candidate> candidate_set;
+  word.capitalize();
   
   for(int i=0; i<this->vocabulary.size(); i++){
-    if(this->domerau_levensthein_edit_distance(word, this->vocabulary[i]) <=2) candidate_set.push(this->vocabulary[i]);
+    this->vocabulary[i].capitalize();
+    abj::Candidate candidate = this->domerau_levensthein_edit_distance(word, this->vocabulary[i]);
+    if(candidate.get_med() <=2) candidate_set.push(candidate);
   }
   return candidate_set;
 }
@@ -94,12 +155,12 @@ void NonWord::test_function(){
   abj::String word("able");
   printf("%s is nonword?%d\n",word.get_raw_data(),nonWord.isNonWord(word));
 
-  abj::Vector<abj::String> candidate_set = nonWord.generate_candidate_set(word);
+ abj::Vector<abj::Candidate> candidate_set = nonWord.generate_candidate_set(word);
   for(int i=0; i <candidate_set.size(); i++) candidate_set[i].print();
 }
 
 
-int main(){
+/*int main(){
   abj::NonWord::test_function();
   return 0;
-}
+  }*/

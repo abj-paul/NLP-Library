@@ -5,6 +5,7 @@
 
 #include "lib_string.h"
 #include "lib_vector.h"
+#include "NonWord.h"
 
 namespace abj{
 #define ALPHABET_SIZE 26
@@ -13,7 +14,7 @@ namespace abj{
 #define ID_SUBSTITUTION "SUBSTITUTION"
 #define ID_TRANSPOSITION "TRANSPOSITION"
 
-  class NoisyChannelModel{
+  class NoisyChannelModel : public abj::NonWord{
   public:
     // private:
     abj::Vector<abj::Vector<int>> insertion_confusion_matrix; // 2D array

@@ -1,0 +1,24 @@
+* Vector
+** Reverse()
+  - Reverse function working fine.
+#+begin_src c++
+#include "lib_vector.h"
+#include "lib_string.h"
+
+int main(){
+  abj::Vector<abj::String> x;
+  abj::String a("Abhi");
+  abj::String b("Jit");
+  abj::String c("Paul");
+  
+  x.push(a);
+  x.push(b);
+  x.push(c);
+
+  for(int i=0; i<x.size(); i++) x[i].print();
+  x.reverse();
+
+  for(int i=0; i<x.size(); i++) x[i].print();
+  return 0;
+}
+#+end_src

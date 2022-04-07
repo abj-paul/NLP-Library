@@ -20,9 +20,10 @@ class Vector{
 	~Vector();
 
 	void push(T& data);
-	// void push(T data);
+	void push(T&& data);
 	void push(abj::Vector<T> new_data);
 
+        void reverse();
 	void print();
 
     void operator = (abj::Vector<T>& x);
@@ -34,6 +35,7 @@ class Vector{
 	int size();
 	T get(int index);
   bool set(int index, T data);
+
 
 	static void test_function();
 };
@@ -85,6 +87,24 @@ void abj::Vector<T>::push(T& data){
     this->storage[this->current_size++] = data;
 
 }
+template<typename T>
+void abj::Vector<T>::push(T&& data){
+	// if(this->current_size+1>this->capacity){
+		// this->resize(this->capacity*2);
+	// }
+	// this->storage[this->current_size++]=data; // usual
+    if(this->current_size+1>=this->capacity){
+        T* temp = (T*)calloc(this->capacity*2, sizeof(T));
+        this->capacity*=2;
+
+        for(int i=0; i<this->current_size; i++) temp[i]=this->storage[i];
+        free(this->storage);
+        this->storage=temp;
+    }
+    this->storage[this->current_size++] = data;
+
+}
+
 
 // template<typename T>
 // void abj::Vector<T>::push(T data){
@@ -211,9 +231,21 @@ template<typename T>
 T abj::Vector<T>::operator[](int index){
   if(index<0 || index>=this->current_size) {
     printf("Vector Out of index!\n");
-    return NULL;
+    return std::boost::none;
   }
   return this->storage[index];
+}
+
+template<typename T>
+void abj::Vector<T>::reverse(){
+  T* new_storage = (T*)calloc(this->capacity, sizeof(T));
+
+  int j=0;
+  for(int i=this->current_size-1; i>=0; i--, j++){
+    new_storage[j]=this->storage[i];
+  }
+  free(this->storage);
+  this->storage = new_storage;
 }
 
 
