@@ -184,8 +184,9 @@ void abj::String::concatenate_at_point(abj::String& str, int index, char separat
 char abj::String::get(int index){
   if(this->curr_size==0) return (char)NULL;
   if(index<0 || index>=this->curr_size){
-    printf("String Index - out of bound!\n");
+    //printf("String Index - out of bound! (%s,%d)\n",this->storage, index);
     return (char)NULL;
+    //exit(1);
   } 
     return this->storage[index];
 }

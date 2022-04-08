@@ -89,13 +89,13 @@ bool abj::Stemmer::regex(const char* c){
   }
 
   else if(condition.equals("*d")){
-    if(this->word.size()<=1) return false;
+    if(this->word.size()<=2) return false;
     else if(this->isConsonant(this->word.size()-1) && isConsonant(this->word.size()-2)) return true;
     else return false;
   }
 
   else if(condition.equals("*o")){
-    if(this->word.size()<=2) return false;
+    if(this->word.size()<=3) return false;
 
     char c = capitalize(this->word.lastChar());
     int len = this->word.size();

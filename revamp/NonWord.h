@@ -7,6 +7,7 @@
 
 #include "lib_string.h"
 #include "lib_vector.h"
+#include "Stemmer.h"
 #include "Candidate.h"
 
 namespace abj{

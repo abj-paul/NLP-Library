@@ -135,10 +135,14 @@ void abj::Vector<T>::push(T&& data){
 
 template<typename T>
 T abj::Vector<T>::get(int index){
-  if(this->current_size==0) return NULL;
+  if(this->current_size==0) {
+    exit(1);//return NULL;
+    printf("Vector index %d>Vector size %d!Exiting...\n",index,this->current_size);
+  }
   if(index<0 || index>=this->current_size) {
-    printf("Vector index out of bound!\n");
-    return 0;
+    printf("Vector index %d out of bound!Exitingn\n",index);
+    exit(1);
+    //return 0;
   }
 	return this->storage[index];
 }
@@ -231,7 +235,8 @@ template<typename T>
 T abj::Vector<T>::operator[](int index){
   if(index<0 || index>=this->current_size) {
     printf("Vector Out of index!\n");
-    return std::boost::none;
+    // return 0;
+    exit(1);
   }
   return this->storage[index];
 }

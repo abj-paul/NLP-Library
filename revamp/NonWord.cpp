@@ -3,6 +3,7 @@ using namespace abj;
 
 NonWord::NonWord(){
   this->load_vocabulary();
+  this->print_vocabulary();
 }
 
 void NonWord::load_vocabulary(){
@@ -15,7 +16,9 @@ void NonWord::load_vocabulary(){
   while(!feof(fptr)){
     fscanf(fptr, "%s\n", word);
     abj::String new_string(word);
-    this->vocabulary.push(new_string);
+    abj::Stemmer stemmer(new_string);
+    this->vocabulary.push(stemmer.get_stem());
+    // this->vocabulary.push(new_string);
   }
   fclose(fptr);
 }
@@ -57,6 +60,9 @@ int NonWord::binarySearch(int left_index, int right_index, abj::String& word){
 }
 
 Candidate NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String&& B){
+  A.capitalize();
+  B.capitalize();
+  
   // Converting A to B
   int m[MAX_WORD_SIZE][MAX_WORD_SIZE];
   int direction[MAX_WORD_SIZE][MAX_WORD_SIZE];
@@ -77,7 +83,7 @@ Candidate NonWord::domerau_levensthein_edit_distance(abj::String& A, abj::String
   // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or B.
   for(int i=1; i<=A.size(); i++){
     for(int j=1; j<=B.size(); j++){
-      if(A[i-1]==B[j-1]) cost=0;
+      if(A[i]==B[j]) cost=0;
       else cost=1;
 
       m[i][j] = std::min(m[i-1][j]+1,                //deletion
@@ -146,6 +152,9 @@ abj::Vector<abj::Candidate> NonWord::generate_candidate_set(abj::String word){
     this->vocabulary[i].capitalize();
     abj::Candidate candidate = this->domerau_levensthein_edit_distance(word, this->vocabulary[i]);
     if(candidate.get_med() <=2) candidate_set.push(candidate);
+
+    //DEBUG
+    candidate.print();
   }
   return candidate_set;
 }
