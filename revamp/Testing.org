@@ -22,3 +22,5 @@ int main(){
   return 0;
 }
 #+end_src
+* Stemmer
+  - A lot of negative index access.

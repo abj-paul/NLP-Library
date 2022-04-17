@@ -9,6 +9,7 @@
 #include "lib_vector.h"
 #include "Stemmer.h"
 #include "Candidate.h"
+#include "ConfusionMatrix.h"
 
 namespace abj{
 #define VOCABULARY_FILE_NAME "vocabulary.txt"
@@ -21,7 +22,8 @@ namespace abj{
 #define TRANSPOSITION_ARROW 5
 #define NO_OPERATION 6
   
-  class NonWord{
+  class NonWord : public ConfusionMatrix
+  {
   private:
     abj::Vector<abj::String>vocabulary;
 
@@ -38,7 +40,6 @@ namespace abj{
 
 
     void backtracking(int i, int j, int d[][MAX_WORD_SIZE], abj::Vector<int>*backtrack_path);
-
     
   public:
     NonWord();

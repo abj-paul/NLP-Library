@@ -12,6 +12,6 @@ int main(){
   abj::Vector<abj::Candidate>v = nonWord.generate_candidate_set(stem);
 
   printf("Size=%d\n",v.size());
-  //for(int i=0; i<v.size(); i++) v[i].print();
+  for(int i=0; i<v.size(); i++) v[i].print();
   return 0;
 }

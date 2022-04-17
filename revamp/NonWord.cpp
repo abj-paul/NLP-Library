@@ -115,7 +115,7 @@ void NonWord::backtracking(int i, int j, int d[][MAX_WORD_SIZE], abj::Vector<int
   backtrack_path->push(d[i][j]);
 
   if(d[i][j]==INSERTION_RIGHT_ARROW){
-    //weight_matrix+=weight[][];
+    // weight_matrix+=weight[][];
     this->backtracking(i, j-1, d, backtrack_path);
   }
   else if(d[i][j]==DELETION_DOWN_ARROW) this->backtracking(i-1, j, d, backtrack_path);
@@ -135,10 +135,10 @@ void NonWord::print_direction(int d[][MAX_WORD_SIZE], abj::String A, abj::String
   }
 }
 void NonWord::print_med_direction(int direction_Value){
-      if(direction_Value==INSERTION_RIGHT_ARROW) printf("<- ");
+      if(direction_Value==INSERTION_RIGHT_ARROW) printf("IN ");
       else if(direction_Value==DELETION_DOWN_ARROW) printf("DW ");
       else if(direction_Value==SAME_CHARACTER_DIAGONAL_ARROW) printf("SM ");
-      else if(direction_Value==SUBSTITUTION_DIAGONAL_ARROW) printf("^| ");
+      else if(direction_Value==SUBSTITUTION_DIAGONAL_ARROW) printf("ST ");
       else if(direction_Value==TRANSPOSITION_ARROW) printf("TP ");
       else if(direction_Value==NO_OPERATION) printf("NA ");
 }
@@ -159,13 +159,22 @@ abj::Vector<abj::Candidate> NonWord::generate_candidate_set(abj::String word){
   return candidate_set;
 }
 
+
 void NonWord::test_function(){
+  abj::String word("abrevat");
   abj::NonWord nonWord;
-  abj::String word("able");
+  abj::Stemmer stemmer(word);
+
   printf("%s is nonword?%d\n",word.get_raw_data(),nonWord.isNonWord(word));
 
- abj::Vector<abj::Candidate> candidate_set = nonWord.generate_candidate_set(word);
-  for(int i=0; i <candidate_set.size(); i++) candidate_set[i].print();
+  abj::String stem = stemmer.get_stem();
+  printf("The stemmed word is=%s\n",stem.get_raw_data());
+  printf("Size=%d\n",stem.size());
+  
+  abj::Vector<abj::Candidate>v = nonWord.generate_candidate_set(stem);
+
+  printf("Size=%d\n",v.size());
+  for(int i=0; i<v.size(); i++) v[i].print();
 }
 
 

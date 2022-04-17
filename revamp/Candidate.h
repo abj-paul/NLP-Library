@@ -20,6 +20,7 @@ namespace abj{
     abj::String str;
     int minimum_edit_distance;
     abj::Vector<int> backtrack_path;
+    double probablity;
 
     
     void print_med_direction(int direction_Value);

@@ -6,6 +6,7 @@ Candidate::Candidate(abj::String str, int med, abj::Vector<int> backtrack_path){
   this->str.initialize(str.get_raw_data());
   this->minimum_edit_distance=med;
   this->backtrack_path=backtrack_path;
+  this->probablity = 0;
 }
 
 abj::String Candidate::get_string(){
@@ -31,6 +32,7 @@ void Candidate::print_med_direction(int direction_Value){
 void Candidate::print(){
   printf("Candidate: %s\n",this->str.get_raw_data());
   printf("MED=%d\n",this->minimum_edit_distance);
-  // for(int i=0; i<backtrack_path.size(); i++)print_med_direction(backtrack_path[i]);
+  for(int i=0; i<backtrack_path.size(); i++)print_med_direction(backtrack_path[i]);
   printf("\n");
+  printf("Probablity=%lf\n",this->probablity);
 }
