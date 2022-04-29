@@ -1,0 +1,11 @@
+#include "DefineNoisyChannel.h"
+
+DefineNoisyChannel::DefineNoisyChannel(){
+  this->load_file();
+}
+
+void DefineNoisyChannel::load_file(){
+  
+}
+
+
