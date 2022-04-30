@@ -24,3 +24,6 @@ int main(){
 #+end_src
 * Stemmer
   - A lot of negative index access.
+* Steps
+  - [X] Made direction public and used it.
+  - [X] Whats causing this infinite loop thing? Erase function? NOPE. Its what we push back. WE pushed back the old word (fore*5). As a result, the number of such words will just keep increasing infinitely.

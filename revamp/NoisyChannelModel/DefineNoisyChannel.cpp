@@ -3,6 +3,19 @@
 DefineNoisyChannel::DefineNoisyChannel(){
   this->load_file();
   this->printDatabase();
+  this->initialize_fields();
+}
+
+
+void DefineNoisyChannel::initialize_fields(){
+  for(int i=0; i<this->number_of_alphabets; i++){
+    std::vector<int> row;
+    for(int j=0; j<this->number_of_alphabets; j++) row.push_back(0);
+    this->insertion_confusion_matrix.push_back(row);
+    this->deletion_confusion_matrix.push_back(row);
+    this->substitution_confusion_matrix.push_back(row);
+    this->transposition_confusion_matrix.push_back(row);
+  }
 }
 
 void DefineNoisyChannel::load_file(){
@@ -25,8 +38,26 @@ void DefineNoisyChannel::split_and_store(std::string line){
 
   char wordSeparator = ',';
   std::vector<std::string> spellingErrors = this->get_tokens(portions[1], wordSeparator);
+
+  this->handleMultipleOccurenceOfWord(&spellingErrors);
+  
   RECORD record = make_pair(mainWord,spellingErrors);
   this->database.push_back(record);
+}
+
+
+void DefineNoisyChannel::handleMultipleOccurenceOfWord(std::vector<std::string>*spellingErrors){
+  char occurenceSeparator = '*';
+  for(int i=0; i<spellingErrors->size(); i++){
+    std::string word = (*spellingErrors)[i];
+    std::vector<std::string> occurenceCount = this->get_tokens(word, occurenceSeparator);
+    word = occurenceCount[0];
+    if(occurenceCount.size()==2) {
+      int occurences = std::stoi(occurenceCount[1]);
+      spellingErrors->erase(spellingErrors->begin()+i);
+      for(int j=1; j<=occurences; j++) (*spellingErrors).push_back(word);
+    } 
+  }
 }
 
 std::vector<std::string> DefineNoisyChannel::get_tokens(std::string line, char separator){
@@ -50,4 +81,93 @@ void DefineNoisyChannel::printDatabase(){
   }
 
   file.close();
+}
+
+
+
+void addToMatrix(MED med, DefineNoisyChannel dnc){
+  dnc.backtracking(med.mainWord.size(), med.newWord.size(), med.direction, med.mainWord, med.newWord);
+}
+
+//Overloading
+void DefineNoisyChannel::backtracking(int i, int j, int direction[][MAX_WORD_SIZE], std::string A, std::string B){
+  if(i<=0 || j<=0) return;
+  int a = A[i-1]-'A';
+  int b = B[j-1]-'A'; 
+  if(a<0 || a>this->number_of_alphabets) return; // We won't handle punctuation errors.
+  if(b<0 || b>this->number_of_alphabets) return;
+
+  if(direction[i][j]==INSERTION_RIGHT_ARROW){
+    this->insertion_confusion_matrix[a][b]++;
+    this->backtracking(i, j-1, direction, A, B);
+  }
+  else if(direction[i][j]==DELETION_DOWN_ARROW) {
+    this->deletion_confusion_matrix[a][b]++;
+    this->backtracking(i-1, j, direction, A, B);
+  }
+  else if(direction[i][j]==SAME_CHARACTER_DIAGONAL_ARROW) this->backtracking(i-1, j-1, direction, A, B);
+  else if(direction[i][j]==SUBSTITUTION_DIAGONAL_ARROW){
+    this->substitution_confusion_matrix[a][b]++;
+    this->backtracking(i-1, j-1, direction, A, B);
+  }
+  else if(direction[i][j]==TRANSPOSITION_ARROW){
+    this->transposition_confusion_matrix[a][b]++;
+    this->backtracking(i-2, j-2, direction, A, B);
+  }
+
+  return;
+}
+
+
+void DefineNoisyChannel::loadMatrices(){
+  for(int i=0; i<this->database.size(); i++){
+    for(int j=0; j<this->database[i].second.size(); j++){
+      MED med(database[i].first,database[i].second[j]);
+      med.domerau_levensthein_edit_distance();
+      // addToMatrix(med, *this);
+      this->backtracking(med.mainWord.size(), med.newWord.size(), med.direction, med.mainWord, med.newWord);
+    }
+  }
+}
+
+void DefineNoisyChannel::printMatrices(){
+  const std::string insertion_filename = "insertion_cofusion_matrix.txt";
+  const std::string deletion_filename = "deletion_cofusion_matrix.txt";
+  const std::string substitution_filename = "substitution_cofusion_matrix.txt";
+  const std::string transposition_filename = "transposition_cofusion_matrix.txt";
+
+  // Insertion Confusion Matrix
+  std::ofstream fileStream;
+  fileStream.open(insertion_filename);
+  for(int i=0; i<this->number_of_alphabets; i++){
+    for(int j=0; j<this->number_of_alphabets; j++) fileStream << this->insertion_confusion_matrix[i][j] <<" ";
+    fileStream<<std::endl;
+  }
+  fileStream.close();
+
+  // Deletion Confusion Matrix
+  fileStream.open(deletion_filename);
+  for(int i=0; i<this->number_of_alphabets; i++){
+    for(int j=0; j<this->number_of_alphabets; j++) fileStream << this->deletion_confusion_matrix[i][j] <<" ";
+    fileStream<<std::endl;
+  }
+  fileStream.close();
+
+
+  // Substitution Confusion Matrix
+  fileStream.open(substitution_filename);
+  for(int i=0; i<this->number_of_alphabets; i++){
+    for(int j=0; j<this->number_of_alphabets; j++) fileStream << this->substitution_confusion_matrix[i][j] <<" ";
+    fileStream<<std::endl;
+  }
+  fileStream.close(); 
+
+  // Transposition Confusion Matrix
+  fileStream.open(transposition_filename);
+  for(int i=0; i<this->number_of_alphabets; i++){
+    for(int j=0; j<this->number_of_alphabets; j++) fileStream << this->transposition_confusion_matrix[i][j] <<" ";
+    fileStream<<std::endl;
+  }
+  fileStream.close(); 
+
 }
