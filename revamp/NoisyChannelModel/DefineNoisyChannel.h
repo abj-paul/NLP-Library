@@ -12,6 +12,11 @@
 #define RECORD std::pair<std::string,std::vector<std::string>>
 class DefineNoisyChannel {
  private:
+  const std::string insertion_filename = "INSERTION_CONFUSION_MATRIX.txt";
+  const std::string deletion_filename = "DELETION_CONFUSION_MATRIX.txt";
+  const std::string substitution_filename = "SUBTITION_CONFUSION_MATRIX.txt";
+  const std::string transposition_filename = "TRANSPOSITION_CONFUSION_MATRIX.txt";
+
   const std::string filename = "spell-errors.txt";
   const std::string debugFileName = "DEBUG_database_spelling_errors.txt";
   const int number_of_alphabets = 26;

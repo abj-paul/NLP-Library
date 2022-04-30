@@ -131,11 +131,6 @@ void DefineNoisyChannel::loadMatrices(){
 }
 
 void DefineNoisyChannel::printMatrices(){
-  const std::string insertion_filename = "insertion_cofusion_matrix.txt";
-  const std::string deletion_filename = "deletion_cofusion_matrix.txt";
-  const std::string substitution_filename = "substitution_cofusion_matrix.txt";
-  const std::string transposition_filename = "transposition_cofusion_matrix.txt";
-
   // Insertion Confusion Matrix
   std::ofstream fileStream;
   fileStream.open(insertion_filename);
