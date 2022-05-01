@@ -129,7 +129,7 @@ double abj::NoisyChannelModel::getNormalizedProbablity(){
 void abj::NoisyChannelModel::test_function(){
   //piece, peace | elephant, elephunt
   abj::String mainWord("elephnt");
-  abj::String candidate("elephant");
+  abj::String candidate("eat");
   printf("Main Word:%s\n",mainWord.get_raw_data());
   printf("Candidate:%s\n",candidate.get_raw_data());
   

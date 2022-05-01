@@ -22,6 +22,8 @@ class MED {
   void print_med_direction(int direction_value);
   friend void addToMatrix(MED, DefineNoisyChannel);
  public:
+  const std::string STRING_START="@";
+  const std::string STRING_END="[";
   int direction[MAX_WORD_SIZE][MAX_WORD_SIZE];
   int m_distance[MAX_WORD_SIZE][MAX_WORD_SIZE];
   std::vector<int> backtrack_path;

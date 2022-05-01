@@ -19,7 +19,7 @@ class DefineNoisyChannel {
 
   const std::string filename = "spell-errors.txt";
   const std::string debugFileName = "DEBUG_database_spelling_errors.txt";
-  const int number_of_alphabets = 26;
+  const int number_of_alphabets = 28;
   std::vector<RECORD>database;
 
   void load_file();
@@ -42,6 +42,7 @@ public:
   DefineNoisyChannel();
   void loadMatrices();
   void printMatrices();
+  static void test_function();
 };
 
 #endif

@@ -30,5 +30,6 @@ int main(){
   - [X] Verify the header file. (RUN and check)
   - [X] Load and print the confusion matrices
   - [X] Make a small function inside confusion matrix class where you run med on two words and return the log probablity.
-  - [ ] Normalize noisy probablity on the size of word
+  - [X] Normalize noisy probablity on the size of word
   - [ ] Edit MED (add a new Symbol - "<" at the begiing and end ">" of the string to account for insertion, deletion at the start and end.)
+  - [ ] Edit noisy channel code to account for smaller candidate.

@@ -35,14 +35,14 @@ void DefineNoisyChannel::split_and_store(std::string line){
   char portionSeparator = ':';
   std::vector<std::string> portions = this->get_tokens(line, portionSeparator);
 
-  std::string mainWord = portions[0];
+  std::string correction = portions[0];
 
   char wordSeparator = ',';
   std::vector<std::string> spellingErrors = this->get_tokens(portions[1], wordSeparator);
 
   this->handleMultipleOccurenceOfWord(&spellingErrors);
   
-  RECORD record = make_pair(mainWord,spellingErrors);
+  RECORD record = make_pair(correction,spellingErrors);
   this->database.push_back(record);
 }
 
@@ -87,7 +87,7 @@ void DefineNoisyChannel::printDatabase(){
 
 
 void addToMatrix(MED med, DefineNoisyChannel dnc){
-  dnc.backtracking(med.mainWord.size(), med.newWord.size(), med.direction, med.mainWord, med.newWord);
+  dnc.backtracking(med.correction.size(), med.typo.size(), med.direction, med.correction, med.typo);
 }
 
 //Overloading
@@ -126,7 +126,7 @@ void DefineNoisyChannel::loadMatrices(){
       MED med(database[i].first,database[i].second[j]);
       med.domerau_levensthein_edit_distance();
       // addToMatrix(med, *this);
-      this->backtracking(med.mainWord.size(), med.newWord.size(), med.direction, med.mainWord, med.newWord);
+      this->backtracking(med.correction.size(), med.typo.size(), med.direction, med.correction, med.typo);
     }
   }
 }
@@ -166,4 +166,15 @@ void DefineNoisyChannel::printMatrices(){
   }
   fileStream.close(); 
 
+}
+
+void DefineNoisyChannel::test_function(){
+  DefineNoisyChannel dnc;
+  dnc.loadMatrices();
+  dnc.printMatrices();
+}
+
+int main(){
+  DefineNoisyChannel::test_function();
+  return 0;
 }

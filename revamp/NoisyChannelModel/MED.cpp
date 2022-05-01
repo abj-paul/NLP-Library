@@ -2,8 +2,8 @@
 
 MED::MED(std::string correction, std::string typo){
   printf("Running MED.\n");
-  this->correction = correction;
-  this->typo = typo;
+  this->correction = STRING_START + correction + STRING_END;
+  this->typo = STRING_START + typo + STRING_END;
 }
 
 void MED::domerau_levensthein_edit_distance(){
@@ -11,11 +11,11 @@ void MED::domerau_levensthein_edit_distance(){
   for (auto & c: typo) c = toupper(c);
   
   // Converting A to B
-  for(int i=0; i<=correction.size(); i++) {
+  for(int i=0; i<correction.size(); i++) {
     m_distance[i][0]=i;
     direction[i][0]=DELETION_DOWN_ARROW;
   }
-  for(int j=0; j<=typo.size(); j++){
+  for(int j=0; j<typo.size(); j++){
     direction[0][j]=INSERTION_RIGHT_ARROW;
     m_distance[0][j]=j;
   }
@@ -24,8 +24,8 @@ void MED::domerau_levensthein_edit_distance(){
 
   int cost=0;
   // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or typo.
-  for(int i=1; i<=correction.size(); i++){
-    for(int j=1; j<=typo.size(); j++){
+  for(int i=1; i<correction.size(); i++){
+    for(int j=1; j<typo.size(); j++){
       if(correction[i]==typo[j]) cost=0;
       else cost=1;
 
@@ -63,18 +63,16 @@ void MED::backtracking(int i, int j){
 }
 
 void MED::print_direction(){
-  printf("MED=%d\n",this->m_distance[correction.size()][typo.size()]);
+  printf("MED=%d\n",this->m_distance[correction.size()-1][typo.size()-1]);
   printf("X  ");
-  for(int i=0; i<=typo.size(); i++){
-    if(i==0) printf("0  ");
-    else printf("%c  ", typo[i-1]);
+  for(int i=0; i<typo.size(); i++){
+    printf("%c  ", typo[i]);
   }
   printf("\n");
 
-  for(int i=0; i<=correction.size(); i++){
-    if(i==0) printf("0  ");
-    else printf("%c  ", correction[i-1]);
-    for(int j=0; j<=typo.size(); j++){
+  for(int i=0; i<correction.size(); i++){
+    printf("%c  ", correction[i]);
+    for(int j=0; j<typo.size(); j++){
       print_med_direction(direction[i][j]);
     }
     printf("\n");
@@ -92,7 +90,7 @@ void MED::print_med_direction(int direction_Value){
 
 void MED::test_function(){
   std::string correction = "Elephant";
-  std::string typo = "Elepahnt";
+  std::string typo = "Elephabnt";
 
   MED med(correction, typo);
   med.domerau_levensthein_edit_distance();
