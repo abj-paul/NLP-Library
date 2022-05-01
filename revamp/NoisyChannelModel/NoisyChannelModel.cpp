@@ -40,20 +40,26 @@ double abj::NoisyChannelModel::getProbablity(){
 
   abj::String c(med.correction);
   abj::String t(med.typo);
-  this->backtrace_noisy_path(med.correction.size()-1, med.typo.size()-1, med.direction);
+  this->correction = c;
+  this->typo = t;
+  this->backtrace_noisy_path(correction.size()-1, typo.size()-1, med.direction);
 
   return this->total_probablity;
 }
 void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][MAX_WORD_SIZE]){
   if(i<=0 || j<=0) return;
- 
+  int alphabets = this->insertion_confusion_matrix.size();
   if(direction[i][j]==INSERTION_RIGHT_ARROW){
     int a = correction[i]-'A';
     int b = typo[j]-'A'; 
 
     int error_occurence = this->insertion_confusion_matrix[a][b];
     int char_occurence = this->substringCount(correction[i]); 
-    double error_probablity = std::log((double)error_occurence/(double)char_occurence);
+    double error_probablity = std::log(
+				       ((double)error_occurence+1)
+				       /
+				       ((double)char_occurence+alphabets)
+				       );
 
     this->total_probablity+=error_probablity;
     this->backtrace_noisy_path(i, j-1, direction);
@@ -64,7 +70,11 @@ void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][
 
     int error_occurence = this->deletion_confusion_matrix[a][b];
     int char_occurence = this->substringCount(typo[j], correction[i]); 
-    double error_probablity = std::log((double)error_occurence/(double)char_occurence);
+    double error_probablity = std::log(
+				       ((double)error_occurence+1)
+				       /
+				       ((double)char_occurence+alphabets)
+				       );
 
     this->total_probablity+=error_probablity;
     this->backtrace_noisy_path(i-1, j, direction);
@@ -76,7 +86,11 @@ void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][
 
     int error_occurence = this->substitution_confusion_matrix[a][b];
     int char_occurence = this->substringCount(correction[i]); 
-    double error_probablity = std::log((double)error_occurence/(double)char_occurence);
+    double error_probablity = std::log(
+				       ((double)error_occurence+1)
+				       /
+				       ((double)char_occurence+alphabets)
+				       );
 
     this->total_probablity+=error_probablity;
     this->backtrace_noisy_path(i-1, j-1, direction);
@@ -87,7 +101,11 @@ void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][
 
     int error_occurence = this->transposition_confusion_matrix[a][b];
     int char_occurence = this->substringCount(typo[j], correction[i]); 
-    double error_probablity = std::log((double)error_occurence/(double)char_occurence);
+    double error_probablity = std::log(
+				       ((double)error_occurence+1)
+				       /
+				       ((double)char_occurence+alphabets)
+				       );
 
     this->total_probablity+=error_probablity;
     this->backtrace_noisy_path(i-2, j-2, direction);
