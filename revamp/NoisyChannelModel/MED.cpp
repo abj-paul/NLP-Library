@@ -38,7 +38,7 @@ void MED::domerau_levensthein_edit_distance(){
       else if(m_distance[i-1][j-1]==m_distance[i][j]) direction[i][j]=SAME_CHARACTER_DIAGONAL_ARROW;
       else if(m_distance[i-1][j-1]+1==m_distance[i][j]) direction[i][j]=SUBSTITUTION_DIAGONAL_ARROW;
       
-      if(i>1 && j>1 && correction[i-1]==typo[j-1-1] && correction[i-1-1]==typo[j-1]){
+      if(i>1 && j>1 && correction[i]==typo[j-1] && correction[i-1]==typo[j]){
 	m_distance[i][j] = std::min(m_distance[i][j], m_distance[i-2][j-2]+1); //transposition
 	if(m_distance[i][j]==m_distance[i-2][j-2]+1) direction[i][j] = TRANSPOSITION_ARROW;
       }
@@ -90,7 +90,7 @@ void MED::print_med_direction(int direction_Value){
 
 void MED::test_function(){
   std::string correction = "Elephant";
-  std::string typo = "Elephabnt";
+  std::string typo = "Elephan";
 
   MED med(correction, typo);
   med.domerau_levensthein_edit_distance();

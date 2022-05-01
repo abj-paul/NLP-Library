@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 
 #ifndef _STRING_LIBRARY_H_
 #define _STRING_LIBRARY_H_
@@ -19,6 +20,7 @@ class String{
   int compare_string(char *str1, char *str2);
 	public:
 		String();
+  String(std::string data);
 		String(abj::String& data);
 		String(char* data, int FLAG);
 		String(const char* data);

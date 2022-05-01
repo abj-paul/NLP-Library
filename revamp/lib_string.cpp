@@ -15,6 +15,18 @@ abj::String::String(){
 //     }
 // }
 
+abj::String::String(std::string str){
+  int size = str.size();
+
+	this->storage = (char*)calloc(size+1,sizeof(char));
+
+	for(int i=0; i<size; i++) this->storage[i]=str[i];
+	this->storage[size]='\0';
+
+	this->curr_size=size;
+	this->curr_capacity=size;
+}
+
 
 abj::String::String(abj::String& data){ // RISKY!!!! because both data and "this" can access this heap data. Thus, without us knowing, data functions can change the heap data.
 	this->storage = (char*)calloc(data.size()+1,sizeof(char));
