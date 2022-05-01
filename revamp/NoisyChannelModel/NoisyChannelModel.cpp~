@@ -1,0 +1,7 @@
+#include "NoisyChannelModel.h"
+//this->load_confusion_matrices();
+
+double abj::NoisyChannelModel::getProbablity(abj::String mainWord, abj::String newWord){
+  std::string word_STL(word.get_raw_data());
+  MED med(word_STL, );
+}

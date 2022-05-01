@@ -1,52 +1,48 @@
 #include "MED.h"
 
-MED::MED(std::string mainWord, std::string newWord){
-  this->mainWord = mainWord;
-  this->newWord = newWord;
+MED::MED(std::string correction, std::string typo){
+  this->correction = correction;
+  this->typo = typo;
 }
 
 void MED::domerau_levensthein_edit_distance(){
-  for (auto & c: mainWord) c = toupper(c);
-  for (auto & c: newWord) c = toupper(c);
+  for (auto & c: correction) c = toupper(c);
+  for (auto & c: typo) c = toupper(c);
   
   // Converting A to B
-  for(int i=0; i<=mainWord.size(); i++) {
-    this->direction[i][0]=i;
+  for(int i=0; i<=correction.size(); i++) {
+    m_distance[i][0]=i;
     direction[i][0]=DELETION_DOWN_ARROW;
   }
-  for(int j=0; j<=newWord.size(); j++){
+  for(int j=0; j<=typo.size(); j++){
     direction[0][j]=INSERTION_RIGHT_ARROW;
-    this->direction[0][j]=j;
+    m_distance[0][j]=j;
   }
   direction[0][0]=NO_OPERATION;
-  this->direction[0][0]=0;
+  m_distance[0][0]=0;
 
   int cost=0;
-  // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or newWord.
-  for(int i=1; i<=mainWord.size(); i++){
-    for(int j=1; j<=newWord.size(); j++){
-      if(mainWord[i]==newWord[j]) cost=0;
+  // A,B indexing starts from 1 and m's indexing starts from 0 according to the algorithm. But our A,B starts from 0. So to compensate that, we start from 1 in the loop but subtract 1 (i-1 or j-1) when accessing A or typo.
+  for(int i=1; i<=correction.size(); i++){
+    for(int j=1; j<=typo.size(); j++){
+      if(correction[i]==typo[j]) cost=0;
       else cost=1;
 
-      this->direction[i][j] = std::min(this->direction[i-1][j]+1,                //deletion
-			std::min(this->direction[i][j-1]+1,       //insertion
-				 this->direction[i-1][j-1]+cost));//substitution
+      m_distance[i][j] = std::min(m_distance[i-1][j]+1,                //deletion
+			std::min(m_distance[i][j-1]+1,       //insertion
+				 m_distance[i-1][j-1]+cost));//substitution
       // Direction
-      if(this->direction[i][j]==this->direction[i-1][j]+1) direction[i][j]=DELETION_DOWN_ARROW;
-      else if(this->direction[i][j]==this->direction[i][j-1]+1) direction[i][j]=INSERTION_RIGHT_ARROW;
-      else if(this->direction[i-1][j-1]==this->direction[i][j]) direction[i][j]=SAME_CHARACTER_DIAGONAL_ARROW;
-      else if(this->direction[i-1][j-1]+1==this->direction[i][j]) direction[i][j]=SUBSTITUTION_DIAGONAL_ARROW;
+      if(m_distance[i][j]==m_distance[i-1][j]+1) direction[i][j]=DELETION_DOWN_ARROW;
+      else if(m_distance[i][j]==m_distance[i][j-1]+1) direction[i][j]=INSERTION_RIGHT_ARROW;
+      else if(m_distance[i-1][j-1]==m_distance[i][j]) direction[i][j]=SAME_CHARACTER_DIAGONAL_ARROW;
+      else if(m_distance[i-1][j-1]+1==m_distance[i][j]) direction[i][j]=SUBSTITUTION_DIAGONAL_ARROW;
       
-      if(i>1 && j>1 && mainWord[i-1]==newWord[j-1-1] && mainWord[i-1-1]==newWord[j-1]){
-	this->direction[i][j] = std::min(this->direction[i][j], this->direction[i-2][j-2]+1); //transposition
-	if(this->direction[i][j]==this->direction[i-2][j-2]+1) direction[i][j] = TRANSPOSITION_ARROW;
+      if(i>1 && j>1 && correction[i-1]==typo[j-1-1] && correction[i-1-1]==typo[j-1]){
+	m_distance[i][j] = std::min(m_distance[i][j], m_distance[i-2][j-2]+1); //transposition
+	if(m_distance[i][j]==m_distance[i-2][j-2]+1) direction[i][j] = TRANSPOSITION_ARROW;
       }
     }
   }
-
-  //print_direction(direction, A, B);
-  this->backtracking(mainWord.size(), newWord.size());
-  //backtrack_path.reverse();
 }
 
 void MED::backtracking(int i, int j){
@@ -66,8 +62,10 @@ void MED::backtracking(int i, int j){
 }
 
 void MED::print_direction(){
-  for(int i=0; i<=mainWord.size(); i++){
-    for(int j=0; j<=newWord.size(); j++){
+  std::cout<<"A: "<<this->correction<<std::endl;
+  std::cout<<"B: "<<this->typo<<std::endl;
+  for(int i=0; i<=correction.size(); i++){
+    for(int j=0; j<=typo.size(); j++){
       print_med_direction(direction[i][j]);
     }
     printf("\n");
@@ -80,4 +78,19 @@ void MED::print_med_direction(int direction_Value){
       else if(direction_Value==SUBSTITUTION_DIAGONAL_ARROW) printf("ST ");
       else if(direction_Value==TRANSPOSITION_ARROW) printf("TP ");
       else if(direction_Value==NO_OPERATION) printf("NA ");
+      else printf("Error! ");
+}
+
+void MED::test_function(){
+  std::string correction = "Elephant";
+  std::string typo = "Elephunt";
+
+  MED med(correction, typo);
+  med.domerau_levensthein_edit_distance();
+  med.print_direction();
+}
+
+int main(){
+  MED::test_function();
+  return 0;
 }

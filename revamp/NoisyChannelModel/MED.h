@@ -23,15 +23,18 @@ class MED {
   friend void addToMatrix(MED, DefineNoisyChannel);
  public:
   int direction[MAX_WORD_SIZE][MAX_WORD_SIZE];
+  int m_distance[MAX_WORD_SIZE][MAX_WORD_SIZE];
   std::vector<int> backtrack_path;
-  std::string mainWord;
-  std::string newWord;
+  std::string typo;
+  std::string correction;
 
   void backtracking(int i, int j);
   void print_direction();
 
-  MED(std::string mainWord, std::string newWord);
+  MED(std::string correction, std::string typo); //(newWord, mainWord)
   void domerau_levensthein_edit_distance();
+
+  static void test_function();
 };
 
 

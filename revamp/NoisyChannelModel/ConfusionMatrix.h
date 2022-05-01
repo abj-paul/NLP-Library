@@ -12,7 +12,7 @@ namespace abj{
 #define ID_TRANSPOSITION "TRANSPOSITION"
 
   class ConfusionMatrix{
-     private:
+  protected:
     abj::Vector<abj::Vector<int>> insertion_confusion_matrix; // 2D array
     abj::Vector<abj::Vector<int>> deletion_confusion_matrix;
     abj::Vector<abj::Vector<int>> substitution_confusion_matrix;

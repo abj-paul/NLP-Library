@@ -1,0 +1,65 @@
+vector<int>  computeLPS(string pattern);
+vector<int> KMP(string pattern, string text);
+
+int main(){
+  string text="acaabaabcaacaabc";
+  string pattern="aab";
+  cout<<"Text="<<text<<endl;
+  cout<<"Pattern="<<pattern<<endl;
+
+  vector<int>occurences = KMP(pattern, text);
+  for(int i=0; i<occurences.size(); i++) cout<<occurences[i]<<" ";
+  cout<<endl;
+
+  return 0;
+}
+
+vector<int> KMP(string pattern, string text){
+  vector<int> pattern_occurence_indices;
+  int n = text.size();
+  int m = pattern.size();
+
+  vector<int>lps = computeLPS(pattern);
+
+  int i=0, j=0;
+
+  while(i<n){
+    if(text[i]==pattern[j]){
+      i++;
+      j++;
+    }else{
+      if(j==0) i++;
+      else j=lps[j-1];
+    }
+
+    if(j==m){
+      printf("Match found at shift(End Index) %d,\n",i);
+      pattern_occurence_indices.push_back(i);
+      j=lps[j-1];
+    }
+  }
+  return pattern_occurence_indices;
+}
+
+
+vector<int>  computeLPS(string pattern){
+  vector<int> lps(pattern.size(),0);
+  int len = 0;
+  int i = 1;
+  lps[0]=0;
+
+  while(i<pattern.size()){
+    if(pattern[i]==pattern[len]) {
+      lps[i]=len+1;
+      len++;
+      i++;
+    }else{
+      if(len==0){
+	lps[i]=0;
+	i++;
+      }else len = lps[len-1];
+    }
+  }
+  
+  return lps;
+}

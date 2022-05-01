@@ -1,0 +1,19 @@
+
+#ifndef _NOISY_CHANNEL_MODEL_H
+#define _NOISY_CHANNEL_MODEL_H
+
+#include "ConfusionMatrix.h"
+#include "MED.h"
+#include "../lib_string.h"
+#include<string>
+
+namespace abj {
+class NoisyChannelModel : public ConfusionMatrix {
+ private:
+  int getSubStringCount(abj::String subString);
+ public:
+  static double getProbablity(abj::String mainWord);
+};
+}
+
+#endif
