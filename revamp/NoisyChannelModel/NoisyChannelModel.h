@@ -14,8 +14,8 @@ namespace abj {
 class NoisyChannelModel : public ConfusionMatrix {
  private:
   abj::String filename;
-  abj::String mainWord;
-  abj::String newWord;
+  abj::String correction;
+  abj::String typo;
   abj::String fileText;
   double total_probablity;
 
@@ -28,6 +28,7 @@ class NoisyChannelModel : public ConfusionMatrix {
  public:
   NoisyChannelModel(abj::String& mainWord, abj::String& newWord);
   double getProbablity();
+  static void test_function();
 };
 }
 

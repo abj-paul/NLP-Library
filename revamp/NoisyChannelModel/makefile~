@@ -1,0 +1,11 @@
+run: NoisyChannelModel.o ConfusionMatrix.o MED.o KMP.o lib_string.o
+	g++ NoisyChannelModel.o ConfusionMatrix.o MED.o KMP.o lib_string.o -o execute
+NoisyChannelModel.o: NoisyChannelModel.cpp NoisyChannelModel.h
+	g++ -c -g NoisyChannelModel.cpp
+ConfusionMatrix.o: ConfusionMatrix.cpp ConfusionMatrix.h
+	g++ -c -g ConfusionMatrix.cpp
+MED.o: MED.cpp MED.h
+	g++ -c -g MED.cpp
+KMP.o: KMP.cpp KMP.h
+	g++ -c -g KMP.cpp
+lib_string.o: 

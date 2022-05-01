@@ -1,6 +1,7 @@
 #include "MED.h"
 
 MED::MED(std::string correction, std::string typo){
+  printf("Running MED.\n");
   this->correction = correction;
   this->typo = typo;
 }
@@ -62,9 +63,17 @@ void MED::backtracking(int i, int j){
 }
 
 void MED::print_direction(){
-  std::cout<<"A: "<<this->correction<<std::endl;
-  std::cout<<"B: "<<this->typo<<std::endl;
+  printf("MED=%d\n",this->m_distance[correction.size()][typo.size()]);
+  printf("X  ");
+  for(int i=0; i<=typo.size(); i++){
+    if(i==0) printf("0  ");
+    else printf("%c  ", typo[i-1]);
+  }
+  printf("\n");
+
   for(int i=0; i<=correction.size(); i++){
+    if(i==0) printf("0  ");
+    else printf("%c  ", correction[i-1]);
     for(int j=0; j<=typo.size(); j++){
       print_med_direction(direction[i][j]);
     }
@@ -83,14 +92,14 @@ void MED::print_med_direction(int direction_Value){
 
 void MED::test_function(){
   std::string correction = "Elephant";
-  std::string typo = "Elephunt";
+  std::string typo = "Elepahnt";
 
   MED med(correction, typo);
   med.domerau_levensthein_edit_distance();
   med.print_direction();
 }
 
-int main(){
-  MED::test_function();
-  return 0;
-}
+// int main(){
+//   MED::test_function();
+//   return 0;
+// }

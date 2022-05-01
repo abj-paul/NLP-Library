@@ -2,6 +2,7 @@
 using namespace abj;
 
 ConfusionMatrix::ConfusionMatrix(){
+  printf("Running Confusion Matrix.\n");
   this->load_confusion_matrices();
 }
 
@@ -20,23 +21,23 @@ void ConfusionMatrix::extract_content_from_file_into_matrix(abj::String* filenam
   }
 
   int count=0;
-  for(int i=0; i<ALPHABET_SIZE; i++){
-    abj::Vector<int> row_value;
-    for(int j=0; j<ALPHABET_SIZE; j++){ // According to confusion matrix
+  for(int i=0; i<MATRIX_SIZE; i++){
+    std::vector<int> row_value;
+    for(int j=0; j<MATRIX_SIZE; j++){ // According to confusion matrix
       fscanf(fptr, "%d", &count);
-      row_value.push(count);
+      row_value.push_back(count);
     }
-    if(matrix_name->equals(ID_INSERTION)) this->insertion_confusion_matrix.push(row_value);
-    else if(matrix_name->equals(ID_DELETION)) this->deletion_confusion_matrix.push(row_value);
-    else if(matrix_name->equals(ID_SUBSTITUTION)) this->substitution_confusion_matrix.push(row_value);
-    else if(matrix_name->equals(ID_TRANSPOSITION)) this->transposition_confusion_matrix.push(row_value);
+    if(matrix_name->equals(ID_INSERTION)) this->insertion_confusion_matrix.push_back(row_value);
+    else if(matrix_name->equals(ID_DELETION)) this->deletion_confusion_matrix.push_back(row_value);
+    else if(matrix_name->equals(ID_SUBSTITUTION)) this->substitution_confusion_matrix.push_back(row_value);
+    else if(matrix_name->equals(ID_TRANSPOSITION)) this->transposition_confusion_matrix.push_back(row_value);
   }
   fclose(fptr);
 }
 
 
 
-void ConfusionMatrix::print_confusion_matrix(abj::Vector<abj::Vector<int>> confusion_matrix, abj::String* filename){
+void ConfusionMatrix::print_confusion_matrix(std::vector<std::vector<int>> confusion_matrix, abj::String* filename){
   FILE* fptr = fopen(filename->get_raw_data(), "w");
   if(fptr==NULL){
     printf("Error opening %s!\n",filename->get_raw_data());
@@ -59,6 +60,4 @@ void ConfusionMatrix::test_function(){
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.deletion_confusion_matrix, new abj::String("DEL_OUTPUT.txt"));
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.substitution_confusion_matrix, new abj::String("SUB_OUTPUT.txt"));
   noisyChannelModel.print_confusion_matrix(noisyChannelModel.transposition_confusion_matrix, new abj::String("TRANS_OUTPUT.txt"));
-
-  //noisyChannelModel.print_vocabulary();
 }

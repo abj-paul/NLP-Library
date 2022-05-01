@@ -1,6 +1,7 @@
 #include "DefineNoisyChannel.h"
 
 DefineNoisyChannel::DefineNoisyChannel(){
+  printf("Running Define Noisy Channel.\n");
   this->load_file();
   this->printDatabase();
   this->initialize_fields();

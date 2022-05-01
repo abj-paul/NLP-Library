@@ -2,6 +2,7 @@
 using namespace std;
 
 KMP::KMP(string text, string pattern){
+  printf("Running KMP.\n");
   this->text = text;
   this->pattern = pattern;
   this->initialize();
