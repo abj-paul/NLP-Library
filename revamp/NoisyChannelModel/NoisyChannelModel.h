@@ -24,10 +24,13 @@ class NoisyChannelModel : public ConfusionMatrix {
 
   int substringCount(char a);
   int substringCount(char a, char b);
+
+  double normalize(double log_value);
   
  public:
   NoisyChannelModel(abj::String& mainWord, abj::String& newWord);
   double getProbablity();
+  double getNormalizedProbablity();
   static void test_function();
 };
 }

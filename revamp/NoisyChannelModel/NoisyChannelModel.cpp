@@ -41,7 +41,6 @@ double abj::NoisyChannelModel::getProbablity(){
 
   return this->total_probablity;
 }
-
 void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][MAX_WORD_SIZE]){
   if(i<=0 || j<=0) return;
  
@@ -93,6 +92,7 @@ void abj::NoisyChannelModel::backtrace_noisy_path(int i, int j, int direction[][
   return;
 }
 
+
 int abj::NoisyChannelModel::substringCount(char a){
   std::string pattern(1,a);
   std::string text(this->fileText.get_raw_data());
@@ -108,14 +108,36 @@ int abj::NoisyChannelModel::substringCount(char a, char b){
   KMP kmp(text,pattern);
   return kmp.occurences.size();
 }
+double abj::NoisyChannelModel::normalize(double log_value){
+  double probablity = std::pow(10, log_value);
+  probablity = pow(probablity, 1.0/(double)this->correction.size());
+  return probablity;
+}
+
+double abj::NoisyChannelModel::getNormalizedProbablity(){
+  if(this->total_probablity==0){
+    std::string correction_STL(correction.get_raw_data());
+    std::string typo_STL(typo.get_raw_data());
+    
+    MED med(correction_STL, typo_STL);
+    med.domerau_levensthein_edit_distance();
+    this->backtrace_noisy_path(correction_STL.size(), typo_STL.size(), med.direction);
+  }
+  return this->normalize(this->total_probablity);
+}
 
 void abj::NoisyChannelModel::test_function(){
-  abj::String mainWord("piece");
-  abj::String candidate("peace");
+  //piece, peace | elephant, elephunt
+  abj::String mainWord("elephnt");
+  abj::String candidate("elephant");
+  printf("Main Word:%s\n",mainWord.get_raw_data());
+  printf("Candidate:%s\n",candidate.get_raw_data());
   
   abj::NoisyChannelModel ncm(candidate, mainWord);
   double probablity = ncm.getProbablity();
   printf("Probablity=%lf\n",probablity);
+  probablity = ncm.getNormalizedProbablity();
+  printf("Normalized Probablity=%lf\n",probablity);
 }
 
 int main(){

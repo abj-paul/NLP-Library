@@ -126,3 +126,7 @@ sed "s/[0-9]*\s*/DETECT/g"
   [[https://www.quora.com/What-are-some-good-algorithms-for-binning-similar-sounding-words][Words with similar pronunciation NLP]]
   [[https://overiq.com/c-programming-101/the-strcmp-function-in-c/][str_cmp code]]
 * Tem
+* Kneeser ney smoothing
+  [[https://github.com/smilli/kneser-ney][github code]]
+kneser-ney smoothing tutorial
+kneser-ney smoothing trigram example
