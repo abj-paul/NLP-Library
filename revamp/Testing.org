@@ -31,5 +31,9 @@ int main(){
   - [X] Load and print the confusion matrices
   - [X] Make a small function inside confusion matrix class where you run med on two words and return the log probablity.
   - [X] Normalize noisy probablity on the size of word
-  - [ ] Edit MED (add a new Symbol - "<" at the begiing and end ">" of the string to account for insertion, deletion at the start and end.)
-  - [ ] Edit noisy channel code to account for smaller candidate.
+  - [X] Edit MED (add a new Symbol - "<" at the begiing and end ">" of the string to account for insertion, deletion at the start and end.)
+  - [X] Edit noisy channel code to account for smaller candidate.
+  - [ ] test cases for string library
+  - [ ] test cases for vector library
+  - [ ] test cases for stemmer
+  - [ ] Combile language model and noisy channel model

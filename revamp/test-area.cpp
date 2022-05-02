@@ -1,17 +1,16 @@
-#include "NonWord.h"
+#include<iostream>
+
 int main(){
-  abj::String word("abrevat");
-  
-  abj::NonWord nonWord;
-  abj::Stemmer stemmer(word);
+  char str[] = "I am only human!";
+  std::string s =  "I am only human!";
 
-  abj::String stem = stemmer.get_stem();
-  printf("The stemmed word is=%s\n",stem.get_raw_data());
-  printf("Size=%d\n",stem.size());
-  
-  abj::Vector<abj::Candidate>v = nonWord.generate_candidate_set(stem);
-
-  printf("Size=%d\n",v.size());
-  for(int i=0; i<v.size(); i++) v[i].print();
+  int size = 0;
+  while(str[size++]!='\0') size++;
+  std::cout<<size<<" "<<s.size()<<std::endl;
+  for(int i=0; i<s.size(); i++){
+    if(str[i]=='\0') printf("NULL");
+    else printf("%c",str[i]);
+  }
+  printf("\n");
   return 0;
 }
