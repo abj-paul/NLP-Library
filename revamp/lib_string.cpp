@@ -338,6 +338,28 @@ void abj::String::swap(abj::String& data){
   this->curr_size = temp_size;
 }
 
+abj::String& abj::String::getFileContent(const abj::String& filename){
+  FILE* fptr = fopen(filename.get_raw_data(), "r");
+  if(fptr==NULL){
+    printf("Error opening file!Exiting..\n");
+    exit(1);
+  }
+
+  fseek(fptr, 0, SEEK_END);
+  int file_size = ftell(fptr);
+  fseek(fptr, 0, SEEK_SET);
+
+  char *buffer = (char*)malloc(file_size + 1);
+  fread(buffer, file_size, 1, fptr);
+  fclose(fptr);
+
+  buffer[file_size] = '\0';
+
+  abj::String* obj = new abj::String(buffer);
+  free(buffer);
+  return *obj;
+}
+
 void abj::String::test_function(){
 printf("Testing String----------------\n");
 	abj::String x("I am Abhijit Paul.");
@@ -382,7 +404,7 @@ printf("Testing String----------------\n");
 	abj::String* data2 = new abj::String(*data1);
 	data2->concatenate_at_point(*new abj::String("Stuff1"),4,'_');
 	data2->print();
-	data2->concatenate_at_end(*new abj::String("I am only human~"), '.');
+	data2->concatenate_at_end(*new abj::String("I am only human~"));
 	data2->print();
 	abj::String* data3 = new abj::String("Eat");
 	data3->print();
@@ -403,6 +425,10 @@ printf("Testing String----------------\n");
 	answer = firstPart + *new abj::String(" ") + lastPart;
 	answer.capitalize();
 	answer.print();
+
+	abj::String totalSentence = getFileContent(*new abj::String("sed-corpus.txt"));
+	printf("Size=%d\n",totalSentence.size());
+	totalSentence.~String();
 }
 
 // int main(){

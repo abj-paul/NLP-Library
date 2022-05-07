@@ -1,4 +1,6 @@
 #include <iostream>
+#ifndef _VECTOR_H_
+#define _VECTOR_H_
 
 namespace abj{
 template<typename T>
@@ -169,3 +171,4 @@ void Vector<T>::swap(abj::Vector<T>& data){
 }
 
 
+#endif

@@ -66,6 +66,8 @@ public:
   char* getStorage() const;
   void setSize(int newSize);
 
+  static abj::String& getFileContent(const abj::String& filename);
+
   friend std::ostream& operator<<( std::ostream &output, const abj::String &data ){
     output <<"String size: " << data.curr_size << ", " << data.storage << "\n";
     return output;

@@ -69,7 +69,7 @@ abj::String abj::Punctuation::getUpdatedCorpus(){
 
 void abj::Punctuation::test_function(){
   printf("Testing Punctuation.-----------------\n");
-  abj::String str("I am only human! and I bleed when I fall down.");
+  abj::String str = abj::String::getFileContent(*new abj::String("sed-corpus.txt"));
 
   abj::Punctuation p;
   p.setCorpus(str);

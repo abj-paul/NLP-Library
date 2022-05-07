@@ -3,7 +3,7 @@
 #ifndef _LIB_PUNCTUATION_H
 #define _LIB_PUNCTUATION_H
 #include "lib_string.h"
-#include "lib_vector.h"
+#include "Vector.h"
 
 
 namespace abj {

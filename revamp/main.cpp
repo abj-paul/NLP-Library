@@ -1,7 +1,7 @@
-#include "lib_string.h"
+// #include "lib_string.h"
 // #include "Vector.h"
 #include<iostream>
-// #include "lib_punctuation.h"
+#include "lib_punctuation.h"
 // #include "SentenceSegmenter.h"
 // #include "Tokenizer.h"
 // #include "Stemmer.h"
@@ -15,8 +15,8 @@ int main(){
   // abj::String::test_function();
   // abj::Vector<abj::String>::test_function();
   // vector_test_function();
-  loadFileToVector();
-  // abj::Punctuation::test_function();
+  // loadFileToVector();
+  abj::Punctuation::test_function();
 	// abj::SentenceSegmenter::test_function();
 	// abj::Tokenizer::test_function();
 	// abj::Stemmer::test_function();
@@ -63,6 +63,7 @@ void loadFileToVector(){
     // arr[size] = myStr;
     // size++;
   }
+  fclose(fptr);
   arr.reverse();
   arr.get(arr.size()-1).print();
   arr.set(arr.size()-1, *new abj::String("Abhijit Paul"));
@@ -76,5 +77,4 @@ void loadFileToVector(){
   new_arr.get(0).print();
   new_arr.get(arr.size()-1).print();
   for(int i=0; i<new_arr.size(); i++) new_arr[i].~String();
-  
 }
