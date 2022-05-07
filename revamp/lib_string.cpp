@@ -6,11 +6,9 @@ abj::String::String(){
 }
 
 abj::String::~String(){
-  if(this->storage!=NULL && this->curr_size!=0){
-      free(this->storage);
-      this->storage=NULL;
-      this->curr_size=0;
-    }
+  free(this->storage);
+  this->storage=NULL;
+  this->curr_size=0;
 }
 
 abj::String::String(std::string str){
@@ -25,7 +23,7 @@ abj::String::String(std::string str){
 }
 
 
-abj::String::String(abj::String& data){ 
+abj::String::String(const abj::String& data){ 
   this->storage = (char*)calloc(data.size()+1,sizeof(char));
   
   for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
@@ -71,15 +69,15 @@ abj::String::String(char* data, int FLAG){
 }
 
 
-int abj::String::size(){
+int abj::String::size() const{
   return this->curr_size;
 }
 
-void abj::String::print(){
+void abj::String::print() const{
   printf("%s\n",this->storage);
 }
 
-char abj::String::capitalize(char c){
+char abj::String::capitalize(char c) const{
 	int offset = 'a'-'A';
 	if(c>='a' && c<='z') c=c-offset;
 	return c;
@@ -89,7 +87,7 @@ void abj::String::capitalize(){
 	for(int i=0; i<this->curr_size; i++) this->storage[i]=capitalize(this->storage[i]);
 }
 
-char* abj::String::get_raw_data(){
+char* abj::String::get_raw_data() const{
   char* temp = (char*)calloc(this->curr_size+1, sizeof(char));
 
   for(int i=0; i<this->curr_size; i++) temp[i] = this->storage[i];
@@ -142,7 +140,7 @@ void abj::String::concatenate_at_end(abj::String& data){
 }
 
 
-bool abj::String::equals(abj::String& data){
+bool abj::String::equals(abj::String& data) const{
   if(data.size()!=this->curr_size) return false;
 
   for(int i=0; i<data.size(); i++){
@@ -151,7 +149,7 @@ bool abj::String::equals(abj::String& data){
   return true;
 }
 
-bool abj::String::equals(const char* data){
+bool abj::String::equals(const char* data) const{
   int data_size=0;
   while(data[data_size]!='\0') data_size++;
   // data_size--;
@@ -178,7 +176,7 @@ void abj::String::concatenate_at_point(abj::String& data, int index){
 }
 
 
-char abj::String::get(int index){
+char abj::String::get(int index) const{
   if(this->curr_size==0){
     printf("Trying to access NULL string!\n");
     return (char)NULL;
@@ -192,7 +190,7 @@ char abj::String::get(int index){
 }
 
 
-void abj::String::initialize(abj::String& data){
+void abj::String::initialize(const abj::String& data){
   this->storage = (char*)calloc(data.size()+1,sizeof(char));
 
   for(int i=0; i<data.size(); i++) this->storage[i]=data.get(i);
@@ -252,7 +250,7 @@ void abj::String::insert_char_at_point(int index, char data){
 }
 
 
-char abj::String::lastChar(){
+char abj::String::lastChar() const{
   return this->storage[this->curr_size-1];
 }
 
@@ -264,7 +262,7 @@ bool abj::String::set(int index, char data){
   return true;
 }
 
-char abj::String::operator[](int index){
+char abj::String::operator[](int index) const{
   if(index<0 || index>=this->curr_size){
     printf("String index out of bound!\n");
     return (char)NULL;
@@ -272,8 +270,7 @@ char abj::String::operator[](int index){
   return this->storage[index];
 }
 
-
-abj::String abj::String::operator+(abj::String data){
+abj::String abj::String::operator+(const abj::String& data){
   char* new_data = (char*)calloc(this->curr_size+data.size()+1, sizeof(char)); //+1 for NULL
   for(int i=0; i<this->curr_size; i++) new_data[i]=this->storage[i];
 
@@ -285,7 +282,7 @@ abj::String abj::String::operator+(abj::String data){
   return s;
 }
 
-bool abj::String::operator==(abj::String data){
+bool abj::String::operator==(const abj::String& data) const{
   if(data.size()!=this->curr_size) return false;
 
   for(int i=0; i<data.size(); i++){
@@ -294,13 +291,15 @@ bool abj::String::operator==(abj::String data){
   return true;
 }
 
-abj::String& abj::String::operator=(abj::String data){
-  this->removeData();
-  this->initialize(data);
+abj::String& abj::String::operator=(const abj::String& data){
+  if(this!=&data){
+    abj::String temp(data);
+    this->swap(temp);
+  }
   return *this;
 }
 
-int abj::String::compare_string(char *str1, char *str2){
+int abj::String::compare_string(char *str1, char *str2) const{
   while( ( *str1 != '\0' && *str2 != '\0' ) && capitalize(*str1) == capitalize(*str2) ){
         str1++;
         str2++;
@@ -309,15 +308,35 @@ int abj::String::compare_string(char *str1, char *str2){
     if(*str1 == *str2) return 0; // strings are identical or found null for both
     else return capitalize(*str1) - capitalize(*str2);
 }
-bool abj::String::operator>(abj::String data){
+bool abj::String::operator>(const abj::String& data) const{
   if(this->compare_string(this->storage, data.get_raw_data()) > 0) return true;
   return false;
 }
-bool abj::String::operator<(abj::String data){
+bool abj::String::operator<(const abj::String& data) const{
   if(this->compare_string(this->storage, data.get_raw_data()) < 0) return true;
   return false;
 }
 
+void abj::String::setStorage(char* storage){
+  this->storage = storage;
+}
+char* abj::String::getStorage() const{
+  return this->storage;
+}
+void abj::String::setSize(int newSize){
+  this->curr_size = newSize;
+}
+
+
+void abj::String::swap(abj::String& data){
+  char* temp_stroage = data.getStorage();
+  data.setStorage(this->storage);
+  this->storage = temp_stroage;
+
+  int temp_size = data.size();
+  data.setSize(this->size());
+  this->curr_size = temp_size;
+}
 
 void abj::String::test_function(){
 printf("Testing String----------------\n");
@@ -386,7 +405,7 @@ printf("Testing String----------------\n");
 	answer.print();
 }
 
-int main(){
-  abj::String::test_function();
-  return 0;
-}
+// int main(){
+//   abj::String::test_function();
+//   return 0;
+// }

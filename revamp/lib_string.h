@@ -4,7 +4,7 @@
 #ifndef _STRING_LIBRARY_H_
 #define _STRING_LIBRARY_H_
 
-#include "lib_vector.h"
+#include "Vector.h"
 
 #define MAX_WORD_IN_A_SENTENCE 20
 #define MAX_WORD_SIZE 40
@@ -17,29 +17,29 @@ class String{
 private:
   char* storage;
   int curr_size;
-  char capitalize(char c);
-  int compare_string(char *str1, char *str2);
+  char capitalize(char c) const;
+  int compare_string(char *str1, char *str2) const;
 public:
   String();
   String(std::string data);
-  String(abj::String& data);
+  String(const abj::String& data);
   String(char* data, int FLAG);
   String(const char* data);
   ~String();
   
-  int size();
-  char get(int index);
+  int size() const;
+  char get(int index) const;
   bool set(int index, char c);
-  void initialize(abj::String& str);
+  void initialize(const abj::String& str);
   void initialize(char* str);
   void initialize(const char* str);
   void removeData();
   void insert_char_at_point(int index, char c);
 
-  void print();
+  void print() const;
   void capitalize();
 
-  char* get_raw_data();
+  char* get_raw_data() const;
   abj::String copy();
 
   // Concatenation
@@ -48,23 +48,32 @@ public:
   void concatenate_at_end(abj::String& str, char separator);
   void concatenate_at_end(abj::String& str);
   
-  bool equals(abj::String& data);
-  bool equals(const char* data);
+  bool equals(abj::String& data) const;
+  bool equals(const char* data) const;
   void resize(int size);
 
-  char lastChar();
-  char operator[](int index);
-  abj::String operator+(abj::String str);
-  bool operator==(abj::String data);
-  abj::String& operator=(abj::String data);
-  bool operator>(abj::String data);
-  bool operator<(abj::String data);
+  char lastChar() const;
+  char operator[](int index) const;
+  abj::String operator+(const abj::String& str);
+  bool operator==(const abj::String& data) const;
+  abj::String& operator=(const abj::String& data);
+  bool operator>(const abj::String& data) const;
+  bool operator<(const abj::String& data) const;
+  bool operator<<(const abj::String& data) const;
+  void swap(abj::String& data);
+
+  void setStorage(char* storage);
+  char* getStorage() const;
+  void setSize(int newSize);
+
+  friend std::ostream& operator<<( std::ostream &output, const abj::String &data ){
+    output <<"String size: " << data.curr_size << ", " << data.storage << "\n";
+    return output;
+  }
 
   static void test_function();
 };
 
 
-//char** tokenizer_revamp(char* str);
-//void print_word_list(char** x);
 }
 #endif
