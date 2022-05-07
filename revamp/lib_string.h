@@ -4,6 +4,7 @@
 #ifndef _STRING_LIBRARY_H_
 #define _STRING_LIBRARY_H_
 
+// #include "lib_vector.h"
 #include "Vector.h"
 
 #define MAX_WORD_IN_A_SENTENCE 20

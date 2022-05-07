@@ -29,7 +29,7 @@ void abj::Stemmer::build_vowel_consonant_array(){
 int abj::Stemmer::calculate_m_value(){
   int vc_count=0;
   for(int i=1; i<this->word.size(); i++){
-    if(this->vowel_consonant_array.get(i-1)==VOWEL && this->vowel_consonant_array.get(i)==CONSONANT)
+    if(this->vowel_consonant_array[i-1]==VOWEL && this->vowel_consonant_array[i]==CONSONANT)
       vc_count++;
   }
   return vc_count;

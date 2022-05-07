@@ -1,11 +1,11 @@
 // #include "lib_string.h"
 // #include "Vector.h"
 #include<iostream>
-#include "lib_punctuation.h"
+// #include "lib_punctuation.h"
 // #include "SentenceSegmenter.h"
 // #include "Tokenizer.h"
-// #include "Stemmer.h"
-//#include "Bigram.h"
+#include "Stemmer.h"
+// #include "Bigram.h"
 //#include "Perplexity.h"
 // #include "NoisyChannelModel.h"
 
@@ -16,12 +16,12 @@ int main(){
   // abj::Vector<abj::String>::test_function();
   // vector_test_function();
   // loadFileToVector();
-  abj::Punctuation::test_function();
-	// abj::SentenceSegmenter::test_function();
-	// abj::Tokenizer::test_function();
-	// abj::Stemmer::test_function();
+  // abj::Punctuation::test_function();
+  // abj::SentenceSegmenter::test_function();
+  // abj::Tokenizer::test_function();
+  abj::Stemmer::test_function();
 
-        // abj::Bigram::test_function();
+  // abj::Bigram::test_function();
 	//abj::Perplexity::test_function();
   //abj::NonWord::test_function();
   // abj::NoisyChannelModel::test_function();
@@ -39,12 +39,12 @@ printf("Testing Vector----------------------\n");
  x.push(firstName);
  x.push(*new abj::String("Jit"));
  x.push(lastName);
- x.print();
+ // x.print();
  
  // y.push(x);
  for(int i=0; i<x.size(); i++) x[i].~String();
  y.push(*new abj::String("Empire!"));
- y.print();
+ // y.print();
  for(int i=0; i<x.size(); i++) y[i].~String();
 }
 
@@ -65,16 +65,16 @@ void loadFileToVector(){
   }
   fclose(fptr);
   arr.reverse();
-  arr.get(arr.size()-1).print();
+  arr[arr.size()-1].print();
   arr.set(arr.size()-1, *new abj::String("Abhijit Paul"));
-  arr.get(arr.size()-1).print();
+  arr[arr.size()-1].print();
 
 
   abj::Vector<abj::String> new_arr(arr);
   for(int i=0; i<arr.size(); i++) arr[i].~String();
 
   new_arr.reverse();
-  new_arr.get(0).print();
-  new_arr.get(arr.size()-1).print();
+  new_arr[0].print();
+  new_arr[arr.size()-1].print();
   for(int i=0; i<new_arr.size(); i++) new_arr[i].~String();
 }

@@ -64,7 +64,7 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text, abj::String tag
   Vector<String>sentences;
   for(int i=0; i<ss.sentence_list.size(); i++){
     Punctuation p;
-    p.setCorpus(ss.sentence_list.get(i));
+    p.setCorpus(ss.sentence_list[i]);
     p.handle_punctuation();
     String sentence = p.getUpdatedCorpus();
     sentences.push(sentence);
@@ -77,7 +77,7 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text, abj::String tag
   Vector<Vector<String>> all_tokens;
   for(int i=0; i<ss.sentence_list.size(); i++){
       Tokenizer t ;
-      t.setString(ss.sentence_list.get(i));
+      t.setString(ss.sentence_list[i]);
       t.tokenize();
       Vector<String>tokens = t.getTokens();
       all_tokens.push(tokens);
@@ -95,7 +95,7 @@ Vector<Vector<String>> Bigram::get_stems_list(abj::String& text, abj::String tag
   for(int i=0; i<all_tokens.size(); i++){
     Vector<String> sentence_stems;
     for(int j=0; j<all_tokens[i].size(); j++){
-      String current_token = all_tokens[i].get(j);
+      String current_token = all_tokens[i][j];
       Stemmer stemmer;
       stemmer.initialize(current_token);
       String current_stem = stemmer.get_stem();
@@ -176,7 +176,7 @@ double Bigram::text_probablity_using_laplace_smoothing(String text){
 void Bigram::print_stems(){
   for(int i=0; i<stemmed_corpus.size(); i++){
     for(int j=0; j<stemmed_corpus[i].size(); j++){
-      this->stemmed_corpus[i].get(j).print();
+      this->stemmed_corpus[i][j].print();
     }
   }
 }

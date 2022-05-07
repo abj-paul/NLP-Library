@@ -13,8 +13,8 @@ abj::Tokenizer::Tokenizer(abj::String sentence){
 }
 
 abj::Tokenizer::~Tokenizer(){
-  this->tokens.~Vector();
   // this->sentence.~String();
+  for(int i=0; i<tokens.size(); i++) tokens[i].~String();
 }
 
 void abj::Tokenizer::setString(abj::String sentence){
@@ -58,7 +58,7 @@ abj::Vector<abj::String> abj::Tokenizer::getTokens(){
 void abj::Tokenizer::print(){
   printf("Number of tokens: %d\n",this->tokens.size());
   for(int i=0; i<this->tokens.size(); i++){
-    this->tokens.get(i).print();
+    this->tokens[i].print();
   }
   printf("\n");
 }
@@ -66,8 +66,8 @@ void abj::Tokenizer::print(){
 
 void abj::Tokenizer::test_function(){
   printf("Testing tokenizer!-----------\n");
-  abj::String str("I am only human and I feel pain when I fall down .");
-  
+  // abj::String str("I am only human and I feel pain when I fall down .");
+  abj::String str = abj::String::getFileContent(*new abj::String("sed-corpus.txt")); 
   abj::Tokenizer tokenizer;
   tokenizer.setString(str);
   tokenizer.tokenize();

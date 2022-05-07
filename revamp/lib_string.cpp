@@ -294,6 +294,12 @@ bool abj::String::operator==(const abj::String& data) const{
 abj::String& abj::String::operator=(const abj::String& data){
   if(this!=&data){
     abj::String temp(data);
+    if(this->curr_size==0){
+      this->storage = (char*)calloc(2,sizeof(char));
+      this->storage[0] = '#';
+      this->storage[1] = '\0';
+      this->curr_size = 1;
+    }
     this->swap(temp);
   }
   return *this;
@@ -360,76 +366,79 @@ abj::String& abj::String::getFileContent(const abj::String& filename){
   return *obj;
 }
 
-void abj::String::test_function(){
-printf("Testing String----------------\n");
-	abj::String x("I am Abhijit Paul.");
-	x.capitalize();
-	x.print();
+// void abj::String::test_function(){
+// printf("Testing String----------------\n");
+// 	abj::String x("I am Abhijit Paul.");
+// 	x.capitalize();
+// 	x.print();
 
-	abj::String y("I am only human~");
-        y.capitalize();
-	printf("x==y? %d\n",y.equals(x));
+// 	abj::String y("I am only human~");
+//         y.capitalize();
+// 	printf("x==y? %d\n",y.equals(x));
 
-	char str[] = "New Word.";
-	abj::String z(str);
-	z.print();
+// 	char str[] = "New Word.";
+// 	abj::String z(str);
+// 	z.print();
 
-	x.concatenate_at_end(z, ':');
-	x.print();
+// 	x.concatenate_at_end(z, ':');
+// 	x.print();
 
-	y.concatenate_at_point(z, y.size(), '_');
-	y.print();
+// 	y.concatenate_at_point(z, y.size(), '_');
+// 	y.print();
 
-	abj::String t;
-	t.concatenate_at_end(x, '_');
-	t.print();
+// 	abj::String t;
+// 	t.concatenate_at_end(x, '_');
+// 	t.print();
 
-	t.insert_char_at_point(t.size()-2, '!');
-	t.insert_char_at_point(t.size()-3, '~');
-	t.print();
+// 	t.insert_char_at_point(t.size()-2, '!');
+// 	t.insert_char_at_point(t.size()-3, '~');
+// 	t.print();
 
-	printf("New test cases.\n");
+// 	printf("New test cases.\n");
 
-	abj::Vector<abj::String>v;
-	for(int i=0; i<10000; i++){
-	  abj::String* newString = new abj::String("Random data is being loaded!");
-	  v.push(*newString);
-	}
+// 	abj::Vector<abj::String>v;
+// 	for(int i=0; i<10000; i++){
+// 	  abj::String* newString = new abj::String("Random data is being loaded!");
+// 	  v.push(*newString);
+// 	}
 
-	for(int i=0; i<v.size(); i++) v[i].~String();
+// 	for(int i=0; i<v.size(); i++) v[i].~String();
 
-	abj::String* data1 = new abj::String();
-	data1->initialize("Data one.");
-	data1->print();
-	abj::String* data2 = new abj::String(*data1);
-	data2->concatenate_at_point(*new abj::String("Stuff1"),4,'_');
-	data2->print();
-	data2->concatenate_at_end(*new abj::String("I am only human~"));
-	data2->print();
-	abj::String* data3 = new abj::String("Eat");
-	data3->print();
-	data3->concatenate_at_end(*new abj::String("ing."));
-	data3->print();
-	abj::String name("AbhiPaul");
-	name.concatenate_at_point(*new abj::String("jit "),4);
-	name.print();
+// 	abj::String* data1 = new abj::String();
+// 	data1->initialize("Data one.");
+// 	data1->print();
+// 	abj::String* data2 = new abj::String(*data1);
+// 	data2->concatenate_at_point(*new abj::String("Stuff1"),4,'_');
+// 	data2->print();
+// 	data2->concatenate_at_end(*new abj::String("I am only human~"));
+// 	data2->print();
+// 	abj::String* data3 = new abj::String("Eat");
+// 	data3->print();
+// 	data3->concatenate_at_end(*new abj::String("ing."));
+// 	data3->print();
+// 	abj::String name("AbhiPaul");
+// 	name.concatenate_at_point(*new abj::String("jit "),4);
+// 	name.print();
 
-	printf("Raw data=%sEND\n",name.get_raw_data());
-	abj::String name2("Abhijit Paul");
-	printf("Equal?%d\n",name.equals(name2));
-	printf("Equal?%d\n",name==name2);
+// 	printf("Raw data=%sEND\n",name.get_raw_data());
+// 	abj::String name2("Abhijit Paul");
+// 	printf("Equal?%d\n",name.equals(name2));
+// 	printf("Equal?%d\n",name==name2);
 
-	abj::String firstPart("Rubik's");
-	abj::String lastPart("Cube is fun!");
-	abj::String answer;
-	answer = firstPart + *new abj::String(" ") + lastPart;
-	answer.capitalize();
-	answer.print();
+// 	abj::String firstPart("Rubik's");
+// 	abj::String lastPart("Cube is fun!");
+// 	abj::String answer;
+// 	answer = firstPart + *new abj::String(" ") + lastPart;
+// 	answer.capitalize();
+// 	answer.print();
 
-	abj::String totalSentence = getFileContent(*new abj::String("sed-corpus.txt"));
-	printf("Size=%d\n",totalSentence.size());
-	totalSentence.~String();
-}
+// 	abj::String emptyString;
+// 	emptyString = lastPart;
+
+// 	abj::String totalSentence = getFileContent(*new abj::String("sed-corpus.txt"));
+// 	printf("Size=%d\n",totalSentence.size());
+// 	totalSentence.~String();
+// }
 
 // int main(){
 //   abj::String::test_function();

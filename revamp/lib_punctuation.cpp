@@ -38,7 +38,7 @@ int abj::Punctuation::get_file_length(FILE* fptr){
 
 bool abj::Punctuation::isPunctuation(char c){
   for(int i=0; i<this->punctuation_list.size(); i++){
-    if(this->punctuation_list.get(i)==c) return true;
+    if(this->punctuation_list[i]==c) return true;
   }
   return false;
 }
@@ -47,7 +47,13 @@ void abj::Punctuation::handle_punctuation(){
   for(int i=0; i<this->corpus.size(); i++){
     //printf("%d) %c==punctuation?\n",i+1,this->corpus.get(i));
     if(isPunctuation(this->corpus.get(i))) {
-      this->corpus.insert_char_at_point(i, this->separator);
+      char c = corpus[i];
+      if(c=='.' || c==',' || c=='?' || c==':' || c=='!' || c==';' || c==')')this->corpus.insert_char_at_point(i, this->separator);
+      else if(c=='.' || c=='\"' || c=='(')this->corpus.insert_char_at_point(i+1, this->separator); // insert space next
+      else if(c=='\'') {
+	this->corpus.set(i,'i'); //s->is
+	this->corpus.insert_char_at_point(i, this->separator);
+      }
       i++;
     }
   }
@@ -72,6 +78,10 @@ void abj::Punctuation::test_function(){
   abj::String str = abj::String::getFileContent(*new abj::String("sed-corpus.txt"));
 
   abj::Punctuation p;
+  printf("\" is punctuation?%d\n",p.isPunctuation('\"'));
+  printf("- is punctuation?%d\n",p.isPunctuation('-'));
+  printf("( is punctuation?%d\n",p.isPunctuation('('));
+
   p.setCorpus(str);
   p.handle_punctuation();
   p.print();

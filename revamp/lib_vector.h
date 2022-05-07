@@ -15,7 +15,7 @@ namespace abj{
   public:
     Vector();
     Vector(int size);
-    Vector(abj::Vector<T>& initialize_data);
+    Vector(const abj::Vector<T>& initialize_data);
 
     ~Vector();
 
@@ -24,17 +24,17 @@ namespace abj{
     void push(abj::Vector<T>& new_data);
 
     void reverse();
-    void print();
+    void print() const;
 
     abj::Vector<T>& operator= (const abj::Vector<T>& data);
-    T operator[](int index);
-    void swap(abj::Vector<T>& data);
+    T operator[](int index) const;
+    void swap(const abj::Vector<T>& data);
 
-    int size();
-    T get(int index);
+    int size() const;
+    T get(int index) const;
     bool set(int index, T data);
 
-    T* getStorage();
+    T* getStorage() const;
     void setStorage(T* newStorage);
     void setSize(int size);
 
@@ -55,7 +55,7 @@ abj::Vector<T>::Vector(int size){
 	this->current_size=0;
 }
 template<typename T>
-abj::Vector<T>::Vector(abj::Vector<T>& initializer){ // copy constructor, deep copy
+abj::Vector<T>::Vector(const abj::Vector<T>& initializer){ // copy constructor, deep copy
 	this->storage = (T*)calloc(initializer.size(), sizeof(T));
 	this->capacity=initializer.size();
 
@@ -133,7 +133,7 @@ void abj::Vector<T>::push(abj::Vector<T>& data){
 }
 
 template<typename T>
-T abj::Vector<T>::get(int index){
+T abj::Vector<T>::get(int index) const{
   if(this->current_size==0) {
     printf("Vector does not exist so can not access index %d!Exiting...\n",index);
     exit(1);//return NULL;
@@ -161,7 +161,7 @@ void abj::Vector<T>::resize(int size){
 }
 
 template<typename T>
-void abj::Vector<T>::print(){
+void abj::Vector<T>::print() const{
   printf("Printing vector:\n");
   for(int i=0; i<this->current_size; i++){
     std::cout<<this->storage[i]<<" ";
@@ -170,7 +170,7 @@ void abj::Vector<T>::print(){
 }
 
 template<typename T>
-int abj::Vector<T>::size(){
+int abj::Vector<T>::size() const{
   return this->current_size;
 }
 
@@ -204,7 +204,7 @@ abj::Vector<T>& abj::Vector<T>::operator=(const abj::Vector<T>& data){
 }
 
 template<typename T>
-void abj::Vector<T>::swap(abj::Vector<T>& data){
+void abj::Vector<T>::swap(const abj::Vector<T>& data){
   T* temp_storage = data.getStorage();
   data.setStorage(this->storage);
   this->storage = temp_storage;
@@ -243,7 +243,7 @@ void abj::Vector<T>::swap(abj::Vector<T>& data){
 
 
 template<typename T>
-T abj::Vector<T>::operator[](int index){
+T abj::Vector<T>::operator[](int index) const{
   if(index<0 || index>=this->current_size) {
     printf("\n[] : Vector Out of index!\n");
     // return 0;
@@ -253,7 +253,7 @@ T abj::Vector<T>::operator[](int index){
 }
 
 template<typename T>
-T* abj::Vector<T>::getStorage(){
+T* abj::Vector<T>::getStorage() const{
   return this->storage;
 }
 template<typename T>

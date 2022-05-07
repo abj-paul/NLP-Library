@@ -1,8 +1,9 @@
 #ifndef _STEMMER_H
 #define _STEMMER_H
 #include "lib_string.h"
-#include "lib_vector.h"
-#include "auxiliary.h"
+// #include "lib_vector.h"
+#include "Vector.h"
+// #include "auxiliary.h"
 
 namespace abj{
 

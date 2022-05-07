@@ -1,4 +1,5 @@
 #include "SentenceSegmenter.h"
+#define MIN_SENTENCE_SIZE 10
 
 abj::SentenceSegmenter::SentenceSegmenter(abj::String corpus){
   this->corpus.initialize(corpus);
@@ -55,7 +56,7 @@ bool abj::SentenceSegmenter::isAbbreviation(abj::String str, int index){
 void abj::SentenceSegmenter::print(){
   printf("The segmented sentences are:--\n");
   for(int i=0; i<sentence_list.size(); i++)
-    this->sentence_list.get(i).print();
+    this->sentence_list[i].print();
 }
 abj::String abj::SentenceSegmenter::make_sentence(int start_index, int end_index){
   char* store_in_heap = (char*)calloc(end_index-start_index+1+1, sizeof(char));
@@ -74,12 +75,17 @@ abj::String abj::SentenceSegmenter::make_sentence(int start_index, int end_index
 }
 
 void abj::SentenceSegmenter::use_decision_tree(){
+  int sentence_count=0;
   int start_index=0,i=0;
   for(i=0; i<this->corpus.size(); i++){
     if(this->decision_tree(i)){
       abj::String sentence = this->make_sentence(start_index, i);
+      if(sentence.size()<MIN_SENTENCE_SIZE) continue;
+      printf("%d) %s\n",sentence_count+1,sentence.get_raw_data());
       this->sentence_list.push(sentence);
       start_index=i+2; // Because there is a space between (dot) and first word of next sentence
+
+	sentence_count++;
     }
     //else printf("%c",this->this->corpus.get(index));
   }
@@ -91,7 +97,8 @@ void abj::SentenceSegmenter::use_decision_tree(){
 void abj::SentenceSegmenter::test_function(){
   printf("Testing SentenceSegmenter--------------------\n");
   //abj::String str("Joy, dipy and abhi went there. They travelled through the forest! The ghosts were lurking behind them, they will rip them apart the moment they see the opportunity! Abhi exclaimed, \"What a time to be alive!\". Hais, there is an error here, smh");
-  abj::String str("Joy, dipy and abhi went there. They travelled through the forest! The ghosts were lurking behind them, they will rip them apart the moment they see the opportunity! Abhi exclaimed, What a time to be alive! Hais, there is an error here, smh.");
+  // abj::String str("Joy, dipy and abhi went there. They travelled through the forest! The ghosts were lurking behind them, they will rip them apart the moment they see the opportunity! Abhi exclaimed, What a time to be alive! Hais, there is an error here, smh.");
+  abj::String str = abj::String::getFileContent(*new abj::String("sed-corpus.txt"));
   
   SentenceSegmenter ss;
   ss.setCorpus(str);
