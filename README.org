@@ -6,7 +6,7 @@
   Abhijit Paul
   BSSE 1201
   IIT, DU
- * Introduction
+* Introduction
   Natural language processing strives to build machines that understand and respond to text or voice data—and respond with text or speech of their own—in much the same way humans do. It combines computational linguistics rule-based modeling of human language—with statistical, machine learning, and deep learning models. Together, these technologies enable computers to process human language in the form of text or voice data and to ‘understand’ its full meaning, complete with the speaker or writer’s intent and sentiment.
 
   While NLP is a huge branch on its own, the basic functionalities are not uncountable. 
