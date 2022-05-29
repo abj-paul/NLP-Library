@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>NLP Library</title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">NLP Library</h1><h2 class="date">06.03.2022</h2>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orga38e3ae">1. Introduction</a></li>
+<li><a href="#/slide-org7988975">2. Background Study</a></li>
+<li><a href="#/slide-org1b03ca7">3. Language Model</a></li>
+<li><a href="#/slide-org21167f2">4. Noisy Channel Model</a></li>
+<li><a href="#/slide-orgc0f4a34">5. Kneeser Ney</a></li>
+<li><a href="#/slide-orga1a2438">6. Challenges</a></li>
+<li><a href="#/slide-org35c91b4">7. What we plan to do in the future?</a></li>
+<li><a href="#/slide-org0f627d7">8. Thank You!</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orga38e3ae">
+<h2 id="orga38e3ae"><span class="section-number-2">1</span> Introduction</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Created by-</th>
+<th scope="col" class="org-left">Supervised by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Abhijit Paul</td>
+<td class="org-left">Dr. Zerina Begum</td>
+</tr>
+
+<tr>
+<td class="org-left">1201(60932)</td>
+<td class="org-left">Professor, IIT, DU</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgcf58a62">
+<h3 id="orgcf58a62"><span class="section-number-3">1.1</span> About Project</h3>
+<p>
+Building a natural language programming library. Our project can be broken into 4 parts.<br />
+</p>
+<ul>
+<li>Preprocessing corpus.<br /></li>
+<li>Language Models and Smoothing.<br /></li>
+<li>Noisy Channel Models.<br /></li>
+<li>Application<br /></li>
+
+</ul>
+<pre class="example">
+Heap Management and Efficiency
+</pre>
+</section>
+</section>
+<section>
+<section id="slide-org7988975">
+<h2 id="org7988975"><span class="section-number-2">2</span> Background Study</h2>
+<p>
+Our project covers three broad fields. We will discuss briefly about them one by one.<br />
+</p>
+</section>
+<section id="slide-orgb461c85">
+<h3 id="orgb461c85"><span class="section-number-3">2.1</span> Language Modeling</h3>
+<p>
+The probablity of a phrase occuring can be described as:<br />
+		\[P(w_1, w_2, ..., w_n)\]<br />
+Using chain rule of probablities, we get<br />
+\[   P(w_1....w_n) = P(w_1)P(w_2|w_1)P(w_3|w_1:2) . . . P(w_n|w_1:w_{n−1}) \]<br />
+</p>
+</section>
+<section id="slide-orgb461c85-split">
+<p>
+\[ = \prod_{i=a}^{b} P(w_k|w_1:w_(k−1)) \]<br />
+</p>
+
+<p>
+ Using Markov's[Ref] assumption, we can simplify this equation further.<br />
+<img src="image-source/markov2.png" alt="markov2.png" /> <br />
+</p>
+</section>
+<section id="slide-orgb461c85-split">
+<p>
+Now implementing Bayesian formula, we can find p(w<sub>n</sub>|w<sub>1&#x2026;w</sub><sub>n-1</sub>).<br />
+<img src="image-source/bayes2.png" alt="bayes2.png" /><br />
+Throughout our project, we use this formula on the core to find the ngram probablities.<br />
+</p>
+</section>
+<section id="slide-org88afd91">
+<h3 id="org88afd91"><span class="section-number-3">2.2</span> Smoothing</h3>
+<p>
+The above formula of language modeling don't work for <b><b>unseen</b></b> words. Now a model should be able to predict unseen words to a certain extent, specially a language model. Because getting a sufficiently large dataset that covers all ngram is <code>impossible</code>. So smoothing is a necessity here.<br />
+</p>
+</section>
+<section id="slide-orgf8ab182">
+<h4 id="orgf8ab182"><span class="section-number-4">2.2.1</span> Laplace Smoothing</h4>
+<p>
+Here, we discount the probablity of each ngram to use them for unseen ngrams.<br />
+<img src="image-source/laplace.png" alt="laplace.png" /><br />
+Where V = the number of total word types in the vocabulary.<br />
+</p>
+</section>
+<section id="slide-org53e1b14">
+<h4 id="org53e1b14"><span class="section-number-4">2.2.2</span> Kneeser Ney Smoothing</h4>
+<p>
+ Its one of the most complex and sophisticated smoothing algorithm  for smoothing. It considers both absolute discounting, novel continuation and lower order probablity to formulate a probablity. Thus its more accurate in practice.<br />
+<img src="image-source/kneeser ney1.png" alt="kneeser ney1.png" /><br />
+C is count for highest order but continuation count for lower order.<br />
+<img src="image-source/kneeser2.png" alt="kneeser2.png" /><br />
+</p>
+</section>
+<section id="slide-org99b1d84">
+<h3 id="org99b1d84"><span class="section-number-3">2.3</span> Evaluation</h3>
+<p>
+Accuracy and similar matrices are not really relevant in NLP so we need a new matrix of evaluation. And that is - perplexity.<br />
+<img src="image-source/perplexity.png" alt="perplexity.png" /><br />
+Where N is the number of words.<br />
+</p>
+</section>
+<section id="slide-org6501cb0">
+<h3 id="org6501cb0"><span class="section-number-3">2.4</span> Noisy Channel Model</h3>
+<p>
+The noisy channel model was applied to the spelling correction task at about the same time by researchers at AT&amp;T Bell Laboratories (Kernighan et al. 1990, Church and Gale 1991) and IBM Watson<br />
+Research (Mays et al., 1991).<br />
+<img src="image-source/noisychannel.png" alt="noisychannel.png" /><br />
+</p>
+</section>
+<section id="slide-org6501cb0-split">
+<p>
+If x is the correction and w is the typo, using bayesian rule, we get<br />
+<img src="image-source/noisy-argmax.png" alt="noisy-argmax.png" /><br />
+Siimplifying it, we get-<br />
+<img src="image-source/noisy-formula.png" alt="noisy-formula.png" /><br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org1b03ca7">
+<h2 id="org1b03ca7"><span class="section-number-2">3</span> Language Model</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Phase</th>
+<th scope="col" class="org-left">Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Sentence Segmentation</td>
+<td class="org-left">Decision Tree</td>
+</tr>
+
+<tr>
+<td class="org-left">Punctuation Handling</td>
+<td class="org-left">Hand Writtten Rules</td>
+</tr>
+
+<tr>
+<td class="org-left">Tokenizaton</td>
+<td class="org-left">Space Separated</td>
+</tr>
+
+<tr>
+<td class="org-left">Stemming</td>
+<td class="org-left">Porter's Algorithm</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-org7c5599e">
+<h3 id="org7c5599e"><span class="section-number-3">3.1</span> Decision Tree</h3>
+
+<div id="org6df01ec" class="figure">
+<p><img src="image-source/decision-tree.jpeg" alt="decision-tree.jpeg" /><br />
+</p>
+</div>
+</section>
+<section id="slide-org7c5599e-split">
+<p>
+We also added:<br />
+</p>
+<ul>
+<li>Abbreviation Checker using maximum matching algorithm<br /></li>
+<li>Binary Search Tree to make searching and matching efficient<br /></li>
+
+</ul>
+</section>
+<section id="slide-org80dc713">
+<h3 id="org80dc713"><span class="section-number-3">3.2</span> Porter's Algorithm</h3>
+<p>
+<a href="https://tartarus.org/martin/PorterStemmer/def.txt">An algorithm for Suffix Stripping, M. F. Porter, 1980</a><br />
+A glimpse of porters algorithm:<br />
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>Step 1a
+
+    SSES -&gt; SS                         caresses  -&gt;  caress
+    IES  -&gt; I                          ponies    -&gt;  poni
+				       ties      -&gt;  ti
+    SS   -&gt; SS                         caress    -&gt;  caress
+    S    -&gt;                            cats      -&gt;  cat
+
+Step 1b
+
+    (m&gt;0) EED -&gt; EE                    feed      -&gt;  feed
+				       agreed    -&gt;  agree
+    (*v*) ED  -&gt;                       plastered -&gt;  plaster
+				       bled      -&gt;  bled
+    (*v*) ING -&gt;                       motoring  -&gt;  motor
+				       sing      -&gt;  sing
+</code></pre>
+</div>
+</section>
+<section id="slide-orgb25f11c">
+<h4 id="orgb25f11c"><span class="section-number-4">3.2.1</span> Simple Regex</h4>
+<p>
+We have developed a simple regex function to help with the <code>porter's algorithm.</code> <br />
+</p>
+<ul>
+<li>*S  (The stem ends with a letter. S={a-ZA-Z})<br /></li>
+<li><b>v</b> (The stem <code>contains</code> a vowel)<br /></li>
+<li>*d  (The stem ends with double consonants)<br /></li>
+<li>*o  (The stem ends in CVC wher the second C is not W,X or Y)<br /></li>
+
+</ul>
+</section>
+<section id="slide-org5df41f9">
+<h3 id="org5df41f9"><span class="section-number-3">3.3</span> NGram</h3>
+<p>
+Using the bayesian formula, we first made a simple Bigram model. But it took a lot of time for each query. So instead, we decided to <b><b>precompute</b></b> everything.<br />
+</p>
+</section>
+<section id="slide-orgf710167">
+<h4 id="orgf710167"><span class="section-number-4">3.3.1</span> Precomputation</h4>
+<ul>
+<li>Make a set of all ngrams<br /></li>
+<li>The set was handmade.<br />
+<ul>
+<li>Distinct elements<br /></li>
+<li>Stores number of occurences of an element.<br /></li>
+
+</ul></li>
+<li>Answer queries in O(logn) time.<br /></li>
+
+</ul>
+</section>
+<section id="slide-orgbbc3642">
+<h3 id="orgbbc3642"><span class="section-number-3">3.4</span> Evaluation</h3>
+<p>
+Perplexity was our matrix for evalutation.<br />
+</p>
+<ul>
+<li>Split the corpus in test and train dataset.<br /></li>
+<li>Find perplexity for test dataset.<br /></li>
+
+</ul>
+
+<div id="org15ab998" class="figure">
+<p><img src="image-source/perplexity.png" alt="perplexity.png" /><br />
+</p>
+</div>
+</section>
+<section id="slide-orgbbc3642-split">
+<p>
+The lower the perplexity, the better the model.<br />
+<img src="image-source/perplexity-db.png" alt="perplexity-db.png" /><br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org21167f2">
+<h2 id="org21167f2"><span class="section-number-2">4</span> Noisy Channel Model</h2>
+<p>
+<a href="https://aclanthology.org/C90-2036.pdf">Kernighan et al. 1990, Church and Gale 1991</a><br />
+</p>
+</section>
+<section id="slide-orga6bc99e">
+<h3 id="orga6bc99e"><span class="section-number-3">4.1</span> Norvig's Spelling Error Collection</h3>
+<p>
+Wikipedia spelling errros:<br />
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>raining: rainning, raning
+writings: writtings
+disparagingly: disparingly
+yellow: yello
+four: forer, fours, fuore, fore*5, for*4
+woods: woodes
+hanging: haing
+aggression: agression
+looking: loking, begining, luing, look*2, locking, lucking, louk, looing, lookin, liking
+eligible: eligble, elegable, eligable
+electricity: electrisity, electricty*2, electrizity
+scold: schold, skold
+adaptable: adabtable
+caned: canned, cained
+immature: imature
+shouldn't: shoudln, shouldnt
+swivel: swival
+appropriation: apropriation
+fur: furr, fer
+stabbed: stabed
+Southwold: Suothwode
+disturb: distrebe, desturb
+recollections: reclections, recolections
+prize: prise, prizer
+wednesday: wensday, wedensday
+succession: sucession, sucesion, succesion
+straight: strate, strait, staidght, stright*2
+guardsmen: gards_men
+incremented: increented
+bacon: backen, baken
+pulse: pluse
+</code></pre>
+</div>
+</section>
+<section id="slide-org668143e">
+<h3 id="org668143e"><span class="section-number-3">4.2</span> Generating Noisy Channel from Error Collection</h3>
+<ul>
+<li>Load error collection<br /></li>
+<li>Find <b><b>Minimum Edit Distance</b></b> backtrace for each error<br /></li>
+<li>Increase deletion/insertion/transposition/substitution count for a given pair of character(w,t) appropriately<br /></li>
+<li>Save the confusion matrix<br /></li>
+
+</ul>
+</section>
+<section id="slide-org9582ea7">
+<h3 id="org9582ea7"><span class="section-number-3">4.3</span> Confusion Matrices</h3>
+<p>
+After the above step, we will get a similar confusion matrix.<br />
+<img src="image-source/confusion-matrix.png" alt="confusion-matrix.png" /><br />
+</p>
+</section>
+<section id="slide-org0c7c215">
+<h3 id="org0c7c215"><span class="section-number-3">4.4</span> KMP</h3>
+<p>
+The formula for finding noisy channel probablity has pattern-count in its denominator.<br />
+<img src="image-source/noisy-formula.png" alt="noisy-formula.png" /><br />
+So we use a KMP algorithm to efficiently find pattern-occurence-count in the entire spelling error collection.<br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgc0f4a34">
+<h2 id="orgc0f4a34"><span class="section-number-2">5</span> Kneeser Ney</h2>
+<p>
+This sophisticated algorithm implements all of the known smoothing techniques into one.<br />
+</p>
+</section>
+<section id="slide-org61ff29b">
+<h3 id="org61ff29b"><span class="section-number-3">5.1</span> Absolute Discounting</h3>
+<p>
+The first part of the equation is essentially usual bayesian formula with absolute discouting d.<br />
+<img src="image-source/kneeser ney1.png" alt="kneeser ney1.png" /><br />
+</p>
+</section>
+<section id="slide-org61ff29b-split">
+<p>
+However, C<sub>KN</sub> is word count for highest order but continuation count for lower order.<br />
+<img src="image-source/kneeser2.png" alt="kneeser2.png" /><br />
+</p>
+</section>
+<section id="slide-orgfb3ab20">
+<h3 id="orgfb3ab20"><span class="section-number-3">5.2</span> Lambda Weighting</h3>
+<p>
+<img src="image-source/lambda.png" alt="lambda.png" /><br />
+Here, we variably decide how much weight we should put on lower order probablities.<br />
+</p>
+</section>
+<section id="slide-org47e9105">
+<h3 id="org47e9105"><span class="section-number-3">5.3</span> Lower Order Probablity</h3>
+<p>
+<img src="image-source/lower order.png" alt="lower order.png" /><br />
+This part recursively finds probablity of lower order. Do note that,<br />
+</p>
+<ul>
+<li>In each iteration, value of d changes so lambda value also changes.<br /></li>
+<li>Meaning, we put different weight to lower order probablity in each stage.<br /></li>
+
+</ul>
+</section>
+<section id="slide-orge42a018">
+<h3 id="orge42a018"><span class="section-number-3">5.4</span> Continuation</h3>
+<p>
+At lowest order, the recursive lower order probablity becomes continuation probablity.<br />
+<img src="image-source/continuation.png" alt="continuation.png" /><br />
+</p>
+</section>
+<section id="slide-org220cd25">
+<h3 id="org220cd25"><span class="section-number-3">5.5</span> Time Complexity</h3>
+<p>
+It requires a lot of time to execute as finding<br />
+</p>
+<ul>
+<li>number of ngram it preceeds<br /></li>
+<li>number of ngram that follows it<br /></li>
+
+</ul>
+<p>
+Requires a significant amount of time. However, once we precompute them, kneeser ney can be the best smoothing algorithm to use.<br />
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orga1a2438">
+<h2 id="orga1a2438"><span class="section-number-2">6</span> Challenges</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+</section>
+<section id="slide-org77069ef">
+<h3 id="org77069ef"><span class="section-number-3">6.1</span> Learning Curves</h3>
+<ul>
+<li><p>
+Understanding Kneeser Ney<br />
+</p>
+<pre class="example">
+The few resources available online are contradictory.
+</pre></li>
+<li><p>
+Finding materials<br />
+</p>
+<pre class="example">
+Corpus are huge and small corpuses are too skewed in one genre.
+</pre></li>
+<li><p>
+Natural Language Programming<br />
+</p>
+<pre class="example">
+Dan Jurafsky, Stanford
+</pre></li>
+<li><p>
+Some tools for memory checking, efficiency and debugging.<br />
+</p>
+<pre class="example">
+GDB, Valgrind, gprof
+</pre></li>
+
+</ul>
+</section>
+<section id="slide-orgdc9eb21">
+<h3 id="orgdc9eb21"><span class="section-number-3">6.2</span> Heap Management</h3>
+<ul>
+<li><p>
+Program swallowing the whole Ram<br />
+</p>
+<pre class="example">
+With htop, we saw how the program slwoly swallows all of Ram and even HDD Ram file
+</pre></li>
+<li><p>
+Destructors alone don't work!<br />
+</p>
+<pre class="example">
+lvalue, rvalue
+</pre></li>
+<li>Memory leak check in each module using valgrind.<br /></li>
+<li><p>
+Stack memory is limited!<br />
+</p>
+<pre class="example">
+stack overflow error occuers if we use STL functions
+</pre></li>
+
+</ul>
+</section>
+<section id="slide-org0394249">
+<h3 id="org0394249"><span class="section-number-3">6.3</span> Time Complexity</h3>
+<ul>
+<li>Default Implementation takes huge amount of time.<br /></li>
+<li>Precomputation<br /></li>
+<li>Binary Search Tree for O(logn) in each Query.<br /></li>
+<li>gprof to check if any function is slowing down our program<br /></li>
+
+</ul>
+</section>
+<section id="slide-org99cd971">
+<h3 id="org99cd971"><span class="section-number-3">6.4</span> Exotic C++ Philosophy</h3>
+<pre class="example">
+Syntax, Differences with java
+</pre>
+
+<ul>
+<li>Rules of three<br /></li>
+<li>Copy-and-Swap idiom<br /></li>
+<li>Template<br /></li>
+<li>lvalue-rvalue<br /></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org35c91b4">
+<h2 id="org35c91b4"><span class="section-number-2">7</span> What we plan to do in the future?</h2>
+<ul>
+<li>Bag of Words<br /></li>
+<li>Soundex Algorithm<br /></li>
+
+</ul>
+<p>
+They feel interesting so I might implement them into my NLP library in near future.<br />
+</p>
+</section>
+<section id="slide-org74661d0">
+<h3 id="org74661d0"><span class="section-number-3">7.1</span> Project Structure</h3>
+
+<div id="org8770718" class="figure">
+<p><img src="project-structure.png" alt="project-structure.png" /><br />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org0f627d7">
+<h2 id="org0f627d7"><span class="section-number-2">8</span> Thank You!</h2>
+<p>
+Lines of Code = 3598<br />
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-text"   ><code trim>[abhijit@hostabhi:~$ wc -l **/*.cpp **/*.h
+   156 Data-Structures/BinarySearchTree.cpp
+   467 Data-Structures/lib_string.cpp
+    82 Evaluation/Evaluation.cpp
+   126 KneeserNey/KneeserNey.cpp
+   138 LanguageModel/Bigram.cpp
+   100 LanguageModel/NGram.cpp
+   119 LanguageModel/PrecomputeNGram.cpp
+    63 NoisyChannelModel/ConfusionMatrix.cpp
+   180 NoisyChannelModel/DefineNoisyChannel.cpp
+    98 NoisyChannelModel/KMP.cpp
+    11 NoisyChannelModel/main.cpp
+   133 NoisyChannelModel/MED.cpp
+   203 NoisyChannelModel/NoisyChannelModel.cpp
+   112 Preprocess-data/lib_punctuation.cpp
+   207 Preprocess-data/SentenceSegmenter.cpp
+   238 Preprocess-data/Stemmer.cpp
+    80 Preprocess-data/Tokenizer.cpp
+    57 Spelling-Correction/Candidate.cpp
+   101 Spelling-Correction/SpellingCorrection.cpp
+    50 Data-Structures/BinarySearchTree.h
+    82 Data-Structures/lib_string.h
+   202 Data-Structures/OrderedSet.h
+    34 Evaluation/Evaluation.h
+    33 KneeserNey/KneeserNey.h
+    49 LanguageModel/Bigram.h
+    42 LanguageModel/NGram.h
+    40 LanguageModel/PrecomputeNGram.h
+    34 NoisyChannelModel/ConfusionMatrix.h
+    48 NoisyChannelModel/DefineNoisyChannel.h
+    25 NoisyChannelModel/KMP.h
+    47 NoisyChannelModel/MED.h
+    39 NoisyChannelModel/NoisyChannelModel.h
+    39 Preprocess-data/lib_punctuation.h
+    42 Preprocess-data/SentenceSegmenter.h
+    40 Preprocess-data/Stemmer.h
+    41 Preprocess-data/Tokenizer.h
+    40 Spelling-Correction/SpellingCorrection.h
+  3598 total
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
