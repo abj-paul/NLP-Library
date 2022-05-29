@@ -1,7 +1,7 @@
 #+OPTIONS: \n:t
 
 * About
-  Building a simple library for natural language processing. The details can be found in Features section.
+  Building a simple library for natural language processing. The details can be found in Features section. [[https://drive.google.com/file/d/1fdLzZEIBXD1kuEQA0TwVmin8HubI4aQy/view?usp=sharing][A graphical overview can be found in this document.]]
   | Details       |
   |---------------|
   | SPL-1 Project |
