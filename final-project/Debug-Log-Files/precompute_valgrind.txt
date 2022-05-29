@@ -1,0 +1,225 @@
+==7140== Memcheck, a memory error detector
+==7140== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7140== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==7140== Command: ./execute
+==7140== Parent PID: 6875
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==  Address 0x8628030 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==  Address 0xe1d1d00 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==  Address 0xe27abf0 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==    by 0x115CC7: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:118)
+==7140==  Address 0xdf34030 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140==    by 0x115987: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:88)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x116089: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:80)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==    by 0x115CC7: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:118)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140==  Address 0x8145a70 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x11616E: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:128)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140==    by 0x115987: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:88)
+==7140==    by 0x115CAF: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:115)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x1160A0: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:81)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==    by 0x115CC7: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:118)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140==  Address 0x837eee0 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x1161E4: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:136)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140==    by 0x115987: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:88)
+==7140==    by 0x115CAF: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:115)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== Mismatched free() / delete / delete []
+==7140==    at 0x484827F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x1160B8: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::inorder_free(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*) (OrderedSet.h:83)
+==7140==    by 0x115EE4: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::~Set() (OrderedSet.h:73)
+==7140==    by 0x115257: abj::PrecomputeNGram::~PrecomputeNGram() (PrecomputeNGram.cpp:27)
+==7140==    by 0x115CC7: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:118)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140==  Address 0x50154f0 is 0 bytes inside a block of size 48 alloc'd
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x116370: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::createTNode(std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:112)
+==7140==    by 0x116114: abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >::insert(abj::TNode<std::vector<abj::String, std::allocator<abj::String> > >*, std::vector<abj::String, std::allocator<abj::String> >) (OrderedSet.h:125)
+==7140==    by 0x115F3D: abj::Set<std::vector<abj::String, std::allocator<abj::String> > >::insert(std::vector<abj::String, std::allocator<abj::String> > const&) (OrderedSet.h:166)
+==7140==    by 0x115987: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:88)
+==7140==    by 0x115CAF: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:115)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 
+==7140== HEAP SUMMARY:
+==7140==     in use at exit: 175 bytes in 14 blocks
+==7140==   total heap usage: 6,042,058 allocs, 6,042,044 frees, 276,557,369 bytes allocated
+==7140== 
+==7140== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115AB9: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:102)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 19 (16 direct, 3 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115B70: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:107)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 20 (16 direct, 4 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115AF2: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:103)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 20 (16 direct, 4 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115BA6: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:108)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 21 (16 direct, 5 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115B2B: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:104)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 21 (16 direct, 5 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 14
+==7140==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x115BDC: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:109)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 28 bytes in 1 blocks are definitely lost in loss record 13 of 14
+==7140==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x10A8EA: abj::String::get_raw_data() const (lib_string.cpp:99)
+==7140==    by 0x1158C7: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:81)
+==7140==    by 0x115CAF: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:115)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== 28 bytes in 1 blocks are definitely lost in loss record 14 of 14
+==7140==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7140==    by 0x10A8EA: abj::String::get_raw_data() const (lib_string.cpp:99)
+==7140==    by 0x11528D: abj::PrecomputeNGram::getFileData(abj::String const&) (PrecomputeNGram.cpp:30)
+==7140==    by 0x1158EC: abj::PrecomputeNGram::build_ngram() (PrecomputeNGram.cpp:81)
+==7140==    by 0x115CAF: abj::PrecomputeNGram::test_function() (PrecomputeNGram.cpp:115)
+==7140==    by 0x10A3B7: main (main.cpp:22)
+==7140== 
+==7140== LEAK SUMMARY:
+==7140==    definitely lost: 152 bytes in 8 blocks
+==7140==    indirectly lost: 23 bytes in 6 blocks
+==7140==      possibly lost: 0 bytes in 0 blocks
+==7140==    still reachable: 0 bytes in 0 blocks
+==7140==         suppressed: 0 bytes in 0 blocks
+==7140== 
+==7140== For lists of detected and suppressed errors, rerun with: -s
+==7140== ERROR SUMMARY: 20332 errors from 15 contexts (suppressed: 0 from 0)

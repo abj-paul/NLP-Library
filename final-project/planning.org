@@ -1,0 +1,78 @@
+* Total Planning
+- [X] See if string class works with abj::Vector
+- [X] See if string class works with std::vector
+- [X] Make punctuation
+- [X] Make sentece segmenter
+- [X] Make abbreviation checker
+- [ ] Load the new corpus file
+- [X] Stemmer and tokenizer and Bigram
+- [X] Review Noisy Channel model to see if everything is working fine.
+- [ ] Implement kneeser ney algorithm
+- [ ] Load english dictionary words on a B+ tree and use those words for tokenization.
+- [ ] Add some better handcrafted rules on punctuation handling ('ve->have)
+- [ ] Add some better handcrafted rules on sentence segmenter(inverted commas "", NUMBERS, month-name abbreviations)
+ Dont focus on accuracy (and so dont waste time reading research papers. Instead, implement as many features as possible.)
+- [ ] Efficiency
+- [ ] Kneeser Ney
+- [ ] Word Correction
+- [ ] Sentence Correction
+- [ ] Speech Recognition
+- [ ] OOP Concepts, Copy constructor for bigram
+- [ ] Edit BST code
+- [ ] Check Abbreviation , do they work?
+** Kneeser Ney
+   - [ ] Test current work with big datasets
+   - [ ] Handwritten example on kneeser ney
+   - [ ] Find a algorithm for picking unique elements, like in SET
+   - [ ] Every NGram class will have probablity and continuationProbablity functions.
+   - [ ] Develop kneeser ney in a separate workspace
+* Sources
+  [[https://www.webopedia.com/reference/text-abbreviations/][1600+ abbreviation list in regular conversations]]
+  [[https://paginas.fe.up.pt/~asousa/acronym.pdf][all global standard acronym definitions]]
+* Debug
+  With sed corpus, 
+Perplexity2.12468
+With small corpus, 
+Perplexity0.998687
+** Efficiency - double cache error with sed corpus
+   Calling Bigram Constructor
+Calling SentenceSegmenter Constructor
+P=Calling SentenceSegmenter Constructor
+double free or corruption (out)
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff7afc34c in __pthread_kill_implementation () from /usr/lib/libc.so.6
+(gdb) bt
+#0  0x00007ffff7afc34c in __pthread_kill_implementation () from /usr/lib/libc.so.6
+#1  0x00007ffff7aaf4b8 in raise () from /usr/lib/libc.so.6
+#2  0x00007ffff7a99534 in abort () from /usr/lib/libc.so.6
+#3  0x00007ffff7af0397 in __libc_message () from /usr/lib/libc.so.6
+#4  0x00007ffff7b0633c in malloc_printerr () from /usr/lib/libc.so.6
+#5  0x00007ffff7b08420 in _int_free () from /usr/lib/libc.so.6
+#6  0x00007ffff7b0abe3 in free () from /usr/lib/libc.so.6
+#7  0x000055555555eec8 in abj::String::~String (this=0x7fffffffe070, __in_chrg=<optimized out>) at lib_string.cpp:12
+#8  0x000055555555ff01 in abj::String::operator= (this=0x555559c65f60, data=...) at lib_string.cpp:311
+#9  0x00005555555722c5 in abj::BinarySearchTree::newNode (this=0x7fffffffe570, item=...) at BinarySearchTree.cpp:10
+#10 0x0000555555572480 in abj::BinarySearchTree::insert (this=0x7fffffffe570, node=0x0, key=...) at BinarySearchTree.cpp:52
+#11 0x00005555555724d9 in abj::BinarySearchTree::insert (this=0x7fffffffe570, node=0x555559c66110, key=...) at BinarySearchTree.cpp:58
+#12 0x00005555555724b4 in abj::BinarySearchTree::insert (this=0x7fffffffe570, node=0x5555581a9700, key=...) at BinarySearchTree.cpp:56
+#13 0x00005555555724b4 in abj::BinarySearchTree::insert (this=0x7fffffffe570, node=0x55555976e400, key=...) at BinarySearchTree.cpp:56
+#14 0x0000555555572529 in abj::BinarySearchTree::insert (this=0x7fffffffe570, key=...) at BinarySearchTree.cpp:65
+#15 0x0000555555560c98 in abj::SentenceSegmenter::buildAbbreviationList (this=0x7fffffffe450) at SentenceSegmenter.cpp:112
+#16 0x0000555555560497 in abj::SentenceSegmenter::SentenceSegmenter (this=0x7fffffffe450, corpus=...) at SentenceSegmenter.cpp:6
+#17 0x00005555555591bc in abj::Bigram::getStemList (this=0x7fffffffe660, text=...) at Bigram.cpp:32
+#18 0x00005555555599c5 in abj::Bigram::probablity (this=0x7fffffffe660, text=...) at Bigram.cpp:104
+#19 0x000055555555a1a7 in abj::Bigram::test_function () at Bigram.cpp:175
+#20 0x00005555555576b8 in main () at main.cpp:21
+(gdb) quit
+* File arrangement
+SentenceSegmenter.cpp  SentenceSegmenter.h  Stemmer.cpp  Stemmer.h  Tokenizer.cpp  Tokenizer.h
+* Evening Task
+  - [ ] Find movie corpus
+  - [ ] make a global corpus file
+  - [ ] Keep testing the code
+  - [ ] Implement LM*NCM
+    
+  - [ ] Edit SLIDE
+  - [ ] Upload everything in github
+

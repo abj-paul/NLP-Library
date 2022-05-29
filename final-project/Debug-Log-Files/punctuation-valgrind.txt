@@ -1,0 +1,129 @@
+==2305== Memcheck, a memory error detector
+==2305== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2305== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2305== Command: ./execute
+==2305== Parent PID: 1033
+==2305== 
+==2305== Invalid write of size 1
+==2305==    at 0x10AAC4: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:135)
+==2305==    by 0x10B915: abj::String::test_function() (lib_string.cpp:394)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x4dc0e4d is 0 bytes after a block of size 29 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AA1F: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:127)
+==2305==    by 0x10B915: abj::String::test_function() (lib_string.cpp:394)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== Invalid read of size 1
+==2305==    at 0x484BD24: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x4C1A5B7: puts (in /usr/lib/libc.so.6)
+==2305==    by 0x10A796: abj::String::print() const (lib_string.cpp:85)
+==2305==    by 0x10B924: abj::String::test_function() (lib_string.cpp:395)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x4dc0e4d is 0 bytes after a block of size 29 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AA1F: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:127)
+==2305==    by 0x10B915: abj::String::test_function() (lib_string.cpp:394)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== Invalid write of size 1
+==2305==    at 0x10AAC4: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:135)
+==2305==    by 0x10B98C: abj::String::test_function() (lib_string.cpp:401)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x4dc126e is 0 bytes after a block of size 30 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AA1F: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:127)
+==2305==    by 0x10B98C: abj::String::test_function() (lib_string.cpp:401)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== Invalid read of size 1
+==2305==    at 0x484BD24: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x4C1A5B7: puts (in /usr/lib/libc.so.6)
+==2305==    by 0x10A796: abj::String::print() const (lib_string.cpp:85)
+==2305==    by 0x10B99B: abj::String::test_function() (lib_string.cpp:402)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x4dc126e is 0 bytes after a block of size 30 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AA1F: abj::String::concatenate_at_end(abj::String&, char) (lib_string.cpp:127)
+==2305==    by 0x10B98C: abj::String::test_function() (lib_string.cpp:401)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== Invalid write of size 1
+==2305==    at 0x10AB9E: abj::String::concatenate_at_end(abj::String&) (lib_string.cpp:147)
+==2305==    by 0x10BB86: abj::String::test_function() (lib_string.cpp:424)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x5196721 is 0 bytes after a block of size 33 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AB14: abj::String::concatenate_at_end(abj::String&) (lib_string.cpp:141)
+==2305==    by 0x10BB86: abj::String::test_function() (lib_string.cpp:424)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== Invalid write of size 1
+==2305==    at 0x10AB9E: abj::String::concatenate_at_end(abj::String&) (lib_string.cpp:147)
+==2305==    by 0x10BBEE: abj::String::test_function() (lib_string.cpp:428)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305==  Address 0x5196868 is 0 bytes after a block of size 8 alloc'd
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A944: abj::String::resize(int) (lib_string.cpp:114)
+==2305==    by 0x10AB14: abj::String::concatenate_at_end(abj::String&) (lib_string.cpp:141)
+==2305==    by 0x10BBEE: abj::String::test_function() (lib_string.cpp:428)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 
+==2305== HEAP SUMMARY:
+==2305==     in use at exit: 195 bytes in 12 blocks
+==2305==   total heap usage: 61,345 allocs, 61,333 frees, 29,755,554,030 bytes allocated
+==2305== 
+==2305== 21 (16 direct, 5 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 12
+==2305==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10BBC7: abj::String::test_function() (lib_string.cpp:428)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 21 (16 direct, 5 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 12
+==2305==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10BC20: abj::String::test_function() (lib_string.cpp:431)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 23 (16 direct, 7 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 12
+==2305==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10BB15: abj::String::test_function() (lib_string.cpp:422)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 27 bytes in 1 blocks are definitely lost in loss record 9 of 12
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A860: abj::String::get_raw_data() const (lib_string.cpp:99)
+==2305==    by 0x10B6C5: abj::String::getFileContent(abj::String const&) (lib_string.cpp:356)
+==2305==    by 0x10BE36: abj::String::test_function() (lib_string.cpp:453)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 27 bytes in 1 blocks are definitely lost in loss record 10 of 12
+==2305==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10A860: abj::String::get_raw_data() const (lib_string.cpp:99)
+==2305==    by 0x10B6C5: abj::String::getFileContent(abj::String const&) (lib_string.cpp:356)
+==2305==    by 0x10D97D: abj::Punctuation::test_function() (lib_punctuation.cpp:102)
+==2305==    by 0x10A32C: main (main.cpp:8)
+==2305== 
+==2305== 33 (16 direct, 17 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 12
+==2305==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10BB5F: abj::String::test_function() (lib_string.cpp:424)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== 43 (16 direct, 27 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12
+==2305==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2305==    by 0x10BE12: abj::String::test_function() (lib_string.cpp:453)
+==2305==    by 0x10A327: main (main.cpp:7)
+==2305== 
+==2305== LEAK SUMMARY:
+==2305==    definitely lost: 134 bytes in 7 blocks
+==2305==    indirectly lost: 61 bytes in 5 blocks
+==2305==      possibly lost: 0 bytes in 0 blocks
+==2305==    still reachable: 0 bytes in 0 blocks
+==2305==         suppressed: 0 bytes in 0 blocks
+==2305== 
+==2305== For lists of detected and suppressed errors, rerun with: -s
+==2305== ERROR SUMMARY: 13 errors from 13 contexts (suppressed: 0 from 0)

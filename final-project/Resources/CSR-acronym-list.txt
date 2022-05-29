@@ -1,0 +1,3380 @@
+
+-A-
+A/D Analog to Digital
+A&T Architecture & Transport (DSL Forum Committee, formerly ATM)
+A/TT Analog Tie Trunk (TIA-646-B)
+AAA Authentication, Authorization and Accounting
+AAC Advanced Audio Coding
+AACCH Auxiliary Analog Control Channel
+AAL ATM Adaptation Layer
+AAL(D) Analog PSTN Access Line (Analog PBX Interface, TIA-646-B)
+AAL5-CU ATM Adaptation Layer 5 Composite User
+AAP Alternative Approval Procedures
+AASO Advanced Audio Server Override (package)
+AASS Advanced Audio Server Set (package)
+AAU Advanced Audio Package
+AAV Authentication Algorithm Version
+ABAC Aggregate Bearer Admission Control
+AbC Approval by Correspondence
+ABM Aggregate Bearer Measurement
+ABNF Augmented Backus-Naur Form
+ABR Average Bit Rate
+ABT Adaptive Block Transform
+AC Advisory Circular
+AC Alternating Current
+AC Authentication Center
+AC Auto Configuration (DSL Forum)
+AC Automatic Callback
+ACA Adaptive Channel Allocation
+ACBO Automatic Cross Band Operation
+ACC Analog Control Channel
+ACCH Associated Control Channel
+ACD Automatic Call Distribution
+ACE Advanced Coding Efficiency
+ACELP Adaptive CELP
+ACF Authentication Control Function
+ACG Automatic Code Gapping
+ACIL Association of Independent Scientific, Engineering and Testing Firms
+ACK Acknowledgment
+ACKS Acknowledgments
+ACM Address Complete Message
+ACOS IEC Advisory Committee on Safety
+ACR Absolute Category Rating
+ACR Alternate Carrier Routing
+ACR Anonymous Call Rejection
+ACRE Authorization and Call Routing Equipment
+ACS Automatic Configuration Service
+ACSB Amplitude Companded Single Side Band
+ACSE Association Control Service Element
+ACT Activation
+ACTA Administrative Council for Terminal Attachment (T1 and TIA)
+ACTE Approvals Committee for Terminal Equipment
+ACTS Advanced Communications Technology Satellite
+AD Administrative Domain
+ADA Americans with Disabilities Act
+ADAAG ADA Accessibility Guidelines
+AD-BES Administrative Back-End Services
+ADC Analog to Digital Converter
+ADDS Application Data Delivery Service
+ADHAG Ad Hoc Authentication Group (TR-45.2)
+ADI Analog Devices Inc.
+ADL ADSL without underlying POTS or ISDN
+ADL All Digital Loop
+ADL Automatic Determination of Location
+ADLC Asynchronous Data Link Control
+ADLG Automatic Determination of Location and Guidance
+ADLNB Association of Designated Laboratories and Notified Bodies (European)
+ADP Answer Detection Pattern
+ADPCM Adaptive Differential PCM
+ADS Asynchronous Data
+ADSI Analog Display Services Interface (Bellcore)
+ADSL Asymmetric Digital Subscriber Loop (Line)
+ADSLF ADSL Forum
+ADSL-R Asymmetric Digital Subscriber Loop (Remote)
+ADT Asynchronous Data Teleservice
+AEC Acoustic Echo Controller
+AECE Acoustic Echo Control Equipment
+AES Advanced Encryption Standard-Rijndael
+AFE Analog Front End
+AFNOR Association francaise de normalisation (French Standardization)
+AG Access Grant
+AGC Audiographics Conferencing
+AGC Automatic Gain Control
+AGCH Access Grant Channel
+AGNI Advisory Group for Network Issues
+AHAG Ad Hoc Authentication Group (TR-45)
+AHES Ad Hoc Emergency Services (TR-45.2)
+AHG Ad Hoc Group
+aHIT! TIPIA merger into IMTC
+AHMMG Ad Hoc Microcell/Microsystems Guidelines
+AHPAI Ad Hoc PCS Air Interface Joint Group
+AHSOG Ad Hoc on Self Organization Group
+AHWG Ad Hoc Working Group
+AI Air Interface
+AI Answer Indicator (V.8)
+AIC Advanced Intra Coding
+AIG Administrators Interest Group
+AIG Authentication Implementation Guide
+AIIM Association for Information and Image Management
+AIN Advanced Intelligent Network
+AINI ATM Inter Network Interface
+AIS Alarm Indication Signal
+AIV Alternative Inter VLC
+a.k.a. Also Known As
+AL Answer List
+AL1 H.223 Adaption Layer 1
+AL-PDU Answer List - Protocol Data Unit
+AL-SDU Answer List - Service Data Unit
+ALC Automatic Level Control
+ALCE Automatic Level Control Equipment
+ALE Automatic Link Establishment Radios
+ALF Application Level Framing
+ALI Automatic Location Identification
+ALIT Automatic Line Insulation Test
+ALT Automatic Link Transfer
+ALU Arithmetic Logic Unit
+AM Amplitude Modulation
+AM Assignment Message
+AMA Adaptive Motion Accuracy
+AMA/CDR Automatic Message Accounting/Call Detail Recording
+AMD Amendment
+AMF Authentication Management Function
+AMPS Advanced Mobile Phone Service
+AMR Adaptive MultiRate
+AMR-WB Adaptive Multi-Rate Wideband
+AN Access Network
+AN Access Node
+AN Advisory Note
+ANAI Access Network Architecture and Interfaces
+ANATEL Agencia Nacional de Telecomunicacoes (Brazil)
+ANF Additional Network Feature
+ANF-CMN Common Information Additional Network Feature (H.450.12)
+ANFP Access Network Frequency Plan
+ANI Automatic Number Identification
+ANOVA Analysis of Variance Procedure
+ANS Answer Tone
+ANSam Answer Tone, amplitude modulated (V.8)
+ANSI American National Standards Institute
+ANT Access Network Transport (Q1/15)
+AOC Advice of Change
+AOC Advice of Charge
+AOC ADSL Overhead Channel
+AOC-D Advice Of Charge during a call
+AOC-E Advice Of Charge at the End of a call
+AOD Audio on Demand
+AP Advanced Prediction
+AP Application Protocols
+APCM Analog PCM Modem
+APCO Associated Public Safety Communications Officers, Inc.
+APDU Application Protocol Data Unit
+APE Application Protocols Entities
+APEC Asian Pacific Economic Cooperation
+API Application Programming Interface
+APIC APCO Project 25 Interface Committee
+APLAC Asian Pacific Laboratory Accreditation Cooperation
+APON ATM PON
+APP Application Marker
+APS Asynchronous Protocol Specification
+AR Adaptive Reception Control
+AR Auto-Regressive
+AR Automatic Recall
+ARC Adaptive Reception Control
+ARC Alarm Reporting Control
+ARCH Access Response Channel
+ARDB Administrative Reference DataBase
+ARF Audio Resource Function
+ARIB Association of Radio Industries and Businesses (accredited standards setting body in Japan)
+ARJ Admission Reject
+ARLP Acoustic Reference Level Plan
+ARM Application Resource Manager
+ARQ Automatic Repeat Request
+ASAP As Soon As Possible
+ASCII American Standard Code for Information Interchange
+ASE Applications Service Element
+ASIC Application Specific Integrated Circuit
+ASID Access, Searching and Indexing of Directories
+ASL Active Speech Level
+ASN Abstract Symbol Notation
+ASO Arbitrary Slice Ordering
+ASOG Access Service Ordering Guidelines
+ASP Application Service Provider
+ASR Automatic Speech Recognition
+ASTM formerly American Society of Testing and Measurement
+ASVD Analog SVD
+AT Access and Terminals (ETSI TC)
+AT Asynchronous Terminal
+ATA Analog Terminal and Access Project
+ATa Analog Working Group (ETSI TC AT)
+AT-A ETSI Access and Terminals Analog Working Group
+ATAAB Analog Technical Ad hoc Advisory Board
+ATAc ATA's Conventional Technology WG
+ATAe ATA's Enhanced Technology WG
+ATBCB Architectural and Transportation Barriers Compliance Board
+ATC Analog Traffic Channel
+AT-D ETSI Access and Terminals Digital Working Group
+ATd Digital Working Group (TC AT)
+ATf Features Working Group (TC AT)
+ATF Administrative Task Force
+AT-F ETSI Access and Terminals Features Working Group
+ATG Access Transport Group (DSL Forum)
+ATIA Australian Telecommunications Industry Association
+ATIS Alliance for Telecommunications Industry Solutions
+ATM Asynchronous Transfer Mode
+ATMF ATM Forum
+ATMOVE Adaptive-Template Movement
+ATM-Utopia Universal Test and Operations Physical Layer Interface for ATM
+ATO Analog Tandem Office (TIA-646-B)
+ATS Abstract Test Suite
+ATS Assigned Time Slot
+ATV Advanced Television
+AuF Authentication Function
+AV AudioVisual
+AVC Audio Visual Coding
+AVC Audiovisual Conferencing
+AVD Alternating Voice Data
+AVI Interactive Audiovisual Services
+AVIS Audio Visual Information Systems
+AVMMS AudioVisual and MultiMedia Services
+AVT Audio/Visual Transport
+AWG American Wire Gauge
+AWGN Additive White Gaussian Noise
+AWI Alert With Info
+-B-
+B Bi-directionally predicted
+B2B Business-to-Business
+B2C Business-to-Consumer
+B2G Business-to-Government
+B&G Bits&Gains (Q4/15)
+B&W Black and White
+BA Basic Access (ISDN)
+BAM Biconic Connector
+BAPT Bundesamt fur Post und Telekommunikation
+BARAS ETSI SAGE standard encryption algorithm for audiovisual services
+BAS Bit rate Allocation Signal
+BAU Base Audio Package
+BB Bandwidth Broker
+BBN Bulk Billing Number
+BBS Bulletin Board System
+BC Basic Call
+BC Bearer Channel
+BCC Basic Control Channel
+BCCA Board Committee on Conformity Assessment
+BCCH Broadcast Control Channel
+BCD Binary Coded Decimal
+BCDF Broadband Content Delivery Forum
+BCF Backward Control Field
+BCF Bearer Control Function
+BCH Bose, Chaudhuri, and Hocquengham
+BCM Back Channel Message
+BCTP Basic Call Transfer Protocol (SG11)
+BD-PSNR Bjøntegaard delta PSNR
+BDS Blank Detail Specification
+BE Border Element
+BEM Big Emerging Markets
+BER Bit Error Rate
+BERT Bit Error Rate Test
+BES Back-End Services
+BEST Back-End Service Transaction
+(B)FER Burst Frame Error Rate
+BF Bearer Function
+BFI Bad Frame Indicator
+BFOC Bayonet Fiber Optic Connector
+BFT Binary File Transfer
+BGN Background Noise Conditions
+B-HLI Broadband High Layer Information
+BICC Bearer Independent Call Control
+BICSI Building Industry Consulting Services International
+BID Billing ID Numbers
+BINTERMS Basic Interoperability for Terminals for Telematic Services
+B-ISDN Broadband ISDN
+B-ISUP Broadband ISDN User Part
+BITB Boulder Industry Test Bed
+BLER Block Error Rates
+BLERf Error Free Block Rate
+BLES Broadband Loop Emulation Service
+B-LLI Broadband Lower Layer Information
+BME Block based Motion Estimation
+BMI Base Station, Mobile Switching Center, and Interworking Function
+BMSC Base Station Manufacturer Code
+BNC ID Backbone Network Connection Identifier
+BNF Backus-Naur Form
+B-NT Broadband Network Termination
+BNT Binary File Transfer
+BNTF Bi-National Task Force
+BNTG Bi-National Task Group
+BNWG Bi-National Working Group
+BO Business Office
+BOF Birds of a Feather
+BoD Board of Directors
+BOMA Building Owners & Managers Association
+BONDING Bandwidth On Demand Interest Group (TR-41)
+BOS Business Object Summit
+BPI+ Baseline Privacy Interface Plus
+B-PISN Broadband PISN
+BPON Broadband Passive Optical Network
+BPTC Block-Product-Turbo-Codes
+B-QSIG Broadband QSIG
+BRA Basic Rate Access
+BRAN Broadband Radio Access Networks (ETSI TC)
+BRAS Broadband Remote Access Server
+BRI Basic Rate Interface
+BRKACK Break Acknowledge frame (V.42)
+BRM Bit Repetition Message
+BRQ Bandwidth Request
+BS Base Station
+BSC Base Station Controller
+BSC Binary Symmetric Channels
+BSMAP Base Station Management Application Part
+BSMC Base Station Manufacturer Code
+BSMI Bureau of Standards, Metrology and Inspection
+B-SMS Broadcasts Short Message Service
+BSN Broadband Service Node (Nortel)
+BSR Board of Standards Review (ANSI)
+BSS Base Station System
+BSS Broadcasting-Satellite Service
+BST Broadcast SMS Teleservice
+BT British Telecom (United Kingdom PTT)
+BTA Basic Trading Area
+BTC Business Telecommunications Committee (ETSI)
+BTM Basic Transfer Mode
+BTS Base Transceiver System
+B-UNI Broadband User Network Interface
+B-VOP Bidirectional Video Object Planes
+B/W Black and White
+BWC Bandwidth Control
+BWS Building Wiring Standard
+-C-
+C&I Commands and Indications
+C&S Control and Signaling (ATM Forum Working Group)
+CA Channel Aggregation
+CA Communication Application (T.611)
+CA Conformity Assessment
+CAB Conformity Assessment Body
+CABA North America's Home and Building Automation Association
+CABAC Context-based Adaptive Binary Arithmetic Coding
+CAC Carrier Access Code
+CAC Connection Admission Control
+CAD Computer Aided Design
+CAGJES Canadian Advisory Group on Joint Electrical Safety Committee
+CAI Common Air Interface
+CAL Common Application Language
+CALEA Communications Assistance for Law Enforcement Act
+CAMA Centralized Automatic Message Accounting
+CANACINTRA Camara Nacional de la Industria de Transformacion (Mexico)
+CANIECE Camara Nacional de la Industria Electronica Y de Communicaciones Electricas (Mexico)
+CAP Carrier-less Amplitude modulation Phase modulation
+CAPI Common API
+CAPCS Cellular Auxiliary Personal Communications Service
+CARE Carrier Access Records Exchange
+CAS Channel Associated Signaling
+CAS Customer Alert Signal
+CASCO Committee on Conformity Assessment (ISO)
+CASE Conformity Assessment System Evaluation (NIST)
+CASS Common Air Satellite Structure
+CAT Cellular Action Team (ECSP committee)
+CATS Consortium for Audiographics Teleconferencing Standards
+CATV Cable Television
+CAVE Cellular Authentication and Voice Encryption Algorithm
+CAWG Conformity Assessment Working Group (Trilateral)
+CB Call Barring (TIA TR-34)
+CB Certification Body
+CB Citizen Band
+CBC Call Bearer Control
+CBC Cipher Block Chaining
+CBEMA Computing Business Equipment Manufacturers Association (see ITI)
+CBP Coded Block Pattern (H.261)
+CBPCM Coded Block Pattern - Chrominance
+CBPC Coded Block Pattern for Chrominance
+CBPY Coded Block Pattern for Luminance
+CBR Constant Bit Rate
+CC Call Control
+CC Common Carrier
+CC Communication Capability field
+CC Conference Call
+CC Continuity Check (Rec. I.610)
+CC Control Channel
+CCA Common Cryptographic Algorithm
+CCB Common Carrier Bureau
+CCBS Completion of Calls to Busy Subscribers
+CCIR Comite consultatif international des radiocommunications
+CCITT Comite consultatif international telegraphique et telephonique
+CCM Call Connection Management
+CCR Call Connect Reliability
+CCR Comparison Category Rating
+CCS Common Channel Signaling
+CCSN Common Channel Signaling Network
+CCSRL Control Channel Segmentation and Reassembly Layer
+CCT Channel Check Test
+CCT Consultative Committee - Telecommunications (Trilateral)
+CD Committee Draft
+CD Communication Device
+CD-ROM Compact Disk-Read Only Memory
+CDCP Call Detail Collect Point
+CDG CDMA Development Group
+CDGP Call Detail Generation Point
+CDH Cooperative Document Handling
+CDIS Call Detail Information Source
+CDL Coded Digital control channel Locator
+CDMA Code Division Multiple Access
+CDN Content Distribution Network
+CDPD Cellular Digital Packet Data
+CDR Call Detail Recording
+CDRP Call Detail Rating Point
+CDS Caller Display Signaling
+CDTAC FCC Consumer/Disability Telecommunications Advisory Committee
+CDV Committee Draft for Vote, IEC
+CE Capabilities Exchange
+CE Core Experiment
+CEASD Common ETSI Approach to Standards Development
+CeBIT Trade show in Hannover, Germany
+CEBus Consumer Electronics Bus
+CEC Canadian Electric Code
+CEC European Committee for Standardization
+CED Called Station Identification (T.30)
+CEG Card Expert Group (ETSI)
+CEG Integrated Circuit Card Expert Group
+CELP Code Excited Linear Prediction
+CEN Commission Europeenne de Normalisation (European Standards Committee)
+CENELEC Commission Europeenne de Normalisation Electrotechnique (European Electrotechnical
+Standards Committee)
+CEOC Clear Embedded Operations Channel
+CEPT Conference of European PTTs
+CER Cell Error Ratio
+CEXT Central Office End Crosstalk
+CESID Caller Emergency Station Identification
+CF Call Forwarding
+CF Center Frequencies
+CF Communication Functions
+CFA Carrier Failure Alarms (s)
+CFBL Call Forward Busy Line/ Don't Answer
+CFI Calling Feature Indicator
+CFP Computer Fax Protocol
+CFP Cypher Feedback
+CFR Code of Federal Regulations
+CFR Confirmation to Receive
+CFU Call Forwarding - Unconditional
+CG Correspondence Group
+CGI Control Grid Interpolation
+CH Compare HDLC
+CHAP Challenge Handshake Authentication Protocol
+CHASE A class of algorithms for decoding block codes, after D. Chase
+CHS Candidate Harmonized Standard
+CI Call Indicator (V.8)
+CI Calling Identity
+CI Characteristic Impedance
+CI Count Indicator
+CI Customer Installation
+CI Customer Interface
+C/I Carrier to Interference Ratio
+CIA Calling subscriber Internet Address
+CIAJ Communications Industry Association of Japan
+CIB Configuration Information Base
+CIC Circuit Identifier Code
+CICES Canadian Interference Causing Equipment Standard
+CID Caller Identification
+CIDCW Calling Identity Delivery on Call Waiting
+CIELAB a device-independent color space
+CIF Common Intermediate Format
+CIG Calling Subscriber Identification
+CILC Canadian Interconnection Liaison Committee
+CIM Common Information Model
+CIP Component-Independent Palette
+CIR Carrier to Interference Ratio
+CISC CRTC Interconnection Steering Committee
+CISPR International Special Committee on Radio Interference
+CISPR/I Subcommittee of CISPR dealing with EMC of information technology, multimedia
+equipment, and receivers
+CIT Charge-Rate Indication Teleservice
+CITEL Comision Internanericana de Telecomunicaciones
+CJ CM terminator
+CL Capabilities Select (see CR)
+CLAD Cell Assembly/Disassembly
+CLASS Bellcore service mark for signaling features such as Caller ID
+CLEC Competitive Local Exchange Carriers
+CLEI Common Language Equipment Identifiaction
+CLI Calling Line Identification
+CLID Calling Line Identity
+CLIP Calling Line Identification Presentation
+CLIP Calling Line ID Parameter
+CLLI Common Language Location Identifier (Telcordia)
+CLNP Connectionless Network Protocol
+CLR Capabilities List Request
+CLR Cell Loss Ratio
+CLR Circuit Layout Record
+CM Cable Modem
+CM Call Manager
+CM Call Menu
+CM Channel Management
+CM Common Mode
+CM Connection Management
+CMB CRC Message Block (TIA-464-C)
+CMC Common Mail Call
+CMC Common Messaging Call
+CME Circuit Multiplication Equipment
+CME Communications Management Entity
+CMI Controlled Mode Idle
+CMIP Common Management Information Protocol
+CMIS Common Management Information Services
+CMISE Common Management Information Service Element
+CMMR Common Mode Rejection
+CMMRD Cellular Microcell/Microsystem Requirements Document
+CMN Common information
+CMODES Confidentiality Modes
+CMOS Comparison Mean Opinion Score
+CMOS Complimentary Metal Oxide Semiconductor
+CMRS Commercial Mobile Radio Services (U.S.)
+CMS Call Management Server
+CMS Call Management Signaling
+CMS Circuit Multiplication System
+CMT Cellular Messaging Teleservice
+CMTSD Cellular Mobile Telephone Service Descriptions
+CMY Cyan, Magenta, Yellow
+CMYK Cyan, Magenta, Yellow, Black
+CN Corporate Network
+CNAD Calling Name Delivery
+CNAP Calling Name Presentation
+CNAR Calling Name Restriction
+CNG Calling Tone (T.30)
+CNG Comfort Noise Generator
+CNI Calling Number Identification
+CNI Comfort Noise Insertion
+CNID Calling Number Identification
+CNIP Calling Number Identification Presentation
+CNIP Calling Name Identity Presentation
+CNIR Calling Number Identification Restriction
+CNP Connection Negotiation Protocol
+CNR Carrier to Noise Ratio
+CNRP Common Name Resolution Protocol
+CO Central Office
+COFETEL Comision Federal de Telecomunicaciones de Mexico
+CoIP Conferencing over IP (IMTC Activity Group)
+COMM comm.drv for Microsoft Windows
+CONNEG Content Negotiations (IETF)
+COO Cell of Origin
+COPEE Council on Office Products Energy Efficiency
+COPS Common Open Policy Service
+CORBA Common Object Request Broker Architecture
+CORD Cibernet On-line Roaming Database
+COS Corporation for Open Systems
+COS-OST Corporation for Open Systems Executive Industry Group
+COSP Customer Owned Outside Plant
+COST Co-Operation in the field of Science and Technology research
+COTS Commercial Off-The-Shelf
+CP Communications Protocol
+CP Continuous Presence (H.243)
+CP Customer Premises
+CP Cyclical Prefix
+CPA Combined Paging/Access
+CPAN Customer Premises Area Network
+CPAP Customer Premises Access Profile
+CPCS Common Part Convergence Sublayer
+CPE Customer Premise Equipment
+CPEV City Pair Polyethylene PVC
+CPF Compatible Protocol Field
+CPH Call Party Handling
+CP-IWF Customer Premises - InterWorking Function (ATM Forum)
+CPL Call Processing Language
+CPM Continuous Presence Multipoint
+CPN Calling Party Number
+CPN Customer Premise Network
+CPS Common Part Sublayer (ATMF)
+CPSII Communications Protocol Stack Independent Interface
+CPT Cellular Paging Teleservice
+CPU Central Processing Unit
+CQ CAS Signal
+CQ Communication Quality
+CQPSK Compatible Differential Offset Quadrature Phase Shift Keying (Digital Modulation)
+CR Capabilities Request (see CL)
+CRe Capabilities Request sent by autoanswering station at call initiation
+CRC Cyclic Redundancy Code
+CRFP Cordless Radio Fixed Parts
+CR-LDP Constraint-based Routed Label Distribution Protocol (a protocol within MPLS)
+CRP Command Repeat
+CRT Cathode Ray Tube
+CRT Chinese Remainder Theorem
+CRTC Canadian Radio and Television Commission
+CRTS Cellular Radio Telecommunications Service
+CRV Call Reference Value
+CS Canadian Standard
+CS Circuit Switched
+CS1 BICC Capability Set 1
+CS2 BICC Capability Set 2
+CS-ACELP Conjugate Structure ACELP
+CS-PDU Convergence Sublayer - Protocol Data Unit
+CSA Called Subscriber Internet Address
+CSA Canadian Standards Association
+CSA Carrier Serving Area
+CSC Call Signalling Channel
+CSCI Computer Software Configuration Item
+CSD Coordinated Standards Document
+CSDN Circuit Switched Data Network
+CSD-P Circuit Switched Data, Point-to-Point Service
+CSE Communication Service Equipment
+CSF Signaling Control Function
+CSI Construction Specification Institute
+CSMA/CD Carrier Sense Multiple Access/Collision Detection
+CSN Circuit-Switched Network
+CSO Curvature of the Second Order
+CSPP Computer System Policy Project
+CSR Communications Standards Review
+CSS Communications Standards Summary
+CSS Composite Source Signal
+CSS Convolutional Spectral Shaping
+CSTA Computer Supported Telecommunications Applications
+CSU Customer Service Unit
+CT Call Trace
+CT2 Cordless Telephone 2 (ETSI)
+CTA Council For Terminal Attachment
+CTB Composite Triple Beat
+CTE Connected Telecommunications Equipment
+CTIA Cellular Telecommunications Industry Association
+CTE Connected Telecommunications Equipment
+CTE Connected Terminal Equipment
+CTF Consumer Telephone Forum (Telcordia)
+CTIA Cellular Telecommunications Industry Association
+CTI Computer Telephony Integration
+CTM Cordless Terminal Mobility
+CTN Corporate Telecommunication Networks
+CTO Chief Technical Officers
+CTP Common Transport Protocol
+CTR Common Technical Requirements
+CTRMP Cordless Telephone Range Measurement Performance
+CTX Centrex
+CU Composite User
+CuT codec under test
+CV Code Violation
+CVoADSL Channnelized Voice over ADSL
+CVoDSL Channnelized Voice over DSL
+CVoSDSL Channnelized Voice over SDSL
+CVSD Continuous Variable Slope Detection
+CW Call Waiting
+CW Continuous Wave
+CWD Call Waiting Deluxe
+CWID Call Waiting ID
+CWP Cost Work Program
+CYL Complex stutter dial 
+-D-
+D-AMPS Digital AMPS
+D/A Digital to Analog
+D/S Downstream
+D/TT Digital Tie Trunk
+DA Delegated Authority
+DAA Data Access Arrangement
+DAC D/A Converter
+DAL Digital Access Line
+DAM Diagnostic Acceptability Measurement
+DANS Directory and Name Service
+DANS Distributed Access Node System
+DAP Document Application Profile
+DAS Door Answering System
+DAT Digital Audio Tape
+DAVIC Digital Audio-Visual Council
+DAWS Digital Advanced Wireless Service
+DB Data Base
+DBA Dynamic Bandwith Assignment
+DBM Dual Bitmap
+DBMS Data Base Management System
+DBS Direct Broadcast Satellite
+DC Data Compression
+DC Direct Current
+DC Directionality Classification
+DCA Dynamic Capacity Allocation
+DCC Data Country Code
+DCC Digital Control Channel
+DCCH Digital Control Channel
+DCD Data Carrier Detect
+DCE Data Circuit terminating Equipment
+DCE Digital Cellular Equipment
+DCF Disengage ConFirmation
+DCME Digital Circuit Multiplication Equipment
+DCMS Digital Circuit Multiplication Systems
+DCN Disconnect (T.30 )
+DCP Digital Connectivity Probing
+DCOR Draft technical Corrigendum (ISO/IEC)
+DCR Degradation Category Rating
+DCS Digital Cellular System
+DCS Digital Command Signal (T.30)
+DCT Data Calling Tone
+DCT Discrete Cosine Transform
+DCT-U Digital Cordless Telephone - U.S.
+DDI Direct Dialing In
+DDoS Distributed Denial of Service
+DDR Document Discrepancy Report
+DDS Digital Data Service
+DEC Digital Extended Command (proposed T.30 extended negotiations)
+DECT Digital Enhanced Cordless Telecommunications (ETSI)
+DEG Draft ETSI Guide
+DEN Directory Enabled Networks
+DEO Digital End Office
+DER Digital Extended Request (proposed T.30 extended negotiations)
+DES Data Encryption Standard (U.S.)
+DES Digital Extend Signal (T.30)
+DES Draft European Standard
+DF Data Compression Format (T.class2)
+DF Deblocking Filter
+DFD Displaced Frame Difference
+DFE Decision Feedback Equalizer
+DFP Distributed Functional Plane
+DFPA Defense Fire Protection Association
+DG Drafting Group
+DGN Director General de Normas (SECOFI, Mexican Standards Organization)
+DGS Digital Station
+DH Diffie-Hellman protocol
+DHCP Dynamic Host Control Protocol (RFC 2131)
+DHE Document Handling Equipment
+DI Digital Interface
+DI Distribution Interface
+DIAMETER IETF protocol used for authentication, authorization and accounting
+DIC Delay Interval Compensation
+DID Direct Inward Dialing
+DIG ISDN compatible Digital Station and tie trunk (TIA-646-B)
+DIL Digital Impairment Learning
+DIMRS Digital Integrated Mobile Radio System
+DIN Deutsche Institut fur Normung (German Standardization Institute)
+DIS Digital Identification Signal
+DIS Draft International Standard (ISO)
+DISA Defense Information Systems Agency
+DISXML Extended Markup Language
+DJGPP MSDOS port of gcc
+DKTS Digital Key Telephone Station
+DLC Digital Loop Carrier
+DLC Dynamic Load Control
+DLCI Data Link Connection Identifier
+DLL Dynamic Link Library
+DLP Data Protocol (H.DLP)
+DM Differential Mode
+DMA Direct Memory Access
+DMH Data Message Handler
+DMI Desktop Management Interface
+DMI Draft Miscellaneous Work Item (ETSI)
+DMIF DSM-CC Multimedia Integration Framework
+DMOS Degradation MOS
+DMP Downlink Measurement Protocol
+DMT Discrete MultiTone
+DMT Discrete Multi-tone Carrier
+DMTF Desktop Management Task Force
+DMV Differential Motion Vector
+DN Directory Number
+DND Do Not Disturb
+DNI Digital Negotiation Information Signal
+DNIS Dialed Number Identification Service
+DNK Digital Not acKnowledge
+DNS Domain Name Server
+DoC Declaration of Conformity
+DOC Department of Commerce
+DOC Department of Communications (Canada)
+DOCSIS Data Over Cable Service Interface Specification
+DoD Department of Defense (U.S.)
+DOE Department of Energy (U.S.)
+DOL Data Off-Loading
+DoS Denial of Service
+DOS Department of State (U.S.)
+DP Data Privacy
+DP Data Pump
+DP Dial Pulse
+DPA Data Privacy Algorithm
+DPA Document Printing Application
+DPBX Digital PBX
+DPCM Digital PCM Modem
+DPI Dots Per Inch
+DPL Digital Power Line (Q1/15)
+DPS Data Partitioned Slice
+DPS Dynamic Power Save
+DPNSS Digital Private Network Signaling System
+DPSK Differential Phase Shift Keying
+DPT Distribution-Preserving Tomlinson
+DQoS Dynamic Quality of Service
+DQUANT Field for modified quantization mode (H.263+)
+DR Discrepancy Report
+DRA Dynamic Rate Adaptation
+DRC Dynamic Rate Change
+DRM Digital Rights Management
+DRQ Disengage Request
+DRP ear Drum Reference Point
+DRR Dynamic Rate Repartitioning
+DRT Diagnostic Rhyme Test
+DRUMS Detailed Revision/Update of Message
+DS0 64 kbit/s Channel
+DS1 1.544 Mbit/s T1 Interface
+DS3 44.736 Mbit/s T3 Interface
+DSA Directory System Authentication
+DSAA DECT Standard Authentication Algorithm
+DSAP Data Services Access Profile
+DSAT Digital Supervisory Audio Tone
+DSC DECT Standard Cipher
+DSCP Differentiated Services Code Point
+DSI Digital Speech Interpolation
+DSL Digital Subscriber Line
+DSL Document SeLection
+DSLAM DSL Access Multiplexer
+DSLF DSL Forum
+DSM-CC Digital Storage Media - Command and Control
+DSMCC Digital System Multimedia Communication Control
+DSN Delivery Status Notification
+DSN Disposition Service Notification
+DSP Digital Signal Processing
+DSR Data Set Ready
+DSR Distributed Speech Recognition
+DSR Dynamic Symbol Reordering
+DSREQ Data Service Request
+DSS1 Digital Subscriber Signaling 1
+DSU Data Service Unit
+DSV Distributed Speaker Verification
+DSVD Digital SVD
+DSX Digital Signal Cross-Connect
+DT Dual Tone
+DTA Digital Terminal and Access Project (ETSI)
+DTAAB DECT Technical Advisory Ad hoc Board
+DTAM Document Transfer Access Method
+DTAP Direct Transfer Application Part
+DTC Digital Traffic Channel
+DTC Digital Transmit Command
+DTD Document Type Definition
+DTE Data Terminal Equipment
+DTG Digital TV Group (UK)
+DTIF Disabilities Issues Task Force
+DTL Designated Transit List
+DTM Dynamic synchronousTransfer Mode
+DTMF Dual Tone Multi Frequency
+DTR Data Terminal Ready
+DTR Draft Technical Report (ETSI)
+DTS Definitive Telefax Standard
+DTS Draft Technical Standard (ETSI)
+DTV Digital TV
+DTX Discontinuous Transmission
+DUT Device Under Test
+DV Digital Video
+DVB Digital Video Broadcasting
+DVB-T DVB Terrestrial
+DVCC Digital Verification Color Code
+DVD Digital Versatile Disk (also Digital Video Disk)
+DVEM Differential Vector Error Magnitude
+DWDM Dense Wavelength Division Mu
+-E-
+E 20 bit sequence
+E&M Ear and Mouth: Separate signaling lines
+E2E End to End
+EA European Accreditation
+EBNF Extended Backus-Naur Form
+EBU European Broadcasting Union
+ebXML electronic business XML Consortium
+EC Echo Canceled
+EC Echo Canceler
+EC Echo Control
+EC Error Control (TR-29)
+EC Error Correction
+EC European Commission
+EC Exchange Carriers
+ECB Electronic Codebook
+ECC Expanded Control Channel
+ECCA European Cable Communications Association
+ECDC Error Correction / Data Compression
+ECE Echo Cancellation Equipment
+ECIC Electronic Communications Implementation Committee
+ECM Error Correction Mode
+ECMA European Communications Manufacturers Association
+ECN Encoding Control Notation (ASN.1)
+ECS Emergency Calling Service
+ECSD Enhancement of High Speed Circuit Switched Data
+ECSP Electronic Communications Service Provider
+ECSQ Entropy Constrained Scalar Quantization
+ECT Explicit Call Transfer
+ECTA European Competitive Telecommunications Association
+ECTEL European Telecommunications and Professional Electronics Industry
+ECTF Enhanced Communication and Transport Service
+ECTF Enterprise Computer Telephony Forum
+ECTRA European Commission of Telecommunications Regulatory Authorities
+EC-VBR Embedded Coding Variable Bit Rate
+ECVQ Entropy Constrained Vector Quantization
+EDACS Enhanced Digital Access Communications System
+EDC Electronic Document Coordinator
+EDD Electronic Document Distribution
+EDGE Enhanced Data rates for GSM Evolution
+EDH Electronic Document Handling
+EDI Electronic Data Interchange
+EDSL Emerging DSL (DSL Forum Study Group)
+EDSLSG Emerging DSL Study Group (DSL Forum)
+EDT European Deaf Telephone
+EE Equipment Engineering (ETSI Technical Committee)
+EEA European Economic Area
+EEC European Economic Community
+EEMAC Electrical and Electronic Manufacturers Association of Canada
+EEP Equal Error Protection
+EES Escrow Encryption Standard
+EFIS Electronic Flight Instrument Systems
+EFM Ethernet in the First Mile
+EFR Enhanced Full Rate
+EFRC Enhanced Full Rate Codec
+EFT Electrical Fast Transient
+EFTA European Free Trade Area
+EG ETSI Guide
+EG Expert Group
+EG AN ETSI Guide Access Network
+EGDIR Expert Group DIRectory system (EWOS)
+EGMHS Expert Group Message Handling System (EWOS)
+EGPRS Enhanced General Packet Radio System
+EHS European Home Standards
+EI Enhancement Intra (pictures, H.263)
+EI Error Indicator
+EIA Electronic Industry Association
+EIAJ EIA Japan
+EIC Equipment Installer's Code
+EICTA European Information and Communications Technology Industry Association
+EICAS Engine Indicating and Condition Advisory System
+EID Equipment Identifier
+EID Error Insertion Device
+eifax extended internet fax
+EII European Information Infrastructure
+EIRP Effective Isotropic Radiated Power
+ELAWG EMC Laboratories Accreditation Working Group
+ELCP Emulated Loop Control Protocol (ATMF, ETSI)
+ELFEXT Equal Level Far-End Crosstalk
+EM Electromagnetic
+EMA Electronic Messaging Association
+EMC ElectroMagnetic Compatibility
+EMC Equipment Manufacturer's Code
+EMCS ElectroMagnetic Compatibility Society
+EME Electromagnetic Emissions
+EMI Electromagnetic Interference
+EMI Exchange Message Interface (Bellcore standard for data transmission between RBOC/LEC
+and the IC/IXC/IEC)
+EMS Element Management System
+EMS Emergency Services
+EMT Electrical Metal Tubing
+E-MTA Embedded Multimedia Terminal Adapter
+EN Enterprise Network
+EN European Norm
+ENP Extended Negotiation Procedure
+ENUM tElephone NUmbering Mapping (IETF)
+EOB End of Block
+EOC Embedded Operations Channel
+EOI End of Image
+EOL End of Line (T.4)
+EOM End of Message (T.30)
+EOR/ERR End of Retransmission/ Response for End of Retransmission
+EOS End of Selection
+EOS End of Sequence
+EOSBS End of Sub-Bitstream
+EOS-PPS End of Selection for selective polling applications
+EOT End of Transmission
+E-OTD Enhanced Observed Time Difference
+EP Enhancement Predicted (pictures, H.263)
+EP Error Pattern
+EP ETSI Project
+EP Extended Protocol
+EPA Environmental Protection Agency
+EP-CN ETSI Project Corporate Network
+EP-DTA ETSI Project Digital Terminal Access
+EP-EASI ETSI Project-European ATM Services Interoperability
+EPHOS European Procurement Handbook for Open Systems
+EPIIC European Program on Information Infrastructure Committee
+EPIISG European Project on Information Infrastructure Starter Group
+EPL Echo Path Loss
+EPM Enter Parameter Mode
+EPP ETSI Partnership Projects
+EPT Echo Protect Time
+ERC European Radio Committees
+EREC Error Resilient Entropy Code/Error Robust Entropy Code
+ERF Emergency Related Forwarding
+ERL Echo Return Loss
+ERM ETSI committee on EMC and Radio spectrum Matters
+ERP Ear Reference Point
+ERP Effective Radiated Power
+ERP EOC Register Protocol
+ERPS Enhanced Reference Picture Selection
+ES Echo Suppressor
+ES Elementary Stream
+ES Emergency Services
+ES Errored Seconds
+ES Escape Sequence
+ES Escape Signal
+ES ETSI Standard
+ES Express Swapping
+ESD Echo Suppressor Devices
+ESD ElectroStatic Discharge
+ESF Extended SuperFrame
+ESI Electronic Signatures and Infrastructures
+ESI Emergency Services Interface
+ESLR Equivalent SLR
+ES/MS Escape Signal/Mode Select
+ESMR Enhanced Specialized Mobile Radio
+ESMTP Extended Simple Mail Transfer Protocol
+ESN Electronic Serial Number
+ESNX Expanded Electronic Serial Number
+ESPM Extended System Parameters Message
+ESRD Emergency Services Routing Digits
+ESS Enhanced Signaling Systems
+eSTL evolving STL
+ET (FCC) Office of Engineering and Technology
+E-TDMA Extended Time Division Multiple Access
+ETIB European Telecoms Intelligence Bulletin
+ETNO European Telecom. Network Organization
+ETNS European Telephony Numbering Space
+ETO European Telecommunications Office
+ETP European Telecommunications Platform
+ETR ETSI Technical Report
+ETS European Telecommunications Standard (ETSI)
+ETSI European Telecommunications Standards Institute
+EU European Union
+EU MRA European Union Mutual Recognition Agreements
+EURESCOM European Institute for Research and Strategic Studies in Telecommunications
+EUROBIT European Association of Manufacturers of Business Machines and Information Technology
+EUT Equipment Under Test
+EV Embedded VBR
+EVRC Enhanced Variable Rate Codec
+EWOS European Workshop on Open Systems
+EXOR Exclusive OR
+EXP Equal Erasure Protection
+EZW Embedded Zero-tree Wav
+-F-
+FA Flexible Alerting
+FAA Federal Aviation Administration (U.S.)
+FACCH Fast Associated Control Channel
+FAMOUS Future Advanced Mobile Universal System
+FAQ Frequently Asked Question
+FAR Federal Aviation Regulations (U.S.)
+FAS Facility Associated Signaling
+FAS Frame Alignment Signal
+FBI Federal Bureau of Investigation (U.S.)
+FBM FEXT Bit Map mode (G.992.1, Annex C)
+FC Feature Code
+FC Type of commercial fiber optic connector (Threaded)
+FC-PH Fibre Channel Physical and Signaling Interface (ANSI X3)
+FCA Fixed Channel Allocation
+FCAPS Faults, Configuration, Accounting, Performance and Security (ISO)
+FCC Federal Communications Commission (U.S.)
+FCD Fast Track Committee Draft (ISO)
+FCF Facsimile Control Field (T.30)
+FCF Forward Control Field
+FCS Frame Check Sequence
+FDA Food and Drug Administration (U.S.)
+FDAM Final Draft AMendment
+FDD Frequency Division Duplexing
+FDDI Fiber Distributed Data Interface
+FDM Frequency Division Multiplexing
+FDIS Final Draft International Standard (ISO)
+FDM File Diagnostic Messages
+FDMA Frequency Division Multiple Access
+FDX Full Duplex
+FE Facilities Exchange
+FE Functional Entities
+FEAL Fast Encryption Algorithm
+FEC Forward Error Correction
+FEC Frame Erasure Concealment
+FECC Far End Camera Control
+FE-EC Far End - Echo Canceller
+FEF Flat Equalized FEXT
+FEI Federation of Electronic Industries (UK)
+FEQ Frequency Domain Equalizer
+FER Frame Error Rate
+FEXT Far End Cross Talk
+FF Feed Forward
+FFPIM Full-mode Facsimile Profile of Internet Mail
+FFS For Further Study
+FFT Fast Fourier Transform
+FG Focus Group
+FGS Fine Granularity Scalability
+FHWA Federal Highway Administration (U.S.)
+FI Format Identifier
+FIF File Interchange Format
+FIFO First In First Out
+FIPS Federal Information Processing Standard
+FIR Finite Impulse Response
+FL Facilities List
+FLC Fixed Length Codeword
+FLMTS Future Land Mobile Telephony Systems
+FM Fault Management
+FM Frequency Modulation
+FMS Flight Management Systems
+FMT Filtered MultiTone
+FNA Functional Network Architecture
+FNE Fixed Network Equipment
+FNV Field Not Valid
+FNV Frame Not Valid
+FO Fiber Optic (TIA)
+FO Foreign Office
+FOC Fiber Optic Connector
+FOCIS Fiber Optic Connector Intermateability Standard
+FoIP Fax over Internet Protocol
+FOM Figure of Merit
+FOREG Forced Registration Flag
+FOTAG Fiber Optic TAG
+FOTP Fiber Optic Test Procedure
+FP Fixed Part
+FPDAM Final Proposed Draft Amendment
+FPGA Field Programmable Gate Array
+FPH Freephone
+FPLMTS Future Public Land Mobile Telephone Systems
+FPP Frames Per Packet
+FPS Frames Per Second
+fps frames per second
+FR Federal Regulation (US)
+FR Frame Relay
+FRAPI-A An ISDN Architecture in use in Japan
+FRC Full Rate Codec
+FRF Frame Relay Forum
+FRS Florida Relay Service
+FS Fixed Satellite
+FS Frame Size
+FS Full Service
+FSA Framework Study Areas
+FSAN Full Service Access Networks
+FSK Frequency Shift Keying
+FSM Finite State Machine (H.323 Gatekeeper)
+FSRA Fast Seamless Rate Adaptation
+FSS Fixed Satellite Service
+FS VDSL Full Service VDSL (FSAN Committee)
+FT Fixed Terminals
+FT Fixed radio Terminal
+FTAA Free Trade Area of the Americas
+FTAM File Transfer, Access and Management
+FTBP File Transfer Body Part
+FTH Class 1 command HDLC transmit
+FTP File Transfer Protocol
+FTP Foiled Twisted Pair
+FTRI Florida Telecommunications Relay, Inc. (www.ftri.org)
+FTT Failure To Train
+FTTB Fiber To The Building
+FTTC Fiber To The Curb
+FTTCab Fiber To The Cabinet
+FTTEx Fiber To The Exchange
+FTTH Fiber To The Home
+FTTO Fiber to the Office
+FUNI Frame Based UNI
+FVC Forward Voice Channel
+FWA Fixed Wireless Access
+FWI Flash With Info
+FWUF Federal Wireless Users Forum (U.S.)
+Fx Crossover Frequency
+FX Foreign eXchange
+FXS Foreign Exchange Station
+FYI For Your Inform
+-G-
+G3FT G3 FX Teleservice
+G3G Global Third Generation
+GA General Assembly (ETSI)
+GAL Graphics Adapter Language
+GAP Generic Access Profile
+GASP Gatekeeper Synchronization Protocol
+GAT Generic Application Template
+GATT General Agreement on Trade and Tariffs
+GBSC Group of Blocks Start Code
+GCAC Generic CAC
+GCC Generic Conference Control
+GDMO Guidelines for the Definition of Managed Objects
+GDMO Generic Definition of Managed Objects
+GDR Global Desired Receive (PSD)
+GEF Generic Extensibility Framework
+GETS Government Emergency Telecommunications Service
+GF Generic Functional Procedures
+GFID GOB frame identification
+GFR Guaranteed Frame Rate (ATM Forum)
+gi gains information
+GI Graded Index
+GIDS Global IP Directory Service
+GIDS Global IP telephony Database Service
+GII Global Information Infrastructure
+GISN Global IP-Telephony Subscriber Number
+GIT Generic Identifier Transport
+GK GateKeeper
+GLP Geographic Location Profile
+GMC Global Motion Compensation
+GMDSS Global Maritime Distress and Safety System
+GMII Gigabit Media Independent Interface
+GMM Global Multimedia Mobility
+GMR Geostationary Mobile Radio
+GMSK Gaussian Minimum Shift Keying
+GMVC Global Motion Vector Coding
+GN GOB Number (H.263)
+GNATT Generic Enhanced Teleservice Transport
+GOB Group of Blocks (H.261, H.263)
+GOF Glass Optical Fiber
+GONOW ETSI NA Task Force, Managed by European Projuction Information Infrastructure
+Coordination (EPIC)
+GOP Group of Pictures
+GoS Grade of Service
+GOSIP Government Open Systems Interconnection Profile
+GOSS Guide to Open Systems Specification
+G-PAD Generalized polling protocol - Packet Assembly/Disaaembly
+GPCAS Global Product Conformity Assessment System
+GPM General Page Message
+GPS Global Positioning System
+GRJ Gatekeeper Reject
+GRP Good Regulatory Practices
+GRQ Gatekeeper Discovery Request
+GPRS General Packet Radio Service
+GSA General Services Administration
+GSC GOB Start Code
+GSM Global System for Mobile Communications
+GSN Global Subscriber Number
+GSO Geostationary Satellite Orbit
+GSS Generalized Spectral Shaping
+GSS Generic Security Application Programming Interface
+GSS Generic Security Service
+GSS Generic Supplementary Services
+GSTN General Switched Telephone Network (i.e., PSTN)
+GT Global Title
+GTA Global Title Address
+GTAAB GSM Technical Advisory Ad hoc Board
+GTAI Global Title Address Information
+GTT Global Title Translation
+GUI Graphical User Interface
+GUP Gatekeeper Update Protocol
+GW GateWay
+GWC GateWay Controller
+GWLOC Gateway Location protocol
+-H-
+H/W Hardware
+HAC Hearing Aid Compatible
+HAM Amateur Radio
+HAN Home ATM Network
+HATIS Hearing Aid Telephone Interconnect System
+HATS Head and Torso Simulator
+HC Header Counter
+HDLC High level Data Link Control
+HDLU High speed Dynamic Link Unit
+HDML Handheld Device Markup Language, a forerunner of WML
+HDSL High-rate Digital Subscriber Line
+HDTV High Definition Television
+HDX Half Duplex
+HE High End
+HE-LPC Harmonic Excitator Linear Predictive Coder
+HEMP High Energy Electromagnetic Pulses
+HES Home Electronic System
+HF High Frequency
+HF Human Factors
+HFC Hybrid Fiber Coax
+HFCI The H.323 Firewall Control Interface
+HFR Hybrid Fibre Radio
+HFT Hands Free Telephone
+HFTP Hybrid-Fiber Twisted Pair
+HFX Hawthorne Facsimile Cipher
+HHR Half-Horizontal Resolution (352 by 480 or 576)
+HI High Impedance
+HIA Hearing Industries Association
+HINE Heterogeneous In-house Networking Environment
+HIPERLAN High Performance Radio Local Area Network
+HIPPI High-Performance Parallel Interface
+HKM Hawthorne Key Management
+HLC Higher Layer Compatibility
+HLF Home Location Function
+HLI High Layer Information
+HLR Home Location Register
+HLTF High Level Task Force
+HLTG High Level Task Group
+HMAC Keyed-Hashing for Message Authentication
+H-MLP High Speed Multi Layer Protocol
+HNI Home Network Identity
+HNS Hughes Network Systems
+HNOS Home NetWork Operating System
+HNW Home NetWork (VESA)
+HO Hand Off
+HomePNA Home Phoneline Networking Alliance
+HPC High Probability of Completion
+HPCI Harmonized Programmable Communications Interface
+HPF High Pass Filter
+HPL Home-Phone LAN
+HPLI Higher Layer Protocol Identifiers
+HPNA Home Phoneline Network Alliance
+HPUX Unix in HP workstations
+HRC Half Rate Codec
+HRD Hypothetical Reference Decoder
+HRDJ1 Hardwired Jack
+HS Harmonized Standards
+HSCSD High Speed Circuit Switched Data
+HSD High Speed Data Channel
+HSM High Speed Modem
+HSP Host Signal Processing
+HSSG High Speed Study Group (IEEE)
+HSSI High Speed Serial Interface
+HSTU-C High Speed Transceiver Unit - Central
+HSTU-R High Speed Transceiver Unit - Remote
+HTML Hyper Text Markup Language
+HTTP HyperText Transport Protocol
+HTU-C Handshake Transceiver Unit - Central Office End
+HTU-R Handshake Transceiver Unit - Remote Terminal End
+HW Hardware
+HWCI Hardware Configurati
+-I-
+I Intra (Q6/16, VCEG)
+I&I Interworking and Interoperability
+I/G Implementors Guide
+I/O Input/Output
+IA Implementation Agreement
+IA Interoperability Agreements
+IAA I Am Alive (emergency system)
+IA5 International Alphabet No. 5, now called International Reference Alphabet (IRA)
+IAC Industry Advisory Committee/Council
+IACM Industry Advisory Committee Meeting (UL)
+IAD Integrated Access Device
+IAEI Israel Association of Electronics Industries
+IAF Internet Aware Fax (T.38)
+IAM Initial Address Message
+IANA Internet Assigned Number Authority
+IAP Intercept Access Point
+IAS Industrial Applications Society (IEEE)
+IAT Internet access time
+IB Indicator Bits
+IBS Intelligent Building Systems
+IC Impairment Combination
+IC Industry Canada
+IC Interexchange Carrier
+ICA Information Communication Architecture
+I-CAN Integrated Customer Access Network
+ICANN Internet Corporation for Assigned Names and Numbers
+ICC International Coordination Committee (ISO)
+ICCID Integrated Circuit Card ID
+ICCF Industry Carriers Compatibility Forum
+ICD International Code Designator
+ICEA Insulated Cable Engineers Association
+ICF InfoConfirm
+ICFA International Computer Facsimile Association
+ICG Intersector Coordination Group
+ICI Inter Carrier Interference
+ICO Intermediate Earth Orbit
+ICS Digital line interface to ISDN Compatible Station meeting requirements of TIA/EIA-579
+ICS Incoming Call Screening
+ICS Implementation Conformance Statement
+ICS Interoperability Compliance Statement (DSL Forum)
+ICT Information and Communication Technology (ETSI)
+ICT Integer Cosine Transforms
+I-CTR Interim Common Technical Requirements
+ICTSB Information and Communication Technology Standards Board
+ICV Integrity Check Value
+ICWWG Interagency Cellular and Wireless Working Group
+ID delay impairment value
+ID Identification
+IDB J2366 ITS Data Bus
+IDCT Inverse Discrete Cosine Transform
+IDEA International Data Encryption Algorithm (Proprietary, from Ascom Tech. AG)
+IDFT Inverse Discrete Fourier Transform
+IDL Interface Design Language
+IDLC Integrated Digital Loop Carrier
+IDRA Integrated Dispatch Radio System
+IDS Integrated Directory Service
+IDSL ISDN Digital Subscriber Line
+IE protocol discriminator Information Element
+IEB Industrial Electronic Bulletin
+IEC International Electrotechnical Commission
+IECEE Compliance with IEC for Electrical Equipment
+IEEE Institute of Electrical and Electronic Engineers
+IEMS International Emergency Multimedia Services
+IEPS International Emergency Preference Scheme (ITU-T E.106 [2000])
+IESG Internet Engineering Steering Group
+IETF Internet Engineering Task Force
+I-ETS Interim ETS (ETSI Standard)
+IF Intermediate Frequency
+IF Isolation Filters
+IF Isolation Function
+IFA Informal FTP Area
+IFAST International Forum on AMPS Standards Technology (CTIA)
+IFAX Internet Facsimile
+IFBCA Internet Fax and Business Communications Association
+IFFT Inverse Fast Fourier Transform
+IFP Internet Facsimile Protocol
+IFTP Informal FTP area
+IG Implementer's Guide
+IG Interoperability Group
+IGMP Internet Group Management Protocol
+IIF Interworking Interoperability Function
+IIP Itinerant Internet Protocol
+IIR Institute for International Research
+IIS Inteface Implementation Specifications (Telemanagement Forum)
+IITF Information Infrastructure Task Force
+ILC Identifier Length Content
+ILD Insertion Loss Deviation
+ILEC Incumbent Local Exchange Carriers
+ILMI Integrated Local Management Interface (ATMForum)
+IM Instant Messaging
+IM Inter-modulation
+IM Internet Multimedia (3GPP)
+IMA Interactive Multimedia Association
+IMA Inverse Multiplexing for ATM
+IMBE Improved MultiBand Excitation
+IMC Internet Mail Consortium
+IMD Inter Modulation Distortion
+IME ILMI Management Entity
+IME Interface Management Entity
+IMEI International Mobile Equipment Identifier
+I-mode Idle mode
+IMP Internet Modem Protocol
+IMPP Instant Messaging and Presence Protocol (IETF)
+IMRS Interactive Multimedia Retrieval Services
+IMS Interactive Multimedia Services
+IMSF IS-41 Message Security Forum
+IMSI International Mobile Subscriber Identity
+IMT International Mobile Telecommunications (IMT-2000)
+IMTC International Multimedia Teleconferencing Consortium
+IN Intelligent Networking
+INAA Integrated Network Access Arrangement
+INAP Intelligent Network Application Profile
+IN/B Intelligent Network/Broadband
+INC International Carrier
+INF IN Forum
+INMD In-service Non-intrusive Measurement Device
+INMETRO Instituto Nacional de Metrologia, Normalizacion e Qualidad Industrial (Brazil)
+iNOW interoperability NOW!
+INTAP Interoperability Technology Association for Information Processing (Japan)
+INTSERV Integrated Services
+IOL InterOperability Laboratory (University of New Hampshire)
+IOS Inter-Operability Specifications
+IP Intellectual Property
+IP Intelligent Peripheral
+IP Internet Protocol
+IPAD Internet Packet Assembler Disassember
+IPAT Internet Protocol Access Terminal
+IPB Improved PB
+IP BCP Internet Protocol Basic Call Processing (SG11)
+IPBCP IP Bearer Control Protocol
+IPBX Internet PBX
+IP-CME Circuit Multiplication Equipment optimized for IP-based Networks
+IPCP Internet Protocol Control Protocol (RFC1332)
+IPDC IP Device Control
+IPDR IP Detail Record (Consortium)
+I-PDU Information PDU
+IPFN IP Federating Network (SPAN14 and TIPHON project)
+IPN Intelligent Packet Network
+IPNS ISDN PBX Network Specification
+IPP Internet Printing Protocol
+IPR Intellectual Property Rights
+IPSEC IP Security (IETF)
+IPT Internet Protocol Telephony
+IPTD IP Packet Transfer Delay
+iptel Internet Protocol Telephony (IETF Working Group)
+IPUI International Portable User Identity
+IPUI R International Portable User Identity for public/GSM
+IRA International Reference Alphabet
+IRA Internet Routing Address
+IRDA Infrared Interface Committee
+IREG ITU-T Recommendation Experiment Group
+IRM International Roaming MIN
+IRQ Interworking Service Request identifier
+IRR Information Request Response
+IRS Intermediate Reference System
+IS Interim Standard (U.S.)
+IS International Standard (ISO)
+ISA Industry Standard Architecture
+ISC International Softswitch Consortium
+ISC International Switching Center
+ISCI Inter-Symbol and Channel Interference
+ISCRI International Special Committee on Radio Interface
+ISD Independent Segment Decoding
+ISD Integrated Services Digital (TIA-646-B)
+ISD International Standards Development
+ISDN Integrated Services Digital Network
+ISDN-BA ISDN Basic Access
+ISDN BRA ISDN Basic Rate Access
+ISDN-PA ISDN Primary Access
+ISD/TT Integrated Services Digital/Tie Trunk
+ISI Inter Symbol Interference
+ISIS Information Society Initiatives in Standardization
+ISLP Intersystem Link Protocol
+ISM Industrial, Scientific, Medical
+ISN Interface Service Node
+ISN Interface Serving Node (SG11)
+ISO International Organization for Standardization
+ISOC Internet Society
+ISOL Integrated Services Over Low speed serial inks
+ISP International Standardized Profile
+ISP Internet Selective Polling
+ISP Internet Service Provider
+ISPBX Integrated Services Private Branch Exchange
+ISPT Italian PTT
+ISRF Internet Screenphone Forum
+ISS Inter-Satellite Service
+ISSG Internet Services Study Group (MSAF)
+ISSLL Integrated Services over Specific Links
+ISSLOW Integrated Services System for Low Bitrate Environments
+IST Integrated Services Trunk
+IST ISDN tie trunks
+ISTO Industry Standards and Technology Organization
+ISTP IPCablecom Signaling Transport Protocol
+IST/TT IST and other Tie Trunk
+ISUP ISDN User Part
+ISWG Interoperability Sub-Working Group (ADSL Forum)
+IT Information Technology
+IT Intermediate Trunk
+ITAAB ISDN Technical Advisory Ad hoc Board
+ITAAG ISDN Technical Advisory Ad hoc Group
+ITAC Information Technology Association of Canada
+ITAC ITU-T Advisory Committee
+ITAD Integrated Telephone Answering Device
+ITAR International Traffic in Arms Regulations
+ITD Interface Telecom Domotique
+ITE Information Technology Equipment
+ITI Information Technology Industry Council (formerly CBEMA)
+ITIC Information Technology Industry Council
+ITL Independent Testing Labs
+ITM Informative Test Methods
+ITOC Independent Telephone Operating Company
+ITS Institute for Telecommunications Sciences
+ITS Intelligent Transport System
+ITSB Image Technology Standards Board
+ITSI Individual TETRA Subscriber Identity
+ITU International Telecommunication Union
+ITU-R ITU Radiocommunications Sector
+ITU-T ITU Telecommunications Sector
+ITU-TSB ITU Telecommunications Standardization Board
+ITUDOCS Electronic Document Service of ITU
+ITV Interactive Television
+IUT Implementation Under Test
+I-V Current - Voltage
+IV Initialization Vector
+IVCD Initial Voice Channel Designation
+IVN Intervening Networks
+IVP Integrated Voice Protocol
+IVPC Integrated Voice Protocol and Commands
+IVR Interactive Voice Response
+IVS Integrated Video Services
+IWF Inter-Working Function
+IWU Interworki
+-J-
+JADSL ADSL for ISDN
+JBIG Joint Binary Image Group
+JC Joint Capabilities
+JCCR Joint Committee on Cellular Roaming
+JCG Joint Coordination Group
+JDC Japan Digital Cellular
+JEEC Joint ETSI/ECMA Committee
+JEM Joint Experts Meeting
+JFIF JPEG File Interchange Format
+JITC Joint Interoperability Test Center
+JM Joint Menu
+JPC Joint Project Committee
+JPT Joint Project Team
+JPEG Joint Photographics Expert Group
+JPG Joint Presidents Group (CEN/CENELEC/ETSI)
+JQG Joint Question Group
+JRG Joint Rapporteurs Group
+JSC Joint Sectoral Committee
+JSD Joint Standards Documents
+JTACS Japanese TACS System
+JTAPI JAVA Telephony API
+JTC Joint Technical Committee
+JURA JPEG Utilities Registration Authority
+JUSTINTAC Joint User Supplier TIA ICEA NEMA Technical Advisory Committee
+JWG Joint Working Group
+-K-
+KLT Karhunen-Loeve Transform
+KTA Key Technical Areas
+KTS Key Telephone System
+KY totally protected key systems (FCC Part 68 Form 73
+-L-
+L2TP Tunneling Protocol, standardized encapsulation capable of carrying multiple PPP sessions
+l2tpext Layer 2 Tunneling Protocol Extensions (IETF)
+LA Local Application (T.611)
+LA Look Ahead
+LAC L2TP Access Concentrator
+LAC Link Access Control
+LADC Local Area Data Channels
+LAES Lawfully Authorized Electronic Surveillance
+LAIC Lawfully Authorized Intercept Capability
+LAN Local Area Network
+LANE LAN Emulation
+LAP Link Access Protocol
+LAPB Link Access Protocol B (ISDN-B Channel)
+LAPD Link Access Protocol D (ISDN-D Channel)
+LAPF Link Access Protocol - Frame
+LAPM Link Access Protocol for Modems (V.42)
+LAPV Link Access Protocol - Video Telephone
+LAR Log Area Ratio
+LATA Local Access Transport Area
+LB Letter Ballot
+LB Loop Back (Rec. I.610)
+LBC Low Bit rate Coder
+LBO Line Build Out
+LBS Location Based Service
+LC Last Call (ITU, IETF)
+LC Logic Channel
+LCAP Large Cell Access Profile
+LCD Liquid Crystal Display
+LCD Loss of Cell Delineation
+LCF Location Confirm
+LCFO Line Current Feed Open
+LCF-PMD Low Cost Fiber-Physical Medium Dependent
+LCL Longitudinal Conversion Loss
+LCN Logical Channel Number
+LCP Link Control Protocol
+LCTL Longitudinal Conversion Loss Transfer
+LD Long Distance
+LDAP Lightweight Directory Access Protocol
+LDCELP Low Delay CELP
+LDDS Limited Distance Data Service
+LDLL Limited Degradation of the Long Loop
+LDM Limited Distance Modem (CS-03)
+LDP Label Distribution Protocol
+LDPA Light Document Printing Architecture
+LDPC Low Density Parity Check
+LE Local Exchange
+LEC Local Exchange Carrier
+LEO Low Earth Orbit
+LES Loop Emulation Service
+LHS Left Hand Side
+LI Lawful Interception
+LISN Line Impedance Stabilization Network
+LL Leased Line
+LLC Logical Link Control
+LLI Lower Layer Information
+LLID Loopback Location Identifier (Rec. I.610)
+LMCO Lockheed Martin Corporation and Ericsson
+LMCS Local Multipoint Communications System
+LMDS Local Multi-point Distribution Service
+LMF Location Management Function
+LMR Land Mobile Radio
+LMS Land Mobile Service
+LMS Loop Management System
+LMSI Local Mobile Station Identity
+LNP Local Number Portability
+LNS L2TP Network Server
+LO Local Oscillator
+LOI Letter of Intent
+LON Local Operating Networks
+LOO Likelihood of Occurrence
+LOS Loss of Signal
+LOSQ Listening Only Speech Quality
+LPC Linear Predictive Coding
+LPF Low Pass Filter
+LPIC Primary / Presubscribed Interexchange/IntraLATA Carrier
+LR Loudness Rating
+LRCC Last Registration Control Channel
+LRE Low bit Rate Encoding
+LRF Location Registration Function
+LRFD Load and Resistance Factor Design
+LRJ LocationReject
+LRN Location routing number for LNP
+LRQ Location Request
+LS Lossless and near Lossless
+LSAS Line-Side Answer Supervision
+LSB Least Significant Bit
+LSD Low Speed Data channel
+LSO Loopback Service Options (cdma2000)
+LSOG Local Service Ordering Guidelines
+LSP Line Spectral Pair
+LSP Local Service Provider
+LSSGR LATA Switching Systems Generic Requirements (Bellcore)
+LSTR Listener Sidetone Rating
+LT Line Termination
+LTP Long Term Prediction
+LTU Line Terminating Unit
+LU Logical Unit
+LUS Location Update Service
+LVD Low Voltage Directive
+LVDS Low Voltage Differential Signaling
+LW Long Wave
+LZJH Lempel-Ziv-Jeff.Heath
+LZW Lempel-Ziv-Welch a
+-M-
+MA Moving Average
+MA Mobile Service
+MAC Management Ad Hoc Committee (TR-41)
+MAC Media Access Control
+MACA Mobile Assisted Channel Allocation
+MAH Mobile Access Hunting
+MAHO Mobile Assisted Handoff
+MAP Media Access Procedure
+MAP Mobile Application Part
+MAPI Messaging API
+MAPI Microsoft API
+MASA Multimedia Services Affiliate Forum
+MATV Master Antenna Television
+MAWG Message Attachment Work Group
+MB Macro Block
+MBA Macroblock Address (H.263)
+MBE Multi-Byte Extension
+MBFT Multipoint Binary File Transfer
+MBMP Modem Bank Management Protocol
+MBN Multiservice Broadband Networks
+MC Message Center
+MC Multipoint Controller (H.323)
+MCBPC Macroblock type & Coded Block Pattern for Chrominance
+MCC Mobile Country Code
+MCC Modem Control Channel
+MCCC Multiple Concatenated Convolutional Codes
+MCD Mobile Communications Division
+MCF Message Confirmation (T.30)
+MCID Multi-line Caller Identification
+MCM Multi-Carrier Modulation
+MCP Motion Compensated Prediction
+MCPE Motion Compensated Prediction Error
+MCNS Multimedia Cable Network System
+Mcps Megachips per second
+MCS Multi-point Control Services (T.122)
+MCU Multi-point Control Unit
+MCV Multipoint Command Visualization
+MD-IS Mobile Data Intermediate System
+MD Manufacturer Defined
+MDBS Mobile Data Base Station
+MDC Manufacturer Declaration of Conformity
+MDC Multiple Description Coding
+MDCP Media Device Control Protocol
+MDCR Minimum Desired Cell Rate
+MDELFEXT Multiple-Disturber Equal-Level Far-End Crosstalk
+MDF Mux Data Frame
+MDI Medium Dependent Interface
+MDLP Mobile Data Link Protocol
+MDN Message Disposition Notification
+MDN Mobile Directory Number
+MDTP Multi-network Datagram Transmission Protocol
+MDU Multi-Dwelling Unit
+ME Mobile Equipment
+ME Motion Estimation
+MED Multiplexer Entry Descriptor
+Megaco MEdia GAteway Control Protocol (IETF)
+Megacop MEdia GAteway COntrol Protocol
+MEI Multiple Extension Interworking
+MEI Multiple Extension In use (TIA/EIA-777-A)
+MELP Mixed Excitation Linear Prediction
+MER Message Error Rate
+MERS Minimal Essential Requirements
+M-ES Mobile End System
+MES Mobile Earth Station
+MF fully protected hybrid systems (FCC Part 68 Form 730)
+MF Multi-tone Frequency
+MFJ Modified Final Judgment
+MFP Multi-Function Peripheral
+MFPA Multi-Function Peripheral Association
+MFPI Multi-Function Peripheral Interface
+MFPL Multi-Function Peripheral Language
+MFPP Multi-Function Packet Protocol
+MG Management Group
+MG Media Gateway
+MGC Media Gateway Controller
+MGCP Media Gateway Control Protocol
+MGT Mobile Global Title
+MH MultiHypothesis motion pictures (H.26L)
+MHEG Multimedia and Hypermedia Experts Group
+MHP Multimedia Home Platform
+MHS Message Handling System X.400
+MI Miscellaneous Work Item (ETSI)
+MI Mode Indicator
+MIB Management Information Base
+MIGG MRA Implementation Guide Group
+MIF Management Information File
+MII Ministry of Industry Information (China)
+MIM Man in the Middle
+MIME Multipurpose Internet Mail Extension
+MIMO Multi-Input-Multi-Output
+M-IN Multimedia Intelligent Networking
+MIN Mobile Identification Number
+MIN Mobile Intelligent Network
+MIP Mobile Internet Protocol
+MIPS Million Instructions Per Second
+M-IRS Modified IRS
+MIRS Multimedia Information Retrieval Services
+MIV Multipoint Indication Visualization
+ML Maximum Likelihood
+MLC Multiple Logical Channel
+MLP Multi-Layer Protocol
+MLPP Multi-Level Precedence and Preemption
+MLT Modulated Lapped Transform
+MLTS Multi-Line Telecommunications Systems
+M-LVDS Multipoint Low Voltage Differential Signaling
+MLWW Multi Layered Winding Wire
+MM Mass Media (FCC)
+MM Mobility Management
+MM MultiMedia
+MM Multimode
+MMAP Mobility Management Application Protocol (T1S1)
+MMBAN Multi Media Broadband Access Nodes
+MMC Multiple Modulus Conversion
+MMCF Multimedia Communications Forum
+MMCOI Multimedia Communications Community of Interest
+MMDS Multichannel Multipoint Distribution Service
+MMF Multi Mode Optical Fiber
+MMG Multimedia Management Group (ETSI)
+MMH-MAC Multilinear Modular Hash - Message Authentication Code
+MMI Man-Machine Interface (TTT Services)
+MMI Modem Management Interface
+MMITS Modular Multifunction Information Transfer System
+mml mobile multilink
+MMO Modem Managed Objects
+MMoMBN Multimedia over MBN
+MMR Modified Modified Read
+MMRA Model Mutual Recognition Agreement
+MMS Multimedia Messaging Service
+MMUSE Multiparty Multimedia Session Control
+MMUSIC Multiparty Multimedia Session Control (WG)
+MNA Management Network Architecture
+MNC Mobile Network Codes
+MNE Mobile Network Entity
+MNLP Mobile Network Location Protocol (IS-732-501)
+MNP4 Microcom Networking Protocol
+MNRP Mobile Network Registration Protocol
+MNRU Modulated Noise Reference Unit
+MO Mobile Originated
+MOCS Managed Objects Conformance Statements
+MODB Macroblock mode for B-blocks
+MoDSL Modems over DSL
+MOH Modem on Hold
+MoIP Modems over Internet Protocol
+MOPS Million Operations Per Second
+MOS Mean Opinion Score
+MoU Memorandum of Understanding
+MOU Memorandum of Understanding
+MP Modulation Parameter
+MP Multipoint Processor (H.323)
+MPC Mobile Position Center
+MPCI Mobile Protocol Capability Indicator
+MPD Mode Power Distribution
+MPE Maximum Permissive Exposure
+MPEG Motion Picture Experts Group
+MPI Minimum Picture Interval
+MPh Half Duplex Modulation Parameters in the V.34 negotiation
+MPL Multiplex Payload Length field
+MPLS Multi-Protocol Label Switching
+MP-MLQ Multi-Pulse - Maximum Likelihood Quantizer
+MPOP Main Point of Penetration (where phone lines enter the residence)
+MPPC Microsoft Point to Point Compression
+MPS Minimum Performance Specification
+MPU Multiple Port Unit
+MQ Modified Quantization
+MQLVS Multi-Quality Layered Video Service
+MR Mode Request
+MR Modified Read
+MR MultiRate
+MRA Mutual Recognition Agreements
+MRC Mixed Raster Content
+MRD Market Requirements Document
+MRM Meeting Room Management
+MRP Markov Renewal Process
+MRPC Multipoint Remote Procedure Call
+MRU Maximum Receive Unit
+MS Management Services
+MS Mobile Station
+MS Mode Select
+MSAF Multimedia Services Affiliate Forum
+MSB Manufacturer Specified Blocks
+MSB Most Significant Bit
+MSBN MultiService Broadband Network
+MSC Message Sequence Chart
+MSC Mobile Switching Center
+MSC-BC Mobile Switching Center - Base Center
+MSCID Mobile Switching Center Identification
+MSCIN Mobile Switching Center Identification Number
+MSC-VBR Multi-mode Source Controlled Variable Bit-Rate
+MSD Master Slave Determination
+MSD Minimum Significant Difference
+MSDL MPEG-4 Syntactic Description Language
+MSDN Multi-Service Data Network
+MSE Mean Squared Error
+MSF Multiservice Switching Forum
+MSI Manufacturer Specific Information
+MSI Maximum Symbol Inversion
+MSID Mobile Station Identity
+MSIN Mobile Station INput (GSM)
+MSIN Mobile Subscriber Identification Number
+MSISDN Mobile Station ISDN
+MSJ Multiple Selective Reject
+MSLT Minimum Scan Line Time
+MSN Microsoft Network
+MSN multiple subscriber numbering
+MSO Markov Service Option (cdma2000)
+MSR Multi-Selective Reject
+MSR Market Service Requirement
+MSS Mobile Satellite Services
+MSSF Multi Service Switching Forum
+MST MESSAGE TYPE field
+MSWG Mobile Services Working Group (NAFTA/CCT)
+MT Mobile Terminal
+MT Mobile Terminated
+MT Mode Toggle
+MT Type of commercial fiber optic connector
+MT2 Cellular User's Mobile Termination
+MTA Major Trading Area
+MTA Multimedia Terminal Adapter (SG9)
+MTA Multimedia Terminal and Applications
+MTH Module Telecom Home
+MTIE Maximum Time Interval Error
+MTM Mobile Test Model
+MTP Message Transfer Part
+MTP Message Transfer Point
+MTP Multicast Transport Protocol
+MTP/SO Multiple Transport Protocol/Self Organizing
+MTS Methodology of Test Suites
+MTS Methods for Testing and Specification (ETSI TC)
+MTSO Mobile Telephone Switching Office
+MTTCM Multi-tone Turbo Trellis Coded Modulation
+MTU Maintenance Terminating Unit
+MTU Maximum Transfer Unit
+MTU Multiple Terminal Unit (DSL Forum)
+MUB Multi-Use Bearer Service
+MUT Modem Under Test
+MUTOA Multi-User Telecommunications Outlet Assemblies
+MUX Multiplexer
+MV Membership Vote (ETSI)
+MV Motion Vector
+MVA Multipoint Visualization Achieved
+MVC Mobile Video Coder
+MVC Multipoint Visualization Capability
+MVD Motion Vector Data
+MVNO Mobile Virtual Network Operator
+MVPD Multi-channel Video Programming Distributor
+MVR Multipoint Visualization Refused/Revoked
+MVV Multirate/VAD VBR
+MW Mid Wave
+MWC Multi-Way Calling
+MWI Message Waiting Indication
+MWIF Mobile Wireless Internet Forum
+MWN Message Waiting No
+-N-
+N Newtons
+NA Network Aspects (ETSI TC)
+NA North America
+NAB National Association Of Broadcasters
+NACK Negative Acknowledgment
+NACLA National Cooperation for Laboratory Accreditation
+NAFTA North American Free Trade Agreement
+NAG Network Architecture Group (DSL Forum)
+NAG Network Reference Models, Acronyms and Definitions, and Guide to Standards Ad Hoc
+(TIA TR-45)
+NAI Network Access Identifier (RFC 2468)
+NAK Negative Acknowledgment
+NAK-NS Negative Acknowledgment - Not Supported
+NAK-NU Negative Acknowledgment - Not Understood
+NAL Network Adaptation Layer
+NALAG Network Adaptation Layer Ad hoc Group
+NAM Number Assignment Module
+NAMPS Narrowband AMPS
+NANC North American Numbering Council
+NANP North American Numbering Plan
+NANPA North American Numbering Plan Administrator
+NAP Network Access Provider
+NAPT Network Address Port Translation
+NAPTR Naming Authority Pointer
+NAR Numbering, Addressing and Routing Committee of ETSI NA2
+NASNA National Association of State 9-1-1 Administrators
+NAS Network Access Servers
+NASRNG Network Access Server Requirements
+NAT Network Address Translation
+NATA North American Telephone Association
+NATO North Atlantic Treaty Organization
+NAVDEC Network Access Server and Voice on IP Device Control
+NA/WCPE North American WCPE
+NB Narrow Band
+NBC Non-backward Compatible
+NBDG New Business Development Group
+NBS Net Broadcast Service
+NBS Network Based Solution
+NBSP NarrowBand Signal Power
+NC Network Codes
+NCA Non-Call Associated
+NCAG Network Commonality Ad Hoc Group
+NCG Number Consulting Group (Bellcore)
+NCaps Capabilities with No sub-fields
+NCAS Non-Call Associated Signaling
+NCITS National Committee for Information Technology Standards
+NCP Network Connection Point
+NCRP National Council of Radiation Protection and Measurement
+NCS Network-based Call Signaling
+NCS Nurse Call System
+NCTA National Cable Television Association
+NCTE Network Circuit Terminating Equipment
+ND NSF Message data Indication
+NDA Non-Disclosure Agreement
+NDB Networked DataBase Service
+NDC National Destination Code (ITU)
+NDIS Network Driver Interface Specification
+NDSS Network Directed System Selection
+NE Network Element
+NE Network Entity
+NEBS Network Equipment Building System, a Bellcore environmental requirements specification
+NEC National Electric Code (U.S.)
+NECA National Electrical Contractors Association
+NECQ National Electronic Components Quality Assessment System
+NE-EC Near End - Echo Canceller
+NEMA National Electrical Manufacturers Association
+NENA National Emergency Number Association
+NESC National Electric Safety Code
+NET Norme Europeenne de Telecommunication
+NEW FORUM Former COCOM
+NEXT Near End Cross Talk
+NFPA National Fire Protection Agency
+ng Next Generation
+NGDLC Next Generation Digital Loop Carrier
+NGN Next Generation Network
+NGN SG Next Generation Network Starter Group
+NGOF Next Generation Optical Fiber
+NGOSS New Generation Operations Support Systems (TM Forum)
+NGSO Non-Geostationary Satellite Orbit
+NHRP Next Hop Resolution Protocol
+NHTSA National Highway Traffic Safety Administration
+NI National ISDN
+NI Network Interface
+NIA Network Indicate Address (H.230)
+NIBS National Institute for Building Standards
+NIC Network Interface Card
+NID Network Identification
+NID Network Interface Device
+NID Network Interface or Demarcation
+NIDAB Narrow Band Digital Broadcasting
+NII National Information Infrastructure
+NIO Network Input Output
+NIP Number Identification Presentation
+NISDN National ISDN
+NIST National Institute of Standards and Technology
+N-ISDN Narrowband ISDN
+N-ISUP Narrowband ISDN User Part
+NIU Network Interface Unit
+NIUF North American ISDN Users Forum
+NLD Non-Linear Distortion
+N-LLC Narrowband Logical Link Control
+NLP Non-Linear Processor
+nm Nanometer
+NM Network Management
+NMAG Network Management Ad hoc Group
+NMC Network Management Center
+NMC Network Model Coverage
+NMDS Narrowband Multi-service Delivery System
+NMF Network Management Forum
+NMS Network Management System
+NMSI National Mobile Station Identification
+NMT Nordic Mobile Telephony
+NMX Normas Mexicanas (non-mandatory Mexican standard)
+NNI Network to Network Interface
+NOF Network Operations Forum
+NOI Notice of Inquiry
+NOM Mexican National Standards
+NO PROBLEM NOn PROprietary reliaBLe Electronic Mail
+NP Network Provider
+NP Non-Public
+NP Number Portability
+NPA Network Provider Access
+NPA Numbering Plan Area
+NPI Numbering Plan Indicator
+NPID Network Provider Identification
+NPR Noise Power Ratio
+NPRM Notice of Proposed Rule Making (FCC)
+NPRP Number Portability Routing Protocol (ETSI TIPHON Project)
+NR Noise Reduction
+NR Nordstrom-Robinson (FEC)
+NRA National Regulatory Authority
+NRC Negotiated Rulemaking Committee
+NRC Network Reliability Council
+NRIC National Reliability and Interoperability Commission
+NRM Network Reference Model
+NRTL Nationally Recognized Testing Laboratory
+NRZ Non-Return to Zero
+NRZI Non-Return to Zero on Ones
+NS-cap Non-Standard capability
+NS/EP National Security and Emergency Preparedness
+NSA National Security Agency (U.S.)
+NSAP Network Service Access Point
+NSB National Standardization Body
+NSC Non-Standard Facilities Command
+NS/EP National Security/Emergency Preparedness
+NSF Network-Specific Facilities
+NSF Non-Standard Facilities
+NSIE Network Security Information Exchange
+NSMA National Spectrum Managers Association
+NSO National Standard Organization
+NSP Network Service Provider
+NSRA Normal Seamless Rate Adaptation
+NSRP Numbered SRP response frames
+NSS Non-Standard Setup
+NSTAC National Security Telecommunications Advisory Committee
+NT Network Termination
+NTCA National Telephone Cooperative Association
+NTE Network Terminating Equipment
+NTIA National Telecommunications and Information Administration
+NTP Network Termination Point
+NTP Network Time Protocol
+NTQ Near Toll Quality
+NTR Network Timing Reference
+NTR Network Timing Reference marker
+NTRAC New Technical Regulations Approval Committee (former TRAC), ETSI
+NTSC National Television System Committee
+NTU Network Terminating Unit
+NVCASE National Voluntary Conformity Assessment System Evaluation
+NVLAP National Voluntary Laboratory Accreditation Program
+NVOD Near Video on Demand
+NVRAM Non-Volatile RAM
+NWK Network, Layer 3 of the WCPE protocol stack
+NYCE Certification Body accredited by SEC
+-O-
+O&M Operations and Maintenance
+O&NM Operations and Network Management working group (DSL Forum)
+O&P Ordering & Provisioning Committee (ATIS)
+OA&M Operations, Administration, and Maintenance
+OAA On Air Activation
+OAM Operations, Administration, and Maintenance
+OAM&P Operations, Administration, Maintenance & Provisioning
+OAN Optical Access Network
+OAP One step Approval Procedure (ETSI)
+OAS Organization of American States
+OATS Over-the-Air Activation TeleService
+OBMC Overlapped Block Motion Compensation
+OBF Ordering and Billing Forum
+OBP On-Board Processing
+OC Operation Channel
+OCCS Overall Construction Classification System
+OCD Out of Cell Delineation (UNI 3.0)
+OCDMA Orthogonal CDMA
+OCG Operational Coordination Group (ETSI)
+OCG Overall Coordination Group
+OCI Open Circuit Interval
+OCR Optical Character Recognition
+ODA Open Document Architecture
+ODBC Open DataBase Connectivity
+ODL Object Definition Language
+ODP Open Distributed Processing
+ODP Originator Detection Pattern (V.42)
+ODTC Office of Defense Trade Controls (US)
+OEM Original Equipment Manufacturer
+OET Office of Engineering and Technology (FCC)
+OFB Output Feedback
+OFDM Orthogonal Frequency Division Multiplexing
+OFS Operational Fixed Service (Microwave)
+OFSTP Optical Fiber Systems Test Procedure
+Oftel British Office of Telecommunications
+OGM Out-Going Message
+OHG Operator Harmonization Group
+OI Outline of Investigation
+OID Object Identifiers
+OIW Open Systems Implementers Workshop
+OJ Official Journal
+OJEC Official Journal of the European Communities
+OLC Open Logical Channel
+OLR On-Line Reconfiguration
+OLR Overall Loudness Rating
+OLT Optical Line Termination
+OM Object Model
+OM Optical fiber Multimode category
+OMCI Operation, Management and Control Interfaces
+OMG Object Management Group
+OMT Overhead Message Train
+ONE Other Network Entities (Omega Networks)
+ONP Open Network Provision
+ONS On Premise Station
+ONT Optical Network Termination
+ONU Optical Network Unit
+OOB Out of Band
+OOF Out of Frame
+OPASTCO Organization for the Promotoion and Advancement of Small Telecommunications Companies
+OpenVoB Voice over Broadband http://www.openvob.org
+OPS Off Premise Station
+OPTIS Overlapped PAM Transmission with Interlocking Spectra
+OPTS Over-the-Air Programming Teleservice
+O-QAM Orthogonally multiplexed QAM
+ORDQ Order Qualification
+ORREQ Origination Request
+OS Operating System
+OS Optical fiber Singlemode category
+OSH Occupational Safety and Health
+OSHA Occupational Safety and Health Administration (U.S.)
+OSI Open Switching Interval
+OSI Open System Interconnection
+OSN One Stop Notification
+OSP Open Settlement Protocol
+OSP OutSide Plant
+OSPF Open Shortest Path First
+OSS Operations Support Systems
+OTA Over-the-Air Activation
+OTAFG OTA Focus Group
+OTAPA Over-the-Air Parameter Administration
+OTAR Over-the-Air Rekeying (APCO Project 25)
+OTASP OTA Service Provisioning
+OTDR Optical Time Domain Reflectometer
+OTFI One Time Feature Indicator
+OTI Open Telecom Infras
+-P-
+P Predicted (Q6/16, VCEG)
+P&A Privacy and Authentication
+PA Partial Agreement
+PA Pass Along (Operation code)
+PABX Private Automatic Branch eXchange
+PAC Program Advisory Committee
+PACA Priority Access and Channel Assignment
+PACA-E Enhanced Priority Access and Channel Assignment Supplement Service
+PACC Partition, Aggregation and Conditional Coding
+PACS Personal Access Communications System, Licensed Band
+PAC-U Personal Access Communications System, Unlicensed Band
+PAD Packet Assembler Disassembler
+PAG Practical Application Guidelines
+PAGODA Profile Alignment Group on ODA
+PAL Phase Alteration Line
+PAM Pulse Amplitude Modulation
+PAMS Perceptual Analysis/Measurement System
+PAR Peak to Average Ratio
+PAR Pixel Aspect Ratio
+PAS Publicly Available Specification
+PASC PCS Access Service for Radio Controllers
+PB Personal Base
+PB Predicted and Bi-directional
+PBNM Policy Based Network Management
+PBO Power Back Off
+PBS Personal Base Station
+PBX Private Branch Exchange
+PC Personal Computer
+PC_SSN Point Code Sub-System Number
+PCA Password Call Acceptance
+PCA Policy Group proposal on CA
+PCB Power Cut Back
+PCC Per Call Control
+PCC Pre-activation Communications Channel
+PCC Private Control Channel
+PCC 1 Permanent Consultative Committee (CITEL)
+PCCA PCMCIA Communication Card Association
+PCCA Portable Computer Communications Association
+PCCC Parallel Concatenated Convolutional Codes
+PCF Personal Call Forwarding
+PCF Picture Clock Frequency
+PCH Paging Channel
+PCI Peripheral Component Interconnect
+PCI Programmable Communications Interface
+PCI Protocol Capability Indicator
+PCIC Petroleum and Chemical Technical Conference (IEEE IAS)
+PCI SIG Peripheral Component Interconnect Special Interest Group
+PCIA Personal Communications Industry Association
+PCL Power Line Communication
+PCM Pulse Code Modulation
+PCMCIA Personal Computer Memory Card International Association
+PCME Packet Circuit Multiplication Equipment
+PCN Personal Communications Network
+PCR Program Clock Reference
+PCS Personal Communication Services
+PCSAP PCS Application
+PCSC Personal Communications Switching Center
+PCSD Personal Communications Services Description
+PCT Pairwise Correlating Transform
+PD Plugfest Document
+PD Powered Device
+PD Proposed Draft
+PDAM Proposed Draft Amendment
+PDC Personal Digital Cellular
+PDD Post Dial Delay
+PDE Position Determining Entity
+PDE Primary Designated Engineer (UL)
+PDF Portable Document Format
+pdf probability distribution function
+PDH Plesiocronous Digital Hierachy
+PDH Primary Digital Hierachy
+PDL Polarization Dependent Loss
+PDN Packet Data Network
+PDS Phase Dithering Sequence
+PDU Protocol Data Unit
+PDTR Proposed Draft Technical Report
+PDU-MUX Protocol Data Unit Multiplexer
+PDV Packet Delay Variation
+PE Policy Enforcement element
+PE Poly Ethylene
+PE Public Inquiry (ETSI)
+PEAQ Perceptual Evaluation of Audio Quality (ITU-R rec. BS.1387)
+PED Portable Electronic Device
+PEF Proxy Element Function
+PER Packed Encoding Rules
+PER Parameter Error Rate
+PESQ Perceptual Evaluation of Speech Quality
+PEX ETSI Help Desk for Conformance
+PEXT Premises End Crosstalk
+PF Presence Function
+PFD Power-flux Density
+PHB Per-Hop forwarding Behavior
+PHCF Hard Polymer Clad Fiber
+PHP Personal Handy Phone
+PHS Personal Handyphone System
+PHY Physical Layer
+PIB Personal Information Base
+PIC Primary / Presubscribed Interexchange Carrier
+PICS Protocol Implementation Conformance Statement
+PID Protocol ID
+PIN Personal Identification Number
+PIN T.30 procedural interupt negative
+PINS Project Initiation Notification System (TIA)
+PINT PSTN Interworking (IETF)
+PINX Private Integrated Network Exchange
+PIP T.30 procedural interupt positive
+PISN Private Integrated Services Network
+PIXIT Profile Initialization for Test Cases
+PKCS Public Key Cryptography Standards
+PKI Public Key Infrastructure
+PL Physical Layer
+PL Preferred Language
+PL Program Lock
+PLAR Private Line Auto Ring
+PLC Power Line Communication
+PLI Power Line Interference
+PLL Phase Locked Loop
+PLMN Public Land Mobile Network
+PLMTS Public Land Mobile Telecommunications System
+PLOAM Physical Layer Operations, Administrations and Maintenance
+PLS Physical Layer Specification
+PLT PowerLine Telecommunications
+PM Phase Modulation
+PM Performance Management
+PM Processable Mode
+PMC Packet Mode Channel
+PMC Project Management Committee (ETSI)
+PMCC Packet Mode Channel Connect
+PMCE Packet Mode Channel Element
+PMCH Packet Mode Channel Call Control
+PMCH Packet Mode Channel Handler
+PMD Physical Media Dependent layer
+PMD Polarization Mode Dispersion
+PMM Protocol Management Module
+PMMS Power Measurement Modulation Session
+PMP Point to MultiPoint
+PMR Peak-to-Mean Ratio
+PMS Physical Media Specific
+PMS-TC Physical Media Specific - Transmission Convergence
+PMT Program Management Team
+PN Project Number (TIA)
+PNE Production of Norms in Europe
+PNNI Private Network to Network Interface
+P-n-P Plug and Play
+PNT Phone-line Network Transceiver
+POC Points of Contact (LBC)
+POC Postal Operations Council
+POC Proof-of concept
+POC Public Operator's Code
+POCSAG Post Office Code Standardization Advisory Group (UK)
+PoD Packet transport over DSL
+PoDSL Packet over DSL
+POF Plastic Optical Fiber
+POF Private Operating Frequencies
+PON Passive Optical Network
+POPs Points of Presence
+POS Packet-over-SONET
+POTS Plain Old Telephone Service
+PoV Packet over VDSL
+PoV-TC Packet over VDSL - Transmission Convergence Layer
+PoW Poor or Worse
+PP Portable Part
+PPD Proposal Package Description
+PPDN Public Packet Data Network
+PPI PCS to PCS Interference
+PPM Parts Per Million
+PPP Point-to-Point Protocol
+PPPoA PPP over ATM
+PPPoE Point to Point Protocol over Ethernet
+pps pulses per second
+PQ Priority Queuing
+PR Public Relations
+PR&A Project Request and Authorization
+PRA Primary Rate Access
+PRBS Pseudo-Random Bit Sequence
+PRC Premium Rate Charging
+PRC Private Channel
+PRD Pseudo-Random Downstream Sequence
+PRI Primary Rate Interface (ISDN)
+PRM Performance Report Messages
+PRNS Pseudo Random Noise Sequence
+PRO Planning and Reporting Officer
+PROM Programmable ROM
+PS PCSC ISDN Switch
+PS Product Safety
+PSA Polled SubAddress
+PSAP Public Safety Answering Point
+PSC Picture Start Code
+PSD Power Spectral Density
+PSDN Public Switched Data Network
+PSDS Public Switched Digital Service
+PSE Power Source Element
+PSE Power Sourcing Equipment
+PSELFEXT Power Sum Equal Level Far-end Crosstalk
+PSI-CELP Pitch Synchronous Innovation CELP
+PSID Private System ID
+PSIDS Private System ID Service
+PSK Phase Shift Key
+PSN Private Switched Network
+PSNEXT Power Sum Near-end Crosstalk
+PSNR Peak Signal to Noise Ratio
+PSP Public Service Profiles
+PSPDN Packet Switched Public Data Network
+PSQM Perceptual Speech Quality Measure (ITU Rec. P.861)
+PSS1 Private Network Signaling System 1, defined by ISO
+PSTN Public Switched Telephone Network
+PSWG Product Safety Working Group (Trilateral)
+PT Portable radio Terminal
+PT Project Team (ETSI)
+PTC PictureTel Transform Coder
+PTCC Pex & Testing Competence Center (ETSI)
+PTM Packet Transfer Mode
+PTN Public Telecommunications Network (TIPHON)
+PTN Private Telecommunications Organizations
+PTNO Public Telecommunications Network Operator (TIPHON)
+PTO Private Telecommunications Organizations
+PTPCP Peer-To-Peer Control Protocols
+PTS Pay Terminals and System
+PTS Payphone Terminals and System
+PTS Pay Terminal System
+PTSP PNNI Topology State Packet
+PTT Public Telephone and Telegraph
+PTT Push to Talk
+PUA Personal User Agent
+PUC Public Utilities Commission
+PUM Personal User Mobility
+PVC Permanent Virtual Circuit
+PVC Poly Vinyl Chloride
+PWA Password Access
+PWD Password (T.30)
+PWG Printer Work Group
+PWT Personal Wireless Telecommunications
+PWT-E Personal Wireless Telecommunications - Enhanced Inte
+-Q-
+Q&A Question and Answer
+QADM Quadrature Audio Data Modulation (VoiceSpan [TM])
+QAM Quadrature Amplitude Modulation
+QBD QoS Bearer Descriptor
+QC Quick Connect
+QCA Quick Connect Acknowledge
+QCELP Qualcomm's proprietary version of CELP
+QCIF Quarter CIF
+Q-Mode Quiescent Mode (Q4/15)
+QoS Quality of Service (also QOS)
+QoSM Quality of Service Manager
+QP Quantization Parameter (H.262)
+QPSK Quadrature Phase Shift Keying
+QS Quality Scalability
+QSDG Quality of Service Development Group
+QSIG The signaling protocol used at the Q-interface between two switches in a private network.
+ECMA/ISO have defined a set of QSIG standards.
+QUANT Quantization parameter
+QUEST Quality Excellence for Suppliers of Telecommunications
+-R-
+R&O Report and Order
+R&TTE Radio and TTE (Telecommunications Terminal Equipment) Directive
+RAB Registrar Accreditation Board
+RACF Radio Access Control Function
+RACH Random Access Channel
+RADIUS Remote Access Dial-In User Server
+RADSL Rate-Adapting ADSL
+RAI Remote Alarm Indication
+RAL Restricted Access Location
+RAM Random Access Memory
+RAM Remote Access Multiplexer (DSL Forum)
+RAMA Resource Auction Multiple Access
+RAN Radio Access Network
+RAND Random Challenge Memory
+RAS Registration, Administration, and Status
+RAS Remote Access Server
+RASC Radio Access System Controller
+RAST Receive And Send Terminal
+RATERQ Rate Request
+RB Radiocommunications Bureau (ITU-R)
+RBAF Radio Bearer Adaptation Function
+RBB Residential BroadBand
+RBER Residual Bit Error Rate
+RBTESC Routing, Bridging, and Transfer of Emergency Service Calls
+RBOC Regional Bell Operating Company
+RBS Robbed-bit signaling
+RBW Resolution BandWidth
+RCC Return Channel for Cable
+RCDD Registered Communications Distribution Designer
+R-CELP Renewal CELP
+RCELP Residual CELP
+RCF Radio Control Function (T1P1)
+RCF RegistrationConfirm
+RCF Registration Control Field
+RCF Remote Call Forwarding
+RCH Random Access Channel
+RCP Radio Control Protocol
+RCPC Rate Compatible Punctured Convolutional
+RD or R-D Rate Distortion
+RDC Remote Device Control
+RDI Remote Detect Indication (VC-RDI)
+RDQ Rate-Distortion constrained Quantization
+RDS Requirements Definition Study
+REA Rural Electrification Association
+REC RECeive alarm
+REJ Reject
+RELP Residual Excited Linear Prediction
+REN Ringer Equivalence Number
+REQ-MP Request Mode Proposal
+REQ-MR Request Mode Request
+RES Radio Equipment Systems
+RESNA Rehabilitation Engineering and Assistive Technology Society of North America
+RESCAP Resource Capabilities discovery
+REVAL Procedure for Evaluation of Radio Technologies for FPLMTS
+RF Radio Frequency
+RF Resolution Function (TIPHON)
+RFC Designation for an IETF Standard
+RFC Remote Feature Control
+RFC Request for Comments (IETF)
+RFDB Resolution Function Data Base (TIPHON)
+RFER Residual Frame Error Rate
+RFI Radio Frequency Interference
+RFI Request for Information
+RFO Remote Foreign Office
+RFP Radio Fixed Parts
+RFP Request for Proposal
+RFQ Request for Quotation
+RFT Remote Feeding Telecommunication (circuits)
+RFT-C Remote power Feeding Telecom - Current limited
+RFT-V Remote power Feeding Telecom - Voltage limited
+RG Residential Gateway
+RGB Red Green Blue
+RGIP Residential Gateway Internal Protocol
+RH Multiple HDLC Receive
+RIP Request In Process
+RIPE Regional Internet Registry for Europe
+RJ Registered Jack
+RL Return Loss
+RLAN Radio Local Area Network
+RLP Radio Link Protocols
+RLR Receive Loudness Rating
+RM Simple Facsimile Receive
+RMI Remote Method Invocation
+RMMIE Remote Modem Management Information Exchange
+RMOA Realtime Multimedia Over ATM (ATM Forum)
+RM-ODP Reference Model for Open Distributed Processing
+RMP Reliable Multicast Protocol
+RMS Root Mean Square
+RNR Receiver Not Ready
+ROAMOPS Roaming Operations Task Force
+ROC Report on Comments
+ROLR Receive Objective Loudness Rating
+ROM Read Only Memory
+ROP Report On Proposals
+ROSE Remote Operations Service Element (X.219 and X.229)
+ROT Receive Only Terminal
+RP Radio Ports
+RP Reference Points
+RP-AS Ringing, Pulse-Alerting Signal
+RPC Remote Procedure Call
+RPCU Radio Port Control Unit
+RPE Regular Pulse Excitation
+RPF Remote Power Feed
+RPP Reverse-Pair Positioning
+RPR Reference Picture Resampling
+RPS Reference Picture Selection
+RPWM Rules of Procedure and Working Methods
+RQV Running Quality Value
+RR Resource Record (TIPHON)
+RR Registration Reject
+RRJ Registration Reject
+RRQ Registration Request
+RRU Reduced Resolution Update
+RS Radio System
+RS Radiocommunications Sector - ITU- (CCIR)
+RS Reed-Solomon (code)
+RS Rectangular Slice
+RS Resolution Services (TIPHON)
+RSA Public Key Cryptosystem invented by Rivest, Shamir and Adleman
+RSA Rural Service Area
+RSDN Regional Switched Digital Network
+RSF Residential Standards Forum
+RSGCP Reliable Signaling Gatway Control Protocol
+RSGP Reliable Signaling Gateway Protocol
+RSID Residential System Identification
+RSL Reference System Lab
+RSSI Received Signal Strength Indication
+RSVP Resource Reservation Setup Protocol (IETF)
+RT Remote Terminal
+RT Round Trip
+RTC Return to Control (T.4)
+RTCA Radio Technical Commission for Aeronautics
+RTCP Real-time Transport Control Protocol
+RTD Round Trip Delay
+RTE Remote Terminal Equipment
+RTF Radio Terminal Function
+RTLM Real Time Link Management
+RTP Real Time Transport Protocol (IETF)
+RTR Revised Technical Report (ETSI)
+RTS Request to Send
+RTS Revised Technical Specification (ETSI)
+RTS-CTS Request to Send - Clear to Send
+RTSP Real-Time Streaming Protocol
+RTT Radio Transmission Technologies
+RTTE Radio and Telecommunication Terminal Equipment
+RTU Right to Use
+RTX Request Retransmission
+RTYPE Rounding Type
+RUFP Reflected Unique Findable Pattern
+RVLC Reversible Variable Length Codes
+RX Receive
+RZ-SSB Return to Ze
+-S-
+S&R Segmentation and Re-assembly
+S/ATT Satellite Analog Tie Trunk (TIA-646-B)
+S/DTT Satellite Digital Tie Trunk (TIA-646-B)
+S/N Signal-to-Noise
+S/T Logical interface between xTU-R and user terminal equipment
+SA1 Systems Aspects - Services (3GPP Committee)
+SAA-AMS Service Aspects and Applications - Audio/Visual Multimedia Services
+SAAC Syntax-Based Adaptive Arithmetic Coding
+SABM Set Asynchronous Balanced Mode
+SABME Set Asynchronous Balanced Mode Extended
+SAC Service Access Code
+SAC Subscriber Access Control
+SAC Syntax-based Arithmetic Coding
+SACCH Slow Associated Control Channel
+SAD Sum of Absolute Differences
+SAE Society of Automotive Engineers
+SAFE SeAmless, Fixed-overhead Efficient (framing)
+SAFER Secure and Fast Encryption Routine
+SAGE Security Algorithms Group of Experts
+SAID Serving Area ID
+SAM Synchronous Access Mode (V.80)
+SAMPS System Assisted Mobile Positioning through Satellite (TDMA Third Generation Wireless)
+SANC Signaling Area Network Code
+SAP Segmentation Application Part
+SAP Service Access Point
+SAP System Application Procedure
+SAPI Service Access Point Identifier
+SAR Segmentation And Re-assembly
+SAR Specific Absorption Rate
+SAS Smart Antenna Savvy
+SAS Subscriber Alerting Signal
+SASET Secure Audio SET
+SAT Satellite
+SAT Satellite ATM
+SAVD Simultaneous or Alternating Voice Data
+SBC Southern Building Code
+S-BCCH Short Message Service Broadcast Control Channel
+SBE Single Byte Extension
+SBI Sub-Bitstream Indicators
+SBID Stuff Bit ID
+SBM Single Bitmap
+SBSD Supplementary and Bearer Service Description (T1S1)
+SC Steering Committee
+SC Service Capability
+SC Subscriber Confidentiality
+SC Type of commercial fiber optic connector (Push-Pull)
+SCA Selective Call Acceptance
+SCaps Capabilities with Sub-fields
+SCC Standards Coordinating Committee (IEEE)
+SCC Standards Council of Canada
+SCCC Serial Concatenated Convolutional Code
+SCCH Single Cell Control Channel
+SCCP Signaling Connection Control Part (SS7)
+SCD Service Capability Definition
+SCELP Spike Code Excited Linear Prediction
+SCF Service Control Function
+SCF Shared Control with Feedback
+SCF Supervisory and Control Function
+SCF Synchronization and Convergence Function
+SCF System Communication Function
+SCM Single-Carrier Modulation
+SCM Station Class Mark
+SCM Sub-Carrier Multiplexing
+SCN Switched Circuit Network
+SCOT Steering Committee on Telecommunications
+SCP Service Control Point
+SCR Selective Call Rejection
+SCSA Signal Computing System Architecture
+SCSC SubCommittee on Standards and Conformance (APEC)
+SCSI Small Computer System Interface
+SCT Strathclyde Compression Transform
+SCT Simple Control Transmission Protocol
+SCT Mexican Ministry of Communications and Transports
+SCTE Society of Cable Television Engineers
+ScTP Screened Twisted Pair
+SCTP Stream Control Transmission Protocol
+SCV Specialized Codec VBR
+SD Spectral Data
+SD Super Domain
+SDB Switched Digital Broadcast
+SDC Supplier's Declaration of Conformity (also SDOC)
+SDCC Supplementary Digital Color Code
+SDCCH Standalone Dedicated Control Channel
+SDD Stutter Dialing Device
+SDF System Directory Function
+SDH Synchronous Digital Hierarchy
+SDL Structure Description Language
+SDMT Synchronized DMT
+SDO Standards Development Organization
+SDoC Suppliers Declaration of Conformity (also SDC)
+SDP Session Description Protocol
+SDPng SDP Next Generation
+SDR Sequence Determined Redundancy
+SDSAF Switched Digital Services Applications Forum
+SDSL Simultaneous DSL
+SDSL Symmetrical high bit rate Digital Subscriber Line
+SDSS Server Display And Script Services
+SDT Stutter Dial Tone
+SDU Service Data Unit
+SE Synchronous Editing
+SEAD Software Encryption Algorithm for Data Services
+SEBCH Systematic Extended Bose, Chaudhuri, and Hocquengham
+SEC ETSI Security Technical Committee
+SECOFI Mexican Ministry of Commerce and Industrial Development
+SEI Supplemental Enhancement Information
+SELV Low Voltage associated with digital circuits (IEC 950)
+SEP Selective Polling (T.30)
+SERVNOT Service Notification
+SES Severely Errored Second
+SES Standards Engineering Society
+SET Simple Endpoint Types
+SF Single Frequency
+SF Superframe
+SF Synchronization Flag
+SfDLy Superframe reconfiguration Delay number (Q4/15)
+SFF Small Form Factor
+SFlgSf Synch Flag Superframe number (Q4/15)
+SFR Special Function Registers
+SG Signaling Gateway
+SG Study Group (ITU)
+SGCI Simple Gateway Control Interface
+SGCP Simple Gateway Control Protocol
+SGFS Special Group for Functional Standards
+SGMM MultiMedia Study Group
+SGSN Serving GPRS Support Node
+SHDSL Single-line High Speed DSL
+SHO Soft Handoff
+SI Signaling Intelligence
+SI Still Image
+SIA Security Industry Association
+SIA Semiconductor Industry Association
+SID Send Identifier
+SID Silence Insertion Descriptor
+SID System Identification
+SIF Standard Interchange Format
+SIG Special Interest Group
+SIGTRAN Signaling transport (IETF)
+SIM Subscriber Identity Module
+SIMD Single-Instruction, Multiple Data
+SIN System Identification Network
+SIO Scientific or Industrial Organization (ITU member)
+SIP Session Initiation Protocol (IETF)
+SIPTEL Session Initiation Profile for Internet Telephony, an IETF BoF group, which was a precurser
+to the IETF Working Group iptel (IP Telephony)
+SIR Signal to Interference Ratio
+SIRD Service Independent Requirements Definition
+SIT Special Information Tone
+SIU Subscriber Interface Unit
+SLA Service Level Agreement
+SLB Sequential Link Bring-up (V.MoIP)
+SLC Subscriber Loop Carrier
+SLC Start of Layer Data
+SLD Second Level Domain
+SLE Screen List Editing
+SLER Signal to Listener Echo Ratio
+SLIC Subscriber Line Integrated Circuit
+SLIM Simple Legislation for the Single Market
+SLP Service Location Protocol
+SLR Send Loudness Rating
+SM Service Management
+SM Single Mode
+SM Spectrum Management
+SMALL Short Multiplexed AAL
+SMATV Satellite Master Antenna Television
+SMD Short Message Delivery
+SMDB Short Message Delivery Broadcast
+SMDBACK Short Message Delivery Backward
+SMDFWD Short Message Delivery Forward
+SMDM Short Message Delivery Multipoint Bearer Service
+SMDPP Short Message Delivery Point-to-Point Bearer Service
+SMDS Switched Multi-megabit Data Service
+SME Short Message Entity
+SME Signaling Message Encryption
+SME Small-to-Medium sized Enterprises
+SME Subject Matter Expert
+SMEKEY Short Message Encryption Key
+SMG Special Mobile Group
+SMI Structure of Management Information
+SMM Spectrum Management Methodology
+SMMI Single Man Machine Interface
+SMPTE Society of Motion Picture and Television Engineers
+SMR Specialized Mobile Radio
+SMS Service Management System
+SMS Short Message Service
+SMSA Standard Metropolitan Statistical Area
+SM-SC Short Message Service Center
+SMSC Short Message Service Center
+SMSC SMS-call
+SMSREQ Short Message Service Request
+SMTP Simple Mail Transfer Protocol
+SMV Selectable Mode Vocoder
+SN Scaling Number
+SN Service Node
+SNA Synchronous Network Architecture
+SNDCP Sub Network Dependent Convergence Protocol
+SNHC Synthetic-Natural Hybrid Coding
+SNI Service Node Interface
+SNI SMS Notification Indicator
+SNI Standard Network Interface
+SNMP Simple Network Management Protocol (IETF)
+SNR-LP SNR scalable coding with Leaky Prediction
+SNR Signal to Noise Ratio
+SOA Semiconductor Optical Amplifier
+SOC System Operator Code
+SOHO Small Office Home Office
+SOI Start of Image
+SOM Self-Organizing Multicast
+SONET Synchronous Optical Network
+SOP Standard Operating Procedure
+SOS Speech Option Selection
+SOT Send Only Terminal
+SOVA Soft Output Viterbi Algorithm
+SP Service Provider
+SP Standards Proposal (TIA Industry Ballot)
+SP Study Point (ETSI)
+SP Switchable-P [frames]
+SPA Service Provider Access
+SPACH Short Message Service, Paging Channel and Access Response Channel
+SPAI Service Provider Access Interfaces
+SPAN Services and Protocols for Advanced Networks (ETSI TC)
+SPAR Service Provider Access Requirements (ETSI SPAN)
+S-PCN Satellite Personal Communications Network
+S-PDU Supervisory PDU
+SPH Service Profile at the Home location
+spi spots per inch
+SPI Standard Programmatic Interface
+SPIFF Still Picture Interchange File Format
+SPINA Subscriber Personal Identification Number Access
+SPINI Subscriber Personal Identification Number Intercept
+SPC Single Parity Check
+SPC System Programming Code
+SPIRITS Service in the PSTN/IN Requesting InTernet Service (IETF)
+SPL Sound Pressure Level
+SPNE Signal Processing Network Equipment
+S-PRBS Single cycle - Pseudo Random Bit Sequence
+SPRT Simple Packet Relay Transport
+SPS Signaling Protocols and Switching
+SPS Signaling Protocol And System Technical Committee (ETSI)
+SPS5 SPC Signaling, Protocols and Switching Stored Program Controller (ETSI)
+SPTT Signal Processing Transmission Terminals
+SPV Service Profile at the Visited location
+SPVC Switched Permanent Virtual Circuit
+SPWG Service Provider-focused Working Group (Trilateral)
+SQ Scalar Quantization
+SQCIF Sub-QCIF
+SQEG Speech Quality Expert Group
+SQL Structured Query Language
+S/R Suspend/Resume
+SR Special Report (Telcordia)
+SRA Seamless Rate Adaptation
+SRC Strategic Review Committee (ETSI)
+SRD Standards Requirements Document
+SRDB Selective Routing Data Base
+SREJ Selective Reject
+SRF Service Resource Function
+SRGB Standard RGB (Red Green Blue)
+SRL Secure Radio Link
+SRL Software Release Letter
+SRL Structural Return Loss
+SRM Standards Related Matters
+SRP Scalable Resource reservation Protocol
+SRP Server Requester Protocol
+SRTS Synchronous Residual Time Stamp
+SRU Signal Regenerator Unit
+SRU-R Signal Regenerator Unit - Remote
+SS Slice Structured
+SS Steady State
+SS Supplementary Services
+SS#5 Signaling System 5
+SS#7, SS7 Signaling System 7
+SS-CD Supplementary Services Call Deflection
+SS-CFB Supplementary Services Call Forwarding Busy
+SS-CFNR Supplementary Services Call Forwarding No Reply
+SS-CFU Supplementary Services Call Forwarding Unconditional
+SS-CI Supplementary Service - Call Intrusion
+SSCOP Service Specific Connecction Oriented Protocol
+SSCQE Single Stimulus Continuous Quality Evaluation
+SSCS Service Specific Convergence Sublayer
+SSD Shared Secret Data
+SSDSL Synchronized Symmetric Digital Subscriber Line
+SSE Sum of Squared Error
+SSF Service Switching Function
+SSFP Service Specific Face Plate
+SSG Special Study Group (ITU)
+SSI Signal Strength Indicator
+SSL Secure Sockets Layer
+SS-MCM Supplementary Services - Message Center Monitoring
+SS-MID Supplementary Services - Mailbox Identification
+SSN Sub-System Number
+SSO Speech Service Option
+SSOVP Solid State Primary Protectors
+SSP Service Switching Point
+SSPR System Selection for Preferred Roaming
+ST Type of commercial fiber optic connector (Bayonet)
+STANAG NATO Standardization Agreement
+STAG Security Techniques Advisory Group
+STB Set Top Box
+STC Sub-Technical Committee (ETSI)
+STD Simplified Trellis Decoder
+STDT Stutter Dial Tone
+STE Secure Terminal Equipment
+STF Specialist Task Force (ETSI)
+STG Special Task Group
+STG Special Topic Group
+STI Service Transport Interface
+STIT IEEE Subcommittee on Telephone Instrument Testing
+STL Software Tool Library
+STM Synchronous Transmission Mode
+STMR Sidetone Masking Rating
+STN Switched Telephone Network
+STP Set of Transmission Parameters (TM6)
+STP Shielded Twisted Pair
+STP Signaling Transfer Point
+STP Standards Technical Panel
+STQ Speech Transmission Quality
+STRE Side-Tone Reference Equipment
+STU Secure Terminal Unit
+STU SHDSL Transceiver Unit
+STU-C SHDSL Transceiver Unit - Central office end
+STU-R SHDSL Transceiver Unit - Remote Terminal End
+STU-III Secure Terminal Unit - III
+STS Short Term Stationary
+SU Subscriber Units
+SUB Sub-address (T.30)
+SUD Single Use Device
+SUR Survivability
+SVB Switched Video Broadcast
+SVC Switched Virtual Circuit
+SVD Simultaneous Voice Data
+SVF Simultaneous Voice and Facsimile
+SW Software
+SWELP Switched Excited Linear Predictive
+SWG Sub-Working 
+-T-
+T&E Technical & Engineering Committee (Telocator)
+T&I Testing & Interoperability (DSL Forum Working Group)
+T&IWG Testing & Interoperability Working Group (ADSL Forum)
+T&R Tip and Ring
+TA Technical Assembly
+TA Terminal Adapter
+TA Transmit Additional information
+TAAB Technical Ad hoc Advisory Board
+TAAC Telecommunications Advisory Committee
+TAB Tone above Band
+TABD Trans-Atlantic Business Dialog
+TAC Terminal-Aggregator Communication
+TAC Terminal Attachment Council
+TACS Total Access Communications Systems
+TAF Terminal Adoption Function
+TAG Technical Advisory Group
+TAP Traditional Approval Process (ITU, via Resolution 1)
+TAP Two-step Approval Process (ETSI)
+TAPAC Terminal Attachment Program Advisory Committee
+TAPI Telephony API
+TASA Telecommunications Access System Act
+TAWG Terminal Attachment Working Group
+TB Technical Body (ETSI)
+TB Turbo Block
+TBB Telecommunications Bonding Backbone
+TBCD Telephony Binary Coded Decimal
+TBD To be Determined
+TBG Technical Basis for Globalization
+TBH Technical Basis for Harmonized conformance
+TBI Ten Bit Interface
+TBR Technical Basis for Regulation (ETSI)
+TBRL Terminal balance return loss
+TC Technical Committee
+TC Telecommunications Closet
+TC Test Case
+TC Transaction Capabilities
+TC Trellis Coded
+TC Turbo Convolutional
+TCAM Telecommunication Conformity Assessment and Market Surveillance Committee (ETSI)
+TCAP Transaction Capabilities Application Part
+TC AT Technical Committee Access and Terminals (ETSI)
+TCB Telecommunications Certification Bodies
+TCBC Telecommunications Certification Bodies Council
+TCC Technical Correlating Committee (NEC)
+TCC Borland Turbo C++ Compiler
+TC-ERM ETSI Technical Committee on EMC and Radio spectrum Matters
+TCF Training Check (T.30)
+TCH Transparent Circuit Handling
+TC HF Technical Committee Human Factor (ETSI)
+TCIF Telecommunications Industry Forum (ATIS)
+TCL Transverse Conversion Loss
+TCLw Terminal Coupling Loss weighted
+TCM Time Compression Multiplex
+TCM Trellis Coded Modulation
+TCM-ISDN Time Compression Multiplexed ISDN
+TC-NA ETSI Technical Committee on Network Aspects
+TCOEF Transform Coefficient
+TCON Telenor Research's error concealment decoder
+T-CONT Traffic Container (G.983.dba)
+TCP Terminal Connection Point
+TCP Transmission Control Protocol
+TCPA Telephone Consumer Protection Act (1991)
+TC-PAM Trellis Coded Pulse Amplitude Modulation
+TCP/IP Transmission Control Protocol/Internet Protocol
+TC SP Technical Committee Speech Processing
+TC-SPS ETSI Technical Committee on Signaling Protocol and System
+TC-TM Technical Committees on Transmission and Multiplexing
+TCR-TR Technical Committee Report-Technical Report
+TCTL Tranverse Conversion Transfer Loss
+TD Temporary Document (ITU et al)
+TDD Task Data Descriptions (T.611 e-mail)
+TDD Telecommunications Devices for the Deaf
+TDD Time Division Duplexing
+TDF Transportable Document Format
+TDM Time Division Multiplex
+TDMA Time Division Multiple Access
+TDOA Time Difference of Arrival
+TDSO Test Data Service Option (cdma2000)
+TE Terminal Equipment (ETSI TC)
+TE Traffic Engineering
+TE2 Cellular User's Terminal Equipment
+TEC-LA Telecommunications and Electronic Consortium for Latin America
+TEDPA Telecommunications Equipment Distribution Program Association (www.tedpa.org)
+TEL Telephony (APEC WG)
+TELR Talker Echo Loudness Rating
+TEM TE Management Meeting
+TEM Transverse Electro Magnetic
+TEN Trans-European Networks
+TEN-Telecom Trans-European Telecommunications Networks
+TEP Talk Echo Protection
+TEQ Time Domain Equalizer
+TES Telecommunication Equipment Safety
+TETRA Trans European Trunked RAdio
+TFIG Task Force Implementation Group
+TFO Tandem Free Operation
+TFTP Trivial File Transfer Protocol (RFC 1350)
+TG Task Group
+TGB Telecommunications Grounding Busbar
+TGCP Trunking Gateway Control Protocol
+TH Tomlinson-Harashima
+THD Total Harmonic Distortion
+THL TransHybrid Loss
+TIA Telecommunications Industry Association
+TICS Transport Information and Control Systems
+TIES Telecom Information Exchange Services (ITU)
+TIES Time Independent Escape Sequence
+TIFF Tagged Image File Format
+TIFF-F Tagged Image File Format-Fax
+TIFF-FX Tagged Image File Format-Fax (RFC 2301)
+TIGIN Transport Network Equipment for Interconnecting GSTN and IP Networks
+TILU Telecommunications Industry Liaison Unit (FBI)
+TIMS Transmission Impairment Measurement System
+TINA Telecommunications Information Networking Architecture
+TIP Transport and Internetworking Package
+TIPIA TIPHON IP telephony Implementation Agreement
+TIPHON Telecommunications and Internet Protocol Harmonization Over Networks (ETSI TC)
+TIWG Testing & Interoperability Working Group
+TLA Three Letter Acronym
+TLC Test Loop Combination
+TLD Third Level Domain
+TLDN Temporary Local Directory Number
+TLP Test Level Point
+TLS Transport Layer Security
+TLV Type Length Value
+TM TeleManagement (Forum)
+TM Transmission and Multiplexing (ETSI TC)
+TMCC TM Chairman's Coordination committee
+TMF TeleManagement Forum
+TMGB Telecommunications Main Grounding Busbar
+tML telecommunications Markup Language
+TML Test Model
+TMN Telecommunication Management Network
+TMN1 Temporal Reference Model for the Near Term 1
+TMN8 Video Codec Test Model, Near-Term, Version
+TMSI Temporary Mobile Station Identity
+TNR Transmit Not Ready
+TNS Transit Network Selection
+TNV Telephone Network Voltage (IEC 950)
+TO Telecommunications Outlet
+TOA Time of Arrival
+ToC Table of Contents
+TOC Terminated Open Circuit
+TOLR Transmit Objective Loudness Rating
+TOM Telecom Operations Map (TeleManagement Forum)
+TON Type of Number
+ToR Terms of Reference
+TOSCA Text and Office Systems Content Architecture
+TOSQA Telecommunication Objective Speech Assessment, algorithm of T-Nova Berkom
+TP Test Protocol
+TP Test Purposes
+TPDU Transport Protocol Data Unit (X.224)
+TPS Transport Protocol Specific
+TPS-TC Transport Protocol Specific-Transmission Convergence
+TPKT Transport Packet (T.123)
+TPUI Temporary Portable User Identity
+T/R Tip/Ring
+TR Technical Report
+TR Technical Requirements (TIA committee)
+TR Telecommunications Room
+TR Temporal Reference
+TR Transmit Ready
+TR2TF Technical (TR- Committee) Regulatory Reform Task Force
+TRAC Technical Recommendations Application Committee (ETSI)
+TRC TIPHON Resolution Capability
+TREG Telecommunications Regulatory Email Grapevine
+TRIC TIA Regulatory Issues Committee
+TRIO TIPHON Remote InterOp
+TRIP Telephony Routing Information Protocol
+TRL Transmit Loudness Rating
+TRMMDS Technical Requirements MultiMedia Distribution Systems
+TRP Temporal Reference for Prediction
+TRRTF Technical (TR- Committee) Regulatory Task Force
+TRWNT Technical Requirements Wireline Terminals
+TRWST Technical Requirements Wireless Terminals
+TS Technical Specification
+TS Time Slot (Q6/15)
+TS PCR Transport Stream Program Clock Reference
+TSA Transmitting Subscriber internet Address
+TSACC Telecommunication Standards Advisory Council of Canada
+TSAG Telecommunication Standardization Advisory Group (ITU)
+TSAPI Telephony Server API
+TSB Telecommunications Standardization Board (ITU)
+TSB Telecommunications Systems Bulletin (TIA)
+TSG Technical Specification Group
+TSI Transmitting Subscriber Identification
+TSP Telephony Service Provider
+TSS ITU-Telecommunications Standardization Sector (CCITT)
+TSS Test Suite Specification
+TSSC Technical Standards Subcommittee (TIA)
+TSSS Temporal, SNR, and Spatial Scalability
+TSV Transport Area (IETF)
+TSWG Transport Sub Working Group (DSL Forum)
+TT ANSI Translation Type
+TTC Telecommunication Technology Committee (Japan)
+TTC TIA Technical Committee
+TTCM Turbo Trellis Coded Modulation
+TTCN Tree and Tabular Combined Notation
+TTE Telecommunications Terminal Equipment
+TTF Technical Task Force
+TTIB Transparent tone in band
+TTL Time To Live
+TTP Trusted Third Party
+TTT Trans-European Network Telecom (TIPHON)
+TTY Teletype
+TU-C Transceiver Unit - Central Office End
+TUP Telephony User Part
+TV Television
+TWA Time Weighted Average
+TWAIN Scanner Interface API: Technology Without An Interesting Name (MFPI work)
+TWP Technical Working Procedures (ETSI)
+TX Transmit
+-U-
+U/S Upstream
+UA User Agent
+UAP Unified Accelerated Procedure
+UART Universal Asynchronous Receiver Transmitter
+UAS Unavailable Seconds (Rec. G.997.1)
+UAWG Universal ADSL Working Group
+UB Unlicensed Band
+UBC Uniform Building Code
+UBC University of British Columbia
+UBIC Unbilled Itemized Calls
+UBR Unspecified Bit Rate
+UBS User-Based Solution
+UC-PAM Ungerboeck Coded PAM
+UCAN User Circuit mode Access to Network (T1S1)
+UCF Unregistration Confirm
+UCI Universal Communications Identifier
+UCS Universal Character Set
+UCS Universal multiple octet coded Character Set
+UDDI Universal Description, Discovery and Integration (industry initiative)
+UDI Unrestricted Digital Information
+UDLC Universal Digital Loop Carrier
+UDP User Datagram Protocol (IETF)
+UEP Unequal Error Protection
+UDP User Datagram Protocol
+UDPTL Facsimile UDP Transport Layer protocol
+UGST User's Group on Software Tools
+UHF Ultra High Frequency
+UI Unit Interval
+UI User Interface
+UI Unnumbered Information transfer format
+UIH Unnumbered Information with Header check
+UIM User Identity Module
+UL Underwriters Laboratories
+ULM Unified Management Framework
+ULP Uneven Level Protection
+Um Radio (Air) Interface between Mobile and Base Station
+UME UNI Management Entity
+UML Unified Modeling Language
+UMTS Universal Mobile Telecommunications System
+UMV Unrestricted Motion Vector (H.263)
+U-N User-Network
+UNAA Universal Network Access Arrangement
+UN/ECE United Nations Economic Commission for Europe
+UNERM Unacknowledged Non-Error Recovery Mode
+UNH University of New Hampshire
+UNI User-Network Interface
+UP User Part
+UPBO Upstream Power Back-Off
+UPC Usage Parameter Control
+U-PCS, UPCS Unlicensed PCS
+UPED User Premises Equipment Division
+uPnP Universal Plug and Play Forum
+UPR Users Performance Requirements
+UPS Uninterrupted Power Supply
+UPT Universal Personal Telecommunications (ITU)
+UPTSP Universal Personal Telecommunications Service Providers
+UPU Universal Postal Union
+UQ Utility Quality
+URI Unified Resource Identifier
+URI User Premises Equipment Regulatory Issues
+URL Uniform Resource Locator
+URQ Unregistration Request
+US Under Study
+US1 TDMA Wireless Speech Coder
+USAG United States Advisory Group
+USB Universal Serial Bus
+USCEL United States Council of EMC Laboratories
+USH University of Sherbrooke
+USIM Universal Subscriber Identity Module (3GPP Working Group T3)
+uSMS universal Short Message Service
+USNC United States National Committee
+USOC Uniform Service Order Codes
+USTA United States Telecom Association
+USTR US Trade Representative
+UT Upper Tester (TIPHON)
+UTAM Unlicensed Transition and Management
+UTC Universal Time Code
+UTF UCS (Universal Character Set) Transformation Format
+UTL Utility
+UTP Unshielded Twisted Pair
+UTRAN UMTS Radio Access Network
+UU, U-U User to User
+UUI User-User Interface
+UUIE User-to-User Information Element
+UUT Unit Under Test
+UVG Universal Voice Grade
+UVLC Universal Variable Length Codeword
+UWCC Universal Wireless Communications Consortium
+UXP Unequal Erasure Protection
+-V-
+V&M Voice and Multimedia WG (ATM Forum)
+V&V Validate and Verify
+VA Viterbi Algorithm
+VAD Voice Activity Detector
+VADSL Very high speed ADSL
+VAF Voice Activity Factor
+VAME Voice on ATM Multiplication Equipment
+VAR Value Added Resellers
+VBD Voice Band Data
+VBRnrt Variable Bit Rate non-real time
+VBRrt Variable Bit Rate real time
+VBSMC Variable Block-Size Motion Compensation
+VBV Video Buffer Verification
+VC-RDI Virtual Circuit-Remote Detect Indicator
+VC Video Control
+VC Virtual Channel
+VC Virtual Circuit (Rec. I.610)
+VC Virtual Connection
+VC Virtual Container
+VC Volume Control
+VCC Virtual Channel Connection
+VCEG Video Coding Experts Group (Q6/16)
+VCELS Vertical Cavity Surface Emitting Laser
+VCOM vcom.drv for Microsoft Chicago
+VCI Virtual Channel Identifier
+VCL Video Coding Layer
+VCR Video Cassette Recorder
+VCS Voice Controlled Services
+VDC Volts DC
+VDI Verification and Demonstration Implementation
+VDI Verification, Design and Implementation
+VDMA German Telefax Association, Verband Deutscher Maschinen und Anlagenbau
+VDSL Very high speed DSL
+VDTI Voiceband Data Transmission Interface
+VED Voice Enhancement Devices
+VEMMI Versatile MultiMedia Interface (ETSI)
+VEMMI Videotex Enhanced Man Machine Interface Service
+VERA Video Error Resilience Algorithm
+VESA Video Electronic Standard Association
+VHE Virtual Home Environment
+VHF Very High Frequency
+VHN VESA's Home Networking
+V-I Voltage - Current
+VIA Vendors ISDN Association
+VICS Vehicle Information and Communications System Service (Japan)
+VIM Vendor Independent Messaging
+VIMP Virtual Interoperability Meeting Place
+VISIONng Voice over IP Service IntroductiON - new generation
+VLAN Virtual Local Area Network
+VLBR Very Low Bit Rate
+VLBVT Very Low Bit rate Video Telephony
+VLC Variable Length Coding
+VLCD Variable Length Coding and Decoding
+VLD Variable Length Decoding
+VLDB Very Large Database
+VLF Visitor Location Function
+VLR Visitor Location Register
+VLRIN Visitor Location Register Identification Number
+VLSI Very Large Scale Integration
+VM Verification Model
+VMAC Voice Mobile Attenuation Code
+VMLA Virtual Mobile Location Area
+VMM Virtual Meeting Management
+VMOA Voice and Multimedia over ATM (ATM Forum WG)
+VMS IBM operating system
+VMS Voice Mail System
+VMWI VoiceMail Waiting Indication
+VoADSL Voice over ADSL
+VoATM Voice over ATM
+VoB Voice over Broadband
+VOC VDSL Operations Channel
+VOD Video on Demand
+VoDSL Voice over DSL
+VoI Voice over Internet
+VoIP Voice Over Internet Protocol
+VoMBN Voice over Multi-Service Broadband Networks
+VoMPLS Voice over MPLS
+VoMSDN Voice over Multi-Service Data Networks
+VON Voice on Network Coalition
+VON Voice On the Net
+VOP Video Object Planes
+VOP Voice over Packet (Network)
+VoSTM Voice over Synchronous Transfer Mode
+VOX Voice Operated Transmission
+VP Virtual Packet
+VP Virtual Path (ATM Forum)
+VPF Virtual Private Facility
+VPI Virtual Path Identifier
+VPIM Voice Profile for Internet Mail
+VPM Voice Privacy Mask
+VPMASK Voice Privacy Mask
+VPN Virtual Private Network
+VQ Vector Quantization
+VQEG Video Quality Experts Group
+VQmon ETSI TS101 329-5 Annex E, Method for Determining an Equipment Impairment Factor
+using Passive Monitoring
+VR Vertical Resolution
+VSAT Very Small Aperture Terminal satellite services
+VSB Vestigial Side Band
+VSC Vertical Service Codes
+VSELP Vector Sum Excited Linear Predictive Coding
+VTOA Voice and Telephony Over ATM
+VTQME Voice Transmission Quality Mouth to Ear (ETSI)
+VTR Video Tape Recorder
+VTS Voice Tone Support
+VTU VDSL Transceiver Unit
+VTU-C VDSL Transceiver Unit - Central
+VTU-O VDSL Transeiver Unit at the Optical network unit
+VTU-R VDSL Transceiver Unit - Remote Terminal
+V-UNI Virtual UNI
+VWC Vector Wa
+-W-
+W3C World Wide Web Consortium
+WACS Wireless Access Communication Systems
+WAN Wide Area Network
+WAP Wireless Application Protocol
+WARC World Administrative Radio Conference
+WB Wide Band
+WBS Wireless Business System
+WCAT Wireless Cellular Action Team
+WCDMA Wideband Code Division Multiple Access
+WCPE Wireless CPE
+WCS Wireless Communications System
+WD Wireless communications Devices
+WD Working Document
+WDM Wavelength Division Multiplexing
+WDS Wireless Data Service
+WEB-CAM Web Camera
+WER Word Error Rate
+WFOM Wait for Overhead Message
+WFQ Weighted Fair Queuing
+WG Working Group
+WI Waveform Interpolation
+WI Work Item
+WIDE Widely Integrated Distributed Environment
+WIMS Wireless Multimedia and Messaging Services
+WIN Wireless Intelligent Network
+WINS BT's Wideband Impulsive Noise Survey
+WLAN Wireless LAN
+WLL Wireless Access Local Loop
+WLNP Wireless Local Number Portability
+WML Wireless Markup Language (used in WAP)
+WMOPS Weighted MOPS
+WOSA Windows Open Services Architecture
+WOT World Ordering Team (TeleManagement Forum)
+WP Working Party (ITU)
+WPA Working Party A
+W-PBX Wireless PBX
+WPT Wireless Personal Terminal
+WRC World Radiocommunication Conference
+WRE Wireless Residential Extension
+WSC World Standardization Conference
+WT Working Text (DSL Forum)
+WTLR Wireless Terminal Location Registration
+WTPF World Telecommunication Policy Forum (ITU)
+WTSA World Telecommuncations Standardization Assembly (ITU)
+WTSC World Telecommunication Standardization Conference (ITU)
+WUPE Wireless User Premises Equipment (TR-41.6)
+WWW World Wide Web (Internet)
+-X-
+XAPI eXtensive Application Programming Interface
+XAPIA X.400 API Association
+xDSL All the different Digital Subscriber Line technologies
+xGCP Gateway Control Protocol including MGCP, SGCP and IPDC
+XID eXchange IDentification
+XIWT Cross-Industry Working Team
+XML eXtended Markup Language
+XNI Customer Network Interface
+xoIP FoIP, MoIP, VoIP
+XOR eXclusive OR
+XRS Message not understood
+XTI X-open Transport Interface
+xTAAB Advisory Board on Other Access Technologies
+xTU-C All the different Transceiver Units - Central
+xTU-R All the different Transceiver Units - Remote
+-Y & Z-
+ZHP Z = input impedance of the ADSL transceiver; HP = high pass (ETSI RTS_TM-06006)
+ZLP Zero Loss P

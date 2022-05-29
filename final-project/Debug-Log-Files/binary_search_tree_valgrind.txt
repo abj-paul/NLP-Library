@@ -1,0 +1,78 @@
+==4149== Memcheck, a memory error detector
+==4149== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4149== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==4149== Command: ./execute
+==4149== Parent PID: 1033
+==4149== 
+==4149== 
+==4149== HEAP SUMMARY:
+==4149==     in use at exit: 238 bytes in 19 blocks
+==4149==   total heap usage: 67 allocs, 48 frees, 74,523 bytes allocated
+==4149== 
+==4149== 12 bytes in 1 blocks are definitely lost in loss record 9 of 19
+==4149==    at 0x484AA83: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10AE88: abj::String::initialize(abj::String const&) (lib_string.cpp:202)
+==4149==    by 0x10E7BE: abj::BinarySearchTree::newNode(abj::String const&) (BinarySearchTree.cpp:23)
+==4149==    by 0x10E979: abj::BinarySearchTree::insert(Node*, abj::String const&) (BinarySearchTree.cpp:65)
+==4149==    by 0x10E9D2: abj::BinarySearchTree::insert(Node*, abj::String const&) (BinarySearchTree.cpp:71)
+==4149==    by 0x10E9D2: abj::BinarySearchTree::insert(Node*, abj::String const&) (BinarySearchTree.cpp:71)
+==4149==    by 0x10E9D2: abj::BinarySearchTree::insert(Node*, abj::String const&) (BinarySearchTree.cpp:71)
+==4149==    by 0x10E9D2: abj::BinarySearchTree::insert(Node*, abj::String const&) (BinarySearchTree.cpp:71)
+==4149==    by 0x10EA22: abj::BinarySearchTree::insert(abj::String const&) (BinarySearchTree.cpp:78)
+==4149==    by 0x10ED3B: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:141)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 21 (16 direct, 5 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10EC85: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:138)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 22 (16 direct, 6 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10ED75: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:143)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 23 (16 direct, 7 indirect) bytes in 1 blocks are definitely lost in loss record 13 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10ECB5: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:139)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 23 (16 direct, 7 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10ECE5: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:140)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 24 (16 direct, 8 indirect) bytes in 1 blocks are definitely lost in loss record 15 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10EC55: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:137)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 25 (16 direct, 9 indirect) bytes in 1 blocks are definitely lost in loss record 16 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10EDA5: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:144)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 28 (16 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10ED15: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:141)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 28 (16 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 18 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10EE13: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:150)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== 32 (16 direct, 16 indirect) bytes in 1 blocks are definitely lost in loss record 19 of 19
+==4149==    at 0x4846013: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4149==    by 0x10ED45: abj::BinarySearchTree::test_function() (BinarySearchTree.cpp:142)
+==4149==    by 0x10A357: main (main.cpp:10)
+==4149== 
+==4149== LEAK SUMMARY:
+==4149==    definitely lost: 156 bytes in 10 blocks
+==4149==    indirectly lost: 82 bytes in 9 blocks
+==4149==      possibly lost: 0 bytes in 0 blocks
+==4149==    still reachable: 0 bytes in 0 blocks
+==4149==         suppressed: 0 bytes in 0 blocks
+==4149== 
+==4149== For lists of detected and suppressed errors, rerun with: -s
+==4149== ERROR SUMMARY: 10 errors from 10 contexts (suppressed: 0 from 0)
