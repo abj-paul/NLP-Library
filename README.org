@@ -1,16 +1,128 @@
+#+OPTIONS: \n:t
 
 * About
-  SPL Project
+  Building a simple library for natural language processing. The details can be found in Features section.
+  SPL1 Project
   Abhijit Paul
   BSSE 1201
+  IIT, DU
+ * Introduction
+  Natural language processing strives to build machines that understand and respond to text or voice data—and respond with text or speech of their own—in much the same way humans do. It combines computational linguistics rule-based modeling of human language—with statistical, machine learning, and deep learning models. Together, these technologies enable computers to process human language in the form of text or voice data and to ‘understand’ its full meaning, complete with the speaker or writer’s intent and sentiment.
+
+  While NLP is a huge branch on its own, the basic functionalities are not uncountable. 
+  
+  In this project, we tried to implement a simple **Natural Language Processing Library** that provides essential functions for language modeling, error detection and correction etc. The exact details on the scope of the project will be presented in Section 3.
+* User Interface
+  Its a library of functions so not much focus was given on implementing a User interface.
+** Language Modeling
+   A simple terminal user interface that first preprocesses the corpus and then, resolves queries in O(logn) time.
+   [[file:image-source/lm-tui.png]]
+** Efficiency
+   Out code is very memory efficient as we have done extensive heap management. Here is a screenshot of us preprocessing a 200,000 word corpus.
+   [[file:image-source/2lakh.png]]
+** Noisy Channel Model
+   As the confusion matrices have been built and its pretty much the same all the time, our noisy channel model is very efficient.
+   [[file:image-source/noisychanneloutput.png]]
+** Kneeser Ney Algorithm
+   Each step here shows the ngram and its subsequent probablity.
+   [[file:image-source/kn-output.png]]
+** Perplexity
+   The outputs are decent considering NLP models using huge corpuses have Perplexity around 100-900.
+   | Corpus Size | Perplexity |
+   |-------------+------------|
+   | 200,000     |        110 |
+   | 110,000     |         15 |
+* Background Study
+Our project covers three broad fields. We will discuss briefly about them one by one.
+** Language Modeling
+   The probablity of a phrase occuring can be described as:
+                   \[P(w_1, w_2, ..., w_n)\]
+   Using chain rule of probablities, we get
+   \[   P(w_1....w_n) = P(w_1)P(w_2|w_1)P(w_3|w_1:2) . . . P(w_n|w_1:w_{n−1}) \]
+   \[ = \prod_{i=a}^{b} P(w_k|w_1:w_(k−1)) \]
+   Using Markov's[Ref] assumption, we can simplify this equation further.
+  [[file:image-source/markov2.png]] 
+   Now implementing Bayesian formula, we can find p(w_n|w_1...w_{n-1}).
+   [[file:image-source/bayes2.png]]
+   Throughout our project, we use this formula on the core to find the ngram probablities.
+** Smoothing
+   The above formula of language modeling don't work for **unseen** words. Now a model should be able to predict unseen words to a certain extent, specially a language model. Because getting a sufficiently large dataset that covers all ngram is ~impossible~. So smoothing is a necessity here.
+*** Laplace Smoothing 
+Here, we discount the probablity of each ngram to use them for unseen ngrams.
+[[file:image-source/laplace.png]]
+Where V = the number of total word types in the vocabulary.
+*** Kneeser Ney Smoothing
+    Its one of the most complex and sophisticated smoothing algorithm  for smoothing. It considers both absolute discounting, novel continuation and lower order probablity to formulate a probablity. Thus its more accurate in practice.
+   [[file:image-source/kneeser ney1.png]]
+   C is count for highest order but continuation count for lower order.
+   [[file:image-source/kneeser2.png]]
+** Evaluation
+   Accuracy and similar matrices are not really relevant in NLP so we need a new matrix of evaluation. And that is - perplexity.
+   [[file:image-source/perplexity.png]]
+   Where N is the number of words.
+** Noisy Channel Model
+The noisy channel model was applied to the spelling correction task at about the same time by researchers at AT&T Bell Laboratories (Kernighan et al. 1990, Church and Gale 1991) and IBM Watson
+Research (Mays et al., 1991).
+[[file:image-source/noisychannel.png]]
+If x is the correction and w is the typo, using bayesian rule, we get
+[[file:image-source/noisy-argmax.png]]
+Siimplifying it, we get-
+[[file:image-source/noisy-formula.png]]
+* Implementation & Testing
+  C++ with OOP concepts was used to achieve modularity for ease of development.
+** Language Model
+   Its the part that we covered in mid. However, we have improved it a lot. Making it more efficient, momory efficient and more accurate.
+*** Preprocessing Corpus
+    Language model requires a lot of preprocessing. In fact, most of the time spent during program execution is spent on these preprocessing tasks.
+    - Sentence Segmentation using a simple Decision tree
+    - Punctuation Handling using handcrafted rules
+    - Tokenization
+    - Stemming based on ~Porter's algorithm~.
+*** Model Implementation
+    Model implementation was a challenge, specially considering we have many ngrams and not just bigram.
+**** Naive Approach and Generalized NGram
+     Here, we simply implement the bayesian rules. While its simple, it also means its more efficient on cases where we don't require precomputation. To reduce code repetability,  we developed a generalized NGram class that works for all n-grams.
+**** Precomputation
+     It takes a huge amount of time initially to precompute the bigrams or ~ngrams~ but once we are done with precomputation, it only takes ~O(logn)~ time to answer each queries.
+*** Evaluation
+    A simple perplexity program was used. Considering fraction multiplication may lead to floating point overflow, we used log value in the entire project.
+** Smoothing
+   Basic bayesian approach don't work for unseen words and a language model must be able to handle them. So we implemented two smoothing algorithm.
+   - Laplace Smoothing
+   - Kneeser Ney Smoothing, one of the most sophisticated smoothing algorithm
+  Kneeser ney smoothing is a very sophisticated algorithm so it can be considered a fourth of our entire project. 
+** Noisy Channel Model
+   This task was tedious considering we requried a lot of studying for it. The confusion matrices provided in Kernighan et al. 1990, Church and Gale 1990 research paper could not be implemented as the dataset they used was huge and most importantly, licensed.
+   So we had to manually search for a curated spelling error file and we found norvig's spelling error files. Using this, we have built a noisy channel.
+   - Defining noisy channels using datasets of spelling errors.
+   - Implementing the noisy channel to find noises in a text segment.
+** Heap Management
+   Our program should be able to handle huge amount of data. So it must be able to handle huge amount of data but sadly, the default C++ STL data structure of std::string is not suited for this purpose because it stores all strings with size less than 22 in stack because that size is nothing compared to the object size. And thus, we can not really store a lot of data in stack as stack size is limited.
+   So we made our own string library that stores everything in heap. And it soon raised memory leak problems, specially lvalue-rvalue memory leaks were cumbersome to detect. We used **valgrind** to efficiently do that.
+** Testing
+  We have evaluated the language model using large test dataset. And the results came out pretty good. Around a 100, considering the models with huge corpus have perplexity around the same level, we consider it a huge success.
+  Also, we used **gprof** to check for any functions that can be made more efficient and thus, the efficiency of our program is ensures.
+  We also checked each module using valgrind to look for any potential memory leaks. Thus we can claim that our software is well-tested.
+* Features [5/5]
+  - [X] Preprocessing corpus
+    - [X] Sentence Segmentation
+    - [X] Punctuation Handling
+    - [X] Tokenization
+    - [X] Stemming
+  - [X] Language Models
+    - [X] NGram
+    - [X] Bigram
+    - [X] Evaluation
+      - [X] Perplexity
+  - [X] Noisy Channel Model
+    - [X] Defining noisy channel into confusion matrices
+    - [X] Using the matrices to calculate noise in given words
+  - [X] Kneeser Ney Algorithm
+  - [X] Application of our Library
+    - [X] Spelling Correction Task
 * Sources
   [[https://www.researchgate.net/profile/Kenneth-Church-2/publication/221102042_A_Spelling_Correction_Program_Based_on_a_Noisy_Channel_Model/links/09e415120007d5385f000000/A-Spelling-Correction-Program-Based-on-a-Noisy-Channel-Model.pdf?origin=publication_detail][Confusion Matrix for Noisy Channel Model - Research Paper]]
-https://aclanthology.org/C90-2036.pdf
-
-[[https://norvig.com/ngrams/][Norvig's Spelling Correction List for noisy channel model]]
-* ToDo [1/3]
-  - [X] Build a basic Language Model
-  - [ ] Fast File Handling
-  - [ ] Hardcode Pronunciation Rules
-* Continuous Evaluation
-https://docs.google.com/spreadsheets/d/1udMsR04-lTSwc5k40loml6rYBmbqdTP_OdLPq6ofee8/edit#gid=0
+  https://aclanthology.org/C90-2036.pdf
+  [[https://norvig.com/ngrams/][Norvig's Spelling Correction List for noisy channel model]]
+** Continuous Evaluation
+ https://docs.google.com/spreadsheets/d/1udMsR04-lTSwc5k40loml6rYBmbqdTP_OdLPq6ofee8/edit#gid=0
