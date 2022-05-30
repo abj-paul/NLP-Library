@@ -35,7 +35,6 @@ namespace abj{
     void print(abj::String& filename);
 
     void insert(const abj::String& key);
-    void deleteNode(const abj::String& key);
     bool find(const abj::String& data);
 
    [[nodiscard]] int size();
