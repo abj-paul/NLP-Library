@@ -91,8 +91,6 @@ void abj::BinarySearchTree::test_function(){
   std::cout << "Inorder traversal: ";
   bst.print();
 
-  std::cout << "\nAfter deleting 10\n";
-  bst.deleteNode(*new abj::String("Unscruplous"));
   std::cout << "Inorder traversal: ";
   bst.print();
   
