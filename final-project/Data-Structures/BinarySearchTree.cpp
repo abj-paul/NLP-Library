@@ -17,7 +17,6 @@ void abj::BinarySearchTree::inorder_free(Node *root){
   }
 }
 
-// Create a node
 Node* abj::BinarySearchTree::newNode(const abj::String& item) {
   Node *temp = (Node *)malloc(sizeof(Node));
   temp->key.initialize(item);
@@ -25,12 +24,10 @@ Node* abj::BinarySearchTree::newNode(const abj::String& item) {
   return temp;
 }
 
-// Inorder Traversal
 void abj::BinarySearchTree::inorder(Node *root) {
   if (root != NULL) {
     inorder(root->left);
 
-    // Traverse root
     std::cout << root->key << " -> ";
 
     inorder(root->right);
@@ -59,12 +56,9 @@ bool abj::BinarySearchTree::find(const abj::String& data){
   return this->findFlag;
 }
 
-// Insert a node
 Node* abj::BinarySearchTree::insert(Node *node, const abj::String& key) {
-  // Return a new node if the tree is empty
   if (node == NULL) return this->newNode(key);
 
-  // Traverse to the right place and insert the node
   if (key < node->key)
     node->left = this->insert(node->left, key);
   else
@@ -79,11 +73,9 @@ void abj::BinarySearchTree::insert(const abj::String& key) {
 }
 
 
-// Find the inorder successor
 Node* abj::BinarySearchTree::minValueNode(Node *node) {
   Node *current = node;
 
-  // Find the leftmost leaf
   while (current && current->left != NULL)
     current = current->left;
 
@@ -94,7 +86,6 @@ void abj::BinarySearchTree::deleteNode(const abj::String& key){
   this->treeRoot = this->deleteNode(this->treeRoot, key);
 }
 
-// Deleting a node
 Node* abj::BinarySearchTree::deleteNode(Node *root, const abj::String& key) {
   // Return if the tree is empty
   if (root == NULL) return root;
@@ -118,10 +109,8 @@ Node* abj::BinarySearchTree::deleteNode(Node *root, const abj::String& key) {
     // If the node has two children
     Node *temp = minValueNode(root->right);
 
-    // Place the inorder successor in position of the node to be deleted
     root->key = temp->key;
 
-    // Delete the inorder successor
     root->right = deleteNode(root->right, temp->key);
   }
   return root;
