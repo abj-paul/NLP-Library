@@ -22,9 +22,7 @@ namespace abj{
     const char* DEBUG_FILEAME="./Debug-Log-Files/binarySearchTree.txt";
 
     Node *insert(Node *node, const abj::String& key);
-    Node *minValueNode(Node *node);
     Node *newNode(const abj::String& item);
-    Node *deleteNode(Node *root, const abj::String& key);
     void inorder(Node *root);
     bool inorder_find(Node *root, const abj::String& key);
     void inorder_free(Node *root);
