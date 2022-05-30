@@ -73,49 +73,6 @@ void abj::BinarySearchTree::insert(const abj::String& key) {
 }
 
 
-Node* abj::BinarySearchTree::minValueNode(Node *node) {
-  Node *current = node;
-
-  while (current && current->left != NULL)
-    current = current->left;
-
-  return current;
-}
-
-void abj::BinarySearchTree::deleteNode(const abj::String& key){
-  this->treeRoot = this->deleteNode(this->treeRoot, key);
-}
-
-Node* abj::BinarySearchTree::deleteNode(Node *root, const abj::String& key) {
-  // Return if the tree is empty
-  if (root == NULL) return root;
-  // Find the node to be deleted
-  if (key < root->key)
-    root->left = deleteNode(root->left, key);
-  else if (key > root->key)
-    root->right = deleteNode(root->right, key);
-  else {
-    // If the node is with only one child or no child
-    if (root->left == NULL) {
-      Node *temp = root->right;
-      free(root);
-      return temp;
-    } else if (root->right == NULL) {
-      Node *temp = root->left;
-      free(root);
-      return temp;
-    }
-
-    // If the node has two children
-    Node *temp = minValueNode(root->right);
-
-    root->key = temp->key;
-
-    root->right = deleteNode(root->right, temp->key);
-  }
-  return root;
-}
-
 int abj::BinarySearchTree::size(){
   return this->treeNodeCount;
 }
